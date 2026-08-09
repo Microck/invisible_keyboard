@@ -47,6 +47,10 @@ plan without needing another architecture-discovery pass.
   current or general until the research pass verifies its evidence boundary.
 - The autonomous run uses local Markdown tickets. It makes no public repository,
   GitHub issue, or external publication without a separately confirmed draft.
+- [LapCal's evidence audit](tickets/002-audit-lapcal-evidence.md) finds useful
+  hardware and data-collection lessons, but no reproducible proof of key
+  identity, live text entry, or product-level performance; treat it as a
+  cautionary baseline, not the implementation base.
 
 ## Not yet specified
 
@@ -78,4 +82,3 @@ plan without needing another architecture-discovery pass.
   proof of usable text entry.
 - Reusing or publishing LapCal code or hardware before its license and technical
   fitness are resolved.
-

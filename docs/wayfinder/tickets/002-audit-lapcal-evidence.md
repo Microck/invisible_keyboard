@@ -1,6 +1,6 @@
 ---
 title: Audit what LapCal actually proved
-status: open
+status: closed
 labels:
   - wayfinder:research
 assignee:
@@ -27,3 +27,14 @@ Start from `research/LapCal` and the branch leads in
 `docs/research/local-evidence-orientation.md`. Do not treat generated model
 binaries as reproducible results without their source data and training record.
 
+## Resolution
+
+Resolved in the [LapCal evidence audit](../../research/lapcal-evidence-audit.md).
+
+LapCal demonstrates physical design artifacts, six-sensor firmware, several
+single-user recordings, exploratory click classifiers, and small binary TFLite
+artifacts. It does not demonstrate key identity, complete text entry, a working
+live runtime, or product-level performance. The audit reproduces the tracked
+timing and dataset lineage where possible, finds temporal split leakage and
+multiple firmware/data defects, and classifies LapCal as evidence and test-input
+material rather than an implementation base.
