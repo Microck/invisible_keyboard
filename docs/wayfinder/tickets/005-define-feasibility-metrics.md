@@ -1,6 +1,6 @@
 ---
 title: Define feasibility metrics for usable text entry
-status: open
+status: closed
 labels:
   - wayfinder:research
 assignee:
@@ -27,3 +27,18 @@ generalization.
 Research may propose threshold ranges and explain their basis. Final acceptance
 thresholds remain a human decision tied to ticket 001.
 
+## Resolution
+
+Resolved in the
+[usable text-entry feasibility contract](../../research/usable-text-entry-feasibility-contract.md).
+The contract separates language-assisted phrase transcription, actual arbitrary
+key intent, and optional accessibility or chorded entry. It defines immutable
+session data, split-before-windowing evaluation, raw and corrected text metrics,
+continuous false-activation exposure, latency and operating-system behavior,
+transfer, learning, comfort, privacy, power, and recovery evidence.
+
+Ten cumulative stage gates now make a prototype falsifiable, from full-topology
+stream integrity through extended use. Metric definitions and protocol
+boundaries are source-backed; absolute usability, false-activation, transfer,
+fatigue, setup, and battery stop/go values are explicitly provisional until the
+human chooses the product claim and acceptance target.

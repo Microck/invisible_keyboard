@@ -62,6 +62,11 @@ plan without needing another architecture-discovery pass.
   throughput by letting language infer same-finger keys, while arbitrary
   spatial QWERTY still needs geometry or an instrumented surface. Gest is the
   only confirmed shutdown; other silent projects remain status-unknown.
+- The [usable text-entry feasibility contract](tickets/005-define-feasibility-metrics.md)
+  requires cumulative evidence from stream integrity through continuous raw and
+  corrected text, transfer, ordinary-movement negatives, and extended use; it
+  keeps language-assisted phrases, exact arbitrary keys, and learned accessible
+  or chorded input as separate claims.
 
 ## Not yet specified
 
