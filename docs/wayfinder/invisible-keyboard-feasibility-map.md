@@ -76,6 +76,10 @@ plan without needing another architecture-discovery pass.
   experiment that comfortably fits the historic EUR 200 cash ceiling; owned
   optical hardware can also fit, while labor, participants, and higher-risk
   modalities require separate, much larger budgets.
+- [Privacy, safety, licensing, and IP constraints](tickets/008-map-risk-license-and-ip.md)
+  keeps both co-leads feasible only behind local-data, explicit-capture,
+  fail-neutral input, human-safety, and pre-market gates; LapCal is study-only
+  for the canonical implementation, and the bounded patent search is not FTO.
 
 ## Not yet specified
 
@@ -105,5 +109,5 @@ plan without needing another architecture-discovery pass.
   finger typing gestures.
 - Treating an offline classifier score, a model binary, or a hardware render as
   proof of usable text entry.
-- Reusing or publishing LapCal code or hardware before its license and technical
-  fitness are resolved.
+- Copying, adapting, publishing, or commercializing LapCal code, PCB, CAD, data,
+  or models in the canonical implementation absent a separate rights grant.

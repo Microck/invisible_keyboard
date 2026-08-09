@@ -1,6 +1,6 @@
 ---
 title: Map privacy, safety, licensing, and intellectual-property constraints
-status: open
+status: closed
 labels:
   - wayfinder:research
 assignee:
@@ -26,3 +26,27 @@ research from a legal freedom-to-operate opinion.
 Use official licenses, statutes or regulator guidance, standards material, and
 primary patent records where available. State jurisdiction and uncertainty.
 
+## Resolution
+
+Resolved in
+[Privacy, safety, licensing, and IP constraints](../../research/privacy-safety-licensing-and-ip-constraints.md).
+
+The two conditional co-leads remain feasible only behind privacy, safety, and
+fail-neutral input gates. The dual-wrist IMU path must keep motion, inferred
+text, and correction state local by default; the optical path adds a hard
+bystander/environment-capture review. Both must pass deterministic key-state,
+least-privilege, all-up recovery, password/logging, and explicit research
+capture controls before system input or participant data collection.
+
+LapCal is study-only for the canonical project. Its repo-wide CC BY-NC-SA 4.0
+statement blocks commercial copying/adaptation absent a separate grant, the
+dataset/model participant and provenance rights are unproved, and the license
+grants no patent rights. The report specifies a fresh clean-room implementation
+route. The targeted patent list is not an FTO opinion; counsel must chart the
+frozen architecture's live claims, families, status, ownership, and territories.
+
+FCC/RED/GB market access, Bluetooth qualification, USB mark/VID use, body-worn
+RF, battery, electrical, material, ergonomics, and accessibility work become
+product gates after intended use, components, claims, and markets are fixed.
+No new ticket was created because the open architecture, decoder, and prototype
+decisions already own those determining facts.
