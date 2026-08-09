@@ -67,6 +67,10 @@ plan without needing another architecture-discovery pass.
   corrected text, transfer, ordinary-movement negatives, and extended use; it
   keeps language-assisted phrases, exact arbitrary keys, and learned accessible
   or chorded input as separate claims.
+- [Operating-system input and compute paths](tickets/006-verify-input-and-compute-paths.md)
+  makes Linux `uinput` the bench route and standards USB HID the cross-platform
+  appliance route; mobile software paths remain target-specific, with hard iOS
+  secure-field limits and no browser-only system keyboard path.
 
 ## Not yet specified
 
