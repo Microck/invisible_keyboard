@@ -57,6 +57,11 @@ plan without needing another architecture-discovery pass.
   allowed; egocentric optical tracking leads when a camera/headset and its
   privacy cost are acceptable. Radar and magnetic tracking remain gated
   fallbacks; the human architecture choice is still open.
+- The [prior-art landscape](tickets/004-map-prior-art-and-failures.md) finds a
+  fundamental product fork: finger-sequence systems can achieve high phrase
+  throughput by letting language infer same-finger keys, while arbitrary
+  spatial QWERTY still needs geometry or an instrumented surface. Gest is the
+  only confirmed shutdown; other silent projects remain status-unknown.
 
 ## Not yet specified
 
