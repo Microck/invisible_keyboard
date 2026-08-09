@@ -1,0 +1,30 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+Executing tests from //:replay-contract-test
+-----------------------------------------------------------------------------
+
+running 2 tests
+test live_sequence_gap_revokes_during_warmup_and_partial_window_fill ... FAILED
+test post_arm_partial_window_integrity_faults_revoke_before_output ... FAILED
+
+failures:
+
+---- live_sequence_gap_revokes_during_warmup_and_partial_window_fill stdout ----
+
+thread 'live_sequence_gap_revokes_during_warmup_and_partial_window_fill' (42187) panicked at tests/replay-contract.rs:1137:9:
+assertion failed: matches!(live.push_candidate(TransportCandidate::Decoded(encode_frame(&frame).unwrap().to_vec()),
+    receipt + 5_000_000), Err(LiveCalibratedError::TerminalFault(actual)) if
+    actual == terminal)
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- post_arm_partial_window_integrity_faults_revoke_before_output stdout ----
+
+thread 'post_arm_partial_window_integrity_faults_revoke_before_output' (42188) panicked at tests/replay-contract.rs:1096:13:
+fault must revoke before filling a window: Left MissingSensor
+
+
+failures:
+    live_sequence_gap_revokes_during_warmup_and_partial_window_fill
+    post_arm_partial_window_integrity_faults_revoke_before_output
+
+test result: FAILED. 0 passed; 2 failed; 0 ignored; 0 measured; 34 filtered out; finished in 23.02s
+

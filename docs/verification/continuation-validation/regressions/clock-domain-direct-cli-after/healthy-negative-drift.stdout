@@ -1,0 +1,20 @@
+evidence=replay-tested
+limitation=Recorded or generated replay does not establish physical typing feasibility.
+records=202
+decoded_frames=202
+left_frames=101
+right_frames=101
+invalid_candidates=0
+reordered_records=0
+decisions=2
+key_decisions=2
+abstentions=0
+runtime_faults=0
+output_events=4
+processing_p50_ns=33880 processing_p90_ns=36120 processing_p95_ns=37640 processing_p99_ns=46440 processing_max_ns=56761
+mapped_receipt_p50_ns=0 mapped_receipt_p95_ns=0 mapped_receipt_p99_ns=0 mapped_receipt_max_ns=0
+final_key_state_neutral=true
+event=0 usage=A state=Down time_us=6413585
+event=1 usage=A state=Up time_us=6413585
+event=2 usage=H state=Down time_us=6414585
+event=3 usage=H state=Up time_us=6414585

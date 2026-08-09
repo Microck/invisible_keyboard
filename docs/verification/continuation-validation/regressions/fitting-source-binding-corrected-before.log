@@ -1,0 +1,71 @@
+OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //:calibration-engine-contract-test (1 packages loaded)
+Analyzing: target //:calibration-engine-contract-test (5 packages loaded, 6 targets configured)
+Analyzing: target //:calibration-engine-contract-test (5 packages loaded, 6 targets configured)
+
+Analyzing: target //:calibration-engine-contract-test (15 packages loaded, 9 targets configured)
+
+Analyzing: target //:calibration-engine-contract-test (65 packages loaded, 18 targets configured)
+
+Analyzing: target //:calibration-engine-contract-test (81 packages loaded, 213 targets configured)
+
+Analyzing: target //:calibration-engine-contract-test (96 packages loaded, 720 targets configured)
+
+Analyzing: target //:calibration-engine-contract-test (127 packages loaded, 1813 targets configured)
+
+Analyzing: target //:calibration-engine-contract-test (147 packages loaded, 2929 targets configured)
+
+Analyzing: target //:calibration-engine-contract-test (188 packages loaded, 4540 targets configured)
+
+Analyzing: target //:calibration-engine-contract-test (203 packages loaded, 5399 targets configured)
+
+INFO: Analyzed target //:calibration-engine-contract-test (206 packages loaded, 5419 targets configured).
+[89 / 425] checking cached actions
+[423 / 425] [Prepa] Compiling Rust bin calibration-engine-contract-test (1 file)
+[423 / 425] Compiling Rust bin calibration-engine-contract-test (1 file); 1s processwrapper-sandbox
+INFO: From Compiling Rust bin calibration-engine-contract-test (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+[425 / 426] Testing //:calibration-engine-contract-test; 1s processwrapper-sandbox
+[425 / 426] Testing //:calibration-engine-contract-test; 10s processwrapper-sandbox
+[425 / 426] Testing //:calibration-engine-contract-test; 40s processwrapper-sandbox
+[425 / 426] Testing //:calibration-engine-contract-test; 45s processwrapper-sandbox
+FAIL: //:calibration-engine-contract-test (Exit 101) (see /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/execroot/_main/bazel-out/aarch64-fastbuild/testlogs/calibration-engine-contract-test/test.log)
+INFO: From Testing //:calibration-engine-contract-test:
+==================== Test output for //:calibration-engine-contract-test:
+
+running 1 test
+test fitting_and_precheck_reject_raw_suffix_fault_before_truth_selection ... FAILED
+
+failures:
+
+---- fitting_and_precheck_reject_raw_suffix_fault_before_truth_selection stdout ----
+
+thread 'fitting_and_precheck_reject_raw_suffix_fault_before_truth_selection' (103521) panicked at tests/calibration-engine-contract.rs:2109:10:
+keyboard precheck must admit the whole raw stream before selected windows: KeyboardPrecheckResult { metrics: KeyboardPrecheckMetrics { intent_separation_basis_points: 10000, finger_agreement_basis_points: 10000 }, evaluated_windows: 232, weak_positions: [] }
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    fitting_and_precheck_reject_raw_suffix_fault_before_truth_selection
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 28 filtered out; finished in 45.23s
+
+================================================================================
+INFO: Found 1 test target...
+Target //:calibration-engine-contract-test up-to-date:
+  bazel-bin/calibration-engine-contract-test
+INFO: Elapsed time: 63.493s, Critical Path: 46.91s
+INFO: 4 processes: 422 action cache hit, 2 internal, 3 processwrapper-sandbox.
+INFO: Build completed, 1 test FAILED, 4 total actions
+//:calibration-engine-contract-test                                      FAILED in 45.3s
+  /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/execroot/_main/bazel-out/aarch64-fastbuild/testlogs/calibration-engine-contract-test/test.log
+
+Executed 1 out of 1 test: 1 fails locally.

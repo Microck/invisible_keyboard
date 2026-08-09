@@ -1,6 +1,6 @@
 ---
 title: Select the first sensing architecture
-status: open
+status: closed
 labels:
   - wayfinder:grilling
 assignee:
@@ -30,3 +30,17 @@ must infer, which assumptions remain personal or session-specific, expected
 cost and form factor, and the fastest falsification test. A recommendation may
 be decisive, but architecture selection requires human approval.
 
+## Resolution
+
+The user selected a LapCal-style wearable as the hard reference and excluded
+sensors in the surface. The canonical architecture therefore uses one IMU per
+finger plus one dorsal reference IMU on each hand, per-hand local acquisition,
+wired transport first, and local host decoding. Optical or instrumented
+surfaces may provide laboratory truth but cannot influence product output.
+
+The independently implemented design and the facts retained or rejected from LapCal are in the
+[passive-surface reference architecture](../../implementation/reference-architecture.md).
+The fastest falsification test is one hand through electrical stream integrity,
+contact observability, acting-finger evidence, and a non-armable within-hand
+position pilot. Exact Core-28 calibration remains a two-controller experiment;
+the one-hand result decides whether buying the second rig is justified.

@@ -1,0 +1,127 @@
+OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //:calibration-browser-receipt-test (1 packages loaded)
+Analyzing: target //:calibration-browser-receipt-test (5 packages loaded, 6 targets configured)
+Analyzing: target //:calibration-browser-receipt-test (5 packages loaded, 6 targets configured)
+
+Analyzing: target //:calibration-browser-receipt-test (12 packages loaded, 8 targets configured)
+
+Analyzing: target //:calibration-browser-receipt-test (65 packages loaded, 17 targets configured)
+
+Analyzing: target //:calibration-browser-receipt-test (84 packages loaded, 516 targets configured)
+
+Analyzing: target //:calibration-browser-receipt-test (109 packages loaded, 1181 targets configured)
+
+Analyzing: target //:calibration-browser-receipt-test (129 packages loaded, 1980 targets configured)
+
+Analyzing: target //:calibration-browser-receipt-test (158 packages loaded, 3373 targets configured)
+
+Analyzing: target //:calibration-browser-receipt-test (187 packages loaded, 4709 targets configured)
+
+Analyzing: target //:calibration-browser-receipt-test (204 packages loaded, 5403 targets configured)
+
+INFO: Analyzed target //:calibration-browser-receipt-test (205 packages loaded, 5419 targets configured).
+[90 / 426] [Prepa] Creating symlink calibration-browser-receipt-test
+[235 / 426] checking cached actions
+[424 / 426] [Prepa] Compiling Rust bin calibration-browser-fixture (1 file)
+INFO: From Compiling Rust bin calibration-browser-fixture (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+[426 / 427] Testing //:calibration-browser-receipt-test; 1s local
+[426 / 427] Testing //:calibration-browser-receipt-test; 5s local
+INFO: From Testing //:calibration-browser-receipt-test:
+==================== Test output for //:calibration-browser-receipt-test:
+{
+  "acknowledgement_attempts": [
+    {
+      "disposition": "held-then-dropped",
+      "revision": 345,
+      "status": 200
+    },
+    {
+      "disposition": "forwarded",
+      "revision": 345,
+      "status": 400
+    },
+    {
+      "disposition": "forwarded",
+      "revision": 348,
+      "status": 200
+    }
+  ],
+  "agent_browser_version": "agent-browser 0.36.0",
+  "application_network_scope": "The app service and fault proxy bind 127.0.0.1, and browser page/subresource navigation is allowlisted to 127.0.0.1 and localhost. This field does not claim observation of tool telemetry or operating-system traffic.",
+  "branch_control": "CDP-injected synthetic state and DOM mutation",
+  "browser_engine": "chrome",
+  "browser_probe": {
+    "chromeObject": true,
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36"
+  },
+  "claim_scope": "Real Chrome executes production calibration-app.js against real CalibrationApp HTTP endpoints through an IPv4-loopback TCP fault proxy and synthetic hardware-mode state. CDP injects result-screen, hidden-element, and mismatched-text branches. The proxy rewrites Origin to the backend origin before forwarding and drops one accepted response. This does not test direct Origin rejection, prove pixel paint, visibility, or lack of occlusion, or establish sensor contact, latency, accuracy, or physical feasibility.",
+  "final_fixture_state": {
+    "capture_lease_revision": 5,
+    "ok": true,
+    "paused": false,
+    "phase": "surface-validate",
+    "screen": "surface-transfer",
+    "service_error": null,
+    "surface_instruction_revision": null,
+    "surface_target": "Tap E now."
+  },
+  "first_receipt": {
+    "acknowledged_host_time_ns": 3478244397,
+    "instruction_revision": 345,
+    "ok": true
+  },
+  "guard_observations": {
+    "hiddenSurface": {
+      "inFlight": null,
+      "surfaceHidden": true
+    },
+    "mismatchedText": {
+      "actual": "Not the pending cue",
+      "expected": "Tap Q now.",
+      "inFlight": null
+    },
+    "resultScreen": {
+      "inFlight": null,
+      "resultVisible": true,
+      "surfaceHidden": true
+    }
+  },
+  "new_cue_recovery": {
+    "acknowledged": 348,
+    "inFlight": null,
+    "pending": null
+  },
+  "origin_boundary": "proxy rewrites Origin; direct service Origin enforcement is outside this receipt",
+  "response_loss_clear": {
+    "inFlight": 345,
+    "pending": null,
+    "serviceRevision": null,
+    "target": "Replacement W, no receipt."
+  },
+  "schema": "invisible-keyboard-synthetic-hardware-browser-receipt-contract-v1",
+  "second_receipt": {
+    "acknowledged_host_time_ns": 3847763904,
+    "instruction_revision": 348,
+    "ok": true
+  }
+}
+================================================================================
+INFO: Found 1 test target...
+Target //:calibration-browser-receipt-test up-to-date:
+  bazel-bin/calibration-browser-receipt-test
+INFO: Elapsed time: 23.119s, Critical Path: 6.05s
+INFO: 8 processes: 419 action cache hit, 6 internal, 2 local, 1 processwrapper-sandbox.
+INFO: Build completed successfully, 8 total actions
+//:calibration-browser-receipt-test                                      PASSED in 5.0s
+
+Executed 1 out of 1 test: 1 test passes.
+There were tests whose specified size is too big. Use the --test_verbose_timeout_warnings command line option to see which ones these are.

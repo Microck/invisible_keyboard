@@ -1,0 +1,211 @@
+{
+  "schema": "invisible-keyboard-axis-characterization-v1",
+  "report_id": "axis-characterization-run-001",
+  "completed_at_utc": "2026-08-30T00:00:00Z",
+  "characterizer_build": "replace-with-exact-characterizer-build-id",
+  "method_id": "fixed-order-600-stationary-iks3-v1",
+  "coordinate_convention": "x-distal-z-dorsal-right-handed-y-by-hand-v1",
+  "candidate_manifest_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "source_session_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+  "rig_evidence_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "criteria": {
+    "expected_gravity_lsb": 8192,
+    "maximum_component_residual_lsb": 820,
+    "minimum_samples_per_face": 600
+  },
+  "hands": [
+    {
+      "hand": "left",
+      "positive_y_direction": "ulnar",
+      "sensors": [
+        {
+          "sensor_index": 0,
+          "role": "thumb",
+          "raw_face_means": [
+            {"face": "positive-x", "sample_count": 600, "mean_acceleration_lsb": [8192, 0, 0]},
+            {"face": "negative-x", "sample_count": 600, "mean_acceleration_lsb": [-8192, 0, 0]},
+            {"face": "positive-y", "sample_count": 600, "mean_acceleration_lsb": [0, 8192, 0]},
+            {"face": "negative-y", "sample_count": 600, "mean_acceleration_lsb": [0, -8192, 0]},
+            {"face": "positive-z", "sample_count": 600, "mean_acceleration_lsb": [0, 0, 8192]},
+            {"face": "negative-z", "sample_count": 600, "mean_acceleration_lsb": [0, 0, -8192]}
+          ],
+          "axis_map": [1, 0, 0, 0, 1, 0, 0, 0, 1],
+          "observed_maximum_component_residual_lsb": 0,
+          "passed": true
+        },
+        {
+          "sensor_index": 1,
+          "role": "index",
+          "raw_face_means": [
+            {"face": "positive-x", "sample_count": 600, "mean_acceleration_lsb": [8192, 0, 0]},
+            {"face": "negative-x", "sample_count": 600, "mean_acceleration_lsb": [-8192, 0, 0]},
+            {"face": "positive-y", "sample_count": 600, "mean_acceleration_lsb": [0, 8192, 0]},
+            {"face": "negative-y", "sample_count": 600, "mean_acceleration_lsb": [0, -8192, 0]},
+            {"face": "positive-z", "sample_count": 600, "mean_acceleration_lsb": [0, 0, 8192]},
+            {"face": "negative-z", "sample_count": 600, "mean_acceleration_lsb": [0, 0, -8192]}
+          ],
+          "axis_map": [1, 0, 0, 0, 1, 0, 0, 0, 1],
+          "observed_maximum_component_residual_lsb": 0,
+          "passed": true
+        },
+        {
+          "sensor_index": 2,
+          "role": "middle",
+          "raw_face_means": [
+            {"face": "positive-x", "sample_count": 600, "mean_acceleration_lsb": [8192, 0, 0]},
+            {"face": "negative-x", "sample_count": 600, "mean_acceleration_lsb": [-8192, 0, 0]},
+            {"face": "positive-y", "sample_count": 600, "mean_acceleration_lsb": [0, 8192, 0]},
+            {"face": "negative-y", "sample_count": 600, "mean_acceleration_lsb": [0, -8192, 0]},
+            {"face": "positive-z", "sample_count": 600, "mean_acceleration_lsb": [0, 0, 8192]},
+            {"face": "negative-z", "sample_count": 600, "mean_acceleration_lsb": [0, 0, -8192]}
+          ],
+          "axis_map": [1, 0, 0, 0, 1, 0, 0, 0, 1],
+          "observed_maximum_component_residual_lsb": 0,
+          "passed": true
+        },
+        {
+          "sensor_index": 3,
+          "role": "ring",
+          "raw_face_means": [
+            {"face": "positive-x", "sample_count": 600, "mean_acceleration_lsb": [8192, 0, 0]},
+            {"face": "negative-x", "sample_count": 600, "mean_acceleration_lsb": [-8192, 0, 0]},
+            {"face": "positive-y", "sample_count": 600, "mean_acceleration_lsb": [0, 8192, 0]},
+            {"face": "negative-y", "sample_count": 600, "mean_acceleration_lsb": [0, -8192, 0]},
+            {"face": "positive-z", "sample_count": 600, "mean_acceleration_lsb": [0, 0, 8192]},
+            {"face": "negative-z", "sample_count": 600, "mean_acceleration_lsb": [0, 0, -8192]}
+          ],
+          "axis_map": [1, 0, 0, 0, 1, 0, 0, 0, 1],
+          "observed_maximum_component_residual_lsb": 0,
+          "passed": true
+        },
+        {
+          "sensor_index": 4,
+          "role": "pinky",
+          "raw_face_means": [
+            {"face": "positive-x", "sample_count": 600, "mean_acceleration_lsb": [8192, 0, 0]},
+            {"face": "negative-x", "sample_count": 600, "mean_acceleration_lsb": [-8192, 0, 0]},
+            {"face": "positive-y", "sample_count": 600, "mean_acceleration_lsb": [0, 8192, 0]},
+            {"face": "negative-y", "sample_count": 600, "mean_acceleration_lsb": [0, -8192, 0]},
+            {"face": "positive-z", "sample_count": 600, "mean_acceleration_lsb": [0, 0, 8192]},
+            {"face": "negative-z", "sample_count": 600, "mean_acceleration_lsb": [0, 0, -8192]}
+          ],
+          "axis_map": [1, 0, 0, 0, 1, 0, 0, 0, 1],
+          "observed_maximum_component_residual_lsb": 0,
+          "passed": true
+        },
+        {
+          "sensor_index": 5,
+          "role": "dorsal",
+          "raw_face_means": [
+            {"face": "positive-x", "sample_count": 600, "mean_acceleration_lsb": [8192, 0, 0]},
+            {"face": "negative-x", "sample_count": 600, "mean_acceleration_lsb": [-8192, 0, 0]},
+            {"face": "positive-y", "sample_count": 600, "mean_acceleration_lsb": [0, 8192, 0]},
+            {"face": "negative-y", "sample_count": 600, "mean_acceleration_lsb": [0, -8192, 0]},
+            {"face": "positive-z", "sample_count": 600, "mean_acceleration_lsb": [0, 0, 8192]},
+            {"face": "negative-z", "sample_count": 600, "mean_acceleration_lsb": [0, 0, -8192]}
+          ],
+          "axis_map": [1, 0, 0, 0, 1, 0, 0, 0, 1],
+          "observed_maximum_component_residual_lsb": 0,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "hand": "right",
+      "positive_y_direction": "radial",
+      "sensors": [
+        {
+          "sensor_index": 0,
+          "role": "thumb",
+          "raw_face_means": [
+            {"face": "positive-x", "sample_count": 600, "mean_acceleration_lsb": [8192, 0, 0]},
+            {"face": "negative-x", "sample_count": 600, "mean_acceleration_lsb": [-8192, 0, 0]},
+            {"face": "positive-y", "sample_count": 600, "mean_acceleration_lsb": [0, 8192, 0]},
+            {"face": "negative-y", "sample_count": 600, "mean_acceleration_lsb": [0, -8192, 0]},
+            {"face": "positive-z", "sample_count": 600, "mean_acceleration_lsb": [0, 0, 8192]},
+            {"face": "negative-z", "sample_count": 600, "mean_acceleration_lsb": [0, 0, -8192]}
+          ],
+          "axis_map": [1, 0, 0, 0, 1, 0, 0, 0, 1],
+          "observed_maximum_component_residual_lsb": 0,
+          "passed": true
+        },
+        {
+          "sensor_index": 1,
+          "role": "index",
+          "raw_face_means": [
+            {"face": "positive-x", "sample_count": 600, "mean_acceleration_lsb": [8192, 0, 0]},
+            {"face": "negative-x", "sample_count": 600, "mean_acceleration_lsb": [-8192, 0, 0]},
+            {"face": "positive-y", "sample_count": 600, "mean_acceleration_lsb": [0, 8192, 0]},
+            {"face": "negative-y", "sample_count": 600, "mean_acceleration_lsb": [0, -8192, 0]},
+            {"face": "positive-z", "sample_count": 600, "mean_acceleration_lsb": [0, 0, 8192]},
+            {"face": "negative-z", "sample_count": 600, "mean_acceleration_lsb": [0, 0, -8192]}
+          ],
+          "axis_map": [1, 0, 0, 0, 1, 0, 0, 0, 1],
+          "observed_maximum_component_residual_lsb": 0,
+          "passed": true
+        },
+        {
+          "sensor_index": 2,
+          "role": "middle",
+          "raw_face_means": [
+            {"face": "positive-x", "sample_count": 600, "mean_acceleration_lsb": [8192, 0, 0]},
+            {"face": "negative-x", "sample_count": 600, "mean_acceleration_lsb": [-8192, 0, 0]},
+            {"face": "positive-y", "sample_count": 600, "mean_acceleration_lsb": [0, 8192, 0]},
+            {"face": "negative-y", "sample_count": 600, "mean_acceleration_lsb": [0, -8192, 0]},
+            {"face": "positive-z", "sample_count": 600, "mean_acceleration_lsb": [0, 0, 8192]},
+            {"face": "negative-z", "sample_count": 600, "mean_acceleration_lsb": [0, 0, -8192]}
+          ],
+          "axis_map": [1, 0, 0, 0, 1, 0, 0, 0, 1],
+          "observed_maximum_component_residual_lsb": 0,
+          "passed": true
+        },
+        {
+          "sensor_index": 3,
+          "role": "ring",
+          "raw_face_means": [
+            {"face": "positive-x", "sample_count": 600, "mean_acceleration_lsb": [8192, 0, 0]},
+            {"face": "negative-x", "sample_count": 600, "mean_acceleration_lsb": [-8192, 0, 0]},
+            {"face": "positive-y", "sample_count": 600, "mean_acceleration_lsb": [0, 8192, 0]},
+            {"face": "negative-y", "sample_count": 600, "mean_acceleration_lsb": [0, -8192, 0]},
+            {"face": "positive-z", "sample_count": 600, "mean_acceleration_lsb": [0, 0, 8192]},
+            {"face": "negative-z", "sample_count": 600, "mean_acceleration_lsb": [0, 0, -8192]}
+          ],
+          "axis_map": [1, 0, 0, 0, 1, 0, 0, 0, 1],
+          "observed_maximum_component_residual_lsb": 0,
+          "passed": true
+        },
+        {
+          "sensor_index": 4,
+          "role": "pinky",
+          "raw_face_means": [
+            {"face": "positive-x", "sample_count": 600, "mean_acceleration_lsb": [8192, 0, 0]},
+            {"face": "negative-x", "sample_count": 600, "mean_acceleration_lsb": [-8192, 0, 0]},
+            {"face": "positive-y", "sample_count": 600, "mean_acceleration_lsb": [0, 8192, 0]},
+            {"face": "negative-y", "sample_count": 600, "mean_acceleration_lsb": [0, -8192, 0]},
+            {"face": "positive-z", "sample_count": 600, "mean_acceleration_lsb": [0, 0, 8192]},
+            {"face": "negative-z", "sample_count": 600, "mean_acceleration_lsb": [0, 0, -8192]}
+          ],
+          "axis_map": [1, 0, 0, 0, 1, 0, 0, 0, 1],
+          "observed_maximum_component_residual_lsb": 0,
+          "passed": true
+        },
+        {
+          "sensor_index": 5,
+          "role": "dorsal",
+          "raw_face_means": [
+            {"face": "positive-x", "sample_count": 600, "mean_acceleration_lsb": [8192, 0, 0]},
+            {"face": "negative-x", "sample_count": 600, "mean_acceleration_lsb": [-8192, 0, 0]},
+            {"face": "positive-y", "sample_count": 600, "mean_acceleration_lsb": [0, 8192, 0]},
+            {"face": "negative-y", "sample_count": 600, "mean_acceleration_lsb": [0, -8192, 0]},
+            {"face": "positive-z", "sample_count": 600, "mean_acceleration_lsb": [0, 0, 8192]},
+            {"face": "negative-z", "sample_count": 600, "mean_acceleration_lsb": [0, 0, -8192]}
+          ],
+          "axis_map": [1, 0, 0, 0, 1, 0, 0, 0, 1],
+          "observed_maximum_component_residual_lsb": 0,
+          "passed": true
+        }
+      ]
+    }
+  ],
+  "passed": true
+}

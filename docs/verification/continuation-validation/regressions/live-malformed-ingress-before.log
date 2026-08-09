@@ -1,0 +1,80 @@
+OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Loading: 0 packages loaded
+    currently loading: 
+Analyzing: target //:replay-contract-test (1 packages loaded)
+Analyzing: target //:replay-contract-test (5 packages loaded, 6 targets configured)
+Analyzing: target //:replay-contract-test (5 packages loaded, 6 targets configured)
+
+Analyzing: target //:replay-contract-test (11 packages loaded, 9 targets configured)
+
+Analyzing: target //:replay-contract-test (51 packages loaded, 9 targets configured)
+
+Analyzing: target //:replay-contract-test (78 packages loaded, 78 targets configured)
+
+Analyzing: target //:replay-contract-test (96 packages loaded, 677 targets configured)
+
+Analyzing: target //:replay-contract-test (122 packages loaded, 1578 targets configured)
+
+Analyzing: target //:replay-contract-test (147 packages loaded, 3169 targets configured)
+
+Analyzing: target //:replay-contract-test (184 packages loaded, 4644 targets configured)
+
+Analyzing: target //:replay-contract-test (203 packages loaded, 5399 targets configured)
+
+INFO: Analyzed target //:replay-contract-test (206 packages loaded, 5419 targets configured).
+[90 / 425] checking cached actions
+[423 / 425] [Prepa] Compiling Rust bin replay-contract-test (1 file)
+INFO: From Compiling Rust bin replay-contract-test (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+[424 / 425] [Prepa] runfiles for //:replay-contract-test
+[425 / 426] Testing //:replay-contract-test; 1s processwrapper-sandbox
+[425 / 426] Testing //:replay-contract-test; 9s processwrapper-sandbox
+[425 / 426] Testing //:replay-contract-test; 13s processwrapper-sandbox
+FAIL: //:replay-contract-test (Exit 101) (see /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/execroot/_main/bazel-out/aarch64-fastbuild/testlogs/replay-contract-test/test.log)
+INFO: From Testing //:replay-contract-test:
+==================== Test output for //:replay-contract-test:
+
+running 3 tests
+test live_malformed_ingress_precedes_a_later_acquisition_fault ... FAILED
+test malformed_oversized_and_unterminated_transport_terminally_revoke ... ok
+test live_merge_held_malformed_candidates_revoke_before_queued_output ... FAILED
+
+failures:
+
+---- live_malformed_ingress_precedes_a_later_acquisition_fault stdout ----
+
+thread 'live_malformed_ingress_precedes_a_later_acquisition_fault' (56969) panicked at tests/replay-contract.rs:3412:9:
+malformed ingress must win before receipt release or a later acquisition fault
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- live_merge_held_malformed_candidates_revoke_before_queued_output stdout ----
+
+thread 'live_merge_held_malformed_candidates_revoke_before_queued_output' (56971) panicked at tests/replay-contract.rs:3412:9:
+malformed ingress must win before receipt release or a later acquisition fault
+
+
+failures:
+    live_malformed_ingress_precedes_a_later_acquisition_fault
+    live_merge_held_malformed_candidates_revoke_before_queued_output
+
+test result: FAILED. 1 passed; 2 failed; 0 ignored; 0 measured; 41 filtered out; finished in 13.90s
+
+================================================================================
+INFO: Found 1 test target...
+Target //:replay-contract-test up-to-date:
+  bazel-bin/replay-contract-test
+INFO: Elapsed time: 34.147s, Critical Path: 16.18s
+INFO: 4 processes: 422 action cache hit, 2 internal, 3 processwrapper-sandbox.
+INFO: Build completed, 1 test FAILED, 4 total actions
+//:replay-contract-test                                                  FAILED in 13.9s
+  /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/execroot/_main/bazel-out/aarch64-fastbuild/testlogs/replay-contract-test/test.log
+
+Executed 1 out of 1 test: 1 fails locally.

@@ -1,0 +1,57 @@
+OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //:physical-study-contract-test (1 packages loaded)
+Analyzing: target //:physical-study-contract-test (5 packages loaded, 6 targets configured)
+Analyzing: target //:physical-study-contract-test (5 packages loaded, 6 targets configured)
+
+Analyzing: target //:physical-study-contract-test (10 packages loaded, 9 targets configured)
+
+Analyzing: target //:physical-study-contract-test (62 packages loaded, 9 targets configured)
+
+Analyzing: target //:physical-study-contract-test (83 packages loaded, 271 targets configured)
+
+Analyzing: target //:physical-study-contract-test (106 packages loaded, 820 targets configured)
+
+Analyzing: target //:physical-study-contract-test (124 packages loaded, 2162 targets configured)
+
+Analyzing: target //:physical-study-contract-test (148 packages loaded, 3108 targets configured)
+
+Analyzing: target //:physical-study-contract-test (181 packages loaded, 4470 targets configured)
+
+Analyzing: target //:physical-study-contract-test (203 packages loaded, 5400 targets configured)
+
+INFO: Analyzed target //:physical-study-contract-test (206 packages loaded, 5419 targets configured).
+[142 / 425] checking cached actions
+[423 / 425] [Prepa] Compiling Rust bin physical-study-contract-test (1 file)
+INFO: From Compiling Rust bin physical-study-contract-test (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+[424 / 425] [Prepa] runfiles for //:physical-study-contract-test
+[425 / 426] Testing //:physical-study-contract-test; 1s processwrapper-sandbox
+[425 / 426] Testing //:physical-study-contract-test; 11s processwrapper-sandbox
+[425 / 426] Testing //:physical-study-contract-test; 15s processwrapper-sandbox
+INFO: From Testing //:physical-study-contract-test:
+==================== Test output for //:physical-study-contract-test:
+
+running 1 test
+test export_complete_study_boundary_cli_fixtures ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 25 filtered out; finished in 15.35s
+
+================================================================================
+INFO: Found 1 test target...
+Target //:physical-study-contract-test up-to-date:
+  bazel-bin/physical-study-contract-test
+INFO: Elapsed time: 34.230s, Critical Path: 16.79s
+INFO: 4 processes: 422 action cache hit, 2 internal, 3 processwrapper-sandbox.
+INFO: Build completed successfully, 4 total actions
+//:physical-study-contract-test                                          PASSED in 15.4s
+
+Executed 1 out of 1 test: 1 test passes.
+There were tests whose specified size is too big. Use the --test_verbose_timeout_warnings command line option to see which ones these are.

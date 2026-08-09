@@ -1,0 +1,248 @@
+OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Loading: 0 packages loaded
+    currently loading: 
+Analyzing: 5 targets (2 packages loaded)
+Analyzing: 5 targets (5 packages loaded, 6 targets configured)
+Analyzing: 5 targets (5 packages loaded, 6 targets configured)
+
+Analyzing: 5 targets (13 packages loaded, 9 targets configured)
+
+Analyzing: 5 targets (65 packages loaded, 18 targets configured)
+
+Analyzing: 5 targets (82 packages loaded, 363 targets configured)
+
+Analyzing: 5 targets (102 packages loaded, 997 targets configured)
+
+Analyzing: 5 targets (141 packages loaded, 2702 targets configured)
+
+Analyzing: 5 targets (168 packages loaded, 3502 targets configured)
+
+Analyzing: 5 targets (200 packages loaded, 4951 targets configured)
+
+Analyzing: 5 targets (209 packages loaded, 5500 targets configured)
+
+INFO: Analyzed 5 targets (209 packages loaded, 5500 targets configured).
+[228 / 450] checking cached actions
+[448 / 460] [Prepa] Compiling Rust rlib invisible_keyboard (35 files)
+[448 / 460] Compiling Rust rlib invisible_keyboard (35 files); 1s processwrapper-sandbox
+[448 / 460] Compiling Rust rlib invisible_keyboard (35 files); 9s processwrapper-sandbox
+[449 / 460] [Prepa] Compiling Rust bin calibration-app-contract-test (1 file)
+INFO: From Compiling Rust bin calibration-app-contract-test (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+[450 / 460] [Prepa] runfiles for //:calibration-app-contract-test
+INFO: From Compiling Rust bin device-transport-contract-test (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+[453 / 462] Compiling Rust bin replay-contract-test (1 file); 0s processwrapper-sandbox
+INFO: From Compiling Rust bin replay-contract-test (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+INFO: From Compiling Rust bin calibration-contract-test (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+[456 / 463] [Prepa] runfiles for //:calibration-contract-test
+[457 / 464] Compiling Rust bin invisible-keyboard (1 file); 1s processwrapper-sandbox
+INFO: From Compiling Rust bin invisible-keyboard (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+[458 / 464] Compiling Rust bin cli-unit-tests (1 file); 0s processwrapper-sandbox
+INFO: From Compiling Rust bin cli-unit-tests (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+[459 / 464] [Prepa] runfiles for //:cli-unit-tests
+INFO: From Testing //:cli-unit-tests:
+==================== Test output for //:cli-unit-tests:
+
+running 7 tests
+test gate0_footer_commit_tests::footer_claim_before_signal_store_remains_committed ... ok
+test gate0_footer_commit_tests::signal_store_before_footer_claim_wins_and_prevents_finish ... ok
+test live_evidence_tests::evidence_retention_failure_is_attached_without_replacing_primary ... ok
+test live_evidence_tests::capacity_error_retains_trigger_and_mailbox_backlog ... ok
+test live_evidence_tests::late_publication_retains_trigger_and_mailbox_backlog ... ok
+test live_evidence_tests::receipt_regression_retains_trigger_and_mailbox_backlog ... ok
+test live_evidence_tests::terminal_snapshot_closes_before_blocking_and_failed_evidence_io ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+
+================================================================================
+[461 / 465] 1 / 5 tests; Testing //:calibration-app-contract-test; 1s processwrapper-sandbox
+[461 / 465] 1 / 5 tests; Testing //:calibration-app-contract-test; 5s processwrapper-sandbox
+INFO: From Testing //:calibration-app-contract-test:
+==================== Test output for //:calibration-app-contract-test:
+
+running 31 tests
+test a_published_saved_result_is_read_only_until_exact_acknowledgement ... ok
+test a_surface_label_requires_the_browser_to_acknowledge_the_rendered_instruction ... ok
+test calibration_action_uses_one_typed_kebab_case_wire_vocabulary ... ok
+test calibration_failure_codes_are_stable_and_exhaustive ... ok
+test abort_revokes_capture_and_cannot_leave_passed_validation ... ok
+test confirmed_layout_decision_is_idempotent_and_cannot_flip_to_rejection ... ok
+test capture_lease_liveness_uses_the_exact_service_revision ... ok
+test dropped_browser_watchdog_expires_capture_fail_closed ... ok
+test elapsed_seconds_are_exposed_as_exact_revision_stable_state ... ok
+test frontend_contains_the_accessible_seven_screen_contract ... ok
+test hardware_abort_accepts_stale_rendered_revision_after_elapsed_progress ... ok
+test hardware_capture_cannot_resume_or_label_after_pause ... ok
+test hardware_http_abort_accepts_stale_revision_only_with_loopback_authorization ... ok
+test hardware_lease_requires_one_persisted_layout_confirmation ... ok
+test hardware_stop_preserves_terminal_failure_after_rendered_state_changes ... ok
+test hardware_worker_events_drive_the_same_finite_seven_screen_state_machine ... ok
+test hidden_tab_expires_capture_and_blocks_further_labels ... ok
+test http_layout_confirmation_uses_connection_accept_time ... ok
+test http_surface_acknowledgement_preserves_first_accept_time_across_retries ... ok
+test layout_confirmation_uses_its_dedicated_revision_across_unrelated_state_updates ... ok
+test loopback_http_requires_the_per_process_token_and_origin ... ok
+test malformed_http_isolated_to_one_connection ... ok
+test no_data_keyboard_precheck_is_explicitly_unknown ... ok
+test progressing_http_body_has_a_cumulative_deadline ... ok
+test progressing_http_headers_have_a_cumulative_deadline ... ok
+test published_result_http_allows_reads_and_only_the_acknowledgement_action ... ok
+test rejected_keyboard_evidence_rotates_equal_score_prompts ... ok
+test rejected_layout_decision_is_typed_terminal_idempotent_and_irreversible ... ok
+test simulated_replay_visits_all_seven_screens_and_never_claims_hardware ... ok
+test stalled_http_connection_times_out_without_blocking_the_service ... ok
+test every_snapshot_visible_error_or_lease_loss_advances_the_revision ... ok
+
+test result: ok. 31 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 5.07s
+
+================================================================================
+INFO: From Testing //:calibration-contract-test:
+==================== Test output for //:calibration-contract-test:
+
+running 10 tests
+test a_validation_block_cannot_be_scored_twice_in_different_stages ... ok
+test abort_revokes_a_validation_passed_state ... ok
+test complete_locked_validation_reaches_validation_passed ... ok
+test deterministic_prompts_cover_keyboard_then_all_surface_positions ... ok
+test duplicate_weak_position_hints_raise_the_target_only_once ... ok
+test elapsed_time_cap_terminates_instead_of_requesting_infinite_text ... ok
+test keyboard_validation_targets_weak_positions_and_stops_on_plateau ... ok
+test locked_surface_validation_cannot_mutate_training_state ... ok
+test rejected_examples_never_advance_coverage ... ok
+test training_and_validation_blocks_cannot_overlap ... ok
+
+test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+================================================================================
+[463 / 465] 3 / 5 tests; Testing //:replay-contract-test; 1s processwrapper-sandbox
+[463 / 465] 3 / 5 tests; Testing //:replay-contract-test; 11s processwrapper-sandbox
+[463 / 465] 3 / 5 tests; Testing //:replay-contract-test; 41s processwrapper-sandbox
+[463 / 465] 3 / 5 tests; Testing //:replay-contract-test; 49s processwrapper-sandbox
+INFO: From Testing //:replay-contract-test:
+==================== Test output for //:replay-contract-test:
+
+running 44 tests
+test artifact_reference_and_calibration_sensitive_settings_fail_closed ... ok
+test calibrated_live_fails_when_startup_neutralization_fails ... ok
+test calibrated_live_output_failure_recovers_and_finishes_neutral ... ok
+test calibrated_live_preserves_transport_primary_and_reports_failed_all_up ... ok
+test artifact_bound_two_hand_replay_emits_exact_core28_taps_and_neutralizes ... ok
+test calibrated_replay_preserves_output_cause_and_independent_recovery_failure ... ok
+test calibrated_replay_rejects_gate0_control_records_instead_of_replaying_them ... ok
+test causal_live_path_warms_both_clocks_before_emitting_and_finishes_neutral ... ok
+test calibrated_replay_rejects_forged_offline_clock_authority_before_output ... ok
+test clean_finish_revokes_wear_session_without_recording_a_terminal_fault ... ok
+test evidence_invalidating_abstention_terminally_revokes ... ok
+test host_receipt_regression_remains_primary_when_independent_all_up_fails ... ok
+test host_receipt_regression_revokes_before_clock_or_output_progress ... ok
+test live_accepts_reader_receipts_older_than_a_later_processing_tick ... ok
+test live_acquisition_integrity_faults_during_initial_clock_warmup_terminally_revoke ... ok
+test live_acquisition_integrity_faults_with_only_one_clock_ready_terminally_revoke ... ok
+test live_cli_ingress_healthy_receipt_merger_preserves_expected_output ... ok
+test live_cli_ingress_revokes_merge_held_faults_before_signal_and_retains_incident ... ok
+test live_disconnect_discards_pending_work_resets_clocks_and_finishes_neutral ... ok
+test live_disconnect_prevents_finish_from_emitting_a_buffered_tap ... ok
+test live_host_clock_regression_revokes_without_watchdog_attribution ... ok
+test live_ingress_closes_admission_after_neutralization_before_releasing_any_evidence ... ok
+test live_ingress_update_cannot_be_released_by_another_authority ... ok
+test live_malformed_ingress_precedes_a_later_acquisition_fault ... ok
+test live_merge_held_malformed_candidates_revoke_before_queued_output ... ok
+test live_pending_capacity_terminally_revokes_without_rearm ... ok
+test live_planned_signals_stop_output_through_the_canonical_safety_owner ... ok
+test live_rejects_an_unacceptable_mapping_before_it_can_arm_output ... ok
+test live_sensor_time_regressions_revoke_before_clock_or_window_progress ... ok
+test live_sequence_gap_revokes_during_warmup_and_partial_window_fill ... ok
+test live_source_loss_revokes_the_instance_without_rearm ... ok
+test live_warmup_integrity_preserves_primary_fault_when_neutralization_fails ... ok
+test live_watchdog_rejects_every_later_frame_without_new_confirmation ... ok
+test live_watchdog_revokes_when_right_stops_during_continuous_left_traffic ... ok
+test live_watchdog_terminally_revokes_and_cannot_rearm ... ok
+test malformed_oversized_and_unterminated_transport_terminally_revoke ... ok
+test every_per_sensor_physical_provenance_change_fails_closed ... ok
+test post_arm_partial_window_integrity_faults_revoke_before_output ... ok
+test recorded_replay_preserves_the_source_layout_confirmation_receipt ... ok
+test nonidentity_finger_and_dorsal_axes_decode_identically_in_replay_and_live ... ok
+test replay_pending_capacity_fails_closed_with_a_typed_error ... ok
+test runtime_binding_allows_only_new_boot_and_session_metadata ... ok
+test stale_device_backlog_then_fresh_timestamp_jump_never_arms_or_emits ... ok
+test runtime_artifact_reference_binds_the_frozen_matching_rule ... ok
+
+test result: ok. 44 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 49.02s
+
+================================================================================
+INFO: From Testing //:device-transport-contract-test:
+==================== Test output for //:device-transport-contract-test:
+
+running 19 tests
+test adversarial_chunking_keeps_each_source_cobs_state_isolated ... ok
+test bootstrap_discovers_both_boots_and_preserves_every_input_byte ... ok
+test bootstrap_rejects_empty_and_duplicate_topologies ... ok
+test bootstrap_rejects_wrong_controller_boot_change_timeout_and_unbounded_input ... ok
+test cross_thread_delivery_reorder_is_merged_by_receipt_time ... ok
+test default_merger_budgets_50_ms_for_reader_thread_delivery_reorder ... ok
+test bootstrap_admits_one_declared_hand_and_returns_all_identities_in_hand_order ... ok
+test gate0_dispatch_rejects_duplicate_requests_wrong_identity_and_time_regression ... ok
+test gate0_dispatch_rejects_every_byte_after_receipt_including_the_same_read ... ok
+test gate0_dispatch_requires_request_binding_and_a_post_request_clean_frame ... ok
+test malformed_candidate_on_one_source_does_not_poison_the_other_source ... ok
+test one_stream_disconnect_retains_its_partial_record_and_does_not_stop_the_other ... ok
+test oversized_candidate_retains_its_source_and_bounded_prefix ... ok
+test pending_candidate_capacity_is_hard_and_overflow_is_atomic ... ok
+test receipt_regression_late_delivery_and_source_silence_are_explicit ... ok
+test simultaneous_frames_have_a_deterministic_source_tie_break ... ok
+test source_configuration_is_unique_and_the_input_event_is_thread_friendly ... ok
+test wrong_hand_frames_are_retained_but_marked_as_identity_faults ... ok
+test gate0_dispatch_accepts_one_bound_receipt_after_its_immediate_clean_frame ... ok
+
+test result: ok. 19 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.03s
+
+================================================================================
+INFO: Found 5 test targets...
+INFO: Elapsed time: 95.602s, Critical Path: 66.34s
+INFO: 18 processes: 447 action cache hit, 6 internal, 17 processwrapper-sandbox.
+INFO: Build completed successfully, 18 total actions
+//:calibration-app-contract-test                                         PASSED in 5.1s
+//:calibration-contract-test                                             PASSED in 0.1s
+//:cli-unit-tests                                                        PASSED in 0.1s
+//:device-transport-contract-test                                        PASSED in 0.1s
+//:replay-contract-test                                                  PASSED in 49.1s
+
+Executed 5 out of 5 tests: 5 tests pass.

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="controller-source-contract-test" tests="1" failures="0" errors="0">
+    <testcase name="controller-source-contract-test" status="run" duration="0" time="0"></testcase>
+      <system-out>
+Generated test.log (if the file is not UTF-8, then this may be unreadable):
+<![CDATA[exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+Executing tests from //:controller-source-contract-test
+-----------------------------------------------------------------------------
+
+running 8 tests
+test character_device_that_is_not_a_tty_fails_closed ... ok
+test fifo_is_an_untouched_byte_stream ... ok
+test gate0_controller_is_one_exclusive_duplex_raw_tty ... ok
+test gate0_controller_rejects_non_tty_sources ... ok
+test gate0_private_pipes_publish_once_and_preserve_stop_eof_as_a_separate_event ... ok
+test gate0_private_pipes_reject_aliases_standard_fds_files_and_reversed_access ... ok
+test regular_file_is_an_untouched_byte_stream ... ok
+test real_pty_is_configured_and_read_back_as_byte_exact_raw_8n1 ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s]]>
+      </system-out>
+    </testsuite>
+</testsuites>

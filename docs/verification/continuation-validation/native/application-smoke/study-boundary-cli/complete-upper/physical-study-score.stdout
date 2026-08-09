@@ -1,0 +1,7 @@
+physical_study=deterministically-scored
+disposition=go
+evidence=/tmp/ikb-study-boundary-obz_k50g/evidence.jsonl
+manifest=/tmp/ikb-study-boundary-obz_k50g/manifest.json
+plan=/tmp/ikb-study-boundary-obz_k50g/plan.json
+report=/home/ubuntu/continuation-proof-native-v13/application-smoke/study-boundary-cli/complete-upper/report.json
+report_sha256=ccb65289427901346ce1c7cb1fba5f5df6700eb26f3bf5853921e4237dfa4f7c

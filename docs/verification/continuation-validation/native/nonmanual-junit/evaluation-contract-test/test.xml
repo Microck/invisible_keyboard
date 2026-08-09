@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="evaluation-contract-test" tests="1" failures="0" errors="0">
+    <testcase name="evaluation-contract-test" status="run" duration="33" time="33"></testcase>
+      <system-out>
+Generated test.log (if the file is not UTF-8, then this may be unreadable):
+<![CDATA[exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+Executing tests from //:evaluation-contract-test
+-----------------------------------------------------------------------------
+
+running 5 tests
+test breakpoint_sweeps_expose_model_failure_instead_of_staying_all_green ... ok
+test nominal_report_does_not_claim_physical_evidence ... ok
+test default_synthetic_stress_suite_is_deterministic ... ok
+test simulated_latency_reaches_the_recording_output_after_the_causal_delay ... ok
+test stress_suite_covers_every_position_and_fault_dimension ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 33.09s]]>
+      </system-out>
+    </testsuite>
+</testsuites>

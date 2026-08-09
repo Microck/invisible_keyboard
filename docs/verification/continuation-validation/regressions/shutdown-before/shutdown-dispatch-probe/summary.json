@@ -1,0 +1,27 @@
+{
+  "binary_sha256": "5e11cfd6b422df87056b57e61504762032f1122874695494739959d239e331b8",
+  "effective_uid": 1000,
+  "kernel": [
+    "Linux",
+    "invisible-keyboard-proof",
+    "6.8.0-142-generic",
+    "#142-Ubuntu SMP PREEMPT_DYNAMIC Wed Sep  2 14:24:27 UTC 2026",
+    "x86_64"
+  ],
+  "modes": {
+    "external-kill": {
+      "cycles": 20,
+      "deadline_failures": 0,
+      "max_dispatch_us": 223882.329,
+      "max_parent_us": 236871.371,
+      "max_native_release_us": 15921.914
+    },
+    "direct-kill": {
+      "cycles": 20,
+      "deadline_failures": 0,
+      "max_dispatch_us": 4152.454,
+      "max_parent_us": 48976.985,
+      "max_native_release_us": 28124.209
+    }
+  }
+}

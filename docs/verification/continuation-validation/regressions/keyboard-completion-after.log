@@ -1,0 +1,26 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+Executing tests from //:calibration-capture-contract-test
+-----------------------------------------------------------------------------
+
+running 18 tests
+test compressed_surface_timeline_is_rejected_even_when_each_receipt_is_internally_ordered ... ok
+test first_canonical_fitting_quiet_id_resolves_and_completes ... ok
+test held_out_capture_requires_the_frozen_matching_rule ... ok
+test held_out_keyboard_activity_is_state_only_keyboard_provenance ... ok
+test keyboard_completion::complete_press_waits_for_release_and_keeps_original_down_provenance ... ok
+test canonical_fitting_and_held_out_facts_round_trip_and_are_complete ... ok
+test keyboard_completion::modifier_after_down_invalidates_the_complete_press_including_state_only_events ... ok
+test keyboard_completion::unreleased_press_has_no_matched_observation_or_coverage_and_is_not_neutral ... ok
+test keyboard_completion::overlapping_presses_remain_raw_without_matched_observations_or_coverage ... ok
+test passive_surface_receipts_require_one_monotonic_rendered_revision ... ok
+test parser_rejects_role_block_and_null_kind_injection ... ok
+test persisted_plan_hash_cannot_be_rebound_after_capture ... ok
+test purpose_plan_artifact_and_seed_bindings_are_exact ... ok
+test same_finger_a_to_q_prompt_relabel_is_rejected_by_plan_order ... ok
+test quiet_prompt_cannot_be_reclassified_as_ordinary_motion ... ok
+test surface_facts_reject_nonincreasing_prompt_time_and_revision ... ok
+test surface_fact_schema_has_no_role_block_position_null_or_hand_channel ... ok
+test surface_facts_reject_unknown_duplicate_missing_and_reordered_prompt_ids ... ok
+
+test result: ok. 18 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 4.16s
+

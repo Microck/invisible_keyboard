@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="neutral-contract-test" tests="1" failures="0" errors="0">
+    <testcase name="neutral-contract-test" status="run" duration="0" time="0"></testcase>
+      <system-out>
+Generated test.log (if the file is not UTF-8, then this may be unreadable):
+<![CDATA[exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+Executing tests from //:neutral-contract-test
+-----------------------------------------------------------------------------
+
+running 9 tests
+test acquisition_faults_bad_clocks_short_evidence_and_any_invalid_candidate_are_rejected ... ok
+test independently_derived_neutral_rejects_repeated_raw_sample_outside_selected_windows ... ok
+test canonical_json_round_trip_and_source_bound_mutation_detection ... ok
+test manifest_clock_session_and_window_identities_must_all_match ... ok
+test neutral_authority_rejects_altered_clock_report_and_rebound_fingerprint ... ok
+test missing_hands_sensors_invalid_frames_and_loss_fail_closed ... ok
+test neutral_evidence_rejects_gate0_control_records_as_their_own_context_error ... ok
+test report_derives_inspectable_two_hand_six_sensor_evidence ... ok
+test neutral_authority_rejects_raw_receipt_faults_despite_passing_clock_statistics ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.49s]]>
+      </system-out>
+    </testsuite>
+</testsuites>

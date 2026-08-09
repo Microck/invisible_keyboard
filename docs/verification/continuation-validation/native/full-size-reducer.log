@@ -1,0 +1,70 @@
+OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //:gate0-trace-contract-test (1 packages loaded)
+Analyzing: target //:gate0-trace-contract-test (5 packages loaded, 6 targets configured)
+Analyzing: target //:gate0-trace-contract-test (5 packages loaded, 6 targets configured)
+
+Analyzing: target //:gate0-trace-contract-test (20 packages loaded, 9 targets configured)
+
+Analyzing: target //:gate0-trace-contract-test (68 packages loaded, 42 targets configured)
+
+Analyzing: target //:gate0-trace-contract-test (89 packages loaded, 576 targets configured)
+
+Analyzing: target //:gate0-trace-contract-test (116 packages loaded, 1333 targets configured)
+
+Analyzing: target //:gate0-trace-contract-test (144 packages loaded, 2634 targets configured)
+
+Analyzing: target //:gate0-trace-contract-test (175 packages loaded, 3995 targets configured)
+
+Analyzing: target //:gate0-trace-contract-test (209 packages loaded, 5446 targets configured)
+
+INFO: Analyzed target //:gate0-trace-contract-test (210 packages loaded, 5450 targets configured).
+[82 / 442] checking cached actions
+[442 / 443] [Prepa] Testing //:gate0-trace-contract-test
+[442 / 443] Testing //:gate0-trace-contract-test; 1s processwrapper-sandbox
+[442 / 443] Testing //:gate0-trace-contract-test; 11s processwrapper-sandbox
+[442 / 443] Testing //:gate0-trace-contract-test; 41s processwrapper-sandbox
+[442 / 443] Testing //:gate0-trace-contract-test; 101s processwrapper-sandbox
+[442 / 443] Testing //:gate0-trace-contract-test; 161s processwrapper-sandbox
+[442 / 443] Testing //:gate0-trace-contract-test; 221s processwrapper-sandbox
+[442 / 443] Testing //:gate0-trace-contract-test; 281s processwrapper-sandbox
+[442 / 443] Testing //:gate0-trace-contract-test; 341s processwrapper-sandbox
+[442 / 443] Testing //:gate0-trace-contract-test; 401s processwrapper-sandbox
+[442 / 443] Testing //:gate0-trace-contract-test; 461s processwrapper-sandbox
+[442 / 443] Testing //:gate0-trace-contract-test; 521s processwrapper-sandbox
+[442 / 443] Testing //:gate0-trace-contract-test; 581s processwrapper-sandbox
+[442 / 443] Testing //:gate0-trace-contract-test; 641s processwrapper-sandbox
+[442 / 443] Testing //:gate0-trace-contract-test; 701s processwrapper-sandbox
+[442 / 443] Testing //:gate0-trace-contract-test; 761s processwrapper-sandbox
+[442 / 443] Testing //:gate0-trace-contract-test; 821s processwrapper-sandbox
+[442 / 443] Testing //:gate0-trace-contract-test; 881s processwrapper-sandbox
+[442 / 443] Testing //:gate0-trace-contract-test; 941s processwrapper-sandbox
+[442 / 443] Testing //:gate0-trace-contract-test; 1001s processwrapper-sandbox
+[442 / 443] Testing //:gate0-trace-contract-test; 1061s processwrapper-sandbox
+[442 / 443] Testing //:gate0-trace-contract-test; 1121s processwrapper-sandbox
+[442 / 443] Testing //:gate0-trace-contract-test; 1181s processwrapper-sandbox
+[442 / 443] Testing //:gate0-trace-contract-test; 1241s processwrapper-sandbox
+[442 / 443] Testing //:gate0-trace-contract-test; 1301s processwrapper-sandbox
+[442 / 443] Testing //:gate0-trace-contract-test; 1307s processwrapper-sandbox
+INFO: From Testing //:gate0-trace-contract-test:
+==================== Test output for //:gate0-trace-contract-test:
+
+running 1 test
+test canonical_raw_scan_uses_bounded_streaming_state has been running for over 60 seconds
+test canonical_raw_scan_uses_bounded_streaming_state ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 38 filtered out; finished in 1307.40s
+
+================================================================================
+INFO: Found 1 test target...
+Target //:gate0-trace-contract-test up-to-date:
+  bazel-bin/gate0-trace-contract-test
+INFO: Elapsed time: 1329.170s, Critical Path: 1308.00s
+INFO: 2 processes: 441 action cache hit, 1 internal, 2 processwrapper-sandbox.
+INFO: Build completed successfully, 2 total actions
+//:gate0-trace-contract-test                                             PASSED in 1307.4s
+
+Executed 1 out of 1 test: 1 test passes.
+There were tests whose specified size is too big. Use the --test_verbose_timeout_warnings command line option to see which ones these are.

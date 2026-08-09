@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="runtime-contract-test" tests="1" failures="0" errors="0">
+    <testcase name="runtime-contract-test" status="run" duration="0" time="0"></testcase>
+      <system-out>
+Generated test.log (if the file is not UTF-8, then this may be unreadable):
+<![CDATA[exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+Executing tests from //:runtime-contract-test
+-----------------------------------------------------------------------------
+
+running 18 tests
+test adapter_failure_preserves_the_cause_and_independent_recovery_failure ... ok
+test adapter_failure_after_key_down_forces_independent_all_up ... ok
+test bad_frame_checksum_never_enters_the_decoder ... ok
+test arbitrary_transport_chunks_reach_one_exact_key_pair ... ok
+test decoded_frame_runtime_keeps_raw_offsets_and_projects_commit_time ... ok
+test byte_and_candidate_runtime_paths_preserve_raw_commit_timestamps ... ok
+test evidence_abstention_remains_primary_when_neutralization_fails ... ok
+test disconnect_preserves_unterminated_evidence_and_forces_all_up ... ok
+test malformed_transport_forces_independent_all_up_and_resets_context ... ok
+test malformed_transport_remains_primary_when_neutralization_fails ... ok
+test one_and_two_hand_runtimes_arm_only_for_their_declared_sources ... ok
+test planned_shutdown_stops_rearming_and_leaves_final_state_neutral ... ok
+test runtime_construction_fails_when_startup_neutralization_fails ... ok
+test source_loss_revokes_run_ownership_until_the_declared_source_returns ... ok
+test sequence_gap_reaches_one_explicit_abstention_and_forces_all_up ... ok
+test two_hand_runtime_rejects_swapped_or_duplicate_decoder_topology ... ok
+test watchdog_timeout_resets_context_and_invokes_independent_all_up ... ok
+test two_hand_runtime_dispatches_both_decoders_through_one_output_state ... ok
+
+test result: ok. 18 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.23s]]>
+      </system-out>
+    </testsuite>
+</testsuites>

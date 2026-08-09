@@ -1,0 +1,53 @@
+OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Loading: 1 packages loaded
+Analyzing: target //:gate0a-capture-stack-test (5 packages loaded, 6 targets configured)
+Analyzing: target //:gate0a-capture-stack-test (5 packages loaded, 6 targets configured)
+
+Analyzing: target //:gate0a-capture-stack-test (25 packages loaded, 8 targets configured)
+
+Analyzing: target //:gate0a-capture-stack-test (74 packages loaded, 52 targets configured)
+
+INFO: Analyzed target //:gate0a-capture-stack-test (86 packages loaded, 1026 targets configured).
+[1 / 1] no actions running
+[7 / 8] Testing //:gate0a-capture-stack-test; 1s processwrapper-sandbox
+[7 / 8] Testing //:gate0a-capture-stack-test; 11s processwrapper-sandbox
+[7 / 8] Testing //:gate0a-capture-stack-test; 19s processwrapper-sandbox
+INFO: From Testing //:gate0a-capture-stack-test:
+==================== Test output for //:gate0a-capture-stack-test:
+test_analyzer_failure_aborts_recorder_and_suppresses_publication (__main__.CaptureContractTests) ... ok
+test_chunk_jump_beyond_stop_window_suppresses_publication (__main__.CaptureContractTests) ... ok
+test_invalid_final_analyzer_log_never_authorizes_a_recorder_footer (__main__.CaptureContractTests) ... ok
+test_production_wrapper_invocation_publishes_one_complete_set (__main__.CaptureContractTests) ... ok
+test_publication_rolls_back_finals_and_keeps_all_partials (__main__.CaptureContractTests) ... ok
+test_readiness_after_the_boot_window_suppresses_publication (__main__.CaptureContractTests) ... ok
+test_readiness_at_the_boot_window_boundary_preserves_the_full_capture (__main__.CaptureContractTests) ... ok
+test_readiness_requires_one_byte_followed_by_eof (__main__.CaptureContractTests) ... ok
+test_recorder_failure_aborts_analyzer_and_suppresses_publication (__main__.CaptureContractTests) ... ok
+test_recorder_log_quota_aborts_both_children (__main__.CaptureContractTests) ... ok
+test_signal_aborts_both_children_without_publication (__main__.CaptureContractTests) ... ok
+test_crabbox_finalizer_hashes_large_inputs_and_resists_scorer_replacement (__main__.FinalizationContractTests) ... ok
+test_final_sidecar_and_report_publish_as_a_pair (__main__.FinalizationContractTests) ... ok
+test_finalizer_rejects_a_distinct_scorer_identity (__main__.FinalizationContractTests) ... ok
+test_log_binds_driver_stop_session_manifest_and_firmware (__main__.FinalizationContractTests) ... ok
+test_scorer_failure_is_fail_closed (__main__.FinalizationContractTests) ... ok
+test_scorer_stderr_quota_is_fail_closed (__main__.FinalizationContractTests) ... ok
+test_bazel_build_entrypoint_resolves_declared_inputs (__main__.StaticCaptureStackContractTests) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 19.205s
+
+OK
+================================================================================
+INFO: Found 1 test target...
+Target //:gate0a-capture-stack-test up-to-date:
+  bazel-bin/gate0a-capture-stack-test
+INFO: Elapsed time: 26.053s, Critical Path: 19.40s
+INFO: 2 processes: 6 action cache hit, 1 internal, 2 processwrapper-sandbox.
+INFO: Build completed successfully, 2 total actions
+//:gate0a-capture-stack-test                                             PASSED in 19.3s
+
+Executed 1 out of 1 test: 1 test passes.
+There were tests whose specified size is too big. Use the --test_verbose_timeout_warnings command line option to see which ones these are.

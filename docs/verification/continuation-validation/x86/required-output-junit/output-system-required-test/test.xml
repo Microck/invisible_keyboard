@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="output-system-required-test" tests="1" failures="0" errors="0">
+    <testcase name="output-system-required-test" status="run" duration="29" time="29"></testcase>
+      <system-out>
+Generated test.log (if the file is not UTF-8, then this may be unreadable):
+<![CDATA[exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+Executing tests from //:output-system-required-test
+-----------------------------------------------------------------------------
+
+running 6 tests
+test native_kernel_stress_executes_ten_thousand_pairs_and_finishes_neutral ... ok
+test native_probe_verifies_core28_identity_and_non_root_access ... ok
+test native_evdev_application_observes_every_core28_pair ... ok
+test selected_keyboard_open_queries_keys_held_before_reader_start ... ok
+test sigkill_destroys_the_owned_uinput_device_without_a_250ms_claim ... ok
+test planned_signals_are_application_observed_neutral_within_250ms ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 28.04s]]>
+      </system-out>
+    </testsuite>
+</testsuites>

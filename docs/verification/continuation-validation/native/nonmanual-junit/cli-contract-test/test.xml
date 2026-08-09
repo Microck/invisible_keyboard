@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="cli-contract-test" tests="1" failures="0" errors="0">
+    <testcase name="cli-contract-test" status="run" duration="573" time="573"></testcase>
+      <system-out>
+Generated test.log (if the file is not UTF-8, then this may be unreadable):
+<![CDATA[exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+Executing tests from //:cli-contract-test
+-----------------------------------------------------------------------------
+
+running 76 tests
+test calibrated_live_ingress_fault_retains_the_whole_chunk_after_clock_warmup ... ok
+test calibrated_live_run_locks_current_and_reset_boots_into_artifact_bound_outputs ... ok
+test calibrated_live_run_rejects_reused_or_existing_outputs_before_device_open ... ok
+test calibrated_live_run_rejects_swapped_and_wrong_controller_identity_without_outputs ... ok
+test calibrated_live_run_requires_artifact_and_calibration_output_directory ... ok
+test calibrated_live_run_requires_fresh_wear_confirmation_before_reading_inputs ... ok
+test calibrated_live_run_retains_bootstrap_bytes_once_and_creates_nothing_before_lock ... ok
+test calibrated_live_run_times_out_a_missing_identity_without_outputs ... ok
+test calibrated_live_watchdog_revokes_during_continuous_empty_transport_traffic ... ok
+test calibrated_replay_rejects_a_runtime_manifest_from_another_physical_rig ... ok
+test calibrated_replay_requires_every_identity_sidecar ... ok
+test calibrated_replay_runs_only_after_recomputing_the_canonical_heldout_bundle ... ok
+test calibration_demo_rejects_invalid_ports_before_binding ... ok
+test capture_commands_never_overwrite_an_existing_session ... ok
+test capture_fails_before_creating_output_when_template_is_missing_or_invalid ... ok
+test commissioning_cli_abort_paths_retain_partial_evidence_without_publishing_reports ... ok
+test commissioning_cli_guides_all_right_hand_poses_and_replay_reproduces_the_report ... ok
+test commissioning_cli_rejects_noninteractive_capture_before_outputs_or_devices ... ok
+test commissioning_rig_hash_cli_uses_typed_canonical_bytes_not_input_formatting ... ok
+test delimited_stdin_capture_preserves_valid_and_invalid_candidates ... ok
+test evidence_bound_calibration_replay_requires_both_disjoint_bundles ... ok
+test firmware_and_host_frame_fixtures_are_byte_identical ... ok
+test gate0_quiesce_cli_contract::record_hand_abort_paths_never_write_a_footer ... ok
+test gate0_quiesce_cli_contract::record_hand_bounds_a_stalled_request_write_and_drain ... ok
+test gate0_quiesce_cli_contract::record_hand_completes_one_identity_bound_quiesce_transaction_over_real_kernel_io ... ok
+test gate0_quiesce_cli_contract::record_hand_observes_control_faults_during_stalled_transmission ... ok
+test gate0_quiesce_cli_contract::record_hand_receipt_deadline_applies_while_sensor_frames_keep_arriving ... ok
+test gate0_quiesce_cli_contract::record_hand_signals_before_the_footer_commit_abort_without_a_footer ... ok
+test gate0_quiesce_cli_contract::record_hand_waits_for_initial_usb_enumeration ... ok
+test gate0_quiesce_cli_contract::record_stream_signal_finishes_a_fragmented_record_without_a_partial_tail ... ok
+test generic_clock_fit_streams_a_healthy_session_beyond_the_setup_cap ... ok
+test hardware_calibration_rejects_reused_device_paths_before_opening_them ... ok
+test hardware_calibration_requires_two_controllers_keyboard_and_output_directory ... ok
+test help_names_the_hardware_free_commands ... ok
+test identity_bootstrap_rejects_a_boot_change_without_outputs ... ok
+test identity_bootstrap_rejects_the_wrong_controller_without_outputs ... ok
+test keyboard_discovery_is_a_runnable_bounded_diagnostic ... ok
+test layout_prints_all_34_positions_and_core28_count ... ok
+test live_transport_fault_remains_primary_when_secondary_finalization_fails ... ok
+test missing_input_is_reported_as_file_io_not_output_failure ... ok
+test operand_free_commands_reject_unexpected_arguments ... ok
+test physical_study_commands_reject_wrong_arity ... ok
+test physical_study_plan_failures_leave_no_partial_authoritative_pair ... ok
+test physical_study_plan_writes_the_exact_canonical_manifest_and_plan ... ok
+test physical_study_score_rejects_semantic_row_tamper_without_a_report ... ok
+test physical_study_score_waits_for_a_writer_and_never_publishes_its_stale_bytes ... ok
+test physical_study_score_writes_a_valid_bound_report_and_never_overwrites_it ... ok
+test physical_study_seal_appends_exact_rows_and_preserves_failures ... ok
+test physical_study_seal_serializes_concurrent_writers_at_the_total_byte_cap ... ok
+test planned_signals_finalize_an_open_stream_capture ... ok
+test planned_signals_finalize_calibrated_live_while_both_fifos_are_busy ... ok
+test record_hand_rejects_fifo_fixtures_because_gate0_requires_a_real_duplex_tty ... ok
+test record_hand_rejects_non_tty_character_device_before_identity_bootstrap ... ok
+test record_hand_rejects_wrong_topology_before_opening_any_controller_or_pipe ... ok
+test record_hand_requires_one_template_device_and_two_distinct_outputs ... ok
+test record_stream_finalizes_each_declared_single_hand_with_observed_boot_binding ... ok
+test record_stream_locks_wire_boots_into_the_manifest_before_recording ... ok
+test record_stream_rejects_device_count_mismatch_and_duplicate_sources_without_outputs ... ok
+test record_stream_requires_a_template_and_two_distinct_outputs ... ok
+test runtime_ignores_missing_corrupt_and_replaced_diagnostic_evidence ... ok
+test runtime_recomputes_and_rejects_a_real_failed_heldout_capture ... ok
+test runtime_rejects_invalid_capture_and_surface_plan_before_device_open ... ok
+test runtime_validation_rejects_forged_and_non_neutral_reports_in_live_and_replay ... ok
+test score_gate0a_reduces_raw_samples_and_writes_a_bound_report ... ok
+test score_gate0a_requires_native_capture_and_never_overwrites_a_report ... ok
+test score_pilot_reduces_bound_raw_evidence_without_authorizing_output ... ok
+test score_pilot_requires_the_complete_operand_layout ... ok
+test session_fixture_round_trips_through_cli_file_io ... ok
+test simulation_output_cannot_be_mistaken_for_physical_proof ... ok
+test source_fault_remains_primary_when_sigint_arrives_after_the_session_footer ... ok
+test sparse_oversized_json_and_gate0_session_fail_before_allocation ... ok
+test stream_capture_persists_oversized_and_unterminated_provenance ... ok
+test terminal_status_disconnect_cannot_erase_a_durable_live_bundle ... ok
+test two_hand_session_fixture_rejects_a_one_hand_manifest_before_file_creation ... ok
+test unknown_command_fails_with_a_direct_error ... ok
+test verification_rejects_a_different_acquisition_manifest ... ok
+
+test result: ok. 76 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 573.44s]]>
+      </system-out>
+    </testsuite>
+</testsuites>

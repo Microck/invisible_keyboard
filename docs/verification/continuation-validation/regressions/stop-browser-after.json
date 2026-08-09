@@ -1,0 +1,12 @@
+{
+  "evidence": "Real Chromium and production HTTP server inside Crabbox; synthetic hardware-mode coordinator fixture",
+  "postedRevision": 344,
+  "status": 200,
+  "responseBody": "{\"revision\":346,\"capture_lease_revision\":null,\"surface_instruction_revision\":null,\"evidence\":\"hardware\",\"limitation\":\"Hardware evidence is accepted only after stream and validation gates.\",\"phase\":\"aborted\",\"screen\":\"validation-result\",\"hardware_health\":\"passed recorded checks\",\"keyboard_device\":\"Synthetic browser-contract keyboard\",\"supported_keyboard_layout\":\"US QWERTY physical positions (us-qwerty-v1)\",\"keyboard_layout_prompt_id\":\"confirm-us-qwerty-v1\",\"keyboard_layout_instruction_revision\":null,\"keyboard_layout_confirmation\":\"confirmed\",\"keyboard_layout_confirmation_revision\":3,\"keyboard_layout_confirmation_host_time_ns\":1,\"prompt\":\"Keyboard block complete\",\"surface_target\":\"Surface block complete\",\"surface_position\":null,\"neutral_seconds\":3,\"elapsed_seconds\":1,\"keyboard_accepted\":232,\"keyboard_required\":232,\"keyboard_coverage_basis_points\":10000,\"keyboard_intent_separation_basis_points\":9500,\"keyboard_finger_agreement_basis_points\":9000,\"keyboard_precheck_evaluated_windows\":112,\"keyboard_weak_positions\":[],\"keyboard_precheck\":\"passed keyboard signal checks\",\"keyboard_accuracy\":\"Key-identity accuracy is not available from the keyboard precheck.\",\"surface_accepted\":102,\"surface_required\":102,\"rejected_examples\":0,\"setup_progress_basis_points\":9000,\"validation\":\"not-run\",\"heldout_validation_passed\":false,\"failure_cause\":null,\"result_acknowledgement\":\"unavailable\",\"result_acknowledgement_revision\":null,\"result_acknowledgement_host_time_ns\":null,\"paused\":true,\"last_error\":null}",
+  "expectedStatus": 200,
+  "currentRevision": 346,
+  "phase": "aborted",
+  "paused": true,
+  "captureLease": null,
+  "recordingState": "Setup paused"
+}

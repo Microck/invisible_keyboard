@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="label-contract-test" tests="1" failures="0" errors="0">
+    <testcase name="label-contract-test" status="run" duration="0" time="0"></testcase>
+      <system-out>
+Generated test.log (if the file is not UTF-8, then this may be unreadable):
+<![CDATA[exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+Executing tests from //:label-contract-test
+-----------------------------------------------------------------------------
+
+running 9 tests
+test deterministic_fake_source_uses_the_injected_shared_host_clock ... ok
+test alignment_is_one_to_one_in_the_shared_host_clock_domain ... ok
+test identity_change_during_a_source_read_cannot_leak_an_event ... ok
+test impulses_outside_the_frozen_window_remain_unmatched ... ok
+test linux_device_exposes_the_same_production_event_source_seam ... ok
+test modifiers_do_not_create_labels_or_overlap ... ok
+test only_a_clean_selected_left_shift_round_trip_identifies_the_keyboard ... ok
+test selected_keyboard_filter_preserves_down_up_and_rejection_reasons ... ok
+test source_identity_is_frozen_and_every_identity_mutation_disarms_labels ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s]]>
+      </system-out>
+    </testsuite>
+</testsuites>

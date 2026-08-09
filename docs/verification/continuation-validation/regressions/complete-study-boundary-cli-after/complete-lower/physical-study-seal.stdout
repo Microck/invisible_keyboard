@@ -1,0 +1,4 @@
+physical_study_row=sealed-and-appended
+row=/home/ubuntu/study-boundary-cli-fixtures/complete-lower/boundary-row.json
+row_sha256=a27d40e31f8093d350e67db401e5aa3f54441ac0a139336f90857bdc3f6f4f1d
+evidence=/tmp/ikb-study-boundary-287nzjoc/evidence.jsonl

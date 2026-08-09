@@ -1,0 +1,55 @@
+OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Loading: 0 packages loaded
+    currently loading: 
+Analyzing: target //:gate0a-capture-stack-test (5 packages loaded, 6 targets configured)
+Analyzing: target //:gate0a-capture-stack-test (5 packages loaded, 6 targets configured)
+
+Analyzing: target //:gate0a-capture-stack-test (84 packages loaded, 313 targets configured)
+
+INFO: Analyzed target //:gate0a-capture-stack-test (86 packages loaded, 1026 targets configured).
+[7 / 8] Testing //:gate0a-capture-stack-test; 0s processwrapper-sandbox
+[7 / 8] Testing //:gate0a-capture-stack-test; 10s processwrapper-sandbox
+[7 / 8] Testing //:gate0a-capture-stack-test; 40s processwrapper-sandbox
+[7 / 8] Testing //:gate0a-capture-stack-test; 81s processwrapper-sandbox
+INFO: From Testing //:gate0a-capture-stack-test:
+==================== Test output for //:gate0a-capture-stack-test:
+test_analyzer_failure_aborts_recorder_and_suppresses_publication (__main__.CaptureContractTests.test_analyzer_failure_aborts_recorder_and_suppresses_publication) ... ok
+test_capture_and_recorder_argv_are_exact (__main__.CaptureContractTests.test_capture_and_recorder_argv_are_exact) ... ok
+test_chunk_jump_beyond_stop_window_suppresses_publication (__main__.CaptureContractTests.test_chunk_jump_beyond_stop_window_suppresses_publication) ... ok
+test_production_wrapper_invocation_publishes_one_complete_set (__main__.CaptureContractTests.test_production_wrapper_invocation_publishes_one_complete_set) ... ok
+test_publication_rolls_back_finals_and_keeps_all_partials (__main__.CaptureContractTests.test_publication_rolls_back_finals_and_keeps_all_partials) ... ok
+test_readiness_requires_one_byte_followed_by_eof (__main__.CaptureContractTests.test_readiness_requires_one_byte_followed_by_eof) ... ok
+test_recorder_failure_aborts_analyzer_and_suppresses_publication (__main__.CaptureContractTests.test_recorder_failure_aborts_analyzer_and_suppresses_publication) ... ok
+test_recorder_log_quota_aborts_both_children (__main__.CaptureContractTests.test_recorder_log_quota_aborts_both_children) ... ok
+test_sample_and_stop_units_are_exact (__main__.CaptureContractTests.test_sample_and_stop_units_are_exact) ... ok
+test_signal_aborts_both_children_without_publication (__main__.CaptureContractTests.test_signal_aborts_both_children_without_publication) ... ok
+test_crabbox_finalizer_hashes_large_inputs_and_resists_scorer_replacement (__main__.FinalizationContractTests.test_crabbox_finalizer_hashes_large_inputs_and_resists_scorer_replacement) ... ok
+test_final_sidecar_and_report_publish_as_a_pair (__main__.FinalizationContractTests.test_final_sidecar_and_report_publish_as_a_pair) ... ok
+test_finalizer_rejects_a_distinct_scorer_identity (__main__.FinalizationContractTests.test_finalizer_rejects_a_distinct_scorer_identity) ... ok
+test_log_binds_driver_stop_session_manifest_and_firmware (__main__.FinalizationContractTests.test_log_binds_driver_stop_session_manifest_and_firmware) ... ok
+test_scorer_failure_is_fail_closed (__main__.FinalizationContractTests.test_scorer_failure_is_fail_closed) ... ok
+test_scorer_stderr_quota_is_fail_closed (__main__.FinalizationContractTests.test_scorer_stderr_quota_is_fail_closed) ... ok
+test_missing_real_capture_binary_environment_fails_closed (__main__.RealCaptureBinaryContractTests.test_missing_real_capture_binary_environment_fails_closed) ... ok
+test_real_pinned_capture_binary_is_hash_bound_and_loadable (__main__.RealCaptureBinaryContractTests.test_real_pinned_capture_binary_is_hash_bound_and_loadable) ... ok
+test_bazel_build_entrypoint_resolves_declared_inputs (__main__.StaticCaptureStackContractTests.test_bazel_build_entrypoint_resolves_declared_inputs) ... ok
+test_build_recipe_pins_all_upstream_revisions (__main__.StaticCaptureStackContractTests.test_build_recipe_pins_all_upstream_revisions) ... ok
+test_patch_widens_and_fails_closed (__main__.StaticCaptureStackContractTests.test_patch_widens_and_fails_closed) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 81.252s
+
+OK
+================================================================================
+INFO: Found 1 test target...
+Target //:gate0a-capture-stack-test up-to-date:
+  bazel-bin/gate0a-capture-stack-test
+INFO: Elapsed time: 87.335s, Critical Path: 81.67s
+INFO: 2 processes: 6 action cache hit, 1 internal, 2 processwrapper-sandbox.
+INFO: Build completed successfully, 2 total actions
+//:gate0a-capture-stack-test                                             PASSED in 81.5s
+
+Executed 1 out of 1 test: 1 test passes.
+There were tests whose specified size is too big. Use the --test_verbose_timeout_warnings command line option to see which ones these are.

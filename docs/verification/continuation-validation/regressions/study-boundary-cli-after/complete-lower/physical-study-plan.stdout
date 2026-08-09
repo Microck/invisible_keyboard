@@ -1,0 +1,7 @@
+physical_study_round=frozen
+roster=/home/ubuntu/audit-regression-proof/study-boundary-cli-after/complete-lower/roster.jsonl
+manifest=/home/ubuntu/audit-regression-proof/study-boundary-cli-after/complete-lower/manifest.json
+manifest_sha256=fe70ae944461edf0b3bc6926e2998763e4e4d5be5d563d5cce5318a126e712bd
+plan=/home/ubuntu/audit-regression-proof/study-boundary-cli-after/complete-lower/plan.json
+plan_sha256=2091f25136dda8b38858bb2fca36fa22544307c8000a13adf2a3454efb83baba
+expected_rows=1

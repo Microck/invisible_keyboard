@@ -1,0 +1,8 @@
+{
+  "baseline_manifest_sha256": "00ccaf18e69f0efc51bcb8ac1bd0b0fb749595edad5c9cd48cd56eaa22da3e6b",
+  "production_matches_frozen_baseline": true,
+  "test_overlays": {
+    "tests/physical-study-contract.rs": "bd8f72f0e9201e9a96e87fca3639849cfed476fc47be689e4da93ce0490cb482",
+    "tests/replay-contract.rs": "3e7b47a159675e3de16d41d67722ea054ea82d78b49ab3c6bde981c983367e8b"
+  }
+}

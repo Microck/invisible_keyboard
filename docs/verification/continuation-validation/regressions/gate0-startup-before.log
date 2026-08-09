@@ -1,0 +1,64 @@
+OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Loading: 0 packages loaded
+    currently loading: 
+Analyzing: target //:gate0-trace-contract-test (5 packages loaded, 6 targets configured)
+Analyzing: target //:gate0-trace-contract-test (5 packages loaded, 6 targets configured)
+
+Analyzing: target //:gate0-trace-contract-test (32 packages loaded, 9 targets configured)
+
+Analyzing: target //:gate0-trace-contract-test (81 packages loaded, 158 targets configured)
+
+Analyzing: target //:gate0-trace-contract-test (106 packages loaded, 941 targets configured)
+
+Analyzing: target //:gate0-trace-contract-test (133 packages loaded, 2327 targets configured)
+
+Analyzing: target //:gate0-trace-contract-test (173 packages loaded, 3964 targets configured)
+
+Analyzing: target //:gate0-trace-contract-test (209 packages loaded, 5374 targets configured)
+
+INFO: Analyzed target //:gate0-trace-contract-test (210 packages loaded, 5450 targets configured).
+[228 / 442] checking cached actions
+[426 / 442] [Prepa] Compiling Rust bin gate0-trace-contract-test (1 file)
+INFO: From Compiling Rust bin gate0-trace-contract-test (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+[442 / 443] Testing //:gate0-trace-contract-test; 0s processwrapper-sandbox
+FAIL: //:gate0-trace-contract-test (Exit 101) (see /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/execroot/_main/bazel-out/aarch64-fastbuild/testlogs/gate0-trace-contract-test/test.log)
+INFO: From Testing //:gate0-trace-contract-test:
+==================== Test output for //:gate0-trace-contract-test:
+
+running 1 test
+test original_selected_firmware_boot_transactions_are_not_acquisition ... FAILED
+
+failures:
+
+---- original_selected_firmware_boot_transactions_are_not_acquisition stdout ----
+
+thread 'original_selected_firmware_boot_transactions_are_not_acquisition' (66699) panicked at tests/gate0-trace-contract.rs:1544:5:
+selected firmware boot configuration is not an INT1-triggered acquisition: [ReadWithoutInt1, I2cSequence, I2cShape, I2cShape, I2cShape, I2cShape, I2cShape, I2cShape, I2cShape, I2cShape, I2cShape, I2cShape, I2cShape, I2cShape, ReadWithoutInt1, I2cSequence, I2cShape, I2cShape, I2cShape, I2cShape, I2cShape, I2cShape, I2cShape, I2cShape, I2cShape, I2cShape, I2cShape, I2cShape, ReadWithoutInt1, I2cSequence, I2cShape, I2cShape, I2cShape, I2cShape, I2cShape, I2cShape, I2cShape, I2cShape, I2cShape, I2cShape, I2cShape, I2cShape, ReadWithoutInt1, I2cSequence, I2cShape, I2cShape, I2cShape, I2cShape, I2cShape, I2cShape, I2cShape, I2cShape, I2cShape, I2cShape, I2cShape, I2cShape, ReadWithoutInt1, I2cSequence, I2cShape, I2cShape, I2cShape, I2cShape, I2cShape]
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    original_selected_firmware_boot_transactions_are_not_acquisition
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 14 filtered out; finished in 0.04s
+
+================================================================================
+INFO: Found 1 test target...
+Target //:gate0-trace-contract-test up-to-date:
+  bazel-bin/gate0-trace-contract-test
+INFO: Elapsed time: 13.740s, Critical Path: 1.21s
+INFO: 4 processes: 439 action cache hit, 2 internal, 3 processwrapper-sandbox.
+INFO: Build completed, 1 test FAILED, 4 total actions
+//:gate0-trace-contract-test                                             FAILED in 0.1s
+  /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/execroot/_main/bazel-out/aarch64-fastbuild/testlogs/gate0-trace-contract-test/test.log
+
+Executed 1 out of 1 test: 1 fails locally.

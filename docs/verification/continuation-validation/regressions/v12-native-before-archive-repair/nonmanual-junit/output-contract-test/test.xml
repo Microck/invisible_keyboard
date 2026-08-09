@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="output-contract-test" tests="1" failures="0" errors="0">
+    <testcase name="output-contract-test" status="run" duration="0" time="0"></testcase>
+      <system-out>
+Generated test.log (if the file is not UTF-8, then this may be unreadable):
+<![CDATA[exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+Executing tests from //:output-contract-test
+-----------------------------------------------------------------------------
+
+running 14 tests
+test a_fresh_session_starts_neutral_and_rejects_the_previous_session_lease ... ok
+test deterministic_replay_crosses_the_output_adapter_seam ... ok
+test core28_tap_is_one_down_up_pair ... ok
+test duplicate_down_and_orphan_up_never_reach_output ... ok
+test every_fault_releases_all_keys_in_stable_order ... ok
+test every_core28_usage_crosses_the_armed_output_session_as_one_pair ... ok
+test host_owned_transitions_remain_explicit_system_test_gates ... ok
+test output_failure_on_either_edge_recovers_neutral_and_revokes_the_lease ... ok
+test output_requires_declared_sources_and_one_run_owner ... ok
+test output_session_fails_closed_when_startup_neutralization_fails ... ok
+test run_revocation_releases_without_claiming_desktop_focus_control ... ok
+test source_loss_during_a_transition_releases_and_requires_a_fresh_lease ... ok
+test time_regression_fails_neutral_and_does_not_apply_requested_event ... ok
+test interrupt_and_terminate_shutdowns_release_after_continuous_dual_source_output ... ok
+
+test result: ok. 14 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s]]>
+      </system-out>
+    </testsuite>
+</testsuites>

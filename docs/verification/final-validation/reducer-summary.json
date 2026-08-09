@@ -1,0 +1,9 @@
+{
+  "command": "bazelisk --batch test //:gate0-trace-contract-test --nocache_test_results --test_output=all --test_arg=--ignored --test_arg=canonical_raw_scan_uses_bounded_streaming_state --test_arg=--exact --test_timeout=1200 --jobs=2",
+  "started": "2026-09-07T22:23:39Z",
+  "finished": "2026-09-07T22:45:19Z",
+  "exit": "0",
+  "source-check.exit": "0",
+  "source-manifest.sha256": "1f79c190e0e82b7e1a11b66b0629996eebf99239cd326c22d9ec6c01f77cfcfd  /home/user/ikb-final-proof-complete/source-before.sha256",
+  "test-binary.sha256": "b5e3828d7bee078a5b3bce6c8fc0413b4e8f402404879daef0f4441a54e30eba  bazel-bin/gate0-trace-contract-test"
+}

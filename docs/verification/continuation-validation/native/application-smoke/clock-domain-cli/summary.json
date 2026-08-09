@@ -1,0 +1,47 @@
+{
+  "cases": [
+    {
+      "scenario": "healthy-negative-drift",
+      "slope_ns_per_us": 999,
+      "exit_code": 0,
+      "session_sha256": "50b099d5768746e6c6b22a57a5bde34d9b5f0f5472db1f3748aa855cf72526f5",
+      "events": [
+        "event=0 usage=A state=Down time_us=6413585",
+        "event=1 usage=A state=Up time_us=6413585",
+        "event=2 usage=H state=Down time_us=6414585",
+        "event=3 usage=H state=Up time_us=6414585"
+      ],
+      "hardware_evidence": false
+    },
+    {
+      "scenario": "invalid-positive-drift",
+      "slope_ns_per_us": 1001,
+      "exit_code": 1,
+      "session_sha256": "958886405e29cf3cd7866197e05b671f15296b38429daaf69049240815957eff",
+      "events": [],
+      "hardware_evidence": false
+    }
+  ],
+  "fixture_files_unchanged": true,
+  "input_files_sha256": {
+    "healthy-negative-drift.iks": "50b099d5768746e6c6b22a57a5bde34d9b5f0f5472db1f3748aa855cf72526f5",
+    "clock-domain-cli-manifest-105631.runtime-template.axis-characterization.json": "ea8dadff2dc40935bc476abd42a3be41e0cd4c657b2b0a661ce0c52e27307870",
+    "runtime-manifest.json": "c1eb9abe31357db1f864f83dd9eab61662156be5f70705e56401c12aec845fa3",
+    "invalid-positive-drift-clocks.json": "44d5ca6a9226bda13f66521650939dea728626037680fba7391e8cd492c867d0",
+    "clock-domain-cli-manifest-105631.artifact.json": "bee0fcab5d027c2b37b6bcc1a92f4ed72f61b4ba6fef93f086a3855db315f171",
+    "clock-domain-cli-manifest-105631.runtime-template.json": "24f7005c57a31f5292dcf993cf65e92f3e513699738fe4236b38f707a58714cc",
+    "healthy-negative-drift-clocks.json": "96e73957bc5518cc409fb27e935ba0ccbf01a97e3ffc8ba73cbf571f59bbce2e",
+    "clock-domain-cli-manifest-105631.rig-evidence.json": "5401c5a9b6536b51284ba3f9983b8924f4622061096d7c84c3de70dec757f90e",
+    "clock-domain-cli-manifest-105631.json": "01d35405c008e6eb0031badac7a033bd6c0e11a3320e142da326bacc9bbf6543",
+    "clock-domain-cases.json": "81b2250bb6083116d241a7becf6229ab8ca35be9e583634c31f373cfbce848fe",
+    "invalid-positive-drift.iks": "958886405e29cf3cd7866197e05b671f15296b38429daaf69049240815957eff",
+    "clock-domain-cli-manifest-105631.runtime-template.rig-evidence.json": "5401c5a9b6536b51284ba3f9983b8924f4622061096d7c84c3de70dec757f90e",
+    "clock-domain-cli-manifest-105631.axis-characterization.json": "ea8dadff2dc40935bc476abd42a3be41e0cd4c657b2b0a661ce0c52e27307870",
+    "clock-domain-cli-manifest-105631.calibration-output/heldout-capture.json": "c7fa70445a85745142afcb6911f9880373ca948db7239eb2a18e7e6663502aff",
+    "clock-domain-cli-manifest-105631.calibration-output/validation-report.json": "045ff4be64b815d98339208ff1e4669f5fb69929bd9bbe38070b772f5b35ede0",
+    "clock-domain-cli-manifest-105631.calibration-output/heldout-clocks.json": "49b5d71facb0b4831866e1b9787d9e1340ea46065273a52bc98a27acd696aa1a",
+    "clock-domain-cli-manifest-105631.calibration-output/heldout-session.iks": "858e3e3606fc2caebc5eace45e9144bb35c68e3b8557ee3c7fd67c5c6c2b11ff",
+    "clock-domain-cli-manifest-105631.calibration-output/heldout-surface-plan.json": "8357b0365f402274b7415b3f07a91d550cbfa032f4b993bce82bef0a0f998031",
+    "clock-domain-cli-manifest-105631.calibration-output/heldout-evidence.json": "487279872a1ae84af7aa728b53f6387c1911c4f8ad08c5b758388f8a67aaf000"
+  }
+}

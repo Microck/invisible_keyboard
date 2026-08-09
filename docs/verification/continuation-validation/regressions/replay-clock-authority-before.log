@@ -1,0 +1,21 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+Executing tests from //:replay-contract-test
+-----------------------------------------------------------------------------
+
+running 1 test
+test calibrated_replay_rejects_forged_offline_clock_authority_before_output ... FAILED
+
+failures:
+
+---- calibrated_replay_rejects_forged_offline_clock_authority_before_output stdout ----
+
+thread 'calibrated_replay_rejects_forged_offline_clock_authority_before_output' (44083) panicked at tests/replay-contract.rs:1198:9:
+altered slope_ns_per_us must not grant calibrated replay authority
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    calibrated_replay_rejects_forged_offline_clock_authority_before_output
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 36 filtered out; finished in 11.88s
+

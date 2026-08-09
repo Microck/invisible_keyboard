@@ -1,0 +1,62 @@
+OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Loading: 1 packages loaded
+Analyzing: target //:calibration-engine-contract-test (5 packages loaded, 6 targets configured)
+Analyzing: target //:calibration-engine-contract-test (5 packages loaded, 6 targets configured)
+
+Analyzing: target //:calibration-engine-contract-test (12 packages loaded, 9 targets configured)
+
+Analyzing: target //:calibration-engine-contract-test (60 packages loaded, 9 targets configured)
+
+Analyzing: target //:calibration-engine-contract-test (83 packages loaded, 308 targets configured)
+
+Analyzing: target //:calibration-engine-contract-test (106 packages loaded, 779 targets configured)
+
+Analyzing: target //:calibration-engine-contract-test (122 packages loaded, 1452 targets configured)
+
+Analyzing: target //:calibration-engine-contract-test (147 packages loaded, 3011 targets configured)
+
+Analyzing: target //:calibration-engine-contract-test (181 packages loaded, 4596 targets configured)
+
+Analyzing: target //:calibration-engine-contract-test (203 packages loaded, 5344 targets configured)
+
+INFO: Analyzed target //:calibration-engine-contract-test (206 packages loaded, 5419 targets configured).
+[146 / 425] checking cached actions
+[425 / 426] [Prepa] Testing //:calibration-engine-contract-test
+[425 / 426] Testing //:calibration-engine-contract-test; 1s processwrapper-sandbox
+[425 / 426] Testing //:calibration-engine-contract-test; 11s processwrapper-sandbox
+[425 / 426] Testing //:calibration-engine-contract-test; 38s processwrapper-sandbox
+FAIL: //:calibration-engine-contract-test (Exit 101) (see /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/execroot/_main/bazel-out/aarch64-fastbuild/testlogs/calibration-engine-contract-test/test.log)
+INFO: From Testing //:calibration-engine-contract-test:
+==================== Test output for //:calibration-engine-contract-test:
+
+running 1 test
+test fitting_and_precheck_reject_raw_suffix_fault_before_truth_selection ... FAILED
+
+failures:
+
+---- fitting_and_precheck_reject_raw_suffix_fault_before_truth_selection stdout ----
+
+thread 'fitting_and_precheck_reject_raw_suffix_fault_before_truth_selection' (102459) panicked at tests/calibration-engine-contract.rs:2104:9:
+Capture(MatchingRuleNeutralEvidenceMismatch)
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    fitting_and_precheck_reject_raw_suffix_fault_before_truth_selection
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 28 filtered out; finished in 38.60s
+
+================================================================================
+INFO: Found 1 test target...
+Target //:calibration-engine-contract-test up-to-date:
+  bazel-bin/calibration-engine-contract-test
+INFO: Elapsed time: 56.148s, Critical Path: 39.03s
+INFO: 2 processes: 424 action cache hit, 1 internal, 2 processwrapper-sandbox.
+INFO: Build completed, 1 test FAILED, 2 total actions
+//:calibration-engine-contract-test                                      FAILED in 38.6s
+  /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/execroot/_main/bazel-out/aarch64-fastbuild/testlogs/calibration-engine-contract-test/test.log
+
+Executed 1 out of 1 test: 1 fails locally.

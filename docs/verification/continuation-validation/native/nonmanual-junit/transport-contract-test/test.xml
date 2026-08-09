@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="transport-contract-test" tests="1" failures="0" errors="0">
+    <testcase name="transport-contract-test" status="run" duration="0" time="0"></testcase>
+      <system-out>
+Generated test.log (if the file is not UTF-8, then this may be unreadable):
+<![CDATA[exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+Executing tests from //:transport-contract-test
+-----------------------------------------------------------------------------
+
+running 10 tests
+test control_records_have_exact_cobs_lengths_and_survive_every_chunk_boundary ... ok
+test controller_dispatch_accepts_frames_and_receipts_but_rejects_outbound_requests ... ok
+test empty_delimiters_are_ignored ... ok
+test disconnect_preserves_an_unterminated_candidate ... ok
+test every_chunk_boundary_reconstructs_one_exact_frame ... ok
+test every_single_byte_deletion_recovers_by_the_third_frame ... ok
+test malformed_record_does_not_shift_the_next_record ... ok
+test oversized_record_is_bounded_and_next_record_recovers ... ok
+test partial_and_oversized_control_candidates_fail_without_shifting_the_next_record ... ok
+test inserted_zero_and_nonzero_bytes_recover_by_the_next_clean_frame ... ok
+
+test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.03s]]>
+      </system-out>
+    </testsuite>
+</testsuites>

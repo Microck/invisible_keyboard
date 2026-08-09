@@ -1,0 +1,250 @@
+INFO: Checking for file changes...
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+WARNING: Build option --action_env has changed, discarding analysis cache (this can be expensive, see https://bazel.build/advanced/performance/iteration-speed).
+Analyzing: target //:gate0a-capture-stack-test (0 packages loaded)
+Analyzing: target //:gate0a-capture-stack-test (0 packages loaded, 0 targets configured)
+Analyzing: target //:gate0a-capture-stack-test (0 packages loaded, 0 targets configured)
+
+Analyzing: target //:gate0a-capture-stack-test (0 packages loaded, 28 targets configured)
+
+INFO: Analyzed target //:gate0a-capture-stack-test (0 packages loaded, 976 targets configured).
+[1 / 1] no actions running
+[7 / 8] Testing //:gate0a-capture-stack-test; 0s processwrapper-sandbox
+[7 / 8] Testing //:gate0a-capture-stack-test; 11s processwrapper-sandbox
+[7 / 8] Testing //:gate0a-capture-stack-test; 41s processwrapper-sandbox
+[7 / 8] Testing //:gate0a-capture-stack-test; 68s processwrapper-sandbox
+[7 / 8] Testing //:gate0a-capture-stack-test; 70s processwrapper-sandbox
+FAIL: //:gate0a-capture-stack-test (Exit 1) (see /home/tester/.cache/bazel/_bazel_tester/417f5360b415a396f4c2cf2d5a1ebb5a/execroot/_main/bazel-out/k8-fastbuild/testlogs/gate0a-capture-stack-test/test.log)
+INFO: From Testing //:gate0a-capture-stack-test:
+==================== Test output for //:gate0a-capture-stack-test:
+test_analyzer_failure_aborts_recorder_and_suppresses_publication (__main__.CaptureContractTests.test_analyzer_failure_aborts_recorder_and_suppresses_publication) ... FAIL
+test_chunk_jump_beyond_stop_window_suppresses_publication (__main__.CaptureContractTests.test_chunk_jump_beyond_stop_window_suppresses_publication) ... FAIL
+test_invalid_final_analyzer_log_never_authorizes_a_recorder_footer (__main__.CaptureContractTests.test_invalid_final_analyzer_log_never_authorizes_a_recorder_footer) ... 
+  test_invalid_final_analyzer_log_never_authorizes_a_recorder_footer (__main__.CaptureContractTests.test_invalid_final_analyzer_log_never_authorizes_a_recorder_footer) (log_fault='missing-receipt') ... FAIL
+  test_invalid_final_analyzer_log_never_authorizes_a_recorder_footer (__main__.CaptureContractTests.test_invalid_final_analyzer_log_never_authorizes_a_recorder_footer) (log_fault='duplicate-receipt') ... FAIL
+  test_invalid_final_analyzer_log_never_authorizes_a_recorder_footer (__main__.CaptureContractTests.test_invalid_final_analyzer_log_never_authorizes_a_recorder_footer) (log_fault='failure-marker') ... FAIL
+  test_invalid_final_analyzer_log_never_authorizes_a_recorder_footer (__main__.CaptureContractTests.test_invalid_final_analyzer_log_never_authorizes_a_recorder_footer) (log_fault='firmware-open-count') ... FAIL
+  test_invalid_final_analyzer_log_never_authorizes_a_recorder_footer (__main__.CaptureContractTests.test_invalid_final_analyzer_log_never_authorizes_a_recorder_footer) (log_fault='final-log-overflow') ... FAIL
+test_production_wrapper_invocation_publishes_one_complete_set (__main__.CaptureContractTests.test_production_wrapper_invocation_publishes_one_complete_set) ... FAIL
+test_publication_rolls_back_finals_and_keeps_all_partials (__main__.CaptureContractTests.test_publication_rolls_back_finals_and_keeps_all_partials) ... ok
+test_readiness_after_the_boot_window_suppresses_publication (__main__.CaptureContractTests.test_readiness_after_the_boot_window_suppresses_publication) ... FAIL
+test_readiness_at_the_boot_window_boundary_preserves_the_full_capture (__main__.CaptureContractTests.test_readiness_at_the_boot_window_boundary_preserves_the_full_capture) ... ERROR
+test_readiness_requires_one_byte_followed_by_eof (__main__.CaptureContractTests.test_readiness_requires_one_byte_followed_by_eof) ... FAIL
+test_recorder_failure_aborts_analyzer_and_suppresses_publication (__main__.CaptureContractTests.test_recorder_failure_aborts_analyzer_and_suppresses_publication) ... FAIL
+test_recorder_log_quota_aborts_both_children (__main__.CaptureContractTests.test_recorder_log_quota_aborts_both_children) ... FAIL
+test_signal_aborts_both_children_without_publication (__main__.CaptureContractTests.test_signal_aborts_both_children_without_publication) ... FAIL
+test_crabbox_finalizer_hashes_large_inputs_and_resists_scorer_replacement (__main__.FinalizationContractTests.test_crabbox_finalizer_hashes_large_inputs_and_resists_scorer_replacement) ... ERROR
+test_final_sidecar_and_report_publish_as_a_pair (__main__.FinalizationContractTests.test_final_sidecar_and_report_publish_as_a_pair) ... ok
+test_finalizer_rejects_a_distinct_scorer_identity (__main__.FinalizationContractTests.test_finalizer_rejects_a_distinct_scorer_identity) ... /usr/lib/python3.12/subprocess.py:1127: ResourceWarning: subprocess 68486 is still running
+  _warn("subprocess %s is still running" % self.pid,
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/usr/lib/python3.12/pathlib.py:357: ResourceWarning: unclosed file <_io.FileIO name=3 mode='rb' closefd=True>
+  def __init__(self, *args):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/usr/lib/python3.12/pathlib.py:357: ResourceWarning: unclosed file <_io.FileIO name=5 mode='rb' closefd=True>
+  def __init__(self, *args):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ERROR
+test_log_binds_driver_stop_session_manifest_and_firmware (__main__.FinalizationContractTests.test_log_binds_driver_stop_session_manifest_and_firmware) ... ok
+test_scorer_failure_is_fail_closed (__main__.FinalizationContractTests.test_scorer_failure_is_fail_closed) ... ok
+test_scorer_stderr_quota_is_fail_closed (__main__.FinalizationContractTests.test_scorer_stderr_quota_is_fail_closed) ... ok
+test_missing_real_capture_binary_environment_fails_closed (__main__.RealCaptureBinaryContractTests.test_missing_real_capture_binary_environment_fails_closed) ... ok
+test_real_pinned_capture_binary_is_hash_bound_and_loadable (__main__.RealCaptureBinaryContractTests.test_real_pinned_capture_binary_is_hash_bound_and_loadable) ... ok
+test_bazel_build_entrypoint_resolves_declared_inputs (__main__.StaticCaptureStackContractTests.test_bazel_build_entrypoint_resolves_declared_inputs) ... ok
+
+======================================================================
+ERROR: test_readiness_at_the_boot_window_boundary_preserves_the_full_capture (__main__.CaptureContractTests.test_readiness_at_the_boot_window_boundary_preserves_the_full_capture)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/tester/.cache/bazel/_bazel_tester/417f5360b415a396f4c2cf2d5a1ebb5a/sandbox/processwrapper-sandbox/12/execroot/_main/bazel-out/k8-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 703, in test_readiness_at_the_boot_window_boundary_preserves_the_full_capture
+    paths = run_wrapper_arguments(arguments)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tester/.cache/bazel/_bazel_tester/417f5360b415a396f4c2cf2d5a1ebb5a/sandbox/processwrapper-sandbox/12/execroot/_main/bazel-out/k8-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 573, in run_wrapper_arguments
+    return capture.run_capture(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/tester/invisible_keyboard/tools/capture-gate0a.py", line 995, in run_capture
+    supervision = supervise_children(
+                  ^^^^^^^^^^^^^^^^^^^
+  File "/home/tester/invisible_keyboard/tools/capture-gate0a.py", line 593, in supervise_children
+    raise CaptureError(
+gate0a_capture.CaptureError: raw-size polling gap was 11379577 ns; maximum is 10000000 ns
+
+======================================================================
+ERROR: test_crabbox_finalizer_hashes_large_inputs_and_resists_scorer_replacement (__main__.FinalizationContractTests.test_crabbox_finalizer_hashes_large_inputs_and_resists_scorer_replacement)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/tester/.cache/bazel/_bazel_tester/417f5360b415a396f4c2cf2d5a1ebb5a/sandbox/processwrapper-sandbox/12/execroot/_main/bazel-out/k8-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 801, in test_crabbox_finalizer_hashes_large_inputs_and_resists_scorer_replacement
+    paths = run_wrapper_arguments(arguments)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tester/.cache/bazel/_bazel_tester/417f5360b415a396f4c2cf2d5a1ebb5a/sandbox/processwrapper-sandbox/12/execroot/_main/bazel-out/k8-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 573, in run_wrapper_arguments
+    return capture.run_capture(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/tester/invisible_keyboard/tools/capture-gate0a.py", line 995, in run_capture
+    supervision = supervise_children(
+                  ^^^^^^^^^^^^^^^^^^^
+  File "/home/tester/invisible_keyboard/tools/capture-gate0a.py", line 593, in supervise_children
+    raise CaptureError(
+gate0a_capture.CaptureError: raw-size polling gap was 17608936 ns; maximum is 10000000 ns
+
+======================================================================
+ERROR: test_finalizer_rejects_a_distinct_scorer_identity (__main__.FinalizationContractTests.test_finalizer_rejects_a_distinct_scorer_identity)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/tester/.cache/bazel/_bazel_tester/417f5360b415a396f4c2cf2d5a1ebb5a/sandbox/processwrapper-sandbox/12/execroot/_main/bazel-out/k8-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 867, in test_finalizer_rejects_a_distinct_scorer_identity
+    paths = run_wrapper_arguments(arguments)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/tester/.cache/bazel/_bazel_tester/417f5360b415a396f4c2cf2d5a1ebb5a/sandbox/processwrapper-sandbox/12/execroot/_main/bazel-out/k8-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 573, in run_wrapper_arguments
+    return capture.run_capture(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/tester/invisible_keyboard/tools/capture-gate0a.py", line 995, in run_capture
+    supervision = supervise_children(
+                  ^^^^^^^^^^^^^^^^^^^
+  File "/home/tester/invisible_keyboard/tools/capture-gate0a.py", line 593, in supervise_children
+    raise CaptureError(
+gate0a_capture.CaptureError: raw-size polling gap was 11178128 ns; maximum is 10000000 ns
+
+======================================================================
+FAIL: test_analyzer_failure_aborts_recorder_and_suppresses_publication (__main__.CaptureContractTests.test_analyzer_failure_aborts_recorder_and_suppresses_publication)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/tester/.cache/bazel/_bazel_tester/417f5360b415a396f4c2cf2d5a1ebb5a/sandbox/processwrapper-sandbox/12/execroot/_main/bazel-out/k8-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 686, in test_analyzer_failure_aborts_recorder_and_suppresses_publication
+    self.assert_failed_pair("analyzer-failure", "success", "status 7")
+  File "/home/tester/.cache/bazel/_bazel_tester/417f5360b415a396f4c2cf2d5a1ebb5a/sandbox/processwrapper-sandbox/12/execroot/_main/bazel-out/k8-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 663, in assert_failed_pair
+    self.assertIn(message, completed.stderr)
+AssertionError: 'status 7' not found in 'gate0a-capture: recorder readiness exceeded the 12000000-byte boot window\n'
+
+======================================================================
+FAIL: test_chunk_jump_beyond_stop_window_suppresses_publication (__main__.CaptureContractTests.test_chunk_jump_beyond_stop_window_suppresses_publication)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/tester/.cache/bazel/_bazel_tester/417f5360b415a396f4c2cf2d5a1ebb5a/sandbox/processwrapper-sandbox/12/execroot/_main/bazel-out/k8-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 683, in test_chunk_jump_beyond_stop_window_suppresses_publication
+    self.assert_failed_pair("jump", "success", "stop window ends")
+  File "/home/tester/.cache/bazel/_bazel_tester/417f5360b415a396f4c2cf2d5a1ebb5a/sandbox/processwrapper-sandbox/12/execroot/_main/bazel-out/k8-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 663, in assert_failed_pair
+    self.assertIn(message, completed.stderr)
+AssertionError: 'stop window ends' not found in 'gate0a-capture: raw-size polling gap was 12974987 ns; maximum is 10000000 ns\n'
+
+======================================================================
+FAIL: test_invalid_final_analyzer_log_never_authorizes_a_recorder_footer (__main__.CaptureContractTests.test_invalid_final_analyzer_log_never_authorizes_a_recorder_footer) (log_fault='missing-receipt')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/tester/.cache/bazel/_bazel_tester/417f5360b415a396f4c2cf2d5a1ebb5a/sandbox/processwrapper-sandbox/12/execroot/_main/bazel-out/k8-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 680, in test_invalid_final_analyzer_log_never_authorizes_a_recorder_footer
+    self.assert_failed_pair("success", "success", message, log_fault=log_fault)
+  File "/home/tester/.cache/bazel/_bazel_tester/417f5360b415a396f4c2cf2d5a1ebb5a/sandbox/processwrapper-sandbox/12/execroot/_main/bazel-out/k8-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 663, in assert_failed_pair
+    self.assertIn(message, completed.stderr)
+AssertionError: 'expected 1 patched-driver receipt(s), found 0' not found in 'gate0a-capture: raw-size polling gap was 14057947 ns; maximum is 10000000 ns\n'
+
+======================================================================
+FAIL: test_invalid_final_analyzer_log_never_authorizes_a_recorder_footer (__main__.CaptureContractTests.test_invalid_final_analyzer_log_never_authorizes_a_recorder_footer) (log_fault='duplicate-receipt')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/tester/.cache/bazel/_bazel_tester/417f5360b415a396f4c2cf2d5a1ebb5a/sandbox/processwrapper-sandbox/12/execroot/_main/bazel-out/k8-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 680, in test_invalid_final_analyzer_log_never_authorizes_a_recorder_footer
+    self.assert_failed_pair("success", "success", message, log_fault=log_fault)
+  File "/home/tester/.cache/bazel/_bazel_tester/417f5360b415a396f4c2cf2d5a1ebb5a/sandbox/processwrapper-sandbox/12/execroot/_main/bazel-out/k8-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 663, in assert_failed_pair
+    self.assertIn(message, completed.stderr)
+AssertionError: 'expected 1 patched-driver receipt(s), found 2' not found in 'gate0a-capture: raw-size polling gap was 10619317 ns; maximum is 10000000 ns\n'
+
+======================================================================
+FAIL: test_invalid_final_analyzer_log_never_authorizes_a_recorder_footer (__main__.CaptureContractTests.test_invalid_final_analyzer_log_never_authorizes_a_recorder_footer) (log_fault='failure-marker')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/tester/.cache/bazel/_bazel_tester/417f5360b415a396f4c2cf2d5a1ebb5a/sandbox/processwrapper-sandbox/12/execroot/_main/bazel-out/k8-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 680, in test_invalid_final_analyzer_log_never_authorizes_a_recorder_footer
+    self.assert_failed_pair("success", "success", message, log_fault=log_fault)
+  File "/home/tester/.cache/bazel/_bazel_tester/417f5360b415a396f4c2cf2d5a1ebb5a/sandbox/processwrapper-sandbox/12/execroot/_main/bazel-out/k8-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 663, in assert_failed_pair
+    self.assertIn(message, completed.stderr)
+AssertionError: 'capture log contains failure marker' not found in 'gate0a-capture: raw-size polling gap was 10060678 ns; maximum is 10000000 ns\n'
+
+======================================================================
+FAIL: test_invalid_final_analyzer_log_never_authorizes_a_recorder_footer (__main__.CaptureContractTests.test_invalid_final_analyzer_log_never_authorizes_a_recorder_footer) (log_fault='firmware-open-count')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/tester/.cache/bazel/_bazel_tester/417f5360b415a396f4c2cf2d5a1ebb5a/sandbox/processwrapper-sandbox/12/execroot/_main/bazel-out/k8-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 680, in test_invalid_final_analyzer_log_never_authorizes_a_recorder_footer
+    self.assert_failed_pair("success", "success", message, log_fault=log_fault)
+  File "/home/tester/.cache/bazel/_bazel_tester/417f5360b415a396f4c2cf2d5a1ebb5a/sandbox/processwrapper-sandbox/12/execroot/_main/bazel-out/k8-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 663, in assert_failed_pair
+    self.assertIn(message, completed.stderr)
+AssertionError: 'to be opened 2 time(s), found 3' not found in 'gate0a-capture: raw-size polling gap was 14590106 ns; maximum is 10000000 ns\n'
+
+======================================================================
+FAIL: test_invalid_final_analyzer_log_never_authorizes_a_recorder_footer (__main__.CaptureContractTests.test_invalid_final_analyzer_log_never_authorizes_a_recorder_footer) (log_fault='final-log-overflow')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/tester/.cache/bazel/_bazel_tester/417f5360b415a396f4c2cf2d5a1ebb5a/sandbox/processwrapper-sandbox/12/execroot/_main/bazel-out/k8-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 680, in test_invalid_final_analyzer_log_never_authorizes_a_recorder_footer
+    self.assert_failed_pair("success", "success", message, log_fault=log_fault)
+  File "/home/tester/.cache/bazel/_bazel_tester/417f5360b415a396f4c2cf2d5a1ebb5a/sandbox/processwrapper-sandbox/12/execroot/_main/bazel-out/k8-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 663, in assert_failed_pair
+    self.assertIn(message, completed.stderr)
+AssertionError: 'sigrok-cli log exceeded' not found in 'gate0a-capture: raw-size polling gap was 13817627 ns; maximum is 10000000 ns\n'
+
+======================================================================
+FAIL: test_production_wrapper_invocation_publishes_one_complete_set (__main__.CaptureContractTests.test_production_wrapper_invocation_publishes_one_complete_set)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/tester/.cache/bazel/_bazel_tester/417f5360b415a396f4c2cf2d5a1ebb5a/sandbox/processwrapper-sandbox/12/execroot/_main/bazel-out/k8-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 619, in test_production_wrapper_invocation_publishes_one_complete_set
+    self.assertEqual(completed.returncode, 0, completed.stderr)
+AssertionError: 1 != 0 : gate0a-capture: raw-size polling gap was 11642058 ns; maximum is 10000000 ns
+
+
+======================================================================
+FAIL: test_readiness_after_the_boot_window_suppresses_publication (__main__.CaptureContractTests.test_readiness_after_the_boot_window_suppresses_publication)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/tester/.cache/bazel/_bazel_tester/417f5360b415a396f4c2cf2d5a1ebb5a/sandbox/processwrapper-sandbox/12/execroot/_main/bazel-out/k8-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 695, in test_readiness_after_the_boot_window_suppresses_publication
+    self.assert_failed_pair("late-boot", "late-readiness", "boot window")
+  File "/home/tester/.cache/bazel/_bazel_tester/417f5360b415a396f4c2cf2d5a1ebb5a/sandbox/processwrapper-sandbox/12/execroot/_main/bazel-out/k8-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 663, in assert_failed_pair
+    self.assertIn(message, completed.stderr)
+AssertionError: 'boot window' not found in 'gate0a-capture: raw-size polling gap was 10076558 ns; maximum is 10000000 ns\n'
+
+======================================================================
+FAIL: test_readiness_requires_one_byte_followed_by_eof (__main__.CaptureContractTests.test_readiness_requires_one_byte_followed_by_eof)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/tester/.cache/bazel/_bazel_tester/417f5360b415a396f4c2cf2d5a1ebb5a/sandbox/processwrapper-sandbox/12/execroot/_main/bazel-out/k8-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 692, in test_readiness_requires_one_byte_followed_by_eof
+    self.assert_failed_pair("wait", "bad-readiness", "readiness must be exactly")
+  File "/home/tester/.cache/bazel/_bazel_tester/417f5360b415a396f4c2cf2d5a1ebb5a/sandbox/processwrapper-sandbox/12/execroot/_main/bazel-out/k8-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 663, in assert_failed_pair
+    self.assertIn(message, completed.stderr)
+AssertionError: 'readiness must be exactly' not found in 'gate0a-capture: raw-size polling gap was 17252967 ns; maximum is 10000000 ns\n'
+
+======================================================================
+FAIL: test_recorder_failure_aborts_analyzer_and_suppresses_publication (__main__.CaptureContractTests.test_recorder_failure_aborts_analyzer_and_suppresses_publication)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/tester/.cache/bazel/_bazel_tester/417f5360b415a396f4c2cf2d5a1ebb5a/sandbox/processwrapper-sandbox/12/execroot/_main/bazel-out/k8-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 689, in test_recorder_failure_aborts_analyzer_and_suppresses_publication
+    self.assert_failed_pair("wait", "recorder-failure", "recorder exited with status 9")
+  File "/home/tester/.cache/bazel/_bazel_tester/417f5360b415a396f4c2cf2d5a1ebb5a/sandbox/processwrapper-sandbox/12/execroot/_main/bazel-out/k8-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 663, in assert_failed_pair
+    self.assertIn(message, completed.stderr)
+AssertionError: 'recorder exited with status 9' not found in 'gate0a-capture: raw-size polling gap was 11009128 ns; maximum is 10000000 ns\n'
+
+======================================================================
+FAIL: test_recorder_log_quota_aborts_both_children (__main__.CaptureContractTests.test_recorder_log_quota_aborts_both_children)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/tester/.cache/bazel/_bazel_tester/417f5360b415a396f4c2cf2d5a1ebb5a/sandbox/processwrapper-sandbox/12/execroot/_main/bazel-out/k8-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 708, in test_recorder_log_quota_aborts_both_children
+    self.assert_failed_pair("wait", "log-overflow", "recorder log exceeded")
+  File "/home/tester/.cache/bazel/_bazel_tester/417f5360b415a396f4c2cf2d5a1ebb5a/sandbox/processwrapper-sandbox/12/execroot/_main/bazel-out/k8-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 663, in assert_failed_pair
+    self.assertIn(message, completed.stderr)
+AssertionError: 'recorder log exceeded' not found in 'gate0a-capture: raw-size polling gap was 11611328 ns; maximum is 10000000 ns\n'
+
+======================================================================
+FAIL: test_signal_aborts_both_children_without_publication (__main__.CaptureContractTests.test_signal_aborts_both_children_without_publication)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/tester/.cache/bazel/_bazel_tester/417f5360b415a396f4c2cf2d5a1ebb5a/sandbox/processwrapper-sandbox/12/execroot/_main/bazel-out/k8-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 729, in test_signal_aborts_both_children_without_publication
+    self.assertTrue(paths.partial_session.exists(), "recorder never became ready")
+AssertionError: False is not true : recorder never became ready
+
+----------------------------------------------------------------------
+Ran 20 tests in 63.005s
+
+FAILED (failures=13, errors=3)
+================================================================================
+[8 / 8] 1 / 1 tests, 1 failed; no actions running
+INFO: Found 1 test target...
+Target //:gate0a-capture-stack-test up-to-date:
+  bazel-bin/gate0a-capture-stack-test
+INFO: Elapsed time: 110.932s, Critical Path: 71.45s
+INFO: 7 processes: 1 action cache hit, 6 internal, 2 processwrapper-sandbox.
+INFO: Build completed, 1 test FAILED, 7 total actions
+//:gate0a-capture-stack-test                                             FAILED in 68.2s
+  /home/tester/.cache/bazel/_bazel_tester/417f5360b415a396f4c2cf2d5a1ebb5a/execroot/_main/bazel-out/k8-fastbuild/testlogs/gate0a-capture-stack-test/test.log
+
+Executed 1 out of 1 test: 1 fails locally.

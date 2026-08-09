@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="device-transport-contract-test" tests="1" failures="0" errors="0">
+    <testcase name="device-transport-contract-test" status="run" duration="0" time="0"></testcase>
+      <system-out>
+Generated test.log (if the file is not UTF-8, then this may be unreadable):
+<![CDATA[exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+Executing tests from //:device-transport-contract-test
+-----------------------------------------------------------------------------
+
+running 19 tests
+test adversarial_chunking_keeps_each_source_cobs_state_isolated ... ok
+test bootstrap_discovers_both_boots_and_preserves_every_input_byte ... ok
+test bootstrap_rejects_empty_and_duplicate_topologies ... ok
+test bootstrap_rejects_wrong_controller_boot_change_timeout_and_unbounded_input ... ok
+test cross_thread_delivery_reorder_is_merged_by_receipt_time ... ok
+test default_merger_budgets_50_ms_for_reader_thread_delivery_reorder ... ok
+test bootstrap_admits_one_declared_hand_and_returns_all_identities_in_hand_order ... ok
+test gate0_dispatch_rejects_duplicate_requests_wrong_identity_and_time_regression ... ok
+test gate0_dispatch_rejects_every_byte_after_receipt_including_the_same_read ... ok
+test gate0_dispatch_requires_request_binding_and_a_post_request_clean_frame ... ok
+test malformed_candidate_on_one_source_does_not_poison_the_other_source ... ok
+test one_stream_disconnect_retains_its_partial_record_and_does_not_stop_the_other ... ok
+test oversized_candidate_retains_its_source_and_bounded_prefix ... ok
+test pending_candidate_capacity_is_hard_and_overflow_is_atomic ... ok
+test receipt_regression_late_delivery_and_source_silence_are_explicit ... ok
+test simultaneous_frames_have_a_deterministic_source_tie_break ... ok
+test source_configuration_is_unique_and_the_input_event_is_thread_friendly ... ok
+test wrong_hand_frames_are_retained_but_marked_as_identity_faults ... ok
+test gate0_dispatch_accepts_one_bound_receipt_after_its_immediate_clean_frame ... ok
+
+test result: ok. 19 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.03s]]>
+      </system-out>
+    </testsuite>
+</testsuites>

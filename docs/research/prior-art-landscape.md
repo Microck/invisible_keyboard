@@ -1,6 +1,6 @@
 # Prior art, products, and abandoned attempts
 
-Access date: 2026-08-09
+Access date: 2026-08-09. LapCal status and sources rechecked 2026-08-29.
 
 ## Result
 
@@ -99,7 +99,7 @@ was found, not zero performance.
 | 2021-2023 | Ultraleap XR Keyboard | Visible virtual keys pressed through optical hand tracking in Unity XR | Open Apache-2.0 repository, 56 stars, release 1.1.0 in 2023; intended for short strings | Repository explicitly says it is not actively maintained; Ultraleap hand-tracking hardware remains current | The authors scope it to usernames, passwords, email addresses, and search queries, not long-form text; no controlled WPM result |
 | 2022 | TypeAnywhere | QWERTY finger sequence from two Tap Strap devices; BERT-derived language decoder; no key coordinates | Study section reports N=10; five days and 2.5 hours total; 70.6 WPM/1.50% CER table, 43.9 WPM/1.37% CER lap, 87.8 WPM physical baseline | Academic prototype; MIT code repo last pushed 2022, model hosted separately on Drive | Same-finger keys are unobservable; phrase transcription and language prior dominate; lap tap misses and rollover remain; paper has a cohort-count inconsistency noted below |
 | 2022-2026 | Tap Strap 2 and TapXR | Proprietary learned finger chords on a surface; TapXR combines motion and optical sensing | Shipped products, first-party firmware through 2024, support/app posts into 2026, and an active owner community; no independent product-wide cohort metric found | Company active; current shop has no products; TapBand successor is waitlist-only and shifts toward smart-glasses control | Month-scale learning, hard and well-lit surface preference, slower than a physical keyboard, and inconsistent legacy-stock availability |
-| 2023-2025 | LapCal | 34-key QWERTY glove with finger IMUs and ML | Hardware, code, and limited recordings; see the dedicated evidence audit | Repository is not archived; last remote push 2025-07-22; inactive versus discontinued is unresolved | No valid live key-identity or text-entry result; do not treat it as a completed or formally abandoned product |
+| 2023-2025 | LapCal | 34-key keyboard goal with a Sweep-style 34-slot topology, finger IMUs, and ML | Hardware, code, topology/packed ordering, and limited recordings; no complete logical 34-position key manifest was verified; see the [dedicated evidence audit](lapcal-evidence-audit.md) | GitHub reported `archived=false` on 2026-08-29; last remote push 2025-07-22; inactive versus discontinued is unresolved | No valid live key-identity or text-entry result; do not treat it as a completed or formally abandoned product |
 | 2024 | TapType | QWERTY finger sequence from two 1.6 kHz wrist accelerometers plus Bayesian and n-gram decoding | Online N=10; 19.2 WPM and 0.6% CER after about 30 minutes | Academic prototype | Same-finger keys come from language, not measured position; personal calibration and hard-surface impacts are required |
 | 2024 | StegoType | Egocentric stereo cameras, 30 Hz hand tracking, imagined surface QWERTY | Training: 268K transcriptions from 606 typists; live N=18: 42.4 WPM and 7% UER versus 74.5 WPM and 0.8% on a physical keyboard | Academic prototype | Ring/pinky occlusion, camera/privacy burden, surface registration, and a 7% final error load |
 | 2025-2026 | Perceptron-GIK glove | Two-hand glove with five FSR contacts and per-finger IMU features, BLE, and learned key prediction | Public code, a single named data directory, model artifacts, three contributors, and 60 issues; no paper, cohort, WPM, CER, release, or license | Active repository prototype; last push 2026-03-11 | Open issues still cover live demo/inference, preprocessing leakage, calibration, inconsistent FSR thresholds, BLE dropouts, and cross-hand alignment |
@@ -113,9 +113,11 @@ LapCal is the supplied reference, not the landscape's performance benchmark.
 The [evidence audit](lapcal-evidence-audit.md) already establishes its sensor,
 data, synchronization, split, firmware, and licensing boundary, so this report
 does not repeat it. For status only: GitHub reports no release, two
-contributors, three open issues, `archived=false`, and a last push on
-2025-07-22. "Abandoned" is therefore a user characterization, not a verified
-maintainer statement.
+contributors, three open issues, `archived=false` as checked on 2026-08-29,
+and a last push on 2025-07-22. Its pinned evidence snapshot is
+[`8638759168d84d32fa50ae461e053055a01c3dff`](https://github.com/xjjak/LapCal/tree/8638759168d84d32fa50ae461e053055a01c3dff).
+"Abandoned" is therefore a user characterization, not a verified maintainer
+statement.
 
 ### Perceptron-GIK glove-invisible-keyboard
 
@@ -298,10 +300,11 @@ should cite the inconsistency rather than silently choose a number.
 
 ## Source registry
 
-All sources were accessed on 2026-08-09. Grades follow the sensing comparison:
-I is peer-reviewed primary work, II is an author manuscript or repository, III
-is first-party product material, V is direct project-status evidence, and VI is
-community anecdote.
+Sources were first accessed on 2026-08-09. LapCal repository status and its
+pinned technical sources were rechecked on 2026-08-29. Grades follow the
+sensing comparison: I is peer-reviewed primary work, II is an author manuscript
+or repository, III is first-party product material, V is direct project-status
+evidence, and VI is community anecdote.
 
 | ID | Grade | Source | Claim boundary |
 | --- | --- | --- | --- |

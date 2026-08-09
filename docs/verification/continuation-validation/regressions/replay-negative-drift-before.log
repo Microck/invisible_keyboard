@@ -1,0 +1,62 @@
+OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //:replay-contract-test (1 packages loaded)
+Analyzing: target //:replay-contract-test (5 packages loaded, 6 targets configured)
+Analyzing: target //:replay-contract-test (5 packages loaded, 6 targets configured)
+
+Analyzing: target //:replay-contract-test (9 packages loaded, 9 targets configured)
+
+Analyzing: target //:replay-contract-test (62 packages loaded, 9 targets configured)
+
+Analyzing: target //:replay-contract-test (82 packages loaded, 366 targets configured)
+
+Analyzing: target //:replay-contract-test (108 packages loaded, 876 targets configured)
+
+Analyzing: target //:replay-contract-test (124 packages loaded, 1958 targets configured)
+
+Analyzing: target //:replay-contract-test (148 packages loaded, 3115 targets configured)
+
+Analyzing: target //:replay-contract-test (181 packages loaded, 4568 targets configured)
+
+Analyzing: target //:replay-contract-test (203 packages loaded, 5393 targets configured)
+
+INFO: Analyzed target //:replay-contract-test (206 packages loaded, 5419 targets configured).
+[86 / 425] checking cached actions
+[425 / 426] [Prepa] Testing //:replay-contract-test
+[425 / 426] Testing //:replay-contract-test; 1s processwrapper-sandbox
+[425 / 426] Testing //:replay-contract-test; 11s processwrapper-sandbox
+[425 / 426] Testing //:replay-contract-test; 13s processwrapper-sandbox
+FAIL: //:replay-contract-test (Exit 101) (see /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/execroot/_main/bazel-out/aarch64-fastbuild/testlogs/replay-contract-test/test.log)
+INFO: From Testing //:replay-contract-test:
+==================== Test output for //:replay-contract-test:
+
+running 1 test
+test replay_negative_drift_preserves_raw_sensor_progress_and_mapped_output ... FAILED
+
+failures:
+
+---- replay_negative_drift_preserves_raw_sensor_progress_and_mapped_output stdout ----
+
+thread 'replay_negative_drift_preserves_raw_sensor_progress_and_mapped_output' (94206) panicked at tests/replay-contract.rs:4209:5:
+[Pipeline(InvalidWindow(SensorTimeRegression { sensor: 0 }))]
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    replay_negative_drift_preserves_raw_sensor_progress_and_mapped_output
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 54 filtered out; finished in 13.46s
+
+================================================================================
+INFO: Found 1 test target...
+Target //:replay-contract-test up-to-date:
+  bazel-bin/replay-contract-test
+INFO: Elapsed time: 30.868s, Critical Path: 13.94s
+INFO: 2 processes: 424 action cache hit, 1 internal, 2 processwrapper-sandbox.
+INFO: Build completed, 1 test FAILED, 2 total actions
+//:replay-contract-test                                                  FAILED in 13.5s
+  /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/execroot/_main/bazel-out/aarch64-fastbuild/testlogs/replay-contract-test/test.log
+
+Executed 1 out of 1 test: 1 fails locally.

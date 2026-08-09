@@ -1,0 +1,3 @@
+# Crabbox test fixture only. Do not install this rule for normal application use.
+# Keep regular-keyboard label tests separate from the Core-28 output identity.
+ACTION!="remove", SUBSYSTEM=="input", KERNEL=="event*", ATTRS{id/bustype}=="0006", ATTRS{id/vendor}=="0000", ATTRS{id/product}=="0000", ATTRS{id/version}=="0001", ATTRS{phys}=="invisible-keyboard/label-test", GROUP:="invisible-keyboard", MODE:="0640", TAG-="uaccess"

@@ -2,9 +2,84 @@
 
 Access date: 2026-08-09
 
-Status: research handoff. This document recommends a falsifiable program. It
-does not record the human product decisions that remain open in the
-[Wayfinder map](../wayfinder/invisible-keyboard-feasibility-map.md).
+Status: research snapshot. This document compares the broad option space. The
+user later fixed the product boundary and prototype direction, so use the
+[first passive-surface prototype roadmap](../implementation/first-prototype-roadmap.md)
+for execution and the
+[Wayfinder map](../wayfinder/invisible-keyboard-feasibility-map.md) for the
+decision record. Use the
+[source integrity audit](source-integrity-audit.md) for the implementation-driving
+claim corrections made after the original research pass.
+
+## Product decision after this research
+
+The selected product must work on passive unmarked surfaces and use wearable
+sensing only. The user chose LapCal's five finger IMUs plus one dorsal IMU per
+hand as the hard topology reference, personal calibration, Core-28 exact input,
+and no language model. LapCal establishes a 34-slot per-finger topology and its
+packed group/bit ordering. It does not establish metric key geometry or this
+project's logical Core-28 map. The implementation is independently written
+under a no-artifact-reuse policy. That choice intentionally accepts more
+key-identity risk than the optical recommendation below because environmental
+sensing violates the chosen type-anywhere boundary.
+
+The optical and instrumented-surface programs below remain useful alternatives
+and laboratory truth methods. They are not the current product implementation.
+The selected one-hand wearable build, wiring, protocol, electrical/contact
+gates, and stop rules are planned in the execution roadmap linked above. No
+wearable rig has been assembled and no physical gate has passed. Exact Core-28
+calibration starts only after both hand rigs pass admission.
+
+The planned Rev-A sensor path uses pulsed LSM6DS3TR-C data-ready edges, direct
+motion-register reads, and a latest-sample cache feeding a 200 Hz aggregate
+grid from 208 Hz sensors. Nominally, 8 reads per second per sensor are
+intentionally decimated and remain visible through retained source-edge
+timestamps. This expected decimation is not an acquisition overrun. Gate 0A
+must use a captured cache-commit marker and a later aggregate-snapshot marker
+to classify every observed edge, read, commit, collision, selection, and
+deliberate decimation. Direct-register reads alone cannot prove that every
+internal conversion was retained [K18].
+
+The decisive Gate 0A artifact is one DSLogic Plus native little-endian `u16`
+capture, not external evidence JSON, decoded NDJSON, or human aggregates. Ten
+raw bits record INT1x6, D8, D9, SDA, and SCL. The full run requests
+7,220,000,000 words at 2 MHz, produces 14,440,000,000 bytes, and scores at
+least 3,601 seconds. The 20 MHz 10-second preflight and 2 MHz 10-minute soak are
+non-decisive. Build, finalization, hashing, and scoring run in a Crabbox; only
+the physical capture runs on the compatible analyzer host. See the capture
+guide's [Canonical artifacts](../implementation/gate0a-capture-stack.md#canonical-artifacts),
+[Box validation record](../implementation/gate0a-capture-stack.md#box-validation-record),
+[Physical preflight sequence](../implementation/gate0a-capture-stack.md#physical-preflight-sequence),
+[Physical-host capture](../implementation/gate0a-capture-stack.md#physical-host-capture),
+[Crabbox finalization](../implementation/gate0a-capture-stack.md#crabbox-finalization),
+and [GPL and firmware provenance](../implementation/gate0a-capture-stack.md#gpl-and-firmware-provenance).
+The fixed firmware blob identities do not yet reproduce from the available
+source snapshots, so redistribution remains a legal and supply-chain risk.
+
+Guided setup uses the physical keyboard only as a non-admission precheck. `B`,
+Space, Backspace, and both outer thumbs are passive-only. Browser
+acknowledgment opens a 1.5-second response gate; a causal sensor observation
+from both hands decides whether exactly one expected hand and finger made
+contact. Passive centroids, final-threshold selection, and held-out validation
+use disjoint evidence. Persisted success is
+`CalibrationPhase::ValidationPassed`, serialized as `validation-passed`, with
+`CalibrationSnapshot.heldout_validation_passed=true`. The resulting
+`HeldOutValidation` authorizes the saved model and replay only; faults use
+`HeldOutValidationError`. The artifact sets
+`requires_wear_session_confirmation=true`. Live output requires a fresh
+per-process `WearSessionConfirmation` because the system cannot detect
+wearable removal, movement, or loosening.
+
+The implemented live path treats output neutralization and durable evidence as
+two milestones. The Linux Gate 0S safety evidence composes a native `uinput`
+owner plus independent evdev consumer with a separate real-CLI recording-mode
+coordinator test. It does not yet prove the full `run-calibrated uinput` path
+inside one 250 ms end-to-end oracle. Exact evidence finalization has no
+universal wall-clock deadline: a terminal run drains only chunks admitted
+before its atomic cutoff, writes and syncs the footer-complete session, audits
+it, and then writes a live-clock-report-v2 document bound to the exact session
+SHA-256. A durable status appears only after the report file and parent
+directory are synced on Unix.
 
 ## Verdict
 
@@ -30,12 +105,12 @@ The conditional recommendation is:
 4. Treat wrist IMU alone as a phrase-transcription architecture. It cannot
    physically distinguish keys assigned to the same finger.
 
-The first build is not a polished keyboard. It is a shared optical-plus-touch
-truth rig that can show whether contact time, finger identity, or surface
-position is the missing fact. It also tests a blank instrumented surface and an
-actual passive surface under visible and hidden layout conditions. Only a
-passing result authorizes the larger cohort, custom hardware, or input-device
-work.
+The first build recommended by this research snapshot was a shared
+optical-plus-touch truth rig, not a polished keyboard. It was a planned rig
+that could show whether contact time, finger identity, or surface position was
+the missing fact. It was not built. The later wearable-only decision replaced
+that execution path, while preserving optical or instrumented truth as an
+optional laboratory method.
 
 The research does **not** support all of these requirements at once:
 
@@ -59,10 +134,10 @@ the evidence, exact protocol, and limits behind each answer.
 | Is the idea possible? | Yes, in four bounded forms. Exact input on a blank instrumented surface has the strongest evidence. Passive hidden QWERTY is plausible but unproved. Learned gestures and language-assisted prose work only under narrower product contracts. | [Verdict](#verdict) and [product contracts](#four-separate-information-contracts) |
 | Which option should be used? | Choose a blank instrumented surface if it is allowed. For strict passive-surface QWERTY, test accessible optical geometry. If a new alphabet is acceptable, preserve a FineType-like system. Use wrist IMU plus a declared language model only for phrase entry. | [Ranked options](#ranked-options) |
 | What happens first? | Run P0: record 10 minutes of timestamped data from the exact candidate platform. Stop that platform if the needed data is inaccessible, capture terms are unacceptable, or timestamps cannot align to contact truth. If P0 passes, run the two-session P1 truth-rig screen. Stop passive QWERTY if the hidden-passive condition fails and the location oracle shows that position remains unobservable. | [The first decisive program](#the-first-decisive-program) |
-| What is needed? | Use a supported optical sensor, independent reference camera, blank contact-truth surface, matched passive surface, fixed registration, and Linux host. Record immutable timestamped sessions, start with a causal nearest-key baseline, run one-variable oracle substitutions, and evaluate with session- and person-held-out gates. | [Hardware](#hardware-boundary), [software](#software-boundary), [data](#data-and-labeling-protocol), and [evaluation](#ten-gate-build-roadmap) |
-| What can be spent or reused? | Inventory owned hardware first. Buy nothing for a product build before the product boundary and P0 are settled. Use the owned-hardware P0/P1 fixture envelope first, and do not fund custom PCBs, BLE polish, a large cohort, or scientific sensors yet. Keep LapCal and emg2qwerty outside the commercial implementation and verify every other artifact's license separately. | [Cost and stop-loss](#cost-envelopes-and-stop-loss) and [clean-room reuse](#clean-room-reuse-rule) |
+| What is needed? | Use a supported optical sensor, independent reference camera, blank contact-truth surface, matched passive surface, fixed registration, and Linux host. Record immutable timestamped sessions, start with a causal nearest-key baseline, run one-variable oracle substitutions, and evaluate with session- and person-held-out gates. | [Hardware](#hardware-boundary), [software](#software-boundary), [data](#data-and-labeling-protocol), and [evaluation](#canonical-build-roadmap) |
+| What can be spent or reused? | Inventory owned hardware first. Buy nothing for a product build before the product boundary and P0 are settled. Use the owned-hardware P0/P1 fixture envelope first, and do not fund custom PCBs, BLE polish, a large cohort, or scientific sensors yet. Project policy keeps LapCal and emg2qwerty artifacts outside the implementation and requires a separate rights review for any proposed reuse. | [Cost and stop-loss](#cost-envelopes-and-stop-loss) and [implementation reuse policy](#independent-implementation-and-no-artifact-reuse-policy) |
 | What is proved versus uncertain? | Published work proves hidden-layout typing on an instrumented surface and narrower learned-gesture or phrase products under their stated tasks. It does not prove accessible, hidden, passive-surface exact QWERTY, full HID behavior, population transfer, long-term comfort, or commercial rights. | [Known gaps and claim-audit notes](#known-gaps-and-claim-audit-notes) |
-| What must the human decide? | Resolve the first use case, then sensing architecture, decoding strategy, and decisive prototype. The recommended defaults are proposals, not approvals. | [Open human decisions](#open-human-decisions-and-recommended-defaults) and [handoff order](#handoff) |
+| What did the human decide? | Wearable-only sensing on passive unmarked surfaces, an independently implemented per-finger/dorsal topology informed by LapCal, personal calibration, Core-28 exact input, and a planned one-hand wired falsification rig first. | [Wayfinder decisions](../wayfinder/invisible-keyboard-feasibility-map.md#decisions-so-far) and [execution roadmap](../implementation/first-prototype-roadmap.md) |
 | Where is the evidence? | K1-K17 link the primary papers and official standards. The local artifact index links the detailed audits, comparisons, cost model, risk register, and Wayfinder map. | [Source registry](#source-registry) and [local artifact index](#local-artifact-index) |
 
 ## What product is being built?
@@ -82,8 +157,9 @@ input. The corrected result must never be reported as sensor key accuracy.
 The person taps the remembered location of a normal QWERTY layout. The system
 must observe contact and layout-relative position. Optical tracking, radar,
 magnetic tracking, acoustic localization, or a spatially instrumented surface
-can supply position in principle. A wrist IMU or sEMG channel cannot supply an
-absolute surface coordinate by itself.
+can supply position in principle. A wrist IMU or sEMG channel does not directly
+measure an absolute surface coordinate; whether its motion or muscle patterns
+separate same-finger positions is an empirical, task-specific question.
 
 This is the closest interpretation of "type without a keyboard" while keeping
 touch-typing muscle memory. It is also the hardest useful interpretation.
@@ -130,7 +206,7 @@ which published result is relevant.
 | 1 | Blank instrumented touch surface | Contact time and 2D location | Hidden-layout touch study: 31.3 to 37.9 WPM over three days [K1] | It is still a physical sensor surface | High |
 | 2 | Egocentric or overhead optical geometry on a passive surface | Hand pose and estimated surface contact location | StegoType and TouchInsight show live surface text entry [K2][K3] | Their headline live tasks showed a virtual keyboard; hidden-layout performance is not established |
 | 3 | Learned wrist IMU plus IR camera gestures | Tap timing, finger combination, and posture | FineType supports letters and mixed-character gesture entry [K4] | New one-handed alphabet; no code-only result or complete HID semantics |
-| 4 | Wrist IMU plus language decoder | Tap timing and likely finger | TapType: online N=10, 19.2 WPM and 0.6% CER after personal calibration [K5] | Same-finger key position is unobserved; prose only unless the contract is narrowed |
+| 4 | Wrist IMU plus language decoder | Tap timing and likely finger | TapType: online N=10, 19.2 WPM and 0.6% CER after personal calibration [K5] | Same-finger key position is not directly measured; the cited result is prose unless the contract is narrowed |
 | 5 | Optical plus IMU | Optical geometry plus high-rate impact evidence | Complementary physics and related hybrid precedents | No reviewed study proves that this exact fusion beats optical alone; synchronization and wear burden increase |
 | 6 | Radar surface localization | Motion and registered surface position | mmKey reported greater than 95% single-key and greater than 90% multi-key recognition [K6] | Custom unavailable array, no comparable live WPM, correction-dependent word result |
 | 7 | Magnetic multi-finger tracking | Calibrated 3D fingertip position | Finexus reported millimeter-scale lab tracking [K7] | Bulky short-range lab hardware and no continuous keyboardless text study |
@@ -148,9 +224,10 @@ The earlier [sensing comparison](sensing-architecture-comparison.md) made
 dual-wrist IMU and egocentric optical tracking conditional co-leads. The full
 Bikeshed review sharpened the product boundary:
 
-- An IMU can provide excellent tap and finger evidence, but same-finger key
-  position remains physically unobserved. More training data cannot create that
-  missing coordinate.
+- An IMU can provide tap and finger evidence, but it does not directly measure
+  same-finger surface position. Classification from motion may still be
+  possible; the selected wearable program must establish that separability on
+  held-out passive-surface data rather than assume an absolute coordinate.
 - Optical tracking is therefore the better strict-QWERTY research lane, but
   only after proving that the required camera or hand-tracking data is actually
   available to this project.
@@ -226,7 +303,7 @@ The program separates four questions:
    key mapping?
 4. If it fails, which missing fact would make it pass?
 
-### Pre-gate P0: platform data access
+### Platform-access screen P0
 
 Do this before selecting a headset, camera SDK, or paper implementation.
 
@@ -252,7 +329,7 @@ unacceptable vendor capture, or timestamps that cannot be related to contact
 truth. The fallback is an owned external camera or the blank instrumented
 surface, not a compatibility shim.
 
-### Pre-gate P1: one- or two-person observability screen
+### Observability screen P1
 
 This is an adversarial engineering screen, not a usability study and not
 population evidence.
@@ -422,27 +499,29 @@ The N=8/N=10 and longer studies begin only when:
   human explicitly selects the hidden instrumented or learned-gesture product;
 - the baseline/oracle result identifies a plausible measured path, not a wish
   for a larger model; and
-- deterministic output Gate 0B is independently safe.
+- deterministic output Gate 0S is independently safe.
 
 No custom PCB, BLE product path, app-store work, participant cohort, or polished
 UI is authorized before those facts exist.
 
-## Ten-gate build roadmap
+## Canonical build roadmap
 
-The two pre-gates above precede the existing ten numbered gates. Gate 0 has two
-independent subgates so acquisition quality cannot hide output defects and a
-perfect replay adapter cannot hide broken sensing.
+Gate 0A, Gate 0S, and Gate 0B are first-class gates in the one canonical
+taxonomy. Gate 0A and Gate 0S are independent so acquisition quality cannot
+hide output defects and a perfect replay adapter cannot hide broken sensing.
+Gate 0B starts the cumulative physical-observability sequence.
 
 | Gate | Required proof | Provisional go condition | Stop condition |
 | --- | --- | --- | --- |
-| 0A - acquisition integrity | Complete sensor/truth topology for at least 60 minutes, 10,000 deterministic truth events where applicable, 10 forced capture faults | 100% sequence accounting, at least 99.9% receipt, sync residual at most 5 ms or 10% of shortest feature, no silent clock reset | Silent loss, clock ambiguity, corrupt/reordered delivery, or metrics without a sent denominator |
-| 0B - deterministic output integrity | Event-file replay through Linux `uinput` into the target app, 10,000 down/up records and 10 faults | App-observed p95 at most 100 ms, p99 at most 200 ms, all-up within 250 ms, zero stuck modifier/repeat | Any stuck key, untraceable event, focus guessing, or fallback paste |
-| 1 - isolated intent | At least N=5, two mounts, 50 randomized activations per supported actuator plus equal quiet/scripted negatives | Miss upper bound at most 5%, p95 at most 100 ms, p99 at most 200 ms, no class recall below 80% | Candidate sensor supplies its own truth or balanced windows are the only negatives |
-| 2 - finger and exact key identity | At least N=8, two mounts, 50 events per advertised class, session-held-out split, no language model | Participant-level macro-F1 lower bound at least 0.90, event-error upper bound at most 10%, every class recall at least 0.80 | Same-finger keys unobservable, top-k replaces top-1, or windows cross a split |
-| 3 - live uncorrected text | At least N=10, two sessions, at least 1,000 characters/session, live causal decoder | Lower bound at least 15 WPM, UER upper bound at most 10%, completion at least 95%, Gate 0 remains green | Offline-only result, future/phrase leakage, or final string not traceable to events |
+| 0A - acquisition integrity | One DSLogic Plus native raw capture with ten bits, 2 MHz, 7,220,000,000 `u16` words, 14,440,000,000 bytes, and at least 3,601 scored seconds, bound to one complete hand session | 100% raw-word sequence and fault accounting; every observed edge, read, collision, D9 eligibility fall, D8 snapshot, selection, and deliberate decimation classified exactly once; at least 99.9% valid receipt; spread at most 5 ms or a passed alignment ablation; and selected source reads complete before their snapshot boundary | Silent or multiply classified evidence, external/decoded evidence substituted for native raw, clock or payload-link ambiguity, wrong mux/register trace, non-latest selection, same-sensor INT1 before D9 eligibility, or an unexpected overrun schedule |
+| 0S - deterministic output integrity | Linux `uinput` through an independent evdev consumer, 10,000 down/up records, native neutralization fault cases, plus a separate real-CLI coordinator and durable-evidence oracle | Native-observer p95 at most 100 ms, p99 at most 200 ms, observed all-up within 250 ms, zero stuck modifier/repeat; exact evidence becomes durable before terminal durable status, without claiming that finalization shares the 250 ms bound | Any stuck key, untraceable event, focus guessing, fallback paste, status before durability, or claim that the current compositional tests prove one full CLI-plus-`uinput` deadline |
+| 0B - observable contact | Both hands; frozen detector; independent contact truth; at least N=5 held-out people, two real remounts each, 50 taps per finger/hand/person/mount, and equal quiet/scripted-motion exposure | Miss upper bound at most 5%; p95/p99 at most 100/200 ms; every finger recall bound at least 80%; zero negative latency, extra contacts, or negative false activations | Candidate sensor supplies its own truth, either hand or a real remount is absent, or the frozen roster changes after inspection |
+| 1 - acting finger | Gate 0B detector frozen; participant-disjoint fitting/held-out evidence; both hands; at least N=5 held-out people, two remounts each, 50 taps per finger/hand/person/mount, and all required negative conditions | Participant-level macro-F1 lower bound at least 0.90; event-error upper bound at most 10%; every finger recall bound at least 0.80; zero extra outputs or negative false activations | Test people enter fitting, simultaneous activity is relabeled after observing output, or finger evidence fails |
+| 2 - exact 34-position/Core-28 identity | Frozen representation; participant-disjoint splits; at least N=8 held-out people, two remounts each, and 50 events for all 34 physical positions in every person/mount slice; no language model | Participant-level macro-F1 lower bound at least 0.90 across Core-28; event-error upper bound at most 10%; every physical-position recall bound at least 0.80; zero enabled outputs on six reserved positions | Same-finger positions are unobservable, top-k replaces top-1, a held-out person enters fitting, or windows cross a split |
+| 3 - live uncorrected text | At least N=10, two sessions, at least 1,000 characters/session, live causal decoder | Lower bound at least 15 WPM, UER upper bound at most 10%, completion at least 95%, Gate 0A and Gate 0S remain green | Offline-only result, future/phrase leakage, or final string not traceable to events |
 | 4 - corrected phrase text | Locked language model and corpus; N=10, at least 20 phrases each from standard and mixed sets | Lower bound at least 20 WPM, final CER upper bound at most 3%, completion at least 95%, corrections at most 0.15/output character | Only corrected output retained or result presented as exact-input evidence |
 | 5 - arbitrary keys, code, and shortcuts | Language disabled; randomized keys, generated secrets, mixed punctuation, code, every advertised usage, 100 modifier/hold/repeat/shortcut trials | Key-event error upper bound at most 5%, shortcut/chord lower bound at least 95%, at least 15 WPM, zero stuck/destructive state | Unsupported keys removed, text normalized, dictionary repair, or app result substitutes for event trace |
-| 6 - session and remount transfer | N=10, three sessions at least 24 hours apart, final complete remount held out | WPM drop at most 20%, UER and miss rise at most 3 points, median calibration at most 2 minutes, p95 setup at most 5 minutes | Test session changes model, normalization, threshold, or geometry before scoring |
+| 6 - session and remount transfer | N=10, three sessions at least 24 hours apart, final complete remount held out | WPM drop at most 20%, UER and miss rise at most 3 points, median calibration at most 2 minutes, p95 setup at most 5 minutes | Test session changes model, collection trigger, final threshold, normalization, or geometry before scoring |
 | 7 - person transfer | Locked pipeline on at least 20 wholly unseen people | Base gate still passes and lower bound on individual pass fraction is at least 0.80 | Any test person enters tuning or poor users are removed |
 | 8 - ordinary movement negatives | At least 30 armed participant-hours over N=10 with 200 interleaved intentional events | False activation upper bound at most 0.1/hour, miss upper bound at most 5%, no false modifier/destructive chord | Balanced negative windows, missing inactive denominator, or a hidden wake gesture |
 | 9 - extended use and recovery | N=12, counterbalanced 90-minute candidate and physical-keyboard conditions | No adverse event, median discomfort rise at most 2/10, participant p90 at most 4/10, stable speed/error, completion at least 95%, runtime at least declared use | Pain/numbness, performance collapse, hidden operator recovery, stuck state, or data-sheet-only battery claim |
@@ -466,12 +545,17 @@ deterministic replay
 
 1. **Deterministic replay:** prove the event vocabulary and key-state machine
    before sensing affects a computer.
-2. **Linux `uinput`:** use `libevdev`, a narrow privileged creation boundary,
-   and an unprivileged recorder/decoder. Test application-observed down/up,
-   modifiers, repeat, layout, focus, crash, and all-up recovery.
+2. **Linux `uinput`:** give the narrow device-creation process write access to
+   `/dev/uinput` through the host's ownership, group mode, ACL, or udev policy;
+   the kernel does not require root as such. Keep the recorder/decoder outside
+   that permission boundary. Test application-observed down/up, modifiers,
+   repeat, layout, focus, crash, and all-up recovery [K12].
 3. **Live local decoder:** connect the frozen sensor event stream to the same
-   adapter. Keep raw, decoded, injected, and application-observed events
-   separately traceable.
+   adapter. A passed held-out report authorizes model/replay use only. Require a
+   fresh per-process user attestation that neither wearable moved before live
+   output. Any source, watchdog, identity, clock, output, or process fault
+   terminally revokes that instance and cannot silently rearm. Keep raw,
+   decoded, injected, and application-observed events separately traceable.
 4. **USB HID:** after the live path is green, present a standard keyboard. Use
    the host layout and repeat behavior. Advertise only the tested rollover and
    usage set.
@@ -493,16 +577,19 @@ dossier.
 | --- | ---: | ---: | ---: | --- |
 | Shared optical truth rig, compatible camera owned | USD 60 / 250 / 650 min/realistic/upper, plus an owned or separately quoted touch-truth surface | USD 500-2,000 for later gates | 120-300 h | Whether accessible optical data observes contact and geometry under visible/hidden and instrumented/passive conditions |
 | All-new optical | USD 320 / 950 / 2,500 | USD 500-2,000 | 120-300 h | Same decision without owned camera/headset hardware |
-| Host-decoded dual-wrist IMU shadow/fallback | USD 95 / 180 / 310 | USD 375-750 through Gates 1-2 | 60-140 h | Whether wrist evidence supports contact/finger classification for phrase input or an earned hybrid |
+| Host-decoded dual-wrist IMU shadow/fallback | USD 95 / 180 / 310 | Not priced until Gate 0B-2 paid hours are scheduled | 60-140 h | Whether wrist evidence supports contact/finger classification for phrase input or an earned hybrid |
 | USB HID increment | USD 0-40 / 150 / 350 | USD 0-300 | 20-80 h | Whether frozen exact events survive cross-platform wired input behavior |
 | BLE HOGP increment | USD 25 / 180 / 500 | USD 0-500 | 60-180 h | Pairing, fault, latency, power, and interoperability after USB passes |
 | Radar | USD 240 board-level minimum / 1,450 realistic raw-capture lane / 3,500 upper | USD 250-1,000 | 160-450 h | Only whether a current EVM resolves adjacent registered keys |
 | Magnetic | USD 300 / 1,500 / 7,000 | Up to USD 1,000 after bench success | 250-700 h | A scientific geometry upper bound, not text entry |
 | sEMG | At least USD 5,768 listed floor, unavailable; realistic cost unknown | USD 500-3,000 | 300-900 h | Not a viable first procurement path |
 
-The historic EUR 200 ceiling was USD 230.70 at the report's reference rate. It
-can cover the cheapest IMU rig or an owned-hardware optical fixture. It cannot
-cover participants or labor and is not a project budget.
+The cost report records USD 230.70 as its 2026-08-09 planning conversion for
+the historic EUR 200 ceiling. Its linked ECB daily feed does not reproduce the
+historic rate, so that number is a dated sensitivity input, not an independently
+verified exchange-rate fact. It can screen the cheapest IMU rig or an
+owned-hardware optical fixture, but it does not cover participants or labor and
+is not a project budget.
 
 ### Staged release of money
 
@@ -511,7 +598,8 @@ cover participants or labor and is not a project budget.
 | Product boundary | USD 0 | Do not buy until "invisible," platform, layout, event set, privacy, calibration, and budget are chosen |
 | P0 data access | Owned hardware and supported SDK only | Stop any platform whose needed observations are inaccessible |
 | P1 observability | Owned/borrowed camera and touch truth first; at most the approved small fixture envelope | Stop strict passive QWERTY when no single oracle exposes a plausible fix |
-| Gates 0-2 | One complete cheap topology and frozen capture/analysis | No custom PCB, battery, gateway, or larger cohort |
+| Gates 0A and 0S | One complete cheap acquisition topology plus the deterministic host-output harness | No custom PCB, battery, gateway, or larger cohort |
+| Gate 0B through Gate 2 | Fund the second hand, independent truth, and frozen physical-study capture/analysis | No custom revision or later cohort before contact, finger, and exact-position evidence passes in order |
 | Gates 3-5 | Host decoder, target harness, then USB HID | Stop on offline-only decoding, language leakage, hidden keys, or unsafe state |
 | Gate 6 | Only now fund repeatable wearable or optical mechanicals | Stop if remount transfer fails without test-time adaptation |
 | Gates 7-9 | Freeze modality and fund population, negatives, comfort, and power evidence | Stop generality, always-on, or safety claims when their bounds fail |
@@ -547,8 +635,10 @@ prices, assumptions, and vendor links.
 - A small adapter owns key state and accepts only the frozen allowlisted usage
   set through a local permissioned protocol.
 - Neutral startup is mandatory. Duplicate down/up is a recorded defect.
-- Planned stop and update send all-up. Fault recovery reaches app-observed
-  neutral within the Gate 0B deadline.
+- Planned stop and update send all-up. The native Linux owner and independent
+  evdev consumer must observe neutral within the Gate 0S deadline. The real CLI
+  coordinator remains a separate proof layer until one all-up oracle exercises
+  the complete `run-calibrated uinput` path.
 - Output follows OS focus. It never guesses or remembers a destination window.
 - BLE pairing requires a physical action and short discoverable window. Record
   whether the achieved link is authenticated or merely encrypted.
@@ -567,17 +657,24 @@ shipping wearable later needs qualified review for repetitive impact/posture,
 skin-contact materials, battery and charging, thermal surface temperature,
 RF exposure, ESD/EMC, mechanical reliability, and target-market product safety.
 
-### Clean-room reuse rule
+### Independent implementation and no-artifact-reuse policy
 
-The canonical commercial implementation must not copy, adapt, train from, or
-ship LapCal or emg2qwerty code, data, weights, PCB, CAD, or models. Both roots
-use noncommercial Creative Commons terms and do not supply the complete patent,
-participant, or commercial rights needed here [K8][K9].
+The canonical implementation must not copy, adapt, train from, or ship LapCal
+or emg2qwerty code, data, weights, PCB, CAD, or models under this project's
+conservative no-artifact-reuse policy. Their repository license statements and
+available provenance do not establish all rights that a commercial product
+would need [K8][K9]. This is a project policy and risk boundary, not a claim
+that their Creative Commons terms prohibit every covered noncommercial use or
+adaptation.
 
-Use those projects only as prior art and failure evidence. Write fresh
-requirements, source, PCB, CAD, datasets, and models. Maintain a provenance
-ledger with source URL, version/hash, owner, license, data/participant rights,
-patent grant if any, and approved use for every dependency and artifact.
+Project policy permits inspection and citation as research evidence. Any
+particular reproduction or adaptation still depends on the applicable rights,
+license terms, and exceptions. Write fresh requirements, source, PCB, CAD,
+datasets, and models. Maintain a provenance ledger with source URL,
+version/hash, owner, license, data/participant rights, patent grant if any, and
+approved use for every dependency and artifact. The project has not documented
+separated teams, access controls, or a communication record and therefore does
+not claim a formal clean-room process.
 
 Before reuse, perform an exact license and provenance review for:
 
@@ -626,7 +723,7 @@ starting default so the next human session can decide quickly.
 | First platform | Linux desktop | Best local capture, deterministic replay, and `uinput` path; no app-store or custom-driver gate |
 | First event set | Core-28 for P1; freeze the full product HID usage/down-up/modifier/repeat/rollover set before Gate 5 | Keeps the physics screen bounded without mislabeling it full keyboard support |
 | Calibration | Allow at most two minutes of personal calibration in early feasibility; always report zero-calibration separately | Gives the architecture a fair screen without hiding session-transfer cost |
-| Metrics | Use the ten-gate contract and provisional thresholds as written; require raw and corrected panels | Stops a single accuracy or WPM headline from becoming the product claim |
+| Metrics | Use the canonical gate contract and provisional thresholds as written; require raw and corrected panels | Stops a single accuracy or WPM headline from becoming the product claim |
 | Abstention | Count as a miss/error | Prevents selective silence from inflating accuracy |
 | Privacy | Offline/local, no network egress, raw capture only in explicit research sessions, content-free production logs | The device handles keystrokes and potentially cameras or biometric signals |
 | Owned hardware | Inventory supported cameras, tablets/touch panels, Linux host, high-frame-rate phone, mounts, and test gear before procurement | Existing hardware changes the best cost path by hundreds of dollars |
@@ -637,9 +734,10 @@ These decisions belong to the open Wayfinder tickets, not this research agent.
 
 ## Source registry
 
-All sources below were accessed on 2026-08-09. Primary papers and official
-standards establish the stated boundary. A metric from one task is not assumed
-to transfer to another.
+K1-K17 were accessed on 2026-08-09. The immutable LapCal links in K9 and the
+primary ST datasheet in K18 were rechecked on 2026-08-29. Primary papers and
+official standards establish the stated boundary. A metric from one task is
+not assumed to transfer to another.
 
 | ID | Source | Claim boundary |
 | --- | --- | --- |
@@ -651,7 +749,7 @@ to transfer to another.
 | K6 | [mmKey DOI](https://doi.org/10.1109/JIOT.2021.3084560) | Custom radar surface-key results, correction and hardware boundary |
 | K7 | [Finexus DOI](https://doi.org/10.1145/2858036.2858125) and [author PDF](https://keyuc.com/research/Finexus/Finexus_CHI2016.pdf) | Five-fingertip magnetic tracking accuracy and lab topology, not text entry |
 | K8 | [emg2qwerty paper](https://proceedings.neurips.cc/paper_files/paper/2024/file/a64d53074d011e49af1dfc72c332fe4b-Paper-Datasets_and_Benchmarks_Track.pdf) and [repository](https://github.com/facebookresearch/emg2qwerty) | Physical-keyboard-labelled sEMG benchmark, availability, and noncommercial reuse boundary |
-| K9 | [LapCal repository](https://github.com/xjjak/LapCal) | Local project provenance only; technical conclusions come from the local audit |
+| K9 | LapCal immutable [project goal and finger subsets](https://github.com/xjjak/LapCal/blob/8638759168d84d32fa50ae461e053055a01c3dff/README.org), [packed format](https://github.com/xjjak/LapCal/blob/8638759168d84d32fa50ae461e053055a01c3dff/Software/README.org), [visualizer](https://github.com/xjjak/LapCal/blob/8638759168d84d32fa50ae461e053055a01c3dff/Utilities/keyboard-visualization/src/main.rs), and [grouping diagram](https://github.com/xjjak/LapCal/blob/8638759168d84d32fa50ae461e053055a01c3dff/Documentation/diagrams/keyboard-state-format-grouping.svg) | Exact 34-slot topology and packed ordering; no metric geometry or complete logical map |
 | K10 | [USB HID 1.11](https://www.usb.org/sites/default/files/hid1_11.pdf) | Report state, boot format, rollover, modifiers, repeat, and LEDs |
 | K11 | [Bluetooth HOGP 1.2](https://www.bluetooth.com/specifications/specs/hid-over-gatt-profile-hogp/) | BLE HID services, security, bonding, reconnect, and latency boundary |
 | K12 | [Linux kernel `uinput`](https://docs.kernel.org/input/uinput.html) | Canonical userspace virtual-input bench route |
@@ -660,6 +758,7 @@ to transfer to another.
 | K15 | [Wobbrock text-entry performance measures](https://faculty.washington.edu/wobbrock/pubs/text-07.pdf) | WPM timing and composition/transcription boundaries |
 | K16 | [GDPR official text](https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng) | Personal/biometric data, purpose, security, deletion, and DPIA boundary |
 | K17 | [NISTIR 8259A](https://csrc.nist.gov/pubs/ir/8259/a/final) | Voluntary IoT security capability baseline |
+| K18 | [ST LSM6DS3TR-C datasheet](https://www.st.com/resource/en/datasheet/lsm6ds3tr-c.pdf) | Direct output registers, block-data-update, pulsed-DRDY, and FIFO reset-mode semantics; the 208-to-200 decimation policy is a project design |
 
 ### Local artifact index
 
@@ -668,9 +767,11 @@ to transfer to another.
 | [Domain context](../../CONTEXT.md) | Shared vocabulary and invariants |
 | [Local evidence orientation](local-evidence-orientation.md) | Supplied ChatGPT session and research-corpus source map |
 | [LapCal evidence audit](lapcal-evidence-audit.md) | Reproducibility, hardware, data, leakage, firmware, and reuse conclusions |
+| [Source integrity audit](source-integrity-audit.md) | Oracle Deep Research reconciliation, primary-source corrections, and remaining physical limits |
+| [Gate 0A DSLogic capture stack](../implementation/gate0a-capture-stack.md) | Canonical native raw capture, Box build/finalization, physical-host procedure, and GPL/firmware provenance |
 | [Sensing architecture comparison](sensing-architecture-comparison.md) | Detailed modality matrix and primary evidence registry |
 | [Prior-art landscape](prior-art-landscape.md) | Academic, commercial, repository, abandonment, and failure-mode landscape |
-| [Usable text-entry feasibility contract](usable-text-entry-feasibility-contract.md) | Metrics, data rules, sample boundaries, ten gates, and scorecard |
+| [Usable text-entry feasibility contract](usable-text-entry-feasibility-contract.md) | Metrics, data rules, sample boundaries, canonical gates, and scorecard |
 | [Operating-system input and compute paths](os-input-and-compute-paths.md) | Linux, Windows, macOS, Android, iOS, USB, BLE, browser, and compute boundaries |
 | [Cost viable prototype paths](cost-viable-prototype-paths.md) | Itemized current price envelopes and gate-linked stop-loss |
 | [Privacy, safety, licensing, and IP constraints](privacy-safety-licensing-and-ip-constraints.md) | Threat model, legal boundaries, safety, compliance, provenance, and risk register |
@@ -682,7 +783,10 @@ not modify, redistribute, or bless it for implementation reuse.
 ## Known gaps and claim-audit notes
 
 - No prototype or participant study was run in this research pass. Every
-  recommendation remains conditional on the pre-gates and gates.
+  recommendation remains conditional on the canonical gates.
+- No selected sensor signal can prove that a wearable stayed fixed after
+  validation. Live operation intentionally depends on a fresh per-process user
+  attestation and terminal fault revocation.
 - FineType's DOI, hardware, study boundaries, and headline results were
   cross-checked during the Bikeshed review. During final synthesis, the indexed
   author-paper host timed out and ACM delivery returned HTTP 403. No public
@@ -720,18 +824,16 @@ not modify, redistribute, or bless it for implementation reuse.
   host, phone, mounts, or test equipment exists. That inventory is the first
   cost input.
 
-## Handoff
+## Handoff status
 
-Resolve the open tickets in this order:
+The four Wayfinder decisions are resolved. The user selected wearable-only
+sensing, the LapCal-style per-finger/dorsal topology, Core-28 exact taps, and an
+independent implementation under a no-artifact-reuse policy. The optical P0/P1
+program above remains a rejected option-space recommendation and a possible
+laboratory-truth method, not the current product plan.
 
-1. [Confirm the first invisible-keyboard use case](../wayfinder/tickets/001-confirm-first-use-case.md).
-2. [Select the first sensing architecture](../wayfinder/tickets/009-select-sensing-architecture.md).
-3. [Choose the decoding and personalization strategy](../wayfinder/tickets/010-choose-decoding-strategy.md).
-4. [Specify the decisive prototype and evaluation protocol](../wayfinder/tickets/011-specify-decisive-prototype.md).
-
-If the recommended defaults are approved, the next implementation artifact is
-the P0/P1 truth-rig specification, not production keyboard code. It should name
-the owned hardware, supported data API, Core-28 geometry, session manifest,
-nearest-key baseline, oracle evaluator, provisional stop thresholds, and exact
-cash cap. Human approval of that artifact completes the feasibility map and
-starts implementation planning.
+Use the [first prototype roadmap](../implementation/first-prototype-roadmap.md)
+for the executable order: one-hand electrical and contact falsification, a
+second admitted rig, two-hand guided calibration with locked passive-surface
+validation, then live Linux output and broader human gates. All of those
+physical stages remain planned and unpassed.

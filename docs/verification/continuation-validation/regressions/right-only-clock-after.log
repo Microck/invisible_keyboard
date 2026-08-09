@@ -1,0 +1,18 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+Executing tests from //:clock-epoch-contract-test
+-----------------------------------------------------------------------------
+
+running 10 tests
+test clock_fit_rejects_frames_from_an_undeclared_hand ... ok
+test explicitly_unreliable_controller_clock_prevents_epoch_fit ... ok
+test clock_epoch_round_trip_binds_manifest_session_controller_and_boot ... ok
+test live_clock_report_rejects_different_bytes_with_the_same_session_header ... ok
+test live_clock_report_separates_recent_operational_fits_from_offline_qualification ... ok
+test fresh_startup_frames_bootstrap_both_controller_fits_from_host_receipts ... ok
+test one_hand_clock_fit_preserves_the_declared_side ... ok
+test unknown_fields_and_wrong_hand_order_are_rejected ... ok
+test wrong_session_controller_or_boot_fails_closed ... ok
+test streamed_clock_fit_matches_the_in_memory_reference_exactly ... ok
+
+test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.20s
+

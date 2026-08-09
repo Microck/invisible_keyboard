@@ -1,0 +1,71 @@
+OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //:replay-contract-test (1 packages loaded)
+Analyzing: target //:replay-contract-test (5 packages loaded, 6 targets configured)
+Analyzing: target //:replay-contract-test (5 packages loaded, 6 targets configured)
+
+Analyzing: target //:replay-contract-test (11 packages loaded, 9 targets configured)
+
+Analyzing: target //:replay-contract-test (62 packages loaded, 9 targets configured)
+
+Analyzing: target //:replay-contract-test (83 packages loaded, 427 targets configured)
+
+Analyzing: target //:replay-contract-test (104 packages loaded, 912 targets configured)
+
+Analyzing: target //:replay-contract-test (133 packages loaded, 2440 targets configured)
+
+Analyzing: target //:replay-contract-test (151 packages loaded, 3245 targets configured)
+
+Analyzing: target //:replay-contract-test (191 packages loaded, 4854 targets configured)
+
+INFO: Analyzed target //:replay-contract-test (206 packages loaded, 5419 targets configured).
+[1 / 1] no actions running
+[158 / 425] checking cached actions
+[423 / 425] [Prepa] Compiling Rust bin replay-contract-test (1 file)
+INFO: From Compiling Rust bin replay-contract-test (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+[424 / 425] [Prepa] runfiles for //:replay-contract-test
+[425 / 426] Testing //:replay-contract-test; 1s processwrapper-sandbox
+[425 / 426] Testing //:replay-contract-test; 11s processwrapper-sandbox
+[425 / 426] Testing //:replay-contract-test; 13s processwrapper-sandbox
+FAIL: //:replay-contract-test (Exit 101) (see /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/execroot/_main/bazel-out/aarch64-fastbuild/testlogs/replay-contract-test/test.log)
+INFO: From Testing //:replay-contract-test:
+==================== Test output for //:replay-contract-test:
+
+running 1 test
+test live_post_evidence_consumer_delay_revokes_before_candidate_flush ... FAILED
+
+failures:
+
+---- live_post_evidence_consumer_delay_revokes_before_candidate_flush stdout ----
+
+thread 'live_post_evidence_consumer_delay_revokes_before_candidate_flush' (84644) panicked at tests/replay-contract.rs:3878:5:
+assertion `left == right` failed: stale taps escaped before consumer watchdog
+  left: 4
+ right: 0
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    live_post_evidence_consumer_delay_revokes_before_candidate_flush
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 48 filtered out; finished in 13.69s
+
+================================================================================
+INFO: Found 1 test target...
+Target //:replay-contract-test up-to-date:
+  bazel-bin/replay-contract-test
+INFO: Elapsed time: 32.768s, Critical Path: 15.98s
+INFO: 4 processes: 422 action cache hit, 2 internal, 3 processwrapper-sandbox.
+INFO: Build completed, 1 test FAILED, 4 total actions
+//:replay-contract-test                                                  FAILED in 13.7s
+  /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/execroot/_main/bazel-out/aarch64-fastbuild/testlogs/replay-contract-test/test.log
+
+Executed 1 out of 1 test: 1 fails locally.

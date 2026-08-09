@@ -1,0 +1,22 @@
+{
+  "schema": "invisible-keyboard-physical-study-split-manifest-v1",
+  "gate": "gate-0b",
+  "round_id": "boundary-smoke",
+  "expected_rows": [
+    {
+      "participant_id": "synthetic-participant",
+      "session_id": "complete-lower",
+      "rig_id": "synthetic-rig",
+      "controller_id": "synthetic-controller",
+      "mount_id": "synthetic-mount",
+      "surface_id": "synthetic-surface",
+      "hand": "left",
+      "split": "heldout",
+      "condition": "intentional-tap",
+      "prompted_label": "thumb",
+      "truth_source": "contact-switch",
+      "prompt_id": "complete-lower-prompt",
+      "prompt_ordinal": 0
+    }
+  ]
+}

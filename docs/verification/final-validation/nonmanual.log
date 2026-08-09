@@ -1,0 +1,97 @@
+OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Loading: 1 packages loaded
+    currently loading: 
+Analyzing: 52 targets (6 packages loaded)
+Analyzing: 52 targets (6 packages loaded, 6 targets configured)
+Analyzing: 52 targets (6 packages loaded, 7 targets configured)
+
+Analyzing: 52 targets (73 packages loaded, 72 targets configured)
+[2 / 2] no actions running
+Analyzing: 52 targets (139 packages loaded, 1742 targets configured)
+[17 / 17] no actions running
+Analyzing: 52 targets (213 packages loaded, 5248 targets configured)
+[61 / 65] 1 / 4 tests; Testing //:firmware-frame-conformance-test; 0s processwrapper-sandbox ... (4 actions running)
+Analyzing: 52 targets (216 packages loaded, 5641 targets configured, 119 aspect applications)
+[65 / 65] 4 / 4 tests; no actions running
+INFO: Analyzed 52 targets (217 packages loaded, 5657 targets configured, 470 aspect applications).
+[303 / 736] 4 / 39 tests; checking cached actions
+[504 / 762] 4 / 39 tests; [Prepa] Testing //:rustfmt-test
+[749 / 789] 6 / 39 tests; [Prepa] Testing //:transport-contract-test
+[771 / 795] 15 / 39 tests; Testing //:calibration-app-contract-test; 1s processwrapper-sandbox ... (8 actions running)
+[778 / 795] 22 / 39 tests; Testing //:calibration-app-contract-test; 2s processwrapper-sandbox ... (8 actions running)
+[782 / 795] 25 / 39 tests; Testing //:calibration-app-contract-test; 3s processwrapper-sandbox ... (8 actions running)
+[786 / 795] 29 / 39 tests; Testing //:calibration-app-contract-test; 4s processwrapper-sandbox ... (8 actions running)
+[786 / 795] 29 / 39 tests; Testing //:calibration-app-contract-test; 5s processwrapper-sandbox ... (8 actions running)
+[788 / 795] 31 / 39 tests; Testing //:physical-study-contract-test; 7s processwrapper-sandbox ... (7 actions running)
+[789 / 795] 32 / 39 tests; Testing //:physical-study-contract-test; 8s processwrapper-sandbox ... (6 actions running)
+[789 / 795] 32 / 39 tests; Testing //:physical-study-contract-test; 19s processwrapper-sandbox ... (6 actions running)
+[789 / 795] 32 / 39 tests; Testing //:physical-study-contract-test; 34s processwrapper-sandbox ... (6 actions running)
+[790 / 795] 33 / 39 tests; Testing //:physical-study-contract-test; 36s processwrapper-sandbox ... (5 actions running)
+[790 / 795] 33 / 39 tests; Testing //:physical-study-contract-test; 39s processwrapper-sandbox ... (5 actions running)
+[791 / 795] 34 / 39 tests; Testing //:physical-study-contract-test; 41s processwrapper-sandbox ... (4 actions running)
+[791 / 795] 34 / 39 tests; Testing //:physical-study-contract-test; 51s processwrapper-sandbox ... (4 actions running)
+[792 / 795] 35 / 39 tests; Testing //:physical-study-contract-test; 53s processwrapper-sandbox ... (3 actions running)
+[792 / 795] 35 / 39 tests; Testing //:physical-study-contract-test; 63s processwrapper-sandbox ... (3 actions running)
+[792 / 795] 35 / 39 tests; Testing //:physical-study-contract-test; 69s processwrapper-sandbox ... (3 actions running)
+[793 / 795] 36 / 39 tests; Testing //:physical-study-contract-test; 71s processwrapper-sandbox ... (2 actions running)
+[793 / 795] 36 / 39 tests; Testing //:physical-study-contract-test; 80s processwrapper-sandbox ... (2 actions running)
+[793 / 795] 36 / 39 tests; Testing //:physical-study-contract-test; 89s processwrapper-sandbox ... (2 actions running)
+[794 / 795] 37 / 39 tests; Testing //:calibration-engine-contract-test; 90s processwrapper-sandbox
+[794 / 795] 37 / 39 tests; Testing //:calibration-engine-contract-test; 100s processwrapper-sandbox
+[794 / 795] 37 / 39 tests; Testing //:calibration-engine-contract-test; 130s processwrapper-sandbox
+[794 / 795] 37 / 39 tests; Testing //:calibration-engine-contract-test; 190s processwrapper-sandbox
+[794 / 795] 37 / 39 tests; Testing //:calibration-engine-contract-test; 250s processwrapper-sandbox
+[794 / 795] 37 / 39 tests; Testing //:calibration-engine-contract-test; 310s processwrapper-sandbox
+[794 / 795] 37 / 39 tests; Testing //:calibration-engine-contract-test; 370s processwrapper-sandbox
+[794 / 795] 37 / 39 tests; Testing //:calibration-engine-contract-test; 395s processwrapper-sandbox
+[795 / 796] 38 / 39 tests; Testing //:cli-contract-test; 1s processwrapper-sandbox
+[795 / 796] 38 / 39 tests; Testing //:cli-contract-test; 334s processwrapper-sandbox
+INFO: Found 13 targets and 39 test targets...
+INFO: Elapsed time: 745.338s, Critical Path: 397.01s
+INFO: 40 processes: 756 action cache hit, 1 internal, 78 processwrapper-sandbox.
+INFO: Build completed successfully, 40 total actions
+//:artifact-contract-test                                                PASSED in 0.8s
+//:calibration-app-contract-test                                         PASSED in 5.2s
+//:calibration-capture-contract-test                                     PASSED in 4.0s
+//:calibration-contract-test                                             PASSED in 0.2s
+//:calibration-engine-contract-test                                      PASSED in 395.3s
+//:calibration-worker-contract-test                                      PASSED in 36.5s
+//:cli-contract-test                                                     PASSED in 334.4s
+//:cli-unit-tests                                                        PASSED in 0.1s
+//:clippy-test                                                           PASSED in 0.2s
+//:clock-contract-test                                                   PASSED in 0.6s
+//:clock-epoch-contract-test                                             PASSED in 0.6s
+//:controller-source-contract-test                                       PASSED in 0.1s
+//:decoder-simulation-contract-test                                      PASSED in 0.5s
+//:device-transport-contract-test                                        PASSED in 0.4s
+//:evaluation-contract-test                                              PASSED in 48.0s
+//:firmware-acquisition-conformance-test                                 PASSED in 0.1s
+//:firmware-frame-conformance-test                                       PASSED in 0.1s
+//:gate0-contract-test                                                   PASSED in 0.2s
+//:gate0-trace-contract-test                                             PASSED in 32.7s
+//:hardware-calibration-contract-test                                    PASSED in 0.5s
+//:label-contract-test                                                   PASSED in 0.2s
+//:layout-contract-test                                                  PASSED in 0.1s
+//:manifest-contract-test                                                PASSED in 0.2s
+//:neutral-contract-test                                                 PASSED in 0.3s
+//:output-contract-test                                                  PASSED in 0.2s
+//:output-system-contract-test                                           PASSED in 2.5s
+//:physical-study-contract-test                                          PASSED in 89.9s
+//:pipeline-contract-test                                                PASSED in 0.2s
+//:prompt-contract-test                                                  PASSED in 0.6s
+//:protocol-contract-test                                                PASSED in 0.3s
+//:replay-contract-test                                                  PASSED in 68.7s
+//:runtime-contract-test                                                 PASSED in 0.4s
+//:rustfmt-test                                                          PASSED in 0.1s
+//:session-contract-test                                                 PASSED in 0.4s
+//:transport-contract-test                                               PASSED in 0.2s
+//:unit-tests                                                            PASSED in 0.1s
+//:validation-contract-test                                              PASSED in 0.2s
+//firmware/zephyr:native-conformance-test                                PASSED in 0.1s
+//firmware/zephyr:native-glue-conformance-test                           PASSED in 0.1s
+
+Executed 39 out of 39 tests: 39 tests pass.
+There were tests whose specified size is too big. Use the --test_verbose_timeout_warnings command line option to see which ones these are.

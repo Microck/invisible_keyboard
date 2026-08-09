@@ -1,0 +1,7 @@
+physical_study=deterministically-scored
+disposition=go
+evidence=/tmp/ikb-study-boundary-jntnaj1u/evidence.jsonl
+manifest=/tmp/ikb-study-boundary-jntnaj1u/manifest.json
+plan=/tmp/ikb-study-boundary-jntnaj1u/plan.json
+report=/home/ubuntu/audit-regression-proof/complete-study-boundary-cli-after/complete-upper/report.json
+report_sha256=ccb65289427901346ce1c7cb1fba5f5df6700eb26f3bf5853921e4237dfa4f7c

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="calibration-worker-contract-test" tests="1" failures="0" errors="0">
+    <testcase name="calibration-worker-contract-test" status="run" duration="28" time="28"></testcase>
+      <system-out>
+Generated test.log (if the file is not UTF-8, then this may be unreadable):
+<![CDATA[exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+Executing tests from //:calibration-worker-contract-test
+-----------------------------------------------------------------------------
+
+running 16 tests
+test decoded_same_identity_integrity_faults_retain_raw_suffix_and_first_cause ... ok
+test first_frame_rejects_out_of_range_sensor_time_without_discarding_raw_bytes ... ok
+test fitting_checkpoint_refuses_to_infer_layout_without_a_confirmation_receipt ... ok
+test fitting_finish_rejects_an_incomplete_surface_plan_before_matching ... ok
+test fitting_requires_a_retained_neutral_window_before_finalization ... ok
+test held_out_capture_inherits_the_frozen_rule_and_rejects_keyboard_labels ... ok
+test repeated_aggregate_with_advancing_offsets_faults_worker_and_retains_evidence ... ok
+test selected_keyboard_identity_change_faults_the_capture_permanently ... ok
+test terminal_capacity_rejection_retains_exact_worker_incident ... ok
+test terminal_late_publication_retains_exact_worker_incident ... ok
+test terminal_receipt_regression_retains_exact_worker_incident ... ok
+test concurrent_sensor_and_keyboard_capture_builds_source_bound_fitting_evidence ... ok
+test worker_integrity_preserves_wrapping_sequences_and_strictly_advancing_sample_times ... ok
+test worker_refuses_to_bind_a_surface_plan_after_the_first_surface_fact ... ok
+test wrong_controller_frame_is_retained_and_faults_the_capture ... ok
+test transport_rejection_retention_bound_preserves_primary_cause ... ok
+
+test result: ok. 16 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 28.95s]]>
+      </system-out>
+    </testsuite>
+</testsuites>

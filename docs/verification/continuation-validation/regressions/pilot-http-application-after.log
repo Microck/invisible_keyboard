@@ -1,0 +1,18 @@
+{"scenario": "progressing-request-after-fix", "status": "HTTP/1.1 408 Request Timeout", "elapsed_seconds": 0.11653697898145765, "next_status": "HTTP/1.1 200 OK"}
+
+running 1 test
+test score_pilot_reduces_bound_raw_evidence_without_authorizing_output ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 75 filtered out; finished in 44.54s
+
+pilot_disposition=stop
+evidence=replay-tested
+hardware_truth=not-asserted
+diagnostic=non-armable
+manifest=/home/ubuntu/audit-regression-proof/pilot-http-application-after/pilot-fixture/pilot-cli-manifest-67324.json
+manifest_sha256=77db90b30a0a86c5c44d3e64af15722e6f7c5593bd6fa1b24848a7d255a798f1
+session=/home/ubuntu/audit-regression-proof/pilot-http-application-after/pilot-fixture/pilot-cli-manifest-67324.iks
+session_sha256=8a341611b9e5abed8391c9d5265c59866efa3d5ab49f0308b50a4368e235d697
+report=/home/ubuntu/audit-regression-proof/pilot-http-application-after/pilot-direct-report.json
+report_sha256=5422ebf8712f24c82b7dcbf0e33694ee28b612a9e9275db7f962fcd174a4ee20
+{"scenario": "direct-pilot-reduction", "disposition": "stop", "contacts": 170, "correct": 0, "missing": 170, "hardware_evidence": false}

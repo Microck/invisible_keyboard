@@ -1,0 +1,87 @@
+OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Loading: 0 packages loaded
+    currently loading: 
+Analyzing: target //:calibration-app-contract-test (1 packages loaded)
+Analyzing: target //:calibration-app-contract-test (5 packages loaded, 6 targets configured)
+Analyzing: target //:calibration-app-contract-test (5 packages loaded, 6 targets configured)
+
+Analyzing: target //:calibration-app-contract-test (9 packages loaded, 9 targets configured)
+
+Analyzing: target //:calibration-app-contract-test (61 packages loaded, 9 targets configured)
+
+Analyzing: target //:calibration-app-contract-test (83 packages loaded, 349 targets configured)
+
+Analyzing: target //:calibration-app-contract-test (109 packages loaded, 765 targets configured)
+
+Analyzing: target //:calibration-app-contract-test (134 packages loaded, 2611 targets configured)
+
+Analyzing: target //:calibration-app-contract-test (156 packages loaded, 3383 targets configured)
+
+Analyzing: target //:calibration-app-contract-test (194 packages loaded, 4966 targets configured)
+
+INFO: Analyzed target //:calibration-app-contract-test (206 packages loaded, 5419 targets configured).
+[1 / 1] no actions running
+[144 / 425] checking cached actions
+[423 / 425] [Prepa] Compiling Rust bin calibration-app-contract-test (1 file)
+INFO: From Compiling Rust bin calibration-app-contract-test (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+[424 / 425] [Prepa] runfiles for //:calibration-app-contract-test
+FAIL: //:calibration-app-contract-test (Exit 101) (see /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/execroot/_main/bazel-out/aarch64-fastbuild/testlogs/calibration-app-contract-test/test.log)
+INFO: From Testing //:calibration-app-contract-test:
+==================== Test output for //:calibration-app-contract-test:
+
+running 6 tests
+test hardware_capture_cannot_resume_or_label_after_pause ... ok
+test hardware_abort_accepts_stale_rendered_revision_after_elapsed_progress ... FAILED
+test hardware_lease_requires_one_persisted_layout_confirmation ... ok
+test hardware_http_abort_accepts_stale_revision_only_with_loopback_authorization ... FAILED
+test hardware_stop_preserves_terminal_failure_after_rendered_state_changes ... FAILED
+test hardware_worker_events_drive_the_same_finite_seven_screen_state_machine ... ok
+
+failures:
+
+---- hardware_abort_accepts_stale_rendered_revision_after_elapsed_progress stdout ----
+
+thread 'hardware_abort_accepts_stale_rendered_revision_after_elapsed_progress' (54248) panicked at tests/calibration-app-contract.rs:928:10:
+Stop setup is not conditional on the rendered state staying current: StaleStateRevision { expected: 7, supplied: 6 }
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- hardware_http_abort_accepts_stale_revision_only_with_loopback_authorization stdout ----
+
+thread 'hardware_http_abort_accepts_stale_revision_only_with_loopback_authorization' (54250) panicked at tests/calibration-app-contract.rs:989:5:
+assertion failed: stopped.starts_with("HTTP/1.1 200")
+
+---- hardware_stop_preserves_terminal_failure_after_rendered_state_changes stdout ----
+
+thread 'hardware_stop_preserves_terminal_failure_after_rendered_state_changes' (54252) panicked at tests/calibration-app-contract.rs:1033:13:
+assertion `left == right` failed
+  left: "aborted"
+ right: "calibration-failed"
+
+
+failures:
+    hardware_abort_accepts_stale_rendered_revision_after_elapsed_progress
+    hardware_http_abort_accepts_stale_revision_only_with_loopback_authorization
+    hardware_stop_preserves_terminal_failure_after_rendered_state_changes
+
+test result: FAILED. 3 passed; 3 failed; 0 ignored; 0 measured; 25 filtered out; finished in 0.01s
+
+================================================================================
+INFO: Found 1 test target...
+Target //:calibration-app-contract-test up-to-date:
+  bazel-bin/calibration-app-contract-test
+INFO: Elapsed time: 18.959s, Critical Path: 1.46s
+INFO: 4 processes: 422 action cache hit, 2 internal, 3 processwrapper-sandbox.
+INFO: Build completed, 1 test FAILED, 4 total actions
+//:calibration-app-contract-test                                         FAILED in 0.0s
+  /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/execroot/_main/bazel-out/aarch64-fastbuild/testlogs/calibration-app-contract-test/test.log
+
+Executed 1 out of 1 test: 1 fails locally.

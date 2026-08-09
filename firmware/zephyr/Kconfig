@@ -1,0 +1,22 @@
+mainmenu "Invisible Keyboard Firmware"
+
+source "Kconfig.zephyr"
+
+choice IKB_HAND
+	prompt "Physical hand controlled by this build"
+	default IKB_HAND_LEFT
+
+config IKB_HAND_LEFT
+	bool "Left hand"
+
+config IKB_HAND_RIGHT
+	bool "Right hand"
+
+endchoice
+
+config IKB_CONTROLLER_ID
+	string "Provisioned controller identity"
+	default ""
+	help
+	  Exact UTF-8 hands.controller_id value used by the host acquisition
+	  manifest. The firmware places SHA-256 of these bytes on the wire.

@@ -1,0 +1,71 @@
+OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //:unit-tests (1 packages loaded)
+Analyzing: target //:unit-tests (5 packages loaded, 6 targets configured)
+Analyzing: target //:unit-tests (5 packages loaded, 6 targets configured)
+
+Analyzing: target //:unit-tests (13 packages loaded, 9 targets configured)
+
+Analyzing: target //:unit-tests (60 packages loaded, 9 targets configured)
+
+Analyzing: target //:unit-tests (81 packages loaded, 192 targets configured)
+
+Analyzing: target //:unit-tests (103 packages loaded, 773 targets configured)
+
+Analyzing: target //:unit-tests (117 packages loaded, 1684 targets configured)
+
+Analyzing: target //:unit-tests (143 packages loaded, 2975 targets configured)
+
+Analyzing: target //:unit-tests (176 packages loaded, 4350 targets configured)
+
+Analyzing: target //:unit-tests (203 packages loaded, 5375 targets configured)
+
+INFO: Analyzed target //:unit-tests (206 packages loaded, 5414 targets configured).
+[158 / 424] checking cached actions
+[422 / 424] [Prepa] Compiling Rust bin unit-tests (35 files)
+[422 / 424] Compiling Rust bin unit-tests (35 files); 1s processwrapper-sandbox
+[422 / 424] Compiling Rust bin unit-tests (35 files); 11s processwrapper-sandbox
+INFO: From Compiling Rust bin unit-tests (35 files):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+[423 / 424] [Prepa] runfiles for //:unit-tests
+FAIL: //:unit-tests (Exit 101) (see /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/execroot/_main/bazel-out/aarch64-fastbuild/testlogs/unit-tests/test.log)
+INFO: From Testing //:unit-tests:
+==================== Test output for //:unit-tests:
+
+running 1 test
+test decoder::aggregate_time_regression::repeated_raw_aggregate_time_rejects_even_when_every_sensor_advances ... FAILED
+
+failures:
+
+---- decoder::aggregate_time_regression::repeated_raw_aggregate_time_rejects_even_when_every_sensor_advances stdout ----
+
+thread 'decoder::aggregate_time_regression::repeated_raw_aggregate_time_rejects_even_when_every_sensor_advances' (93198) panicked at src/decoder.rs:1186:9:
+assertion `left == right` failed
+  left: Ok(())
+ right: Err(Structure(TimeRegression))
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    decoder::aggregate_time_regression::repeated_raw_aggregate_time_rejects_even_when_every_sensor_advances
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 58 filtered out; finished in 0.01s
+
+================================================================================
+INFO: Found 1 test target...
+Target //:unit-tests up-to-date:
+  bazel-bin/unit-tests
+INFO: Elapsed time: 30.322s, Critical Path: 13.13s
+INFO: 4 processes: 421 action cache hit, 2 internal, 3 processwrapper-sandbox.
+INFO: Build completed, 1 test FAILED, 4 total actions
+//:unit-tests                                                            FAILED in 0.1s
+  /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/execroot/_main/bazel-out/aarch64-fastbuild/testlogs/unit-tests/test.log
+
+Executed 1 out of 1 test: 1 fails locally.

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="session-contract-test" tests="1" failures="0" errors="0">
+    <testcase name="session-contract-test" status="run" duration="0" time="0"></testcase>
+      <system-out>
+Generated test.log (if the file is not UTF-8, then this may be unreadable):
+<![CDATA[exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+Executing tests from //:session-contract-test
+-----------------------------------------------------------------------------
+
+running 30 tests
+test acquisition_specific_session_caps_match_their_exact_physical_contracts ... ok
+test complete_record_boundary_without_footer_is_rejected ... ok
+test dropping_a_partial_writer_cannot_produce_a_finalized_session ... ok
+test every_candidate_retains_its_physical_controller_stream ... ok
+test control_records_round_trip_and_terminal_audit_returns_the_exact_binding ... ok
+test every_partial_footer_is_rejected ... ok
+test every_partial_record_is_reported_as_truncated ... ok
+test flush_publishes_the_header_but_only_finish_writes_end3 ... ok
+test iks3_magic_is_a_hard_cut_and_checksum_valid_iks2_is_rejected ... ok
+test impossible_candidate_lengths_are_rejected_before_writing ... ok
+test nondecoded_provenance_cannot_be_bypassed_by_frame_shaped_bytes ... ok
+test raw_malformed_payload_is_preserved_and_counted ... ok
+test record_corruption_is_distinct_from_captured_frame_corruption ... ok
+test reference_session_round_trips_through_strict_audit ... ok
+test rejected_provenance_keeps_footer_closed_bytes_for_incident_diagnosis ... ok
+test same_inputs_produce_byte_identical_session_files ... ok
+test sequence_anomalies_and_clock_regressions_are_visible ... ok
+test sequence_wrap_is_in_order ... ok
+test streaming_audit_matches_owned_evidence_without_a_second_hash_path ... ok
+test streaming_audit_rejects_corruption_at_the_end_of_the_footer ... ok
+test strict_session_audit_rejects_semantically_invalid_control_records ... ok
+test terminal_audit_rejects_an_invalid_record_before_receipt ... ok
+test terminal_audit_rejects_timeout_binding_mismatch_and_dirty_final_frame ... ok
+test terminal_audit_requires_a_frame_immediately_before_receipt ... ok
+test terminal_audit_requires_receipt_last ... ok
+test trailing_bytes_after_footer_are_rejected ... ok
+test transport_candidate_provenance_survives_strict_replay ... ok
+test valid_records_round_trip_in_append_order ... ok
+test wrong_claimed_hand_is_accounted_and_strict_finalization_fails_closed ... ok
+test every_single_bit_record_corruption_is_rejected ... ok
+
+test result: ok. 30 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.10s]]>
+      </system-out>
+    </testsuite>
+</testsuites>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="protocol-contract-test" tests="1" failures="0" errors="0">
+    <testcase name="protocol-contract-test" status="run" duration="0" time="0"></testcase>
+      <system-out>
+Generated test.log (if the file is not UTF-8, then this may be unreadable):
+<![CDATA[exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+Executing tests from //:protocol-contract-test
+-----------------------------------------------------------------------------
+
+running 10 tests
+test encoder_and_decoder_reject_missing_physical_identity ... ok
+test canonical_frame_is_exactly_160_bytes ... ok
+test left_and_right_have_distinct_wire_values ... ok
+test quiesce_decoders_reject_lengths_checksums_and_checksum_valid_fixed_fields ... ok
+test quiesce_encoders_and_decoders_reject_zero_identities ... ok
+test quiesce_records_have_exact_layouts_and_round_trip ... ok
+test removed_fifo_status_bit_is_not_part_of_the_current_protocol ... ok
+test round_trip_preserves_every_field_and_signed_extremes ... ok
+test truncated_and_extended_frames_are_rejected ... ok
+test every_single_bit_payload_corruption_is_rejected ... ok
+
+test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s]]>
+      </system-out>
+    </testsuite>
+</testsuites>

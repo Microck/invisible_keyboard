@@ -1,0 +1,40 @@
+OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //.crabbox/ikb-stop-browser:stop-browser-fixture (1 packages loaded)
+Analyzing: target //.crabbox/ikb-stop-browser:stop-browser-fixture (5 packages loaded, 6 targets configured)
+Analyzing: target //.crabbox/ikb-stop-browser:stop-browser-fixture (5 packages loaded, 6 targets configured)
+
+Analyzing: target //.crabbox/ikb-stop-browser:stop-browser-fixture (8 packages loaded, 8 targets configured)
+
+Analyzing: target //.crabbox/ikb-stop-browser:stop-browser-fixture (49 packages loaded, 8 targets configured)
+
+Analyzing: target //.crabbox/ikb-stop-browser:stop-browser-fixture (80 packages loaded, 152 targets configured)
+
+Analyzing: target //.crabbox/ikb-stop-browser:stop-browser-fixture (102 packages loaded, 634 targets configured)
+
+Analyzing: target //.crabbox/ikb-stop-browser:stop-browser-fixture (122 packages loaded, 1883 targets configured)
+
+Analyzing: target //.crabbox/ikb-stop-browser:stop-browser-fixture (141 packages loaded, 2709 targets configured)
+
+Analyzing: target //.crabbox/ikb-stop-browser:stop-browser-fixture (167 packages loaded, 4051 targets configured)
+
+Analyzing: target //.crabbox/ikb-stop-browser:stop-browser-fixture (203 packages loaded, 5187 targets configured)
+
+INFO: Analyzed target //.crabbox/ikb-stop-browser:stop-browser-fixture (204 packages loaded, 5394 targets configured).
+[1 / 1] no actions running
+[423 / 425] [Prepa] Compiling Rust bin stop-browser-fixture (1 file)
+INFO: From Compiling Rust bin stop-browser-fixture (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+INFO: Found 1 target...
+Target //.crabbox/ikb-stop-browser:stop-browser-fixture up-to-date:
+  bazel-bin/.crabbox/ikb-stop-browser/stop-browser-fixture
+INFO: Elapsed time: 18.463s, Critical Path: 1.05s
+INFO: 3 processes: 422 action cache hit, 2 internal, 1 processwrapper-sandbox.
+INFO: Build completed successfully, 3 total actions

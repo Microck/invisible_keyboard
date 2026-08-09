@@ -1,0 +1,113 @@
+OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //:calibration-worker-contract-test (1 packages loaded)
+Analyzing: target //:calibration-worker-contract-test (5 packages loaded, 6 targets configured)
+Analyzing: target //:calibration-worker-contract-test (5 packages loaded, 6 targets configured)
+
+Analyzing: target //:calibration-worker-contract-test (15 packages loaded, 9 targets configured)
+
+Analyzing: target //:calibration-worker-contract-test (66 packages loaded, 77 targets configured)
+
+Analyzing: target //:calibration-worker-contract-test (84 packages loaded, 522 targets configured)
+
+Analyzing: target //:calibration-worker-contract-test (113 packages loaded, 933 targets configured)
+
+Analyzing: target //:calibration-worker-contract-test (132 packages loaded, 2007 targets configured)
+
+Analyzing: target //:calibration-worker-contract-test (157 packages loaded, 3466 targets configured)
+
+Analyzing: target //:calibration-worker-contract-test (199 packages loaded, 5133 targets configured)
+
+INFO: Analyzed target //:calibration-worker-contract-test (206 packages loaded, 5419 targets configured).
+[32 / 244] checking cached actions
+[423 / 425] [Prepa] Compiling Rust bin calibration-worker-contract-test (1 file)
+INFO: From Compiling Rust bin calibration-worker-contract-test (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+[425 / 426] Testing //:calibration-worker-contract-test; 0s processwrapper-sandbox
+[425 / 426] Testing //:calibration-worker-contract-test; 11s processwrapper-sandbox
+[425 / 426] Testing //:calibration-worker-contract-test; 29s processwrapper-sandbox
+INFO: From Testing //:calibration-worker-contract-test:
+==================== Test output for //:calibration-worker-contract-test:
+
+running 15 tests
+test decoded_same_identity_integrity_faults_retain_raw_suffix_and_first_cause ... ok
+test first_frame_rejects_out_of_range_sensor_time_without_discarding_raw_bytes ... ok
+test fitting_checkpoint_refuses_to_infer_layout_without_a_confirmation_receipt ... ok
+test fitting_finish_rejects_an_incomplete_surface_plan_before_matching ... ok
+test fitting_requires_a_retained_neutral_window_before_finalization ... ok
+test held_out_capture_inherits_the_frozen_rule_and_rejects_keyboard_labels ... ok
+test selected_keyboard_identity_change_faults_the_capture_permanently ... ok
+test terminal_capacity_rejection_retains_exact_worker_incident ... ok
+test terminal_late_publication_retains_exact_worker_incident ... ok
+test terminal_receipt_regression_retains_exact_worker_incident ... ok
+test concurrent_sensor_and_keyboard_capture_builds_source_bound_fitting_evidence ... ok
+test worker_integrity_preserves_wrapping_sequences_and_nondecreasing_sample_times ... ok
+test worker_refuses_to_bind_a_surface_plan_after_the_first_surface_fact ... ok
+test wrong_controller_frame_is_retained_and_faults_the_capture ... ok
+test transport_rejection_retention_bound_preserves_primary_cause ... ok
+
+test result: ok. 15 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 29.08s
+
+================================================================================
+INFO: Found 1 test target...
+Target //:calibration-worker-contract-test up-to-date:
+  bazel-bin/calibration-worker-contract-test
+INFO: Elapsed time: 46.893s, Critical Path: 30.42s
+INFO: 4 processes: 422 action cache hit, 2 internal, 3 processwrapper-sandbox.
+INFO: Build completed successfully, 4 total actions
+//:calibration-worker-contract-test                                      PASSED in 29.1s
+
+Executed 1 out of 1 test: 1 test passes.
+OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Loading: 0 packages loaded
+    currently loading: .crabbox/ikb-authority-smoke
+Analyzing: target //.crabbox/ikb-authority-smoke:audit-smoke (5 packages loaded, 6 targets configured)
+Analyzing: target //.crabbox/ikb-authority-smoke:audit-smoke (5 packages loaded, 6 targets configured)
+
+Analyzing: target //.crabbox/ikb-authority-smoke:audit-smoke (8 packages loaded, 8 targets configured)
+
+Analyzing: target //.crabbox/ikb-authority-smoke:audit-smoke (61 packages loaded, 8 targets configured)
+
+Analyzing: target //.crabbox/ikb-authority-smoke:audit-smoke (82 packages loaded, 308 targets configured)
+
+Analyzing: target //.crabbox/ikb-authority-smoke:audit-smoke (101 packages loaded, 751 targets configured)
+
+Analyzing: target //.crabbox/ikb-authority-smoke:audit-smoke (121 packages loaded, 1417 targets configured)
+
+Analyzing: target //.crabbox/ikb-authority-smoke:audit-smoke (146 packages loaded, 2948 targets configured)
+
+Analyzing: target //.crabbox/ikb-authority-smoke:audit-smoke (184 packages loaded, 4518 targets configured)
+
+Analyzing: target //.crabbox/ikb-authority-smoke:audit-smoke (204 packages loaded, 5397 targets configured)
+
+INFO: Analyzed target //.crabbox/ikb-authority-smoke:audit-smoke (204 packages loaded, 5397 targets configured).
+[154 / 425] checking cached actions
+[423 / 425] [Prepa] Compiling Rust bin audit-smoke (4 files)
+INFO: From Compiling Rust bin audit-smoke (4 files):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+[424 / 425] [Prepa] runfiles for //.crabbox/ikb-authority-smoke:audit-smoke
+INFO: Found 1 target...
+Target //.crabbox/ikb-authority-smoke:audit-smoke up-to-date:
+  bazel-bin/.crabbox/ikb-authority-smoke/audit-smoke
+INFO: Elapsed time: 17.757s, Critical Path: 1.38s
+INFO: 6 processes: 419 action cache hit, 5 internal, 1 processwrapper-sandbox.
+INFO: Build completed successfully, 6 total actions
+INFO: Running command line: bazel-bin/.crabbox/ikb-authority-smoke/audit-smoke <args omitted>
+post_arm partial_window_fault=revoked later_clean_frame=rejected output_events=0 neutral_confirmed=true
+monitor premerge_acquisition_fault=terminal saved_reopened_records=3 exact_raw_suffix=true evidence_eligible=false
+offline canonical_neutral=accepted altered_p95=rejected passing_sidecar_with_bad_raw_receipts=rejected

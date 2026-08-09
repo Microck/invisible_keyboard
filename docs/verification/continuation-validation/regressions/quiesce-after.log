@@ -1,0 +1,16 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+Executing tests from //:cli-contract-test
+-----------------------------------------------------------------------------
+
+running 8 tests
+test gate0_quiesce_cli_contract::record_hand_abort_paths_never_write_a_footer ... ok
+test gate0_quiesce_cli_contract::record_hand_bounds_a_stalled_request_write_and_drain ... ok
+test gate0_quiesce_cli_contract::record_hand_completes_one_identity_bound_quiesce_transaction_over_real_kernel_io ... ok
+test gate0_quiesce_cli_contract::record_hand_observes_control_faults_during_stalled_transmission ... ok
+test gate0_quiesce_cli_contract::record_hand_receipt_deadline_applies_while_sensor_frames_keep_arriving ... ok
+test gate0_quiesce_cli_contract::record_hand_signals_before_the_footer_commit_abort_without_a_footer ... ok
+test gate0_quiesce_cli_contract::record_hand_waits_for_initial_usb_enumeration ... ok
+test gate0_quiesce_cli_contract::record_stream_signal_finishes_a_fragmented_record_without_a_partial_tail ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 66 filtered out; finished in 3.84s
+

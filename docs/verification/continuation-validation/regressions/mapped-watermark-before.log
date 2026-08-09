@@ -1,0 +1,73 @@
+OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Loading: 1 packages loaded
+Analyzing: target //:replay-contract-test (5 packages loaded, 6 targets configured)
+Analyzing: target //:replay-contract-test (5 packages loaded, 6 targets configured)
+
+Analyzing: target //:replay-contract-test (11 packages loaded, 9 targets configured)
+
+Analyzing: target //:replay-contract-test (61 packages loaded, 9 targets configured)
+
+Analyzing: target //:replay-contract-test (82 packages loaded, 361 targets configured)
+
+Analyzing: target //:replay-contract-test (103 packages loaded, 726 targets configured)
+
+Analyzing: target //:replay-contract-test (127 packages loaded, 1850 targets configured)
+
+Analyzing: target //:replay-contract-test (151 packages loaded, 2949 targets configured)
+
+Analyzing: target //:replay-contract-test (191 packages loaded, 4745 targets configured)
+
+Analyzing: target //:replay-contract-test (203 packages loaded, 5401 targets configured)
+
+INFO: Analyzed target //:replay-contract-test (206 packages loaded, 5419 targets configured).
+[212 / 425] checking cached actions
+[422 / 425] [Prepa] Compiling Rust rlib invisible_keyboard (35 files)
+[422 / 425] Compiling Rust rlib invisible_keyboard (35 files); 1s processwrapper-sandbox
+[422 / 425] Compiling Rust rlib invisible_keyboard (35 files); 9s processwrapper-sandbox
+[423 / 425] [Prepa] Compiling Rust bin replay-contract-test (1 file)
+[423 / 425] Compiling Rust bin replay-contract-test (1 file); 1s processwrapper-sandbox
+INFO: From Compiling Rust bin replay-contract-test (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+[425 / 426] Testing //:replay-contract-test; 0s processwrapper-sandbox
+[425 / 426] Testing //:replay-contract-test; 11s processwrapper-sandbox
+[425 / 426] Testing //:replay-contract-test; 13s processwrapper-sandbox
+FAIL: //:replay-contract-test (Exit 101) (see /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/execroot/_main/bazel-out/aarch64-fastbuild/testlogs/replay-contract-test/test.log)
+INFO: From Testing //:replay-contract-test:
+==================== Test output for //:replay-contract-test:
+
+running 1 test
+test live_cli_ingress_jitter_inversion_preserves_exact_core28_output ... FAILED
+
+failures:
+
+---- live_cli_ingress_jitter_inversion_preserves_exact_core28_output stdout ----
+
+thread 'live_cli_ingress_jitter_inversion_preserves_exact_core28_output' (74740) panicked at tests/replay-contract.rs:3353:37:
+called `Result::unwrap()` on an `Err` value: TerminalFault(RuntimeFault(State(TimeRegression { previous_us: 6415000, actual_us: 6414930 })))
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    live_cli_ingress_jitter_inversion_preserves_exact_core28_output
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 47 filtered out; finished in 13.39s
+
+================================================================================
+INFO: Found 1 test target...
+Target //:replay-contract-test up-to-date:
+  bazel-bin/replay-contract-test
+INFO: Elapsed time: 47.142s, Critical Path: 30.34s
+INFO: 5 processes: 421 action cache hit, 2 internal, 4 processwrapper-sandbox.
+INFO: Build completed, 1 test FAILED, 5 total actions
+//:replay-contract-test                                                  FAILED in 13.4s
+  /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/execroot/_main/bazel-out/aarch64-fastbuild/testlogs/replay-contract-test/test.log
+
+Executed 1 out of 1 test: 1 fails locally.

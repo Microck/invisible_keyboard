@@ -1,0 +1,26 @@
+{
+  "source_manifest_sha256": "5b6c2109e0a521d3470f895b87f8d4b9667e8a3c72da3fdd510ab234ffa478e6",
+  "cli_sha256": "9b57ff02a07680c4a758fdec4de6afb62c9a1b31294f91cef462bd14f4440518",
+  "cli_test_sha256": "db10b91ab3ec592741ef02373e3eaa4610588c997874a98b646a036773ef46a5",
+  "three_consecutive_uncached_runs": true,
+  "runs": [
+    {
+      "lane": "durability-1",
+      "trace_sha256": "2b68d17a33a06b3b1e43881987b6d87d77bf01d0938fc0641528bd6802452385",
+      "started_utc": "2026-10-11T10:47:05.584750+00:00",
+      "finished_utc": "2026-10-11T10:48:02.877792+00:00"
+    },
+    {
+      "lane": "durability-2",
+      "trace_sha256": "14112b27dd2080ad55a7a04731275d7acd7a2d3914aff567fa9eba2c7c1f9bdc",
+      "started_utc": "2026-10-11T10:48:03.389153+00:00",
+      "finished_utc": "2026-10-11T10:48:59.775561+00:00"
+    },
+    {
+      "lane": "durability-3",
+      "trace_sha256": "a4df329d54375a736d7fa654eba9929f2b611ce12ebc7e12b9605ca8e30aaaa9",
+      "started_utc": "2026-10-11T10:49:00.158306+00:00",
+      "finished_utc": "2026-10-11T10:49:56.875498+00:00"
+    }
+  ]
+}

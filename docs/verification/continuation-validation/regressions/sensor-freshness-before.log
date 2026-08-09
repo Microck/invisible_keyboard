@@ -1,0 +1,69 @@
+OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Loading: 0 packages loaded
+    currently loading: 
+Analyzing: target //:decoder-simulation-contract-test (1 packages loaded)
+Analyzing: target //:decoder-simulation-contract-test (5 packages loaded, 6 targets configured)
+Analyzing: target //:decoder-simulation-contract-test (5 packages loaded, 6 targets configured)
+
+Analyzing: target //:decoder-simulation-contract-test (13 packages loaded, 9 targets configured)
+
+Analyzing: target //:decoder-simulation-contract-test (65 packages loaded, 19 targets configured)
+
+Analyzing: target //:decoder-simulation-contract-test (84 packages loaded, 518 targets configured)
+
+Analyzing: target //:decoder-simulation-contract-test (109 packages loaded, 1047 targets configured)
+
+Analyzing: target //:decoder-simulation-contract-test (134 packages loaded, 2622 targets configured)
+
+Analyzing: target //:decoder-simulation-contract-test (153 packages loaded, 3299 targets configured)
+
+Analyzing: target //:decoder-simulation-contract-test (191 packages loaded, 4732 targets configured)
+
+Analyzing: target //:decoder-simulation-contract-test (205 packages loaded, 5410 targets configured)
+
+INFO: Analyzed target //:decoder-simulation-contract-test (206 packages loaded, 5419 targets configured).
+[126 / 425] checking cached actions
+[423 / 425] [Prepa] Compiling Rust bin decoder-simulation-contract-test (1 file)
+INFO: From Compiling Rust bin decoder-simulation-contract-test (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+FAIL: //:decoder-simulation-contract-test (Exit 101) (see /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/execroot/_main/bazel-out/aarch64-fastbuild/testlogs/decoder-simulation-contract-test/test.log)
+INFO: From Testing //:decoder-simulation-contract-test:
+==================== Test output for //:decoder-simulation-contract-test:
+
+running 1 test
+test repeated_sensor_timestamp_at_allowed_skew_boundary_is_rejected ... FAILED
+
+failures:
+
+---- repeated_sensor_timestamp_at_allowed_skew_boundary_is_rejected stdout ----
+
+thread 'repeated_sensor_timestamp_at_allowed_skew_boundary_is_rejected' (75232) panicked at tests/decoder-simulation-contract.rs:180:9:
+assertion failed: matches!(TapWindow::new(frames),
+    Err(WindowError::SensorTimeRegression { sensor: 0 }))
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    repeated_sensor_timestamp_at_allowed_skew_boundary_is_rejected
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 16 filtered out; finished in 0.00s
+
+================================================================================
+INFO: Found 1 test target...
+Target //:decoder-simulation-contract-test up-to-date:
+  bazel-bin/decoder-simulation-contract-test
+INFO: Elapsed time: 18.614s, Critical Path: 1.05s
+INFO: 4 processes: 422 action cache hit, 2 internal, 3 processwrapper-sandbox.
+INFO: Build completed, 1 test FAILED, 4 total actions
+//:decoder-simulation-contract-test                                      FAILED in 0.0s
+  /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/execroot/_main/bazel-out/aarch64-fastbuild/testlogs/decoder-simulation-contract-test/test.log
+
+Executed 1 out of 1 test: 1 fails locally.

@@ -1,0 +1,4 @@
+physical_study_row=sealed-and-appended
+row=/home/ubuntu/audit-regression-proof/study-boundary-cli-after/complete-lower/row.json
+row_sha256=899e4e3439bab0a779538ba15c712cbe7bbaa1153a050b1a416ddf1074600862
+evidence=/home/ubuntu/audit-regression-proof/study-boundary-cli-after/complete-lower/evidence.jsonl

@@ -1,0 +1,122 @@
+[
+  {
+    "lane": "aggregate-time-before",
+    "exit_code": 3,
+    "expected_failing_case": "repeated_raw_aggregate_time_rejects_even_when_every_sensor_advances",
+    "observed_expected_failure": true,
+    "failures": [
+      "decoder::aggregate_time_regression::repeated_raw_aggregate_time_rejects_even_when_every_sensor_advances"
+    ]
+  },
+  {
+    "lane": "replay-positive-drift-before",
+    "exit_code": 3,
+    "expected_failing_case": "replay_positive_drift_rejects_repeated_raw_sensor_before_mapping",
+    "observed_expected_failure": true,
+    "failures": [
+      "replay_positive_drift_rejects_repeated_raw_sensor_before_mapping"
+    ]
+  },
+  {
+    "lane": "replay-negative-drift-before",
+    "exit_code": 3,
+    "expected_failing_case": "replay_negative_drift_preserves_raw_sensor_progress_and_mapped_output",
+    "observed_expected_failure": true,
+    "failures": [
+      "replay_negative_drift_preserves_raw_sensor_progress_and_mapped_output"
+    ]
+  },
+  {
+    "lane": "live-negative-drift-before",
+    "exit_code": 3,
+    "expected_failing_case": "live_negative_drift_consumes_allowed_skew_boundary_and_preserves_mapped_output",
+    "observed_expected_failure": true,
+    "failures": [
+      "live_negative_drift_consumes_allowed_skew_boundary_and_preserves_mapped_output"
+    ]
+  },
+  {
+    "lane": "live-aggregate-time-before",
+    "exit_code": 3,
+    "expected_failing_case": "live_repeated_raw_aggregate_revokes_before_merger_or_evidence_io",
+    "observed_expected_failure": true,
+    "failures": [
+      "live_repeated_raw_aggregate_revokes_before_merger_or_evidence_io"
+    ]
+  },
+  {
+    "lane": "neutral-sensor-time-before",
+    "exit_code": 1,
+    "expected_failing_case": "raw_sensor_repeat_in_neutral_returns_source_error_without_panicking",
+    "observed_expected_failure": false,
+    "failures": [],
+    "overlay_sha256": "f4aafdefd495b9c5c95676647b357177c5e3d5549393537d68f8857d86e3e1ca"
+  },
+  {
+    "lane": "offline-unselected-time-before",
+    "exit_code": 1,
+    "expected_failing_case": "raw_sensor_repeat_outside_neutral_is_rejected_under_1001ns_clocks",
+    "observed_expected_failure": false,
+    "failures": [],
+    "overlay_sha256": "f4aafdefd495b9c5c95676647b357177c5e3d5549393537d68f8857d86e3e1ca"
+  },
+  {
+    "lane": "offline-aggregate-time-before",
+    "exit_code": 1,
+    "expected_failing_case": "raw_aggregate_repeat_with_advancing_sensor_times_is_rejected",
+    "observed_expected_failure": false,
+    "failures": [],
+    "overlay_sha256": "f4aafdefd495b9c5c95676647b357177c5e3d5549393537d68f8857d86e3e1ca"
+  },
+  {
+    "lane": "worker-aggregate-time-before",
+    "exit_code": 3,
+    "expected_failing_case": "repeated_aggregate_with_advancing_offsets_faults_worker_and_retains_evidence",
+    "observed_expected_failure": true,
+    "failures": [
+      "repeated_aggregate_with_advancing_offsets_faults_worker_and_retains_evidence"
+    ]
+  },
+  {
+    "lane": "fitting-heldout-monitor-time-before",
+    "exit_code": 3,
+    "expected_failing_case": "fitting_and_heldout_monitors_reject_acquisition_faults_and_keep_both_incidents",
+    "observed_expected_failure": true,
+    "failures": [
+      "hardware_calibration::tests::fitting_and_heldout_monitors_reject_acquisition_faults_and_keep_both_incidents"
+    ]
+  },
+  {
+    "lane": "monitor-handoff-time-before",
+    "exit_code": 3,
+    "expected_failing_case": "monitor_successor_keeps_sequence_and_sensor_time_continuity",
+    "observed_expected_failure": true,
+    "failures": [
+      "hardware_calibration::tests::monitor_successor_keeps_sequence_and_sensor_time_continuity"
+    ]
+  },
+  {
+    "lane": "heldout-negative-drift-before",
+    "exit_code": 1,
+    "expected_failing_case": "heldout_999ns_clock_preserves_valid_raw_sensor_advance_at_skew_boundary",
+    "observed_expected_failure": false,
+    "failures": [],
+    "overlay_sha256": "f4aafdefd495b9c5c95676647b357177c5e3d5549393537d68f8857d86e3e1ca"
+  },
+  {
+    "lane": "heldout-positive-drift-before",
+    "exit_code": 1,
+    "expected_failing_case": "heldout_1001ns_clock_rejects_raw_sensor_repeat_outside_truth_windows",
+    "observed_expected_failure": false,
+    "failures": [],
+    "overlay_sha256": "f4aafdefd495b9c5c95676647b357177c5e3d5549393537d68f8857d86e3e1ca"
+  },
+  {
+    "lane": "fitting-precheck-source-before",
+    "exit_code": 1,
+    "expected_failing_case": "fitting_and_precheck_reject_raw_suffix_fault_before_truth_selection",
+    "observed_expected_failure": false,
+    "failures": [],
+    "overlay_sha256": "f4aafdefd495b9c5c95676647b357177c5e3d5549393537d68f8857d86e3e1ca"
+  }
+]

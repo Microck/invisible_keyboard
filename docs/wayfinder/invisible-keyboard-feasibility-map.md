@@ -1,6 +1,6 @@
 ---
 title: Invisible keyboard feasibility
-status: open
+status: closed
 labels:
   - wayfinder:map
 ---
@@ -33,8 +33,9 @@ plan without needing another architecture-discovery pass.
 - Keep intent detection, symbol decoding, language correction, and operating
   system event injection conceptually separate even when a later implementation
   combines them.
-- Human decisions remain open while the user is away. Research may narrow the
-  options and recommend a choice, but it may not impersonate approval.
+- During the initial research pass, human decisions remained open while the
+  user was away. The later product, sensing, decoder, calibration, and
+  prototype instructions resolved them; the linked tickets retain the record.
 - Keep this effort in the local Markdown tracker. Do not create GitHub issues
   or publish external artifacts without a separately confirmed draft.
 - This map covers feasibility and prototype specification. It is not a software
@@ -42,6 +43,27 @@ plan without needing another architecture-discovery pass.
 
 ## Decisions so far
 
+- [Confirm the first invisible-keyboard use case](tickets/001-confirm-first-use-case.md)
+  fixes the product boundary: a wearable-only, personal calibrated system for
+  familiar split-QWERTY tapping on passive unmarked surfaces. The physical
+  reference has 34 positions, while the first advertised manifest is Core-28:
+  A-Z, Space, and Backspace.
+- [Select the first sensing architecture](tickets/009-select-sensing-architecture.md)
+  selects LapCal's five finger IMUs plus one dorsal reference IMU per hand as
+  the hard topology reference. The implementation follows the documented
+  independent-implementation/no-artifact-reuse policy, uses wired acquisition
+  first, and permits cameras or instrumented surfaces only as laboratory truth.
+- [Choose the decoding and personalization strategy](tickets/010-choose-decoding-strategy.md)
+  selects a causal staged decoder: physical channel identifies the finger,
+  relative finger-to-dorsal motion supplies intent features, and a personal
+  per-finger classifier identifies the position without a language model.
+- [Specify the decisive prototype and evaluation protocol](tickets/011-specify-decisive-prototype.md)
+  selects a USD 77.05 one-hand electronics build around XIAO nRF52840 Plus,
+  TCA9548A, and six LSM6DS3TR-C breakouts. A 60-minute stream gate precedes the
+  second hand, and the one-hand rig separately tests contact observability. It
+  cannot create an armable Core-28 artifact. Guided keyboard-label calibration
+  and locked passive-surface validation begin only after both hand rigs pass
+  admission.
 - [Audit what LapCal actually proved](tickets/002-audit-lapcal-evidence.md) finds useful
   hardware and data-collection lessons, but no reproducible proof of key
   identity, live text entry, or product-level performance; treat it as a
@@ -51,7 +73,9 @@ plan without needing another architecture-discovery pass.
   passive-surface test when personal calibration and language decoding are
   allowed; egocentric optical tracking leads when a camera/headset and its
   privacy cost are acceptable. Radar and magnetic tracking remain gated
-  fallbacks; the human architecture choice is still open.
+  fallbacks. The later user decision selects the finger-IMU topology for the
+  product despite its greater key-identity risk because environmental sensing
+  violates the type-anywhere boundary.
 - [Map prior art, products, and abandoned attempts](tickets/004-map-prior-art-and-failures.md)
   finds a
   fundamental product fork: finger-sequence systems can achieve high phrase
@@ -79,8 +103,13 @@ plan without needing another architecture-discovery pass.
 
 ## Not yet specified
 
-None. Every currently specifiable question is represented by an open child
-ticket.
+None. All child tickets have a linked resolution. The remaining unknowns are
+physical execution gates, not planning questions.
+
+The implementation contract is maintained in the
+[passive-surface reference architecture](../implementation/reference-architecture.md),
+the [first prototype roadmap](../implementation/first-prototype-roadmap.md),
+and the [guided calibration contract](../implementation/calibration-experience.md).
 
 ## Out of scope
 

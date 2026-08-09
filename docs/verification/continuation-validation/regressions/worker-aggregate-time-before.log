@@ -1,0 +1,68 @@
+OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Loading: 0 packages loaded
+    currently loading: 
+Analyzing: target //:calibration-worker-contract-test (1 packages loaded)
+Analyzing: target //:calibration-worker-contract-test (5 packages loaded, 6 targets configured)
+Analyzing: target //:calibration-worker-contract-test (5 packages loaded, 6 targets configured)
+
+Analyzing: target //:calibration-worker-contract-test (11 packages loaded, 9 targets configured)
+
+Analyzing: target //:calibration-worker-contract-test (62 packages loaded, 9 targets configured)
+
+Analyzing: target //:calibration-worker-contract-test (82 packages loaded, 226 targets configured)
+
+Analyzing: target //:calibration-worker-contract-test (108 packages loaded, 961 targets configured)
+
+Analyzing: target //:calibration-worker-contract-test (133 packages loaded, 2481 targets configured)
+
+Analyzing: target //:calibration-worker-contract-test (161 packages loaded, 3704 targets configured)
+
+Analyzing: target //:calibration-worker-contract-test (190 packages loaded, 4906 targets configured)
+
+INFO: Analyzed target //:calibration-worker-contract-test (206 packages loaded, 5419 targets configured).
+[1 / 1] no actions running
+[175 / 425] checking cached actions
+[423 / 425] [Prepa] Compiling Rust bin calibration-worker-contract-test (1 file)
+INFO: From Compiling Rust bin calibration-worker-contract-test (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+[425 / 426] Testing //:calibration-worker-contract-test; 0s processwrapper-sandbox
+FAIL: //:calibration-worker-contract-test (Exit 101) (see /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/execroot/_main/bazel-out/aarch64-fastbuild/testlogs/calibration-worker-contract-test/test.log)
+INFO: From Testing //:calibration-worker-contract-test:
+==================== Test output for //:calibration-worker-contract-test:
+
+running 1 test
+test repeated_aggregate_with_advancing_offsets_faults_worker_and_retains_evidence ... FAILED
+
+failures:
+
+---- repeated_aggregate_with_advancing_offsets_faults_worker_and_retains_evidence stdout ----
+
+thread 'repeated_aggregate_with_advancing_offsets_faults_worker_and_retains_evidence' (97025) panicked at tests/calibration-worker-contract.rs:1479:12:
+duplicate raw aggregate must fail before merge release: ()
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    repeated_aggregate_with_advancing_offsets_faults_worker_and_retains_evidence
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 15 filtered out; finished in 0.01s
+
+================================================================================
+INFO: Found 1 test target...
+Target //:calibration-worker-contract-test up-to-date:
+  bazel-bin/calibration-worker-contract-test
+INFO: Elapsed time: 18.627s, Critical Path: 1.38s
+INFO: 4 processes: 422 action cache hit, 2 internal, 3 processwrapper-sandbox.
+INFO: Build completed, 1 test FAILED, 4 total actions
+//:calibration-worker-contract-test                                      FAILED in 0.0s
+  /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/execroot/_main/bazel-out/aarch64-fastbuild/testlogs/calibration-worker-contract-test/test.log
+
+Executed 1 out of 1 test: 1 fails locally.

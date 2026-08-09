@@ -1,0 +1,70 @@
+[
+  {
+    "lane": "required-output",
+    "command": [
+      "bazelisk",
+      "--host_jvm_args=-Xmx2g",
+      "test",
+      "//:output-system-required-test",
+      "--nocache_test_results",
+      "--test_output=all",
+      "--jobs=2",
+      "--local_resources=memory=3072"
+    ],
+    "started_utc": "2026-10-13T01:34:28.116449+00:00",
+    "finished_utc": "2026-10-13T01:48:47.485340+00:00",
+    "exit_code": 0
+  },
+  {
+    "lane": "x86-tty-and-footer",
+    "command": [
+      "bazelisk",
+      "--host_jvm_args=-Xmx2g",
+      "test",
+      "//:cli-contract-test",
+      "--nocache_test_results",
+      "--test_output=all",
+      "--jobs=2",
+      "--local_resources=memory=3072",
+      "--test_arg=gate0_quiesce_cli_contract::"
+    ],
+    "started_utc": "2026-10-13T01:48:47.729498+00:00",
+    "finished_utc": "2026-10-13T01:53:45.759104+00:00",
+    "exit_code": 0
+  },
+  {
+    "lane": "selected-board-firmware",
+    "command": [
+      "bazelisk",
+      "--host_jvm_args=-Xmx2g",
+      "build",
+      "//firmware/zephyr:firmware",
+      "--jobs=2",
+      "--local_resources=memory=3072",
+      "--action_env=CMAKE_BUILD_PARALLEL_LEVEL=2",
+      "--action_env=HOME=/home/tester"
+    ],
+    "started_utc": "2026-10-13T01:53:45.979285+00:00",
+    "finished_utc": "2026-10-13T02:45:20.393190+00:00",
+    "exit_code": 0
+  },
+  {
+    "lane": "capture-stack",
+    "command": [
+      "bazelisk",
+      "--host_jvm_args=-Xmx2g",
+      "test",
+      "//:gate0a-capture-stack-test",
+      "--nocache_test_results",
+      "--test_output=all",
+      "--jobs=2",
+      "--local_resources=memory=3072",
+      "--test_env=IKB_GATE0A_TEST_CAPTURE_BINARY=/home/tester/gate0a-stack-build-v3/artifacts/sigrok-cli-gate0a",
+      "--test_env=IKB_GATE0A_TEST_FIRMWARE_BUNDLE=/home/tester/gate0a-stack-build-v3/artifacts/gate0a-dslogic-plus-firmware.tar",
+      "--test_timeout=3600"
+    ],
+    "started_utc": "2026-10-13T02:45:20.446271+00:00",
+    "finished_utc": "2026-10-13T02:47:14.595759+00:00",
+    "exit_code": 3
+  }
+]

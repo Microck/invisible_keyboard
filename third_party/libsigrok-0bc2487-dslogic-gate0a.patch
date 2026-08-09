@@ -1,0 +1,211 @@
+diff --git a/src/hardware/dreamsourcelab-dslogic/protocol.h b/src/hardware/dreamsourcelab-dslogic/protocol.h
+index 42ed85f..9779f3f 100644
+--- a/src/hardware/dreamsourcelab-dslogic/protocol.h
++++ b/src/hardware/dreamsourcelab-dslogic/protocol.h
+@@ -36,7 +36,6 @@
+ 
+ #define MAX_RENUM_DELAY_MS	3000
+ #define NUM_SIMUL_TRANSFERS	32
+-#define MAX_EMPTY_TRANSFERS	(NUM_SIMUL_TRANSFERS * 2)
+ 
+ #define NUM_CHANNELS		16
+ #define NUM_TRIGGER_STAGES	16
+@@ -124,9 +123,10 @@ struct dev_context {
+ 
+ 	gboolean acq_aborted;
+ 
+-	unsigned int sent_samples;
++	uint64_t sent_samples;
++	uint64_t completed_transfers;
++	uint64_t transfer_anomalies;
+ 	int submitted_transfers;
+-	int empty_transfer_count;
+ 
+ 	unsigned int num_transfers;
+ 	struct libusb_transfer **transfers;
+diff --git a/src/hardware/dreamsourcelab-dslogic/protocol.c b/src/hardware/dreamsourcelab-dslogic/protocol.c
+index f5397b7..113dfce 100644
+--- a/src/hardware/dreamsourcelab-dslogic/protocol.c
++++ b/src/hardware/dreamsourcelab-dslogic/protocol.c
+@@ -677,6 +677,18 @@ static void finish_acquisition(struct sr_dev_inst *sdi)
+ 	struct dev_context *devc;
+ 
+ 	devc = sdi->priv;
++	if (devc->limit_samples &&
++		devc->sent_samples == devc->limit_samples &&
++		devc->completed_transfers > 0 &&
++		devc->transfer_anomalies == 0) {
++		sr_info("IKB_DSLOGIC_TRANSFER_V1 completed_transfers=%" PRIu64
++			" anomalies=0", devc->completed_transfers);
++	} else {
++		sr_err("IKB_DSLOGIC_TRANSFER_FAILURE_V1 samples=%" PRIu64
++			" completed_transfers=%" PRIu64 " anomalies=%" PRIu64,
++			devc->sent_samples, devc->completed_transfers,
++			devc->transfer_anomalies);
++	}
+ 
+ 	std_session_send_df_end(sdi);
+ 
+@@ -714,14 +726,19 @@ static void free_transfer(struct libusb_transfer *transfer)
+ 
+ static void resubmit_transfer(struct libusb_transfer *transfer)
+ {
++	struct sr_dev_inst *sdi;
++	struct dev_context *devc;
+ 	int ret;
+ 
+ 	if ((ret = libusb_submit_transfer(transfer)) == LIBUSB_SUCCESS)
+ 		return;
+ 
+ 	sr_err("%s: %s", __func__, libusb_error_name(ret));
++	sdi = transfer->user_data;
++	devc = sdi->priv;
++	devc->transfer_anomalies++;
++	abort_acquisition(devc);
+ 	free_transfer(transfer);
+-
+ }
+ 
+ static void deinterleave_buffer(const uint8_t *src, size_t length,
+@@ -771,13 +788,11 @@ static void LIBUSB_CALL receive_transfer(struct libusb_transfer *transfer)
+ 	struct dev_context *const devc = sdi->priv;
+ 	const size_t channel_count = enabled_channel_count(sdi);
+ 	const uint16_t channel_mask = enabled_channel_mask(sdi);
+-	const unsigned int cur_sample_count = DSLOGIC_ATOMIC_SAMPLES *
+-		transfer->actual_length /
+-		(DSLOGIC_ATOMIC_BYTES * channel_count);
+-
+-	gboolean packet_has_error = FALSE;
+-	unsigned int num_samples;
+-	int trigger_offset;
++	const size_t sample_block_bytes = DSLOGIC_ATOMIC_BYTES * channel_count;
++
++	uint64_t cur_sample_count;
++	uint64_t num_samples;
++	uint64_t trigger_offset;
+ 
+ 	/*
+ 	 * If acquisition has already ended, just free any queued up
+@@ -791,38 +806,36 @@ static void LIBUSB_CALL receive_transfer(struct libusb_transfer *transfer)
+ 	sr_dbg("receive_transfer(): status %s received %d bytes.",
+ 		libusb_error_name(transfer->status), transfer->actual_length);
+ 
+-	/* Save incoming transfer before reusing the transfer struct. */
+-
+-	switch (transfer->status) {
+-	case LIBUSB_TRANSFER_NO_DEVICE:
++	if (transfer->status != LIBUSB_TRANSFER_COMPLETED) {
++		devc->transfer_anomalies++;
++		sr_err("Capture rejected USB transfer status %s.",
++			libusb_error_name(transfer->status));
+ 		abort_acquisition(devc);
+ 		free_transfer(transfer);
+ 		return;
+-	case LIBUSB_TRANSFER_COMPLETED:
+-	case LIBUSB_TRANSFER_TIMED_OUT: /* We may have received some data though. */
+-		break;
+-	default:
+-		packet_has_error = TRUE;
+-		break;
+ 	}
+ 
+-	if (transfer->actual_length == 0 || packet_has_error) {
+-		devc->empty_transfer_count++;
+-		if (devc->empty_transfer_count > MAX_EMPTY_TRANSFERS) {
+-			/*
+-			 * The FX2 gave up. End the acquisition, the frontend
+-			 * will work out that the samplecount is short.
+-			 */
+-			abort_acquisition(devc);
+-			free_transfer(transfer);
+-		} else {
+-			resubmit_transfer(transfer);
+-		}
++	if (transfer->actual_length == 0) {
++		devc->transfer_anomalies++;
++		sr_err("Capture rejected empty USB transfer.");
++		abort_acquisition(devc);
++		free_transfer(transfer);
+ 		return;
+-	} else {
+-		devc->empty_transfer_count = 0;
+ 	}
+ 
++	if (!sample_block_bytes ||
++		(size_t)transfer->actual_length % sample_block_bytes != 0) {
++		devc->transfer_anomalies++;
++		sr_err("Capture rejected invalid sample-block length %d.",
++			transfer->actual_length);
++		abort_acquisition(devc);
++		free_transfer(transfer);
++		return;
++	}
++
++	cur_sample_count = DSLOGIC_ATOMIC_SAMPLES *
++		(uint64_t)transfer->actual_length / sample_block_bytes;
++
+ 	if (!devc->limit_samples || devc->sent_samples < devc->limit_samples) {
+ 		if (devc->limit_samples && devc->sent_samples + cur_sample_count > devc->limit_samples)
+ 			num_samples = devc->limit_samples - devc->sent_samples;
+@@ -840,8 +853,6 @@ static void LIBUSB_CALL receive_transfer(struct libusb_transfer *transfer)
+ 		 *
+ 		 * Hopefully in future it will be possible to pass the data on as-is.
+ 		 */
+-		if (transfer->actual_length % (DSLOGIC_ATOMIC_BYTES * channel_count) != 0)
+-			sr_err("Invalid transfer length!");
+ 		deinterleave_buffer(transfer->buffer, transfer->actual_length,
+ 			devc->deinterleave_buffer, channel_count, channel_mask);
+ 
+@@ -865,6 +876,7 @@ static void LIBUSB_CALL receive_transfer(struct libusb_transfer *transfer)
+ 			send_data(sdi, devc->deinterleave_buffer, num_samples);
+ 			devc->sent_samples += num_samples;
+ 		}
++		devc->completed_transfers++;
+ 	}
+ 
+ 	if (devc->limit_samples && devc->sent_samples >= devc->limit_samples) {
+@@ -953,7 +965,8 @@ static int start_transfers(const struct sr_dev_inst *sdi)
+ 
+ 	devc->sent_samples = 0;
+ 	devc->acq_aborted = FALSE;
+-	devc->empty_transfer_count = 0;
++	devc->completed_transfers = 0;
++	devc->transfer_anomalies = 0;
+ 	devc->submitted_transfers = 0;
+ 
+ 	g_free(devc->transfers);
+@@ -1007,15 +1020,15 @@ static void LIBUSB_CALL trigger_receive(struct libusb_transfer *transfer)
+ 
+ 	sdi = transfer->user_data;
+ 	devc = sdi->priv;
+-	if (transfer->status == LIBUSB_TRANSFER_CANCELLED) {
+-		sr_dbg("Trigger transfer canceled.");
+-		/* Terminate session. */
+-		std_session_send_df_end(sdi);
+-		usb_source_remove(sdi->session, devc->ctx);
+-		devc->num_transfers = 0;
+-		g_free(devc->transfers);
+-	} else if (transfer->status == LIBUSB_TRANSFER_COMPLETED
+-			&& transfer->actual_length == sizeof(struct dslogic_trigger_pos)) {
++	if (transfer->status != LIBUSB_TRANSFER_COMPLETED ||
++		transfer->actual_length != sizeof(struct dslogic_trigger_pos)) {
++		devc->transfer_anomalies++;
++		sr_err("Capture rejected trigger transfer status %s with length %d.",
++			libusb_error_name(transfer->status), transfer->actual_length);
++		abort_acquisition(devc);
++		free_transfer(transfer);
++		return;
++	} else {
+ 		tpos = (struct dslogic_trigger_pos *)transfer->buffer;
+ 		sr_info("tpos real_pos %d ram_saddr %d cnt_h %d cnt_l %d", tpos->real_pos,
+ 			tpos->ram_saddr, tpos->remain_cnt_h, tpos->remain_cnt_l);
+@@ -1045,7 +1058,8 @@ SR_PRIV int dslogic_acquisition_start(const struct sr_dev_inst *sdi)
+ 
+ 	devc->ctx = drvc->sr_ctx;
+ 	devc->sent_samples = 0;
+-	devc->empty_transfer_count = 0;
++	devc->completed_transfers = 0;
++	devc->transfer_anomalies = 0;
+ 	devc->acq_aborted = FALSE;
+ 
+ 	usb_source_add(sdi->session, devc->ctx, timeout, receive_data, drvc);

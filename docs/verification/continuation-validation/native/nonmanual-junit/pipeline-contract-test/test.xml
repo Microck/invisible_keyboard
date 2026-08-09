@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="pipeline-contract-test" tests="1" failures="0" errors="0">
+    <testcase name="pipeline-contract-test" status="run" duration="0" time="0"></testcase>
+      <system-out>
+Generated test.log (if the file is not UTF-8, then this may be unreadable):
+<![CDATA[exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+Executing tests from //:pipeline-contract-test
+-----------------------------------------------------------------------------
+
+running 8 tests
+test contact_before_four_idle_windows_cannot_emit_a_repeat ... ok
+test device_time_regression_discards_all_buffered_context ... ok
+test continuous_stream_emits_exactly_one_key_decision_per_tap ... ok
+test quality_fault_during_repeat_suppression_is_still_emitted ... ok
+test idle_stream_never_emits_a_decision ... ok
+test reserved_position_emits_one_explicit_abstention ... ok
+test retained_short_impulse_is_timestamped_at_the_commit_frame ... ok
+test wrong_hand_frame_resets_the_pipeline_and_returns_an_error ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.09s]]>
+      </system-out>
+    </testsuite>
+</testsuites>

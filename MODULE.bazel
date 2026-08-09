@@ -1,0 +1,60 @@
+module(
+    name = "invisible_keyboard",
+    version = "0.1.0",
+)
+
+bazel_dep(name = "platforms", version = "1.1.0")
+bazel_dep(name = "rules_cc", version = "0.2.22")
+bazel_dep(name = "rules_rust", version = "0.73.0")
+bazel_dep(name = "rules_shell", version = "0.8.0")
+
+rust = use_extension("@rules_rust//rust:extensions.bzl", "rust")
+rust.toolchain(
+    edition = "2024",
+    versions = ["1.94.0"],
+)
+use_repo(rust, "rust_toolchains")
+register_toolchains("@rust_toolchains//:all")
+
+# Keep Bazel as the only project dependency manifest. Crate Universe resolves
+# and locks the host integration dependencies through Bzlmod.
+crate = use_extension("@rules_rust//crate_universe:extensions.bzl", "crate")
+crate.spec(
+    package = "evdev",
+    version = "=0.13.2",
+)
+crate.spec(
+    package = "libc",
+    version = "=0.2.189",
+)
+# evdev 0.13.2 encodes UI_SET_PHYS with a one-byte ioctl size, so Linux rejects
+# VirtualDeviceBuilder.with_phys() with EINVAL. Apply only upstream's pointer-
+# size correction from commit 7fee138a341f73b81b9c4f8c59e3527c6a169ea3,
+# which follows the original with_phys work in PR #134:
+# https://github.com/emberian/evdev/pull/134
+# https://github.com/emberian/evdev/commit/7fee138a341f73b81b9c4f8c59e3527c6a169ea3
+crate.annotation(
+    crate = "evdev",
+    patch_args = ["-p1"],
+    patches = ["//:third_party/evdev-0.13.2-ui-set-phys-pointer-size.patch"],
+)
+crate.spec(
+    package = "signal-hook",
+    version = "=0.4.4",
+)
+crate.spec(
+    package = "serde",
+    version = "=1.0.228",
+    features = ["derive"],
+)
+crate.spec(
+    package = "serde_json",
+    version = "=1.0.145",
+    features = ["float_roundtrip"],
+)
+crate.spec(
+    package = "sha2",
+    version = "=0.10.9",
+)
+crate.from_specs(name = "crates")
+use_repo(crate, "crates")

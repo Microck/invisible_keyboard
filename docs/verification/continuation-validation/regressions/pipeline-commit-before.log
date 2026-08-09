@@ -1,0 +1,67 @@
+OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Loading: 1 packages loaded
+Analyzing: target //:pipeline-contract-test (5 packages loaded, 6 targets configured)
+Analyzing: target //:pipeline-contract-test (5 packages loaded, 6 targets configured)
+
+Analyzing: target //:pipeline-contract-test (20 packages loaded, 9 targets configured)
+
+Analyzing: target //:pipeline-contract-test (67 packages loaded, 39 targets configured)
+
+Analyzing: target //:pipeline-contract-test (83 packages loaded, 381 targets configured)
+
+Analyzing: target //:pipeline-contract-test (109 packages loaded, 953 targets configured)
+
+Analyzing: target //:pipeline-contract-test (125 packages loaded, 1804 targets configured)
+
+Analyzing: target //:pipeline-contract-test (156 packages loaded, 3402 targets configured)
+
+Analyzing: target //:pipeline-contract-test (194 packages loaded, 5106 targets configured)
+
+INFO: Analyzed target //:pipeline-contract-test (206 packages loaded, 5419 targets configured).
+[1 / 1] no actions running
+[192 / 425] checking cached actions
+[423 / 425] [Prepa] Compiling Rust bin pipeline-contract-test (1 file)
+INFO: From Compiling Rust bin pipeline-contract-test (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+FAIL: //:pipeline-contract-test (Exit 101) (see /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/execroot/_main/bazel-out/aarch64-fastbuild/testlogs/pipeline-contract-test/test.log)
+INFO: From Testing //:pipeline-contract-test:
+==================== Test output for //:pipeline-contract-test:
+
+running 1 test
+test retained_short_impulse_is_timestamped_at_the_commit_frame ... FAILED
+
+failures:
+
+---- retained_short_impulse_is_timestamped_at_the_commit_frame stdout ----
+
+thread 'retained_short_impulse_is_timestamped_at_the_commit_frame' (62211) panicked at tests/pipeline-contract.rs:98:13:
+assertion `left == right` failed
+  left: 100000
+ right: 115000
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    retained_short_impulse_is_timestamped_at_the_commit_frame
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 7 filtered out; finished in 0.01s
+
+================================================================================
+INFO: Found 1 test target...
+Target //:pipeline-contract-test up-to-date:
+  bazel-bin/pipeline-contract-test
+INFO: Elapsed time: 17.173s, Critical Path: 1.04s
+INFO: 4 processes: 422 action cache hit, 2 internal, 3 processwrapper-sandbox.
+INFO: Build completed, 1 test FAILED, 4 total actions
+//:pipeline-contract-test                                                FAILED in 0.1s
+  /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/execroot/_main/bazel-out/aarch64-fastbuild/testlogs/pipeline-contract-test/test.log
+
+Executed 1 out of 1 test: 1 fails locally.

@@ -1,0 +1,21 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+Executing tests from //:cli-contract-test
+-----------------------------------------------------------------------------
+
+running 1 test
+test gate0_quiesce_cli_contract::record_hand_bounds_a_stalled_request_write_and_drain ... FAILED
+
+failures:
+
+---- gate0_quiesce_cli_contract::record_hand_bounds_a_stalled_request_write_and_drain stdout ----
+
+thread 'gate0_quiesce_cli_contract::record_hand_bounds_a_stalled_request_write_and_drain' (18582) panicked at tests/cli-contract.rs:4513:9:
+a stalled request must not block deadline supervision
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    gate0_quiesce_cli_contract::record_hand_bounds_a_stalled_request_write_and_drain
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 72 filtered out; finished in 1.58s
+

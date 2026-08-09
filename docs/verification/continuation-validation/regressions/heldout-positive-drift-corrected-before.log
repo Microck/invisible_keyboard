@@ -1,0 +1,63 @@
+OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //:calibration-engine-contract-test (1 packages loaded)
+Analyzing: target //:calibration-engine-contract-test (5 packages loaded, 6 targets configured)
+Analyzing: target //:calibration-engine-contract-test (5 packages loaded, 6 targets configured)
+
+Analyzing: target //:calibration-engine-contract-test (10 packages loaded, 9 targets configured)
+
+Analyzing: target //:calibration-engine-contract-test (62 packages loaded, 9 targets configured)
+
+Analyzing: target //:calibration-engine-contract-test (82 packages loaded, 261 targets configured)
+
+Analyzing: target //:calibration-engine-contract-test (108 packages loaded, 960 targets configured)
+
+Analyzing: target //:calibration-engine-contract-test (126 packages loaded, 2142 targets configured)
+
+Analyzing: target //:calibration-engine-contract-test (151 packages loaded, 3252 targets configured)
+
+Analyzing: target //:calibration-engine-contract-test (188 packages loaded, 4693 targets configured)
+
+INFO: Analyzed target //:calibration-engine-contract-test (206 packages loaded, 5419 targets configured).
+[1 / 1] no actions running
+[170 / 425] checking cached actions
+[425 / 426] [Prepa] Testing //:calibration-engine-contract-test
+[425 / 426] Testing //:calibration-engine-contract-test; 1s processwrapper-sandbox
+[425 / 426] Testing //:calibration-engine-contract-test; 11s processwrapper-sandbox
+[425 / 426] Testing //:calibration-engine-contract-test; 41s processwrapper-sandbox
+[425 / 426] Testing //:calibration-engine-contract-test; 77s processwrapper-sandbox
+FAIL: //:calibration-engine-contract-test (Exit 101) (see /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/execroot/_main/bazel-out/aarch64-fastbuild/testlogs/calibration-engine-contract-test/test.log)
+INFO: From Testing //:calibration-engine-contract-test:
+==================== Test output for //:calibration-engine-contract-test:
+
+running 1 test
+test heldout_1001ns_clock_rejects_raw_sensor_repeat_outside_truth_windows has been running for over 60 seconds
+test heldout_1001ns_clock_rejects_raw_sensor_repeat_outside_truth_windows ... FAILED
+
+failures:
+
+---- heldout_1001ns_clock_rejects_raw_sensor_repeat_outside_truth_windows stdout ----
+
+thread 'heldout_1001ns_clock_rejects_raw_sensor_repeat_outside_truth_windows' (101926) panicked at tests/calibration-engine-contract.rs:2085:16:
+unlabeled suffix must not hide repeated raw sensor time under a 1001ns/us clock
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    heldout_1001ns_clock_rejects_raw_sensor_repeat_outside_truth_windows
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 28 filtered out; finished in 77.30s
+
+================================================================================
+INFO: Found 1 test target...
+Target //:calibration-engine-contract-test up-to-date:
+  bazel-bin/calibration-engine-contract-test
+INFO: Elapsed time: 94.173s, Critical Path: 77.64s
+INFO: 2 processes: 424 action cache hit, 1 internal, 2 processwrapper-sandbox.
+INFO: Build completed, 1 test FAILED, 2 total actions
+//:calibration-engine-contract-test                                      FAILED in 77.3s
+  /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/execroot/_main/bazel-out/aarch64-fastbuild/testlogs/calibration-engine-contract-test/test.log
+
+Executed 1 out of 1 test: 1 fails locally.

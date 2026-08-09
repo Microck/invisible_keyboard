@@ -1,0 +1,82 @@
+INFO: Checking for file changes...
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //:cli-contract-test (0 packages loaded)
+Analyzing: target //:cli-contract-test (0 packages loaded, 0 targets configured)
+Analyzing: target //:cli-contract-test (0 packages loaded, 0 targets configured)
+
+Analyzing: target //:cli-contract-test (0 packages loaded, 0 targets configured)
+
+Analyzing: target //:cli-contract-test (0 packages loaded, 8 targets configured)
+
+Analyzing: target //:cli-contract-test (2 packages loaded, 11 targets configured)
+
+INFO: Analyzed target //:cli-contract-test (3 packages loaded, 30 targets configured).
+[1 / 1] no actions running
+[241 / 326] checking cached actions
+[311 / 401] [Prepa] Creating source manifest for //:cli-contract-test
+[415 / 427] [Prepa] Compiling firmware/frame-protocol-conformance.c
+[439 / 447] Compiling firmware/frame-protocol-conformance.c; 0s processwrapper-sandbox ... (2 actions, 1 running)
+[439 / 447] Compiling firmware/frame-protocol-conformance.c; 1s processwrapper-sandbox ... (2 actions running)
+[439 / 447] Compiling firmware/frame-protocol-conformance.c; 11s processwrapper-sandbox ... (2 actions running)
+[440 / 447] Compiling Rust bin invisible-keyboard (1 file); 11s processwrapper-sandbox ... (2 actions, 1 running)
+[440 / 447] Compiling Rust bin invisible-keyboard (1 file); 13s processwrapper-sandbox ... (2 actions running)
+[441 / 447] Compiling Rust bin invisible-keyboard (1 file); 19s processwrapper-sandbox ... (2 actions, 1 running)
+[441 / 447] Compiling Rust bin invisible-keyboard (1 file); 20s processwrapper-sandbox ... (2 actions running)
+[442 / 447] Compiling Rust bin invisible-keyboard (1 file); 25s processwrapper-sandbox ... (2 actions, 1 running)
+[443 / 447] Compiling Rust bin invisible-keyboard (1 file); 26s processwrapper-sandbox ... (2 actions running)
+[444 / 447] Compiling Rust bin invisible-keyboard (1 file); 33s processwrapper-sandbox ... (2 actions, 1 running)
+[444 / 447] Compiling Rust bin invisible-keyboard (1 file); 34s processwrapper-sandbox ... (2 actions running)
+[444 / 447] Compiling Rust bin invisible-keyboard (1 file); 44s processwrapper-sandbox ... (2 actions running)
+[444 / 447] Compiling Rust bin invisible-keyboard (1 file); 74s processwrapper-sandbox ... (2 actions running)
+[444 / 447] Compiling Rust bin invisible-keyboard (1 file); 135s processwrapper-sandbox ... (2 actions running)
+INFO: From Compiling Rust bin invisible-keyboard (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+[444 / 447] Compiling Rust bin invisible-keyboard (1 file); 195s processwrapper-sandbox ... (2 actions running)
+[445 / 447] Compiling Rust bin cli-contract-test (1 file); 163s processwrapper-sandbox
+[445 / 447] Compiling Rust bin cli-contract-test (1 file); 173s processwrapper-sandbox
+INFO: From Compiling Rust bin cli-contract-test (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+[446 / 447] [Prepa] runfiles for //:cli-contract-test
+[447 / 448] Testing //:cli-contract-test; 0s processwrapper-sandbox
+[447 / 448] Testing //:cli-contract-test; 26s processwrapper-sandbox
+[447 / 448] 1 / 1 tests; Testing //:cli-contract-test; 27s processwrapper-sandbox
+INFO: From Testing //:cli-contract-test:
+==================== Test output for //:cli-contract-test:
+
+running 9 tests
+test gate0_quiesce_cli_contract::record_hand_abort_paths_never_write_a_footer ... ok
+test gate0_quiesce_cli_contract::record_hand_bounds_a_stalled_request_write_and_drain ... ok
+test gate0_quiesce_cli_contract::record_hand_completes_one_identity_bound_quiesce_transaction_over_real_kernel_io ... ok
+test gate0_quiesce_cli_contract::record_hand_observes_control_faults_during_stalled_transmission ... ok
+test gate0_quiesce_cli_contract::record_hand_receipt_deadline_applies_while_sensor_frames_keep_arriving ... ok
+test gate0_quiesce_cli_contract::record_hand_signal_after_the_footer_commit_does_not_revoke_end3 ... ok
+test gate0_quiesce_cli_contract::record_hand_signals_before_the_footer_commit_abort_without_a_footer ... ok
+test gate0_quiesce_cli_contract::record_hand_waits_for_initial_usb_enumeration ... ok
+test gate0_quiesce_cli_contract::record_stream_signal_finishes_a_fragmented_record_without_a_partial_tail ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 68 filtered out; finished in 23.74s
+
+================================================================================
+INFO: Found 1 test target...
+Target //:cli-contract-test up-to-date:
+  bazel-bin/cli-contract-test
+[448 / 448] 1 / 1 tests; no actions running
+INFO: Elapsed time: 292.948s, Critical Path: 225.68s
+INFO: 13 processes: 6 internal, 8 processwrapper-sandbox.
+INFO: Build completed successfully, 13 total actions
+//:cli-contract-test                                                     PASSED in 26.3s
+
+Executed 1 out of 1 test: 1 test passes.
+There were tests whose specified size is too big. Use the --test_verbose_timeout_warnings command line option to see which ones these are.

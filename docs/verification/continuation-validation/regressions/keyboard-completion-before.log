@@ -1,0 +1,50 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+Executing tests from //:calibration-capture-contract-test
+-----------------------------------------------------------------------------
+
+running 4 tests
+test keyboard_completion::modifier_after_down_invalidates_the_complete_press_including_state_only_events ... FAILED
+test keyboard_completion::complete_press_waits_for_release_and_keeps_original_down_provenance ... FAILED
+test keyboard_completion::overlapping_presses_remain_raw_without_matched_observations_or_coverage ... FAILED
+test keyboard_completion::unreleased_press_has_no_matched_observation_or_coverage_and_is_not_neutral ... FAILED
+
+failures:
+
+---- keyboard_completion::modifier_after_down_invalidates_the_complete_press_including_state_only_events stdout ----
+
+thread 'keyboard_completion::modifier_after_down_invalidates_the_complete_press_including_state_only_events' (35640) panicked at tests/calibration-capture-contract.rs:990:13:
+assertion `left == right` failed
+  left: 1
+ right: 0
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- keyboard_completion::complete_press_waits_for_release_and_keeps_original_down_provenance stdout ----
+
+thread 'keyboard_completion::complete_press_waits_for_release_and_keeps_original_down_provenance' (35639) panicked at tests/calibration-capture-contract.rs:990:13:
+assertion `left == right` failed
+  left: 1
+ right: 0
+
+---- keyboard_completion::overlapping_presses_remain_raw_without_matched_observations_or_coverage stdout ----
+
+thread 'keyboard_completion::overlapping_presses_remain_raw_without_matched_observations_or_coverage' (35641) panicked at tests/calibration-capture-contract.rs:990:13:
+assertion `left == right` failed
+  left: 1
+ right: 0
+
+---- keyboard_completion::unreleased_press_has_no_matched_observation_or_coverage_and_is_not_neutral stdout ----
+
+thread 'keyboard_completion::unreleased_press_has_no_matched_observation_or_coverage_and_is_not_neutral' (35642) panicked at tests/calibration-capture-contract.rs:990:13:
+assertion `left == right` failed
+  left: 1
+ right: 0
+
+
+failures:
+    keyboard_completion::complete_press_waits_for_release_and_keeps_original_down_provenance
+    keyboard_completion::modifier_after_down_invalidates_the_complete_press_including_state_only_events
+    keyboard_completion::overlapping_presses_remain_raw_without_matched_observations_or_coverage
+    keyboard_completion::unreleased_press_has_no_matched_observation_or_coverage_and_is_not_neutral
+
+test result: FAILED. 0 passed; 4 failed; 0 ignored; 0 measured; 14 filtered out; finished in 0.32s
+

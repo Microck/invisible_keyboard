@@ -1,0 +1,20 @@
+[
+  {
+    "lane": "nonmanual",
+    "command": [
+      "bazelisk",
+      "--batch",
+      "--host_jvm_args=-Xmx2g",
+      "test",
+      "//...",
+      "--build_tests_only",
+      "--nocache_test_results",
+      "--test_output=all",
+      "--jobs=1",
+      "--local_resources=memory=3072"
+    ],
+    "started_utc": "2026-10-11T09:23:45.725367+00:00",
+    "finished_utc": "2026-10-11T09:59:51.068168+00:00",
+    "exit_code": 0
+  }
+]

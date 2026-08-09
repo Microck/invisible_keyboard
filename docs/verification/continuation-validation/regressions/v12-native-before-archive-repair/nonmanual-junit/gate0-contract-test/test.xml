@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="gate0-contract-test" tests="1" failures="0" errors="0">
+    <testcase name="gate0-contract-test" status="run" duration="0" time="0"></testcase>
+      <system-out>
+Generated test.log (if the file is not UTF-8, then this may be unreadable):
+<![CDATA[exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+Executing tests from //:gate0-contract-test
+-----------------------------------------------------------------------------
+
+running 4 tests
+test gate0_constants_encode_the_decisive_roadmap_contract ... ok
+test one_hand_capture_target_preserves_physical_identity ... ok
+test one_hand_capture_target_rejects_two_hands ... ok
+test verdict_precedence_is_fail_then_inconclusive_then_pass ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s]]>
+      </system-out>
+    </testsuite>
+</testsuites>

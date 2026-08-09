@@ -1,0 +1,9 @@
+{
+  "archive_sha256": "31a8abb9e893675f86d31d442a89dc8908fe50ada8d9a3ede2084ee34af1d3f2",
+  "preserved_files": [
+    "live-durability-receipt.json",
+    "live-durability-strace.log"
+  ],
+  "round_trip_exact": true,
+  "scope": "The v12 nonmanual graph and first durability test passed; the old runner then failed by assuming Bazel supplied outputs.zip. These are superseded receipts, not final acceptance."
+}

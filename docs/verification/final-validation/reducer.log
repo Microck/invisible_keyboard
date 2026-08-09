@@ -1,0 +1,205 @@
+2026/09/07 22:23:39 Downloading https://releases.bazel.build/9.2.0/release/bazel-9.2.0-linux-x86_64...
+2026/09/07 22:23:40 Signed by Bazel Developer (Bazel APT repository key) <bazel-dev@googlegroups.com>
+Extracting Bazel installation...
+OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.
+Computing main repo mapping: 
+Computing main repo mapping: 
+Computing main repo mapping: 
+Computing main repo mapping: 
+Computing main repo mapping: 
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Loading: 0 packages loaded
+    currently loading: 
+Loading: 0 packages loaded
+    currently loading: 
+Loading: 0 packages loaded
+    currently loading: 
+Analyzing: target //:gate0-trace-contract-test (1 packages loaded)
+Analyzing: target //:gate0-trace-contract-test (5 packages loaded, 6 targets configured)
+Analyzing: target //:gate0-trace-contract-test (5 packages loaded, 6 targets configured)
+
+Analyzing: target //:gate0-trace-contract-test (59 packages loaded, 9 targets configured)
+
+Analyzing: target //:gate0-trace-contract-test (84 packages loaded, 518 targets configured)
+
+Analyzing: target //:gate0-trace-contract-test (128 packages loaded, 2352 targets configured)
+
+Analyzing: target //:gate0-trace-contract-test (199 packages loaded, 5053 targets configured)
+
+Analyzing: target //:gate0-trace-contract-test (199 packages loaded, 5053 targets configured)
+
+Analyzing: target //:gate0-trace-contract-test (199 packages loaded, 5053 targets configured)
+
+Analyzing: target //:gate0-trace-contract-test (199 packages loaded, 5053 targets configured)
+
+Analyzing: target //:gate0-trace-contract-test (199 packages loaded, 5053 targets configured)
+
+Analyzing: target //:gate0-trace-contract-test (199 packages loaded, 5053 targets configured)
+
+Analyzing: target //:gate0-trace-contract-test (199 packages loaded, 5053 targets configured)
+
+Analyzing: target //:gate0-trace-contract-test (199 packages loaded, 5053 targets configured)
+
+Analyzing: target //:gate0-trace-contract-test (199 packages loaded, 5053 targets configured)
+
+INFO: Analyzed target //:gate0-trace-contract-test (206 packages loaded, 5418 targets configured).
+[52 / 309] [Prepa] Writing repo mapping manifest for @@rules_rust++crate+crates__proc-macro2-1.0.107//:_bs_ [for tool]
+[164 / 427] [Prepa] Creating symlink external/rules_rust++rust+rust_linux_x86_64__x86_64-unknown-linux-gnu__stable_tools/rust_toolchain/lib/rustlib/x86_64-unknown-linux-gnu/lib/libLLVM.so.21.1-rust-1.94.0-stable [for tool]
+[242 / 427] Compiling Rust (without process_wrapper) rlib tinyjson (4 files) [for tool]; 0s processwrapper-sandbox
+[243 / 427] Compiling Rust (without process_wrapper) bin process_wrapper (6 files) [for tool]; 0s processwrapper-sandbox
+INFO: From Compiling Rust (without process_wrapper) bin process_wrapper (6 files) [for tool]:
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+[245 / 427] Compiling Rust rlib percent_encoding v2.3.1 (1 file) [for tool]; 0s processwrapper-sandbox ... (2 actions running)
+[251 / 427] Compiling Rust rlib cargo_build_script_runner (2 files) [for tool]; 1s processwrapper-sandbox ... (2 actions, 1 running)
+[256 / 427] Compiling Rust bin runner (1 file) [for tool]; 0s processwrapper-sandbox ... (2 actions, 1 running)
+INFO: From Compiling Rust bin runner (1 file) [for tool]:
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+[263 / 427] Compiling Rust bin _bs_ (17 files) [for tool]; 0s processwrapper-sandbox ... (2 actions, 1 running)
+[271 / 427] Compiling Rust bin _bs_ (21 files) [for tool]; 0s processwrapper-sandbox ... (2 actions, 1 running)
+[278 / 427] Compiling Rust rlib serde_core v1.0.228 (20 files) [for tool]; 0s processwrapper-sandbox ... (2 actions, 1 running)
+[283 / 427] Compiling Rust rlib serde_core v1.0.228 (20 files) [for tool]; 1s processwrapper-sandbox ... (2 actions, 1 running)
+[289 / 427] Compiling Rust rlib proc_macro2 v1.0.93 (17 files) [for tool]; 0s processwrapper-sandbox ... (2 actions, 1 running)
+[289 / 427] Compiling Rust rlib proc_macro2 v1.0.93 (17 files) [for tool]; 1s processwrapper-sandbox ... (2 actions running)
+[291 / 427] Compiling Rust rlib winnow v0.7.15 (98 files) [for tool]; 2s processwrapper-sandbox ... (2 actions running)
+[293 / 427] Compiling Rust rlib syn v2.0.98 (96 files) [for tool]; 1s processwrapper-sandbox ... (2 actions, 1 running)
+[295 / 427] Compiling Rust rlib syn v2.0.98 (96 files) [for tool]; 3s processwrapper-sandbox
+[296 / 427] [Prepa] Compiling Rust proc-macro thiserror_impl v1.0.69 (10 files) [for tool]
+[296 / 427] Compiling Rust proc-macro thiserror_impl v1.0.69 (10 files) [for tool]; 1s processwrapper-sandbox ... (2 actions running)
+[297 / 427] Compiling Rust proc-macro serde_derive v1.0.228 (28 files) [for tool]; 2s processwrapper-sandbox ... (2 actions, 1 running)
+[298 / 427] Compiling Rust proc-macro serde_derive v1.0.228 (28 files) [for tool]; 4s processwrapper-sandbox ... (2 actions running)
+[299 / 427] Compiling Rust proc-macro serde_derive v1.0.228 (28 files) [for tool]; 6s processwrapper-sandbox ... (2 actions, 1 running)
+[301 / 427] Compiling Rust rlib synstructure v0.13.1 (2 files) [for tool]; 1s processwrapper-sandbox ... (2 actions, 1 running)
+[303 / 427] Compiling Rust proc-macro yoke_derive v0.7.5 (3 files) [for tool]; 0s processwrapper-sandbox ... (2 actions running)
+[304 / 427] Compiling Rust proc-macro yoke_derive v0.7.5 (3 files) [for tool]; 1s processwrapper-sandbox ... (2 actions running)
+[308 / 427] Compiling Rust proc-macro zerofrom_derive v0.1.5 (3 files) [for tool]; 0s processwrapper-sandbox ... (2 actions running)
+[309 / 427] Compiling Rust proc-macro zerofrom_derive v0.1.5 (3 files) [for tool]; 1s processwrapper-sandbox ... (2 actions running)
+[310 / 427] Compiling Rust rlib toml_edit v0.22.24 (58 files) [for tool]; 2s processwrapper-sandbox ... (2 actions, 1 running)
+[312 / 427] Compiling Rust rlib toml_edit v0.22.24 (58 files) [for tool]; 3s processwrapper-sandbox ... (2 actions running)
+[313 / 427] Compiling Rust proc-macro zerovec_derive v0.10.3 (9 files) [for tool]; 3s processwrapper-sandbox ... (2 actions, 1 running)
+[314 / 427] Compiling Rust rlib toml v0.8.20 (29 files) [for tool]; 1s processwrapper-sandbox ... (2 actions running)
+[316 / 427] Compiling Rust proc-macro displaydoc v0.2.5 (21 files) [for tool]; 0s processwrapper-sandbox
+[318 / 427] Compiling Rust rlib icu_collections v1.5.0 (26 files) [for tool]; 0s processwrapper-sandbox ... (2 actions, 1 running)
+[320 / 427] [Prepa] Compiling Rust rlib icu_provider v1.5.0 (20 files) [for tool]
+[321 / 427] Compiling Rust rlib icu_locid_transform v1.5.0 (15 files) [for tool]; 0s processwrapper-sandbox
+[322 / 427] Compiling Rust rlib icu_properties v1.5.1 (14 files) [for tool]; 0s processwrapper-sandbox
+[323 / 427] [Prepa] Compiling Rust rlib icu_normalizer v1.5.0 (13 files) [for tool]
+[323 / 427] Compiling Rust rlib icu_normalizer v1.5.0 (13 files) [for tool]; 1s processwrapper-sandbox
+[325 / 427] Compiling Rust rlib idna v1.0.3 (11 files) [for tool]; 0s processwrapper-sandbox
+[326 / 427] [Prepa] Compiling Rust rlib url v2.5.4 (9 files) [for tool]
+[326 / 427] Compiling Rust rlib url v2.5.4 (9 files) [for tool]; 1s processwrapper-sandbox
+[327 / 427] Compiling Rust rlib cargo_util_schemas v0.3.1 (8 files) [for tool]; 0s processwrapper-sandbox
+[328 / 427] [Prepa] Compiling Rust bin cargo_toml_variable_extractor (1 file) [for tool]
+[328 / 427] Compiling Rust bin cargo_toml_variable_extractor (1 file) [for tool]; 1s processwrapper-sandbox
+[328 / 427] Compiling Rust bin cargo_toml_variable_extractor (1 file) [for tool]; 11s processwrapper-sandbox
+INFO: From Compiling Rust bin cargo_toml_variable_extractor (1 file) [for tool]:
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+[329 / 427] [Prepa] runfiles for @@rules_rust+//cargo/private/cargo_toml_variable_extractor:cargo_toml_variable_extractor
+[341 / 427] Compiling Rust bin _bs_ (22 files) [for tool]; 0s processwrapper-sandbox ... (2 actions, 1 running)
+[356 / 427] Compiling Rust rlib proc_macro2 v1.0.107 (22 files) [for tool]; 0s processwrapper-sandbox ... (2 actions, 1 running)
+[360 / 427] Compiling Rust rlib serde_core v1.0.228 (20 files); 1s processwrapper-sandbox ... (2 actions running)
+[362 / 427] Compiling Rust rlib serde_core v1.0.228 (20 files); 2s processwrapper-sandbox ... (2 actions running)
+[367 / 427] Compiling Rust rlib syn v2.0.119 (97 files) [for tool]; 2s processwrapper-sandbox ... (2 actions, 1 running)
+[369 / 427] Compiling Rust rlib syn v2.0.119 (97 files) [for tool]; 3s processwrapper-sandbox ... (2 actions running)
+[370 / 427] Compiling Rust rlib serde_json v1.0.145 (68 files); 2s processwrapper-sandbox ... (2 actions, 1 running)
+[377 / 427] Compiling Rust proc-macro serde_derive v1.0.228 (28 files) [for tool]; 1s processwrapper-sandbox ... (2 actions, 1 running)
+[387 / 427] Compiling Rust proc-macro serde_derive v1.0.228 (28 files) [for tool]; 2s processwrapper-sandbox ... (2 actions, 1 running)
+[390 / 427] Compiling Rust proc-macro serde_derive v1.0.228 (28 files) [for tool]; 3s processwrapper-sandbox ... (2 actions running)
+[391 / 427] Compiling Rust proc-macro serde_derive v1.0.228 (28 files) [for tool]; 5s processwrapper-sandbox ... (2 actions, 1 running)
+[399 / 427] Compiling Rust rlib typenum v1.20.1 (15 files); 0s processwrapper-sandbox ... (2 actions, 1 running)
+[410 / 427] Compiling Rust rlib bitvec v1.1.1 (66 files); 0s processwrapper-sandbox ... (2 actions, 1 running)
+[416 / 427] Compiling Rust rlib bitvec v1.1.1 (66 files); 1s processwrapper-sandbox ... (2 actions running)
+[422 / 427] Compiling Rust rlib sha2 v0.10.9 (17 files); 0s processwrapper-sandbox ... (2 actions, 1 running)
+[424 / 427] [Prepa] Compiling Rust rlib invisible_keyboard (33 files)
+[424 / 427] Compiling Rust rlib invisible_keyboard (33 files); 1s processwrapper-sandbox
+[424 / 427] Compiling Rust rlib invisible_keyboard (33 files); 11s processwrapper-sandbox
+[425 / 427] [Prepa] Compiling Rust bin gate0-trace-contract-test (1 file)
+INFO: From Compiling Rust bin gate0-trace-contract-test (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+[426 / 427] [Prepa] runfiles for //:gate0-trace-contract-test
+[427 / 428] Testing //:gate0-trace-contract-test; 1s processwrapper-sandbox
+[427 / 428] Testing //:gate0-trace-contract-test; 10s processwrapper-sandbox
+[427 / 428] Testing //:gate0-trace-contract-test; 40s processwrapper-sandbox
+[427 / 428] Testing //:gate0-trace-contract-test; 100s processwrapper-sandbox
+[427 / 428] Testing //:gate0-trace-contract-test; 160s processwrapper-sandbox
+[427 / 428] Testing //:gate0-trace-contract-test; 220s processwrapper-sandbox
+[427 / 428] Testing //:gate0-trace-contract-test; 280s processwrapper-sandbox
+[427 / 428] Testing //:gate0-trace-contract-test; 340s processwrapper-sandbox
+[427 / 428] Testing //:gate0-trace-contract-test; 400s processwrapper-sandbox
+[427 / 428] Testing //:gate0-trace-contract-test; 460s processwrapper-sandbox
+[427 / 428] Testing //:gate0-trace-contract-test; 520s processwrapper-sandbox
+[427 / 428] Testing //:gate0-trace-contract-test; 580s processwrapper-sandbox
+[427 / 428] Testing //:gate0-trace-contract-test; 640s processwrapper-sandbox
+[427 / 428] Testing //:gate0-trace-contract-test; 700s processwrapper-sandbox
+[427 / 428] Testing //:gate0-trace-contract-test; 760s processwrapper-sandbox
+[427 / 428] Testing //:gate0-trace-contract-test; 820s processwrapper-sandbox
+[427 / 428] Testing //:gate0-trace-contract-test; 880s processwrapper-sandbox
+[427 / 428] Testing //:gate0-trace-contract-test; 940s processwrapper-sandbox
+[427 / 428] Testing //:gate0-trace-contract-test; 1000s processwrapper-sandbox
+[427 / 428] Testing //:gate0-trace-contract-test; 1060s processwrapper-sandbox
+[427 / 428] Testing //:gate0-trace-contract-test; 1120s processwrapper-sandbox
+[427 / 428] Testing //:gate0-trace-contract-test; 1143s processwrapper-sandbox
+INFO: From Testing //:gate0-trace-contract-test:
+==================== Test output for //:gate0-trace-contract-test:
+
+running 1 test
+test canonical_raw_scan_uses_bounded_streaming_state has been running for over 60 seconds
+test canonical_raw_scan_uses_bounded_streaming_state ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 23 filtered out; finished in 1142.92s
+
+================================================================================
+INFO: Found 1 test target...
+Target //:gate0-trace-contract-test up-to-date:
+  bazel-bin/gate0-trace-contract-test
+INFO: Elapsed time: 1296.255s, Critical Path: 1224.82s
+INFO: 428 processes: 262 internal, 167 processwrapper-sandbox.
+INFO: Build completed successfully, 428 total actions
+//:gate0-trace-contract-test                                             PASSED in 1143.0s
+
+Executed 1 out of 1 test: 1 test passes.
+There were tests whose specified size is too big. Use the --test_verbose_timeout_warnings command line option to see which ones these are.
+	Command being timed: "bazelisk --batch test //:gate0-trace-contract-test --nocache_test_results --test_output=all --test_arg=--ignored --test_arg=canonical_raw_scan_uses_bounded_streaming_state --test_arg=--exact --test_timeout=1200 --jobs=2"
+	User time (seconds): 1548.49
+	System time (seconds): 62.19
+	Percent of CPU this job got: 123%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 21:39.60
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 807348
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 347
+	Minor (reclaiming a frame) page faults: 3875802
+	Voluntary context switches: 173508
+	Involuntary context switches: 162713
+	Swaps: 0
+	File system inputs: 55304
+	File system outputs: 4666856
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

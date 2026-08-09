@@ -1,0 +1,93 @@
+/*
+ * XIAO nRF52840 Plus application overlay.
+ *
+ * Upstream Zephyr 4.4.0 has xiao_ble/nrf52840 but no Plus qualifier. The Plus
+ * keeps D0-D10 compatible and adds D11-D19. These chip-pin mappings are from
+ * Seeed's source page at commit 8663ae88fd144a7992793f96a55e17c642620135:
+ * https://github.com/Seeed-Studio/wiki-documents/blob/8663ae88fd144a7992793f96a55e17c642620135/sites/en/docs/Sensor/SeeedStudio_XIAO/SeeedStudio_XIAO_nRF52840-Sense/XIAO_BLE.md
+ * Seeed's current pin map also confirms D9/P1.14:
+ * https://wiki.seeedstudio.com/XIAO_BLE/
+ *
+ * Physical harness contract:
+ *   D4/P0.04 = SDA, D5/P0.05 = SCL
+ *   sensor INT1[0..5] = D0, D1, D2, D3, D6, D7
+ *   Gate 0 aggregate-snapshot marker = D8/P1.13 (analyzer output only)
+ *   Gate 0 cache-commit marker = D9/P1.14 (analyzer output only)
+ *   D10 remains unused
+ *   TCA9548A A0-A2 and each LSM6DS3TR-C SA0 are tied low
+ *   TCA9548A RST breakout pad is left open; its onboard 10K pull-up holds it
+ *   inactive, and no controller GPIO or unverified rear pad is used
+ *
+ * Do not substitute unverified bottom-pad pins here. A different harness must
+ * provide a reviewed overlay rather than silently falling back at runtime.
+ */
+
+#include <dt-bindings/gpio/gpio.h>
+#include <dt-bindings/i2c/i2c.h>
+
+/ {
+	ikb_drdy_inputs: ikb-drdy-inputs {
+		compatible = "gpio-keys";
+
+		ikb_drdy0: sensor-0 {
+			gpios = <&gpio0 2 GPIO_ACTIVE_HIGH>;
+		};
+		ikb_drdy1: sensor-1 {
+			gpios = <&gpio0 3 GPIO_ACTIVE_HIGH>;
+		};
+		ikb_drdy2: sensor-2 {
+			gpios = <&gpio0 28 GPIO_ACTIVE_HIGH>;
+		};
+		ikb_drdy3: sensor-3 {
+			gpios = <&gpio0 29 GPIO_ACTIVE_HIGH>;
+		};
+		ikb_drdy4: sensor-4 {
+			gpios = <&gpio1 11 GPIO_ACTIVE_HIGH>;
+		};
+		ikb_drdy5: sensor-5 {
+			gpios = <&gpio1 12 GPIO_ACTIVE_HIGH>;
+		};
+	};
+
+	ikb_analyzer_outputs: ikb-analyzer-outputs {
+		compatible = "gpio-leds";
+
+		ikb_snapshot_marker: gate0-snapshot-marker {
+			gpios = <&gpio1 13 GPIO_ACTIVE_HIGH>;
+		};
+		ikb_cache_commit_marker: gate0-cache-commit-marker {
+			gpios = <&gpio1 14 GPIO_ACTIVE_HIGH>;
+		};
+	};
+
+	aliases {
+		ikb-drdy0 = &ikb_drdy0;
+		ikb-drdy1 = &ikb_drdy1;
+		ikb-drdy2 = &ikb_drdy2;
+		ikb-drdy3 = &ikb_drdy3;
+		ikb-drdy4 = &ikb_drdy4;
+		ikb-drdy5 = &ikb_drdy5;
+		ikb-snapshot = &ikb_snapshot_marker;
+		ikb-cache-commit = &ikb_cache_commit_marker;
+	};
+};
+
+&xiao_i2c {
+	status = "okay";
+	clock-frequency = <I2C_BITRATE_FAST>;
+};
+
+/* The upstream board otherwise assigns D6/D7 to the unused hardware UART. */
+&uart0 {
+	status = "disabled";
+};
+
+/*
+ * Two SensorFrames of driver buffering. The application owns fixed normal,
+ * final, and receipt slots. RX admits one 85-byte encoded stop request while
+ * retaining headroom to drain and reject an oversized candidate.
+ */
+&board_cdc_acm_uart {
+	tx-fifo-size = <324>;
+	rx-fifo-size = <128>;
+};

@@ -1,0 +1,58 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+Executing tests from //:unit-tests
+-----------------------------------------------------------------------------
+
+running 50 tests
+test calibration_capture::tests::capture_gate_rejects_gate0_controls_before_generic_integrity ... ok
+test calibration_capture::tests::causal_contact_emission_is_invariant_to_future_frames ... ok
+test calibration_capture::tests::contacts_after_the_bounded_gate_cannot_change_an_accepted_association ... ok
+test calibration_capture::tests::first_event_rule_reports_wrong_hand_wrong_finger_no_event_and_multiple_events ... ok
+test calibration_capture::tests::pre_cue_contact_is_ignored_without_hiding_the_first_post_cue_contact ... ok
+test calibration_capture::tests::rendered_receipt_opens_a_self_paced_gate_but_sensor_contact_anchors_the_label ... ok
+test calibration_capture::tests::scheduled_stillness_is_not_counted_as_ordinary_motion ... ok
+test axis_characterization::tests::axis_search_recovers_every_proper_signed_rotation ... ok
+test calibration_capture::tests::target_identity_cannot_select_past_the_first_causal_event ... ok
+test calibration_capture::tests::target_truth_windows_reserve_all_source_records_against_later_targets ... ok
+test calibration_engine::tests::binder_allows_simultaneous_opposite_hand_truth_windows ... ok
+test calibration_engine::tests::binder_rejects_intersecting_target_truth_windows ... ok
+test calibration_engine::tests::binder_rejects_target_intersection_with_threshold_null_truth ... ok
+test calibration_engine::tests::clean_stream_gate_rejects_gate0_controls_before_generic_integrity ... ok
+test clock_epoch::tests::timestamp_spool_is_private_and_removed_on_normal_drop ... ok
+test clock_epoch::tests::timestamp_spool_is_removed_when_a_fit_path_returns_an_error ... ok
+test calibration_capture::tests::target_cannot_reuse_a_threshold_or_null_parameter_window ... ok
+test decoder::tests::borrowed_split_window_reuses_storage_and_preserves_decode_order ... ok
+test hardware_calibration::tests::abort_lease_loss_and_source_fault_commit_typed_nonready_state ... ok
+test hardware_calibration::tests::displayed_coverage_uses_a_canonical_complete_set_from_two_blocks ... ok
+test hardware_calibration::tests::finite_keyboard_warm_start_and_passive_threshold_plans_cover_their_contracts ... ok
+test hardware_calibration::tests::keyboard_blocks_alternate_only_between_finite_prompt_passes ... ok
+test hardware_calibration::tests::contended_keyboard_boundary_dispatches_only_one_batch_before_retry ... ok
+test hardware_calibration::tests::quiescent_keyboard_boundary_drains_the_full_bounded_queue_before_transition ... ok
+test hardware_calibration::tests::raw_prompt_attempts_do_not_change_matched_deficits_and_stop_at_the_cap ... ok
+test hardware_calibration::tests::selected_keyboard_state_survives_worker_boundaries_until_key_up ... ok
+test hardware_calibration::tests::keyboard_dispatch_yields_with_replenished_backlog_and_loses_no_events ... ok
+test hardware_calibration::tests::timed_capture_needs_every_receipt_and_null_window_after_the_drain_horizon ... ok
+test output::linux::tests::all_core28_usages_have_unique_kernel_codes ... ok
+test protocol::tests::checksum_valid_bad_magic_is_rejected ... ok
+test protocol::tests::checksum_valid_invalid_headers_are_rejected_semantically ... ok
+test protocol::tests::checksum_valid_unknown_flags_are_rejected ... ok
+test protocol::tests::crc32_matches_standard_check_value ... ok
+test reader_mailbox::tests::close_owns_the_full_queue_and_rejects_waiting_publishers ... ok
+test reader_mailbox::tests::close_snapshot_equals_the_publish_result_at_the_admission_race ... ok
+test reader_mailbox::tests::closed_receiver_disconnects_while_senders_are_still_alive ... ok
+test reader_mailbox::tests::freeing_space_admits_one_waiting_item_in_order ... ok
+test reader_mailbox::tests::receiver_drop_releases_the_lock_before_dropping_queued_values ... ok
+test reader_mailbox::tests::receiver_reports_disconnect_only_after_the_admitted_backlog ... ok
+test reader_mailbox::tests::two_publishers_keep_per_source_order_without_loss_or_duplication ... ok
+test session::tests::all_header_prefix_corruption_is_detected ... ok
+test session::tests::checksum_valid_candidate_length_contradiction_is_rejected ... ok
+test session::tests::checksum_valid_footer_count_mismatch_is_rejected ... ok
+test session::tests::checksum_valid_nonzero_record_reserved_bytes_are_rejected ... ok
+test session::tests::checksum_valid_unknown_record_kind_is_rejected ... ok
+test session::tests::clean_two_hand_stream_rejects_recorded_time_regressions ... ok
+test session::tests::oversized_payload_is_rejected_before_the_writer_changes ... ok
+test transport::tests::cobs_round_trips_zero_patterns_and_long_runs ... ok
+test transport::tests::malformed_cobs_run_is_rejected ... ok
+test hardware_calibration::tests::timed_plans_preserve_every_target_and_per_hand_motion_exposure ... ok
+
+test result: ok. 50 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.14s
+

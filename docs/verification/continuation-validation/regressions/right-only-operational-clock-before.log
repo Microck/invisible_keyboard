@@ -1,0 +1,21 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+Executing tests from //:clock-epoch-contract-test
+-----------------------------------------------------------------------------
+
+running 1 test
+test one_hand_clock_fit_preserves_the_declared_side ... FAILED
+
+failures:
+
+---- one_hand_clock_fit_preserves_the_declared_side stdout ----
+
+thread 'one_hand_clock_fit_preserves_the_declared_side' (36282) panicked at tests/clock-epoch-contract.rs:468:14:
+operational reports accept either declared single-hand topology: InvalidHandOrder
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    one_hand_clock_fit_preserves_the_declared_side
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 9 filtered out; finished in 0.03s
+

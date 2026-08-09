@@ -1,0 +1,43 @@
+{
+  "binary_sha256": "9b57ff02a07680c4a758fdec4de6afb62c9a1b31294f91cef462bd14f4440518",
+  "evidence_kind": "synthetic software-only timestamp-boundary smoke",
+  "hardware_evidence": false,
+  "cases": [
+    {
+      "case": "underflow",
+      "interval_admitted": false,
+      "score_exit_code": 1,
+      "evidence_sha256": "2791af444726ed7c52aa783728039c231bdb794da278e375f07fdbee591a5673",
+      "manifest_sha256": "473a4b34d1e2304059c1312cfa340993c036a0d0076fc7da31e4376552f68dd0",
+      "plan_sha256": "1c86ce00b370544cefaa0318e1dc632b3cbb601bf74882f1c5ce68b5ebd747bc"
+    },
+    {
+      "case": "overflow",
+      "interval_admitted": false,
+      "score_exit_code": 1,
+      "evidence_sha256": "3bbe667bd32dac4c57e3be894b120e07ad049c103cad49c536ba51ff7b7ed248",
+      "manifest_sha256": "d9231ca37d487bf0a3fc66d36ba3995a32ac1e9ba70df9f103c239bb509764c1",
+      "plan_sha256": "afbf5564463aa310fdcac74c14f41bb0bc97fdba33549865e804d677ab2735d1"
+    },
+    {
+      "case": "complete-lower",
+      "interval_admitted": true,
+      "score_exit_code": 0,
+      "evidence_sha256": "343d9e5927cc91b124bb697fce83ab444f080762a5cd5a7c18f8264b45b01959",
+      "manifest_sha256": "5ba8072bee9c15c7600a43136896a91f527ea553cdc5ba7cfd6997e9e52e9f2d",
+      "plan_sha256": "643620d3b12c4bb3a507460e78aec3d4d45d6dbd038055df3186624f90e7d7d0",
+      "computed_disposition": "no-go",
+      "matched_events": 5001
+    },
+    {
+      "case": "complete-upper",
+      "interval_admitted": true,
+      "score_exit_code": 0,
+      "evidence_sha256": "afb3a25a13750d8684da5f025ea0c00cdb8da8741629c6db77fd73a4c166af71",
+      "manifest_sha256": "a916cfe08bd2c53a0e56bb305ba828f47f9df1229afda5587d0b1e8a76610df1",
+      "plan_sha256": "4f25ae906153a4df004df4f408e39039268e474401543ef679a7bc3909c4e357",
+      "computed_disposition": "go",
+      "matched_events": 5001
+    }
+  ]
+}

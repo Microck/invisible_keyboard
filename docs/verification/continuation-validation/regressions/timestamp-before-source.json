@@ -1,0 +1,13 @@
+{
+  "baseline_manifest_sha256": "a5675d1a9269009ddbb97eafa44adae5bc2c0c2912b55c251d3a2fdb6ebce78b",
+  "all_original_files_match_frozen_baseline": true,
+  "production_changes": false,
+  "test_overlays": {
+    "src/decoder.rs": "5b7e327586af89aefaad105b09e274eeada92da7ce2d2c8aa42519b39210b4c2",
+    "src/hardware_calibration.rs": "faf40653ab77ad4f18480fc3419124e7a2bcd0f3111fee1be2453ee1a8ba30f1",
+    "tests/calibration-engine-contract.rs": "f4aafdefd495b9c5c95676647b357177c5e3d5549393537d68f8857d86e3e1ca",
+    "tests/calibration-worker-contract.rs": "35cd9ef2fd589546d2d8789f5350ef8e3d098a103807a759cdea8f23f02b0925",
+    "tests/replay-contract.rs": "3941749ce83f5f23bffca22b8ce14ad3a579d5921228e534a95c3bda2a25b6da"
+  },
+  "decoder_overlay_kind": "appended cfg(test) regression module only"
+}

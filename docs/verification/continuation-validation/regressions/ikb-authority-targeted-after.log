@@ -1,0 +1,204 @@
+OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Analyzing: 7 targets (1 packages loaded)
+Analyzing: 7 targets (5 packages loaded, 6 targets configured)
+Analyzing: 7 targets (5 packages loaded, 6 targets configured)
+
+Analyzing: 7 targets (19 packages loaded, 9 targets configured)
+
+Analyzing: 7 targets (73 packages loaded, 48 targets configured)
+
+Analyzing: 7 targets (85 packages loaded, 524 targets configured)
+
+Analyzing: 7 targets (119 packages loaded, 937 targets configured)
+
+Analyzing: 7 targets (136 packages loaded, 2188 targets configured)
+
+Analyzing: 7 targets (154 packages loaded, 3253 targets configured)
+
+Analyzing: 7 targets (193 packages loaded, 4348 targets configured)
+
+Analyzing: 7 targets (206 packages loaded, 5430 targets configured)
+[1 / 1] no actions running
+INFO: Analyzed 7 targets (206 packages loaded, 5430 targets configured).
+[248 / 455] checking cached actions
+[440 / 455] [Prepa] Compiling Rust bin unit-tests (35 files)
+[440 / 455] Compiling Rust bin unit-tests (35 files); 1s processwrapper-sandbox ... (2 actions running)
+[440 / 455] Compiling Rust bin unit-tests (35 files); 10s processwrapper-sandbox ... (2 actions running)
+INFO: From Compiling Rust bin unit-tests (35 files):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+[441 / 455] Compiling Rust rlib invisible_keyboard (35 files); 17s processwrapper-sandbox ... (2 actions, 1 running)
+==================== Test output for //:unit-tests:
+
+running 4 tests
+test calibration_engine::tests::clean_stream_gate_rejects_gate0_controls_before_generic_integrity ... ok
+test calibration_capture::tests::capture_gate_rejects_gate0_controls_before_generic_integrity ... ok
+test hardware_calibration::tests::observed_monitor_fault_cannot_be_erased_by_a_transport_handoff ... ok
+test hardware_calibration::tests::monitor_successor_keeps_sequence_and_sensor_time_continuity ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 54 filtered out; finished in 0.34s
+
+================================================================================
+INFO: From Testing //:unit-tests:
+[443 / 456] 1 / 7 tests; Compiling Rust rlib invisible_keyboard (35 files); 19s processwrapper-sandbox
+[444 / 456] 1 / 7 tests; [Prepa] Compiling Rust bin replay-contract-test (1 file)
+INFO: From Compiling Rust bin clock-epoch-contract-test (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+[445 / 456] 1 / 7 tests; Compiling Rust bin replay-contract-test (1 file); 1s processwrapper-sandbox ... (2 actions, 1 running)
+INFO: From Compiling Rust bin replay-contract-test (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+INFO: From Compiling Rust bin calibration-worker-contract-test (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+[448 / 458] 1 / 7 tests; Compiling Rust bin calibration-worker-contract-test (1 file); 1s processwrapper-sandbox ... (2 actions running)
+INFO: From Compiling Rust bin calibration-engine-contract-test (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+[451 / 459] 1 / 7 tests; Compiling Rust bin hardware-calibration-contract-test (1 file); 0s processwrapper-sandbox ... (2 actions, 1 running)
+INFO: From Compiling Rust bin hardware-calibration-contract-test (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+==================== Test output for //:clock-epoch-contract-test:
+
+running 1 test
+test one_hand_clock_fit_preserves_the_declared_side ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 9 filtered out; finished in 0.08s
+
+================================================================================
+INFO: From Testing //:clock-epoch-contract-test:
+INFO: From Compiling Rust bin neutral-contract-test (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+[456 / 461] 2 / 7 tests; Testing //:replay-contract-test; 1s processwrapper-sandbox ... (2 actions, 1 running)
+==================== Test output for //:calibration-worker-contract-test:
+
+running 2 tests
+test worker_integrity_preserves_wrapping_sequences_and_nondecreasing_sample_times ... ok
+test decoded_same_identity_integrity_faults_retain_raw_suffix_and_first_cause ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 13 filtered out; finished in 0.06s
+
+================================================================================
+INFO: From Testing //:calibration-worker-contract-test:
+[458 / 462] 3 / 7 tests; Testing //:replay-contract-test; 2s processwrapper-sandbox ... (2 actions running)
+[458 / 462] 3 / 7 tests; Testing //:replay-contract-test; 11s processwrapper-sandbox ... (2 actions running)
+[458 / 462] 3 / 7 tests; Testing //:replay-contract-test; 26s processwrapper-sandbox ... (2 actions running)
+==================== Test output for //:replay-contract-test:
+
+running 7 tests
+test live_acquisition_integrity_faults_during_initial_clock_warmup_terminally_revoke ... ok
+test live_acquisition_integrity_faults_with_only_one_clock_ready_terminally_revoke ... ok
+test live_sensor_time_regressions_revoke_before_clock_or_window_progress ... ok
+test calibrated_replay_rejects_forged_offline_clock_authority_before_output ... ok
+test live_sequence_gap_revokes_during_warmup_and_partial_window_fill ... ok
+test live_warmup_integrity_preserves_primary_fault_when_neutralization_fails ... ok
+test post_arm_partial_window_integrity_faults_revoke_before_output ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 31 filtered out; finished in 26.92s
+
+================================================================================
+INFO: From Testing //:replay-contract-test:
+==================== Test output for //:hardware-calibration-contract-test:
+
+running 1 test
+test invalid_sensor_frame_is_a_terminal_stream_integrity_failure ... FAILED
+
+failures:
+
+---- invalid_sensor_frame_is_a_terminal_stream_integrity_failure stdout ----
+
+thread 'invalid_sensor_frame_is_a_terminal_stream_integrity_failure' (45040) panicked at tests/hardware-calibration-contract.rs:152:5:
+assertion failed: matches!(error,
+    CalibrationWorkerError::Faulted(CalibrationWorkerFault::FrameQuality
+    {
+        source: Hand::Left, reason:
+        invisible_keyboard::decoder::AbstainReason::MissingSensor, ..
+    }))
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    invalid_sensor_frame_is_a_terminal_stream_integrity_failure
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 10 filtered out; finished in 0.02s
+
+================================================================================
+FAIL: //:hardware-calibration-contract-test (Exit 101) (see /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/execroot/_main/bazel-out/aarch64-fastbuild/testlogs/hardware-calibration-contract-test/test.log)
+INFO: From Testing //:hardware-calibration-contract-test:
+==================== Test output for //:neutral-contract-test:
+
+running 2 tests
+test neutral_authority_rejects_raw_receipt_faults_despite_passing_clock_statistics ... ok
+test neutral_authority_rejects_altered_clock_report_and_rebound_fingerprint ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 6 filtered out; finished in 0.28s
+
+================================================================================
+INFO: From Testing //:neutral-contract-test:
+[461 / 462] 6 / 7 tests, 1 failed; Testing //:calibration-engine-contract-test; 27s processwrapper-sandbox
+[461 / 462] 6 / 7 tests, 1 failed; Testing //:calibration-engine-contract-test; 37s processwrapper-sandbox
+[461 / 462] 6 / 7 tests, 1 failed; Testing //:calibration-engine-contract-test; 67s processwrapper-sandbox
+[461 / 462] 6 / 7 tests, 1 failed; Testing //:calibration-engine-contract-test; 127s processwrapper-sandbox
+[461 / 462] 6 / 7 tests, 1 failed; Testing //:calibration-engine-contract-test; 187s processwrapper-sandbox
+[461 / 462] 6 / 7 tests, 1 failed; Testing //:calibration-engine-contract-test; 212s processwrapper-sandbox
+INFO: From Testing //:calibration-engine-contract-test:
+==================== Test output for //:calibration-engine-contract-test:
+
+running 2 tests
+test offline_authority_consumers_reject_altered_valid_looking_clock_reports has been running for over 60 seconds
+test offline_authority_consumers_reject_forged_clock_statistics_and_fingerprints has been running for over 60 seconds
+test offline_authority_consumers_reject_altered_valid_looking_clock_reports ... ok
+test offline_authority_consumers_reject_forged_clock_statistics_and_fingerprints ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 21 filtered out; finished in 212.41s
+
+================================================================================
+INFO: Found 7 test targets...
+INFO: Elapsed time: 257.178s, Critical Path: 237.37s
+INFO: 23 processes: 439 action cache hit, 8 internal, 22 processwrapper-sandbox.
+INFO: Build completed, 1 test FAILED, 23 total actions
+//:calibration-engine-contract-test                                      PASSED in 212.5s
+//:calibration-worker-contract-test                                      PASSED in 0.1s
+//:clock-epoch-contract-test                                             PASSED in 0.1s
+//:neutral-contract-test                                                 PASSED in 0.4s
+//:replay-contract-test                                                  PASSED in 27.0s
+//:unit-tests                                                            PASSED in 0.4s
+//:hardware-calibration-contract-test                                    FAILED in 0.1s
+  /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/execroot/_main/bazel-out/aarch64-fastbuild/testlogs/hardware-calibration-contract-test/test.log
+
+Executed 7 out of 7 tests: 6 tests pass and 1 fails locally.
+There were tests whose specified size is too big. Use the --test_verbose_timeout_warnings command line option to see which ones these are.

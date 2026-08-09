@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="artifact-contract-test" tests="1" failures="0" errors="0">
+    <testcase name="artifact-contract-test" status="run" duration="0" time="0"></testcase>
+      <system-out>
+Generated test.log (if the file is not UTF-8, then this may be unreadable):
+<![CDATA[exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+Executing tests from //:artifact-contract-test
+-----------------------------------------------------------------------------
+
+running 8 tests
+test artifact_round_trip_preserves_decoder_behavior_and_identity ... ok
+test hand_decoders_clock_fits_and_sensor_bindings_must_have_the_same_topology ... ok
+test every_sensor_provenance_field_and_matching_rule_is_part_of_artifact_identity ... ok
+test legacy_per_hand_mount_ids_and_invalid_matching_rule_hash_fail_closed ... ok
+test layout_confirmation_receipt_is_part_of_the_artifact_fingerprint ... ok
+test one_session_may_supply_disjoint_roles_but_blocks_cannot_overlap ... ok
+test manifest_change_changes_artifact_fingerprint ... ok
+test unknown_fields_and_incomplete_coverage_fail_closed ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.38s]]>
+      </system-out>
+    </testsuite>
+</testsuites>

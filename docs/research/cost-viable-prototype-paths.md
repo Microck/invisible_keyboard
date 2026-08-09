@@ -10,25 +10,27 @@ architecture. Prices are prototype quantities, not production unit costs.
 
 The cheapest evidence-producing path is a tethered, host-decoded pair of Seeed
 XIAO nRF52840 Sense boards. A complete build with one spare can be planned at
-USD 95 minimum, USD 180 realistic, or USD 310 upper bound before tax. Only its
-minimum and realistic cases fit the historic EUR 200 cash ceiling. That spend
-can falsify stream, contact, and finger-evidence assumptions. It cannot prove
-exact arbitrary QWERTY key identity because wrist IMUs do not observe key
-position.
+USD 95 minimum, USD 180 realistic, or USD 310 upper bound before tax. Its
+minimum and realistic cases fall below the report's dated USD 230.70
+sensitivity input for the historic EUR 200 cash ceiling. That spend can falsify
+stream, contact, and finger-evidence assumptions. It cannot prove exact
+arbitrary QWERTY key identity because wrist IMUs do not observe key position.
 
 Optical tracking is also cheap when compatible hardware and compute are already
 owned. All-new optical, custom IMU, radar with raw capture, magnetic scientific,
-and sEMG paths do not fit EUR 200. Labor and participant payments dominate every
-credible study, so a parts-only ceiling must not be presented as a project
-budget.
+and sEMG paths exceed that dated sensitivity input. Labor and participant
+payments dominate every credible study, so a parts-only ceiling must not be
+presented as a project budget.
 
 ## Cost rules and assumptions
 
 - Public prices and availability were captured on 2026-08-09. USD is used
   unless the source lists another currency.
-- The ECB reference rate for 2026-08-07, the latest business day, was EUR 1 =
-  USD 1.1535 [P16]. EUR 200 therefore equals USD 230.70. No vendor price was
-  silently converted.
+- On 2026-08-09 this report recorded a planning conversion stated for
+  2026-08-07: EUR 1 = USD 1.1535, or USD 230.70 for EUR 200. The cited ECB
+  daily feed is a moving current-rate endpoint and does not independently
+  reproduce that historic value. Treat USD 230.70 as a dated planning input,
+  not a verified historical-rate fact [P16].
 - Listed prices exclude sales tax, VAT, customs, and shipping unless noted.
   RobotShop says its USD 217 Leap Motion Controller 2 price includes US tariffs
   but calculates shipping at checkout [P7]. OpenBCI says shipping is calculated
@@ -60,7 +62,7 @@ not tax/customs, participants, or labor.
 
 | Path | Cash min / realistic / upper | Participant allowance | Engineering | Illustrative all-in min / realistic / upper | Decision bought |
 | --- | --- | --- | --- | --- | --- |
-| Host-decoded dual-wrist IMU | USD 95 / 180 / 310 | USD 375-750 through Gates 1-2 | 60-140 h | USD 6,470 / 10,680 / 15,060 | Whether the full two-wrist stream can detect taps and fingers reliably enough to continue claim A |
+| Host-decoded dual-wrist IMU | USD 95 / 180 / 310 | Unknown until paid Gate 0B-2 hours are scheduled | 60-140 h | Unknown; USD 6,095 / 10,180 / 14,310 before participant cost | Whether the full two-wrist stream can detect taps and fingers reliably enough to continue claim A |
 | Cleaner custom dual-wrist IMU | USD 295 / 650 / 1,520 | USD 500-1,500 | 140-320 h | USD 14,795 / 24,650 / 35,020 | Whether placement, power, radio, and repeatable mounting survive a purpose-built revision |
 | Optical/IR, compatible hardware owned | USD 60 / 250 / 650 | USD 500-2,000 | 120-300 h | USD 12,560 / 21,250 / 32,650 | Whether owned cameras observe contact and layout geometry under intended lighting and occlusion |
 | Optical/IR, all-new | USD 320 / 950 / 2,500 | USD 500-2,000 | 120-300 h | USD 12,820 / 21,950 / 34,500 | Same geometry decision without relying on owned hardware |
@@ -71,9 +73,11 @@ not tax/customs, participants, or labor.
 | sEMG research lane | At least USD 5,768 listed floor, unavailable; realistic and upper unknown | USD 500-3,000 | 300-900 h | Unknown | Whether a purchasable, synchronized, sufficient-rate bilateral system contains keyboardless intent evidence |
 | Optional Pi Zero 2 W gateway | USD 15-55 / 120 / 300 | USD 0 | 40-120 h | USD 4,015 / 8,120 / 12,300 | Whether MCU profiling proves a larger local decoder is required |
 
-The illustrative all-in midpoint uses the midpoint engineering hours and a
-representative participant allowance. It is arithmetic for comparison, not a
-quote.
+Where shown, the illustrative all-in midpoint uses the midpoint engineering
+hours and a representative participant allowance. It is arithmetic for
+comparison, not a quote. The host-decoded IMU row stops at cash plus engineering
+because the canonical Gate 0B-2 protocols do not specify enough paid hours to
+price their participant work. It implies no participant total.
 
 ## 1. Cheapest host-decoded dual-wrist IMU falsification rig
 
@@ -171,7 +175,7 @@ measurement, and shipping. A broader host/pairing lab is USD 500 upper.
 No custom Windows/macOS virtual-HID driver or signing certificate is needed for
 a standards HID appliance. Product Bluetooth qualification, radio compliance,
 battery transport testing, app signing, and certification are excluded. BLE
-spend is premature until USB Gate 0 passes; a gateway is premature until the
+spend is premature until USB Gate 0S passes; a gateway is premature until the
 frozen decoder fails profiling on the sensor MCU.
 
 ## 5. Radar feasibility board
@@ -252,7 +256,8 @@ the chosen decoder cannot live on the sensor MCU.
 
 ## EUR 200 sensitivity
 
-At USD 230.70, the historic ceiling passes these cash-only cases:
+Using the report's dated USD 230.70 planning conversion, the historic ceiling
+passes these cash-only cases:
 
 - dual-wrist IMU minimum and realistic;
 - optical minimum when compatible camera/headset and compute are owned;
@@ -262,35 +267,40 @@ At USD 230.70, the historic ceiling passes these cash-only cases:
 
 It fails custom IMU, all-new optical, decisive radar, magnetic scientific, and
 sEMG. A bare USD 155 radar board is below the ceiling, but its USD 240 minimum
-experiment is not. No lane fits EUR 200 after even Gate 1-2 participant payments
-and engineering labor are included. The ceiling is useful as an early hardware
-stop-loss, not as a product or research-program budget.
+experiment is not. The complete Gate 0B-2 human studies also include unpriced
+participant work and engineering outside this cash-only ceiling. The ceiling is
+useful as an early hardware stop-loss, not as a product or research-program
+budget.
 
 ## Gate-linked spend ladder and stop-losses
 
 | Gate | Release only this spend | Participant allowance | Stop-loss |
-| --- | --- | ---: | --- |
-| Before 0 | USD 0: product boundary, claim A/B/C, privacy, surface, and target platform decisions | 0 | Do not buy custom PCBs, camera/headset, DCA1000, magnetic/sEMG hardware, gateway, or BLE polish |
-| 0 stream integrity | One complete cheap topology: IMU USD 95-180 or owned optical USD 60-250; deterministic label/fault fixture | 0 | Stop on silent loss, clock ambiguity, bad sync, stuck state, or missed full-topology rate |
-| 1 isolated intent | Ground-truth fixture and replacements, USD 25-100 incremental | 5 x 1 h x 25 = 125 | Stop if independent ground truth cannot align or miss/latency bounds fail |
-| 2 finger/key identity | No custom revision yet; spend on frozen capture/analysis only | Up to 8 x 2 h x 25 = 400 | Stop claim B when exact key intent is physically unobservable; stop A if finger evidence fails |
-| 3 live uncorrected text | Host decoder and test harness; USD 100-500 incremental | 10 x 2 x 1.5 h x 25 = 750, plus scheduling | Stop if only replay/offline works or phrase knowledge leaks in |
-| 4 corrected phrase A | Locked local language assets; normally USD 0 license | 10 x 2 h x 25 = 500 | Stop if corrected output cannot be traced or is presented as B evidence |
-| 5 arbitrary text B | USB HID appliance only after Gate 3; USD 0-350 | About 500 | Stop on hidden unsupported keys, repaired identifiers, or unsafe modifier state |
-| 6 remount transfer | Cleaner wearable or robust optical fixture only now: USD 295-1,520 incremental by lane | 10 x 3 x 1 h x 25 = 750, plus scheduling | Stop if the held-out remount changes normalization/model before scoring or transfer bounds fail |
-| 7 person transfer | No new modality; freeze it | 20 x 2 h x 25 = 1,000, plus recruiting | Stop generality claim if the participant-level confidence bound fails |
-| 8 ordinary negatives | Wearable spares, logging, travel/setting supplies | 30 h x 25 = 750, plus incidentals | Stop always-on claim above 0.1 false activations/hour or on any destructive chord |
+| --- | --- | --- | --- |
+| Before 0A | USD 0: product boundary, claim A/B/C, privacy, surface, and target platform decisions | 0 | Do not buy custom PCBs, camera/headset, DCA1000, magnetic/sEMG hardware, gateway, or BLE polish |
+| 0A acquisition integrity | One complete cheap topology: IMU USD 95-180 or owned optical USD 60-250; native capture and deterministic fault fixture | 0 | Stop on silent loss, clock ambiguity, bad sync, or a failed full-topology schedule |
+| 0S deterministic output integrity | Reuse the host and Linux `uinput` harness; add only an unowned harmless target/fault fixture | 0 | Stop on an untraceable event, stuck state, missed neutral deadline, or status before durable evidence |
+| 0B observable contact | Fund the second matching hand before the canonical round, plus independent truth and replacements; no custom revision | Not priced: schedule paid hours from the frozen roster first | Stop if independent truth cannot align or the contact miss, latency, recall, extra-event, or false-activation rules fail |
+| 1 acting finger | Frozen capture/analysis only; no new modality | Not priced: protocol fixes events and exposure, not paid hours | Stop if acting-finger evidence or required negative-condition abstention fails |
+| 2 exact 34-position/Core-28 identity | Frozen capture/analysis only; no custom revision yet | Not priced: protocol fixes events and mounts, not paid hours | Stop the exact-input claim when same-finger position is physically unobservable |
+| 3 live uncorrected text | Host decoder and test harness; USD 100-500 incremental | Not priced: schedule the two sessions and 1,000 characters first | Stop if only replay/offline works or phrase knowledge leaks in |
+| 4 corrected phrase A | Locked local language assets; normally USD 0 license | Not priced: schedule the fixed phrase blocks first | Stop if corrected output cannot be traced or is presented as exact-input evidence |
+| 5 arbitrary text B | USB HID appliance only after Gate 3; USD 0-350 | Not priced: schedule the advertised-event trials first | Stop on hidden unsupported keys, repaired identifiers, or unsafe modifier state |
+| 6 session/remount transfer | Cleaner wearable or robust optical fixture only now: USD 295-1,520 incremental by lane | Not priced: schedule all three sessions first | Stop if the held-out remount changes normalization/model before scoring or transfer bounds fail |
+| 7 person transfer, if claimed | No new modality; freeze it | Not priced: schedule the unseen-person study first | Stop the generality claim if the participant-level confidence bound fails |
+| 8 ordinary-movement negatives | Wearable spares, logging, travel/setting supplies | 30 h x 25 = 750, plus incidentals | Stop the always-on claim above 0.1 false activations/hour or on any destructive chord |
 | 9 extended use | Batteries and final mechanical cleanability/comfort revision | 12 x 3 h x 25 = 900, plus 20 percent = 1,080 | Stop on adverse event, persistent pain/numbness, collapse, unsafe recovery, or unmeasured runtime |
 
 Some sessions may satisfy more than one gate, but the protocol must be frozen
 before claiming that saving. Never recruit the later cohort before the earlier
-physical gate passes. The cumulative nominal participant allowance is about
-USD 5,855 before additional recruiting, travel, IRB, facility, and data-storage
-costs; it is not a powered-study budget.
+physical gate passes. Gates 0B through 7 do not specify enough paid duration to
+support a cumulative participant budget, so this report does not publish one.
+Price each frozen roster and schedule before authorization. Gate 8 and Gate 9
+are the only rows whose current protocols state enough participant duration for
+the arithmetic shown above.
 
 ## Premature purchases
 
-Before Gate 0 and the product-boundary decisions, all of these are premature:
+Before Gate 0A and the product-boundary decisions, all of these are premature:
 
 - a custom wearable PCB or enclosure;
 - any new Quest, Leap camera, or privacy-sensitive optical rig when cameras are
@@ -322,7 +332,7 @@ Before Gate 0 and the product-boundary decisions, all of these are premature:
 | P13 | [JLCPCB prototype service](https://jlcpcb.com/features/pcb-prototype) | Bare prototype headline from USD 2 |
 | P14 | [JLCPCB assembly FAQ](https://jlcpcb.com/help/article/pcb-assembly-faqs) | Assembly headline from USD 8; exact quote depends on parts/process |
 | P15 | [Prolific participant pay](https://www.prolific.com/resources/how-much-should-you-pay-research-participants) | USD 8/hour minimum, USD 12/hour recommendation for its online pool |
-| P16 | [ECB daily reference rates](https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml) | 2026-08-07 EUR 1 = USD 1.1535 |
+| P16 | [ECB daily reference rates](https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml) | Moving current-rate feed; it does not preserve or reproduce the report's recorded 2026-08-07 planning value |
 | P17 | [Mouser EU DCA1000EVM](https://eu.mouser.com/ProductDetail/Texas-Instruments/DCA1000EVM?qs=MLItCLRbWszpQLhOmNMP6Q%3D%3D) | EUR 849.65 captured search listing; direct automation denied |
 | P18 | [Adafruit TLV493D](https://www.adafruit.com/product/4366) | USD 5.95, in stock |
 | P19 | [Polhemus Patriot](https://polhemus.com/all-trackers/patriot) | Two sensors, 60 Hz, contact-sales/no public price |

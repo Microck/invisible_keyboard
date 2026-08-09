@@ -1,0 +1,7 @@
+physical_study_round=frozen
+roster=/home/ubuntu/study-boundary-cli-fixtures/complete-upper/roster.jsonl
+manifest=/tmp/ikb-study-boundary-obz_k50g/manifest.json
+manifest_sha256=a916cfe08bd2c53a0e56bb305ba828f47f9df1229afda5587d0b1e8a76610df1
+plan=/tmp/ikb-study-boundary-obz_k50g/plan.json
+plan_sha256=4f25ae906153a4df004df4f408e39039268e474401543ef679a7bc3909c4e357
+expected_rows=5041

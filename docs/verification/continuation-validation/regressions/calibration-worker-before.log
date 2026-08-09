@@ -1,0 +1,41 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+Executing tests from //:calibration-worker-contract-test
+-----------------------------------------------------------------------------
+
+running 3 tests
+test terminal_capacity_rejection_retains_exact_worker_incident ... FAILED
+test terminal_late_publication_retains_exact_worker_incident ... FAILED
+test terminal_receipt_regression_retains_exact_worker_incident ... FAILED
+
+failures:
+
+---- terminal_capacity_rejection_retains_exact_worker_incident stdout ----
+
+thread 'terminal_capacity_rejection_retains_exact_worker_incident' (26118) panicked at tests/calibration-worker-contract.rs:634:5:
+assertion `left == right` failed: terminal closure retains each candidate once
+  left: 0
+ right: 6
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- terminal_late_publication_retains_exact_worker_incident stdout ----
+
+thread 'terminal_late_publication_retains_exact_worker_incident' (26119) panicked at tests/calibration-worker-contract.rs:634:5:
+assertion `left == right` failed: terminal closure retains each candidate once
+  left: 2
+ right: 6
+
+---- terminal_receipt_regression_retains_exact_worker_incident stdout ----
+
+thread 'terminal_receipt_regression_retains_exact_worker_incident' (26120) panicked at tests/calibration-worker-contract.rs:634:5:
+assertion `left == right` failed: terminal closure retains each candidate once
+  left: 0
+ right: 6
+
+
+failures:
+    terminal_capacity_rejection_retains_exact_worker_incident
+    terminal_late_publication_retains_exact_worker_incident
+    terminal_receipt_regression_retains_exact_worker_incident
+
+test result: FAILED. 0 passed; 3 failed; 0 ignored; 0 measured; 9 filtered out; finished in 0.01s
+

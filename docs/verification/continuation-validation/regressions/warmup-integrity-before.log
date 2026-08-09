@@ -1,0 +1,37 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+Executing tests from //:replay-contract-test
+-----------------------------------------------------------------------------
+
+running 3 tests
+test live_acquisition_integrity_faults_during_initial_clock_warmup_terminally_revoke ... FAILED
+test live_acquisition_integrity_faults_with_only_one_clock_ready_terminally_revoke ... FAILED
+test live_warmup_integrity_preserves_primary_fault_when_neutralization_fails ... FAILED
+
+failures:
+
+---- live_acquisition_integrity_faults_during_initial_clock_warmup_terminally_revoke stdout ----
+
+thread 'live_acquisition_integrity_faults_during_initial_clock_warmup_terminally_revoke' (35676) panicked at tests/replay-contract.rs:934:13:
+hand=Left, flags=0, skew=0, one_hand_ready=false
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- live_acquisition_integrity_faults_with_only_one_clock_ready_terminally_revoke stdout ----
+
+thread 'live_acquisition_integrity_faults_with_only_one_clock_ready_terminally_revoke' (35677) panicked at tests/replay-contract.rs:934:13:
+hand=Left, flags=0, skew=0, one_hand_ready=true
+
+---- live_warmup_integrity_preserves_primary_fault_when_neutralization_fails stdout ----
+
+thread 'live_warmup_integrity_preserves_primary_fault_when_neutralization_fails' (35683) panicked at tests/replay-contract.rs:1023:9:
+assertion failed: matches!(live.push_candidate(TransportCandidate::Decoded(encode_frame(&frame).expect("missing-sensor frame encodes").to_vec()),
+    record.host_time_ns,), Err(LiveCalibratedError::TerminalFault(actual)) if
+    actual == terminal)
+
+
+failures:
+    live_acquisition_integrity_faults_during_initial_clock_warmup_terminally_revoke
+    live_acquisition_integrity_faults_with_only_one_clock_ready_terminally_revoke
+    live_warmup_integrity_preserves_primary_fault_when_neutralization_fails
+
+test result: FAILED. 0 passed; 3 failed; 0 ignored; 0 measured; 31 filtered out; finished in 11.59s
+

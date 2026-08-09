@@ -1,0 +1,452 @@
+{
+  "schema": "invisible-keyboard-physical-study-report-v1",
+  "evidence_schema": "invisible-keyboard-physical-study-evidence-row-v1",
+  "evidence_label": "hardware-dependent-observations; deterministic-analysis",
+  "limitation": "This report validates provenance, split discipline, scoring, and the declared physical observations. It cannot prove that the rig, truth source, mount, or participant protocol was executed as declared.",
+  "gate": "gate-0b",
+  "round_id": "frozen-round-1",
+  "split_manifest_sha256": "a916cfe08bd2c53a0e56bb305ba828f47f9df1229afda5587d0b1e8a76610df1",
+  "analysis_plan_sha256": "4f25ae906153a4df004df4f408e39039268e474401543ef679a7bc3909c4e357",
+  "contact_detector_sha256": "2b484a7c1822a00b2635ebc2430dcd5a515b1e5d3aa106763eadef685293c08c",
+  "contact_detector_fit_splits": [
+    "train",
+    "validation"
+  ],
+  "observation_representation": "derived",
+  "transform_sha256": "91f77a9ec70cd40b52634be40c400f91ed4597221bd4cd4afbf4b3a0dc75dc2e",
+  "transform_fit_splits": [
+    "train"
+  ],
+  "source": {
+    "exact_jsonl_sha256": "afb3a25a13750d8684da5f025ea0c00cdb8da8741629c6db77fd73a4c166af71",
+    "canonical_row_set_sha256": "32d487aaa281ebc17c38a27a8d5c3526f2ba4b34d8d8e27aefaff0dc1a37a5c5",
+    "train_row_set_sha256": null,
+    "validation_row_set_sha256": null,
+    "heldout_row_set_sha256": "32d487aaa281ebc17c38a27a8d5c3526f2ba4b34d8d8e27aefaff0dc1a37a5c5",
+    "row_count": 5041,
+    "observation_artifact_sha256": [
+      "16825cedd35512256bf85dffd5bf8770165f6f4aefb4a784e76c3217dcdc647c",
+      "17b660e410bf5cc2409154c9d61a8feec4e86fd18817090ce6b380e7b5414537",
+      "1d679350f5487d391b1cafb7316247229e9faab191328096cbeb511b45b80d02",
+      "281d0dc76e3e6ffd181079c7e2b654a28af340442f6d8ef58f37874ec42aae8c",
+      "417e5b09ec7f7fb8e6265a25f87e80008c899694478e24d8cd7f8a094fa95075",
+      "46fec31031f915f807643b3aa8d51f20bde876e5bb63cb391a322cee15bece80",
+      "650823e10d3603610d1289cbe37abc907a73b5e18a29ef338eab7bc2ef2cfb21",
+      "6541cc043ca3ceb92980524b51a4324f6f098bc73e24deb89ae29720e722fe70",
+      "6fb48fdcc5272edc03c5b8f390479228fbe9d66f5c8c3d01593528590331fb4c",
+      "75c39d38e3868e307c2df84935872d4d239c611e29400b7d83384bcb6007fa46",
+      "763b08a5e7649afdebd6672ecf130ab26d08e6915ce7ee797d708ca4b1603a93",
+      "96cb37bab7ef1d44bd0315a48751a0b54285c01f8f9fa75ec13451cb8570db18",
+      "9c3381f132732188eb4625d4974f1cb5f33ec68cb46637118a320092acedffa7",
+      "a5addb377e5438a08cd593ba8d74acb2ca84ad8781a29841dedd042b2d80c310",
+      "af177e15f20fc51f058b778bfa2822a093bbb79c448661fa69617e997d61747c",
+      "c6ff8e1df8c2b607f8d5e71300a5181a8f653ab647d47bed59996a1583045e60",
+      "dda14a864c07bdf356d04a860a80bb03d5f0644aa7dce5e66165f5f0ea75f061",
+      "e2d46b0c7b9c73b217618a50ed9fcdc86a5f068c52eedd20c5ab676846a30900",
+      "ea093fa448b9747a3a2045725752b079f11173ee4a6366780509e806fcb66ccd",
+      "ed2d575b8d807f8761936aa39769ef7f6645f28c0b394a880310446557b06c4c",
+      "f4a1c7eb82c8b043a0d38858074a18e7d7e48b1751b1f724beee483a16d97238"
+    ]
+  },
+  "frozen_model": null,
+  "cohort": {
+    "participant_count": 5,
+    "session_count": 21,
+    "mount_count": 10,
+    "rig_count": 5,
+    "controller_count": 10,
+    "surface_count": 1
+  },
+  "participant_groups": [
+    {
+      "participant_id": "participant-0",
+      "mount_id": null,
+      "surfaces": [
+        "rigid-desk-1"
+      ],
+      "sessions": [
+        "complete-upper",
+        "participant-0-session-0-Left",
+        "participant-0-session-0-Right",
+        "participant-0-session-1-Left",
+        "participant-0-session-1-Right"
+      ],
+      "positive_trials": 1001,
+      "misses": 0,
+      "event_errors": 0,
+      "macro_f1_ppm": null
+    },
+    {
+      "participant_id": "participant-1",
+      "mount_id": null,
+      "surfaces": [
+        "rigid-desk-1"
+      ],
+      "sessions": [
+        "participant-1-session-0-Left",
+        "participant-1-session-0-Right",
+        "participant-1-session-1-Left",
+        "participant-1-session-1-Right"
+      ],
+      "positive_trials": 1000,
+      "misses": 0,
+      "event_errors": 0,
+      "macro_f1_ppm": null
+    },
+    {
+      "participant_id": "participant-2",
+      "mount_id": null,
+      "surfaces": [
+        "rigid-desk-1"
+      ],
+      "sessions": [
+        "participant-2-session-0-Left",
+        "participant-2-session-0-Right",
+        "participant-2-session-1-Left",
+        "participant-2-session-1-Right"
+      ],
+      "positive_trials": 1000,
+      "misses": 0,
+      "event_errors": 0,
+      "macro_f1_ppm": null
+    },
+    {
+      "participant_id": "participant-3",
+      "mount_id": null,
+      "surfaces": [
+        "rigid-desk-1"
+      ],
+      "sessions": [
+        "participant-3-session-0-Left",
+        "participant-3-session-0-Right",
+        "participant-3-session-1-Left",
+        "participant-3-session-1-Right"
+      ],
+      "positive_trials": 1000,
+      "misses": 0,
+      "event_errors": 0,
+      "macro_f1_ppm": null
+    },
+    {
+      "participant_id": "participant-4",
+      "mount_id": null,
+      "surfaces": [
+        "rigid-desk-1"
+      ],
+      "sessions": [
+        "participant-4-session-0-Left",
+        "participant-4-session-0-Right",
+        "participant-4-session-1-Left",
+        "participant-4-session-1-Right"
+      ],
+      "positive_trials": 1000,
+      "misses": 0,
+      "event_errors": 0,
+      "macro_f1_ppm": null
+    }
+  ],
+  "remount_groups": [
+    {
+      "participant_id": "participant-0",
+      "mount_id": "participant-0-mount-0",
+      "surfaces": [
+        "rigid-desk-1"
+      ],
+      "sessions": [
+        "complete-upper",
+        "participant-0-session-0-Left",
+        "participant-0-session-0-Right"
+      ],
+      "positive_trials": 501,
+      "misses": 0,
+      "event_errors": 0,
+      "macro_f1_ppm": null
+    },
+    {
+      "participant_id": "participant-0",
+      "mount_id": "participant-0-mount-1",
+      "surfaces": [
+        "rigid-desk-1"
+      ],
+      "sessions": [
+        "participant-0-session-1-Left",
+        "participant-0-session-1-Right"
+      ],
+      "positive_trials": 500,
+      "misses": 0,
+      "event_errors": 0,
+      "macro_f1_ppm": null
+    },
+    {
+      "participant_id": "participant-1",
+      "mount_id": "participant-1-mount-0",
+      "surfaces": [
+        "rigid-desk-1"
+      ],
+      "sessions": [
+        "participant-1-session-0-Left",
+        "participant-1-session-0-Right"
+      ],
+      "positive_trials": 500,
+      "misses": 0,
+      "event_errors": 0,
+      "macro_f1_ppm": null
+    },
+    {
+      "participant_id": "participant-1",
+      "mount_id": "participant-1-mount-1",
+      "surfaces": [
+        "rigid-desk-1"
+      ],
+      "sessions": [
+        "participant-1-session-1-Left",
+        "participant-1-session-1-Right"
+      ],
+      "positive_trials": 500,
+      "misses": 0,
+      "event_errors": 0,
+      "macro_f1_ppm": null
+    },
+    {
+      "participant_id": "participant-2",
+      "mount_id": "participant-2-mount-0",
+      "surfaces": [
+        "rigid-desk-1"
+      ],
+      "sessions": [
+        "participant-2-session-0-Left",
+        "participant-2-session-0-Right"
+      ],
+      "positive_trials": 500,
+      "misses": 0,
+      "event_errors": 0,
+      "macro_f1_ppm": null
+    },
+    {
+      "participant_id": "participant-2",
+      "mount_id": "participant-2-mount-1",
+      "surfaces": [
+        "rigid-desk-1"
+      ],
+      "sessions": [
+        "participant-2-session-1-Left",
+        "participant-2-session-1-Right"
+      ],
+      "positive_trials": 500,
+      "misses": 0,
+      "event_errors": 0,
+      "macro_f1_ppm": null
+    },
+    {
+      "participant_id": "participant-3",
+      "mount_id": "participant-3-mount-0",
+      "surfaces": [
+        "rigid-desk-1"
+      ],
+      "sessions": [
+        "participant-3-session-0-Left",
+        "participant-3-session-0-Right"
+      ],
+      "positive_trials": 500,
+      "misses": 0,
+      "event_errors": 0,
+      "macro_f1_ppm": null
+    },
+    {
+      "participant_id": "participant-3",
+      "mount_id": "participant-3-mount-1",
+      "surfaces": [
+        "rigid-desk-1"
+      ],
+      "sessions": [
+        "participant-3-session-1-Left",
+        "participant-3-session-1-Right"
+      ],
+      "positive_trials": 500,
+      "misses": 0,
+      "event_errors": 0,
+      "macro_f1_ppm": null
+    },
+    {
+      "participant_id": "participant-4",
+      "mount_id": "participant-4-mount-0",
+      "surfaces": [
+        "rigid-desk-1"
+      ],
+      "sessions": [
+        "participant-4-session-0-Left",
+        "participant-4-session-0-Right"
+      ],
+      "positive_trials": 500,
+      "misses": 0,
+      "event_errors": 0,
+      "macro_f1_ppm": null
+    },
+    {
+      "participant_id": "participant-4",
+      "mount_id": "participant-4-mount-1",
+      "surfaces": [
+        "rigid-desk-1"
+      ],
+      "sessions": [
+        "participant-4-session-1-Left",
+        "participant-4-session-1-Right"
+      ],
+      "positive_trials": 500,
+      "misses": 0,
+      "event_errors": 0,
+      "macro_f1_ppm": null
+    }
+  ],
+  "metrics": {
+    "positive_trials": 5001,
+    "negative_trials": 40,
+    "negative_exposure_us": 2400000000,
+    "matched_events": 5001,
+    "misses": 0,
+    "extra_events": 0,
+    "duplicate_events": 0,
+    "false_activations": 0,
+    "false_activations_milli_per_hour": 0,
+    "event_errors": 0,
+    "miss_rate_ppm": 0,
+    "miss_upper_95_ppm": 2992,
+    "event_error_rate_ppm": null,
+    "event_error_upper_95_ppm": null,
+    "latency_min_us": 10000,
+    "latency_p95_us": 10000,
+    "latency_p95_upper_95_us": 10000,
+    "latency_p99_us": 10000,
+    "latency_p99_upper_95_us": 10000,
+    "participant_minimum_class_recall_ppm": 1000000,
+    "participant_minimum_class_recall_lower_95_ppm": 977237,
+    "participant_macro_f1_ppm": null,
+    "participant_macro_f1_lower_95_ppm": null,
+    "per_class": [
+      {
+        "label": "thumb",
+        "support": 1001,
+        "true_positive": 1001,
+        "false_positive": 0,
+        "false_negative": 0,
+        "precision_ppm": 1000000,
+        "recall_ppm": 1000000,
+        "f1_ppm": 1000000
+      },
+      {
+        "label": "index",
+        "support": 1000,
+        "true_positive": 1000,
+        "false_positive": 0,
+        "false_negative": 0,
+        "precision_ppm": 1000000,
+        "recall_ppm": 1000000,
+        "f1_ppm": 1000000
+      },
+      {
+        "label": "middle",
+        "support": 1000,
+        "true_positive": 1000,
+        "false_positive": 0,
+        "false_negative": 0,
+        "precision_ppm": 1000000,
+        "recall_ppm": 1000000,
+        "f1_ppm": 1000000
+      },
+      {
+        "label": "ring",
+        "support": 1000,
+        "true_positive": 1000,
+        "false_positive": 0,
+        "false_negative": 0,
+        "precision_ppm": 1000000,
+        "recall_ppm": 1000000,
+        "f1_ppm": 1000000
+      },
+      {
+        "label": "pinky",
+        "support": 1000,
+        "true_positive": 1000,
+        "false_positive": 0,
+        "false_negative": 0,
+        "precision_ppm": 1000000,
+        "recall_ppm": 1000000,
+        "f1_ppm": 1000000
+      }
+    ],
+    "confusion_matrix": null
+  },
+  "criteria": [
+    {
+      "id": "miss-rate-upper-95",
+      "comparison": "at-most",
+      "threshold": 50000,
+      "unit": "ppm",
+      "point": 0,
+      "confidence_bound": 2992,
+      "confidence_method": "participant bootstrap over one-sided exact per-participant binomial bounds, 20000 replicates",
+      "outcome": "pass"
+    },
+    {
+      "id": "contact-latency-minimum",
+      "comparison": "at-least",
+      "threshold": 0,
+      "unit": "microseconds",
+      "point": 10000,
+      "confidence_bound": null,
+      "confidence_method": null,
+      "outcome": "pass"
+    },
+    {
+      "id": "minimum-finger-recall-lower-95",
+      "comparison": "at-least",
+      "threshold": 800000,
+      "unit": "ppm",
+      "point": 1000000,
+      "confidence_bound": 977237,
+      "confidence_method": "participant bootstrap over Bonferroni-adjusted one-sided exact per-participant class bounds, 20000 replicates",
+      "outcome": "pass"
+    },
+    {
+      "id": "contact-latency-p95-upper-95",
+      "comparison": "at-most",
+      "threshold": 100000,
+      "unit": "microseconds",
+      "point": 10000,
+      "confidence_bound": 10000,
+      "confidence_method": "participant bootstrap over exact one-sided nonparametric per-participant quantile bounds, 20000 replicates",
+      "outcome": "pass"
+    },
+    {
+      "id": "contact-latency-p99-upper-95",
+      "comparison": "at-most",
+      "threshold": 200000,
+      "unit": "microseconds",
+      "point": 10000,
+      "confidence_bound": 10000,
+      "confidence_method": "participant bootstrap over exact one-sided nonparametric per-participant quantile bounds, 20000 replicates",
+      "outcome": "pass"
+    },
+    {
+      "id": "extra-contact-events",
+      "comparison": "at-most",
+      "threshold": 0,
+      "unit": "events",
+      "point": 0,
+      "confidence_bound": null,
+      "confidence_method": null,
+      "outcome": "pass"
+    },
+    {
+      "id": "negative-false-activation-rate",
+      "comparison": "at-most",
+      "threshold": 0,
+      "unit": "milli-events-per-hour",
+      "point": 0,
+      "confidence_bound": null,
+      "confidence_method": null,
+      "outcome": "pass"
+    }
+  ],
+  "disposition": "go"
+}

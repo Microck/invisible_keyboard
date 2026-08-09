@@ -1,0 +1,391 @@
+Starting local Bazel server (9.2.0) and connecting to it...
+... still trying to connect to local Bazel server (64128) after 10 seconds ...
+... still trying to connect to local Bazel server (64128) after 20 seconds ...
+... still trying to connect to local Bazel server (64128) after 30 seconds ...
+... still trying to connect to local Bazel server (64128) after 40 seconds ...
+... still trying to connect to local Bazel server (64128) after 50 seconds ...
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Loading: 0 packages loaded
+    currently loading: 
+Loading: 0 packages loaded
+    currently loading: 
+Loading: 0 packages loaded
+    currently loading: 
+Loading: 0 packages loaded
+    currently loading: 
+Loading: 0 packages loaded
+    currently loading: 
+Loading: 0 packages loaded
+    currently loading: 
+Loading: 0 packages loaded
+    currently loading: 
+Analyzing: target //:output-system-required-test (1 packages loaded)
+Analyzing: target //:output-system-required-test (1 packages loaded)
+Analyzing: target //:output-system-required-test (1 packages loaded)
+Analyzing: target //:output-system-required-test (1 packages loaded)
+Analyzing: target //:output-system-required-test (2 packages loaded)
+Analyzing: target //:output-system-required-test (2 packages loaded)
+Analyzing: target //:output-system-required-test (5 packages loaded)
+Analyzing: target //:output-system-required-test (5 packages loaded, 6 targets configured)
+Analyzing: target //:output-system-required-test (5 packages loaded, 6 targets configured)
+
+Analyzing: target //:output-system-required-test (5 packages loaded, 6 targets configured)
+
+Analyzing: target //:output-system-required-test (5 packages loaded, 6 targets configured)
+
+Analyzing: target //:output-system-required-test (7 packages loaded, 6 targets configured)
+
+Analyzing: target //:output-system-required-test (8 packages loaded, 9 targets configured)
+
+Analyzing: target //:output-system-required-test (8 packages loaded, 9 targets configured)
+
+Analyzing: target //:output-system-required-test (9 packages loaded, 9 targets configured)
+
+Analyzing: target //:output-system-required-test (9 packages loaded, 9 targets configured)
+
+Analyzing: target //:output-system-required-test (9 packages loaded, 9 targets configured)
+
+Analyzing: target //:output-system-required-test (10 packages loaded, 9 targets configured)
+
+Analyzing: target //:output-system-required-test (11 packages loaded, 9 targets configured)
+
+Analyzing: target //:output-system-required-test (13 packages loaded, 9 targets configured)
+
+Analyzing: target //:output-system-required-test (14 packages loaded, 9 targets configured)
+
+Analyzing: target //:output-system-required-test (15 packages loaded, 9 targets configured)
+
+Analyzing: target //:output-system-required-test (17 packages loaded, 9 targets configured)
+
+Analyzing: target //:output-system-required-test (17 packages loaded, 9 targets configured)
+
+Analyzing: target //:output-system-required-test (18 packages loaded, 9 targets configured)
+
+Analyzing: target //:output-system-required-test (20 packages loaded, 9 targets configured)
+
+Analyzing: target //:output-system-required-test (22 packages loaded, 9 targets configured)
+
+Analyzing: target //:output-system-required-test (23 packages loaded, 9 targets configured)
+
+Analyzing: target //:output-system-required-test (25 packages loaded, 9 targets configured)
+
+Analyzing: target //:output-system-required-test (26 packages loaded, 9 targets configured)
+
+Analyzing: target //:output-system-required-test (27 packages loaded, 9 targets configured)
+
+Analyzing: target //:output-system-required-test (28 packages loaded, 9 targets configured)
+
+Analyzing: target //:output-system-required-test (31 packages loaded, 9 targets configured)
+
+Analyzing: target //:output-system-required-test (32 packages loaded, 9 targets configured)
+
+Analyzing: target //:output-system-required-test (34 packages loaded, 9 targets configured)
+
+Analyzing: target //:output-system-required-test (36 packages loaded, 9 targets configured)
+
+Analyzing: target //:output-system-required-test (38 packages loaded, 9 targets configured)
+
+Analyzing: target //:output-system-required-test (39 packages loaded, 9 targets configured)
+
+Analyzing: target //:output-system-required-test (40 packages loaded, 9 targets configured)
+
+Analyzing: target //:output-system-required-test (41 packages loaded, 9 targets configured)
+
+Analyzing: target //:output-system-required-test (43 packages loaded, 9 targets configured)
+
+Analyzing: target //:output-system-required-test (44 packages loaded, 9 targets configured)
+
+Analyzing: target //:output-system-required-test (45 packages loaded, 9 targets configured)
+
+Analyzing: target //:output-system-required-test (47 packages loaded, 9 targets configured)
+
+Analyzing: target //:output-system-required-test (48 packages loaded, 9 targets configured)
+
+Analyzing: target //:output-system-required-test (49 packages loaded, 9 targets configured)
+
+Analyzing: target //:output-system-required-test (50 packages loaded, 9 targets configured)
+
+Analyzing: target //:output-system-required-test (52 packages loaded, 9 targets configured)
+
+Analyzing: target //:output-system-required-test (53 packages loaded, 9 targets configured)
+
+Analyzing: target //:output-system-required-test (55 packages loaded, 9 targets configured)
+
+Analyzing: target //:output-system-required-test (56 packages loaded, 9 targets configured)
+
+Analyzing: target //:output-system-required-test (56 packages loaded, 9 targets configured)
+
+Analyzing: target //:output-system-required-test (57 packages loaded, 9 targets configured)
+
+Analyzing: target //:output-system-required-test (58 packages loaded, 9 targets configured)
+
+Analyzing: target //:output-system-required-test (59 packages loaded, 9 targets configured)
+
+Analyzing: target //:output-system-required-test (60 packages loaded, 9 targets configured)
+
+Analyzing: target //:output-system-required-test (60 packages loaded, 9 targets configured)
+
+Analyzing: target //:output-system-required-test (61 packages loaded, 9 targets configured)
+
+Analyzing: target //:output-system-required-test (62 packages loaded, 9 targets configured)
+
+Analyzing: target //:output-system-required-test (64 packages loaded, 16 targets configured)
+
+Analyzing: target //:output-system-required-test (65 packages loaded, 18 targets configured)
+
+Analyzing: target //:output-system-required-test (66 packages loaded, 24 targets configured)
+
+Analyzing: target //:output-system-required-test (67 packages loaded, 41 targets configured)
+
+Analyzing: target //:output-system-required-test (70 packages loaded, 43 targets configured)
+
+Analyzing: target //:output-system-required-test (72 packages loaded, 45 targets configured)
+
+Analyzing: target //:output-system-required-test (73 packages loaded, 48 targets configured)
+
+Analyzing: target //:output-system-required-test (74 packages loaded, 51 targets configured)
+
+Analyzing: target //:output-system-required-test (75 packages loaded, 53 targets configured)
+
+Analyzing: target //:output-system-required-test (78 packages loaded, 58 targets configured)
+
+Analyzing: target //:output-system-required-test (79 packages loaded, 63 targets configured)
+
+Analyzing: target //:output-system-required-test (80 packages loaded, 150 targets configured)
+
+Analyzing: target //:output-system-required-test (81 packages loaded, 171 targets configured)
+
+Analyzing: target //:output-system-required-test (81 packages loaded, 199 targets configured)
+
+Analyzing: target //:output-system-required-test (83 packages loaded, 248 targets configured)
+
+Analyzing: target //:output-system-required-test (84 packages loaded, 519 targets configured)
+
+Analyzing: target //:output-system-required-test (85 packages loaded, 519 targets configured)
+
+Analyzing: target //:output-system-required-test (88 packages loaded, 521 targets configured)
+
+Analyzing: target //:output-system-required-test (89 packages loaded, 528 targets configured)
+
+Analyzing: target //:output-system-required-test (90 packages loaded, 543 targets configured)
+
+Analyzing: target //:output-system-required-test (92 packages loaded, 551 targets configured)
+
+Analyzing: target //:output-system-required-test (93 packages loaded, 561 targets configured)
+
+Analyzing: target //:output-system-required-test (94 packages loaded, 570 targets configured)
+
+Analyzing: target //:output-system-required-test (96 packages loaded, 570 targets configured)
+
+Analyzing: target //:output-system-required-test (97 packages loaded, 584 targets configured)
+
+Analyzing: target //:output-system-required-test (100 packages loaded, 605 targets configured)
+
+Analyzing: target //:output-system-required-test (101 packages loaded, 620 targets configured)
+
+Analyzing: target //:output-system-required-test (101 packages loaded, 626 targets configured)
+
+Analyzing: target //:output-system-required-test (103 packages loaded, 641 targets configured)
+
+Analyzing: target //:output-system-required-test (103 packages loaded, 654 targets configured)
+
+Analyzing: target //:output-system-required-test (105 packages loaded, 668 targets configured)
+
+Analyzing: target //:output-system-required-test (107 packages loaded, 719 targets configured)
+
+Analyzing: target //:output-system-required-test (108 packages loaded, 880 targets configured)
+
+Analyzing: target //:output-system-required-test (109 packages loaded, 896 targets configured)
+
+Analyzing: target //:output-system-required-test (110 packages loaded, 908 targets configured)
+
+Analyzing: target //:output-system-required-test (111 packages loaded, 1013 targets configured)
+
+Analyzing: target //:output-system-required-test (112 packages loaded, 1061 targets configured)
+
+Analyzing: target //:output-system-required-test (114 packages loaded, 1079 targets configured)
+
+Analyzing: target //:output-system-required-test (114 packages loaded, 1090 targets configured)
+
+Analyzing: target //:output-system-required-test (115 packages loaded, 1159 targets configured)
+
+Analyzing: target //:output-system-required-test (118 packages loaded, 1259 targets configured)
+
+Analyzing: target //:output-system-required-test (118 packages loaded, 1312 targets configured)
+
+Analyzing: target //:output-system-required-test (120 packages loaded, 1394 targets configured)
+
+Analyzing: target //:output-system-required-test (121 packages loaded, 1448 targets configured)
+
+Analyzing: target //:output-system-required-test (122 packages loaded, 1480 targets configured)
+
+Analyzing: target //:output-system-required-test (124 packages loaded, 1584 targets configured)
+
+Analyzing: target //:output-system-required-test (125 packages loaded, 1681 targets configured)
+
+Analyzing: target //:output-system-required-test (127 packages loaded, 1766 targets configured)
+
+Analyzing: target //:output-system-required-test (127 packages loaded, 1769 targets configured)
+
+Analyzing: target //:output-system-required-test (129 packages loaded, 1782 targets configured)
+
+Analyzing: target //:output-system-required-test (130 packages loaded, 1828 targets configured)
+
+Analyzing: target //:output-system-required-test (132 packages loaded, 1862 targets configured)
+
+Analyzing: target //:output-system-required-test (134 packages loaded, 1902 targets configured)
+
+Analyzing: target //:output-system-required-test (135 packages loaded, 1942 targets configured)
+
+Analyzing: target //:output-system-required-test (136 packages loaded, 2156 targets configured)
+
+Analyzing: target //:output-system-required-test (137 packages loaded, 2203 targets configured)
+
+Analyzing: target //:output-system-required-test (139 packages loaded, 2221 targets configured)
+
+Analyzing: target //:output-system-required-test (139 packages loaded, 2703 targets configured)
+
+Analyzing: target //:output-system-required-test (141 packages loaded, 2720 targets configured)
+
+Analyzing: target //:output-system-required-test (141 packages loaded, 2745 targets configured)
+
+Analyzing: target //:output-system-required-test (143 packages loaded, 2770 targets configured)
+
+Analyzing: target //:output-system-required-test (144 packages loaded, 2886 targets configured)
+
+Analyzing: target //:output-system-required-test (146 packages loaded, 2964 targets configured)
+
+Analyzing: target //:output-system-required-test (146 packages loaded, 3021 targets configured)
+
+Analyzing: target //:output-system-required-test (148 packages loaded, 3042 targets configured)
+
+Analyzing: target //:output-system-required-test (150 packages loaded, 3073 targets configured)
+
+Analyzing: target //:output-system-required-test (150 packages loaded, 3191 targets configured)
+
+Analyzing: target //:output-system-required-test (152 packages loaded, 3213 targets configured)
+
+Analyzing: target //:output-system-required-test (153 packages loaded, 3230 targets configured)
+
+Analyzing: target //:output-system-required-test (153 packages loaded, 3246 targets configured)
+
+Analyzing: target //:output-system-required-test (154 packages loaded, 3264 targets configured)
+
+Analyzing: target //:output-system-required-test (156 packages loaded, 3302 targets configured)
+
+Analyzing: target //:output-system-required-test (158 packages loaded, 3340 targets configured)
+
+Analyzing: target //:output-system-required-test (158 packages loaded, 3383 targets configured)
+
+Analyzing: target //:output-system-required-test (160 packages loaded, 3433 targets configured)
+
+Analyzing: target //:output-system-required-test (162 packages loaded, 3447 targets configured)
+
+Analyzing: target //:output-system-required-test (162 packages loaded, 3616 targets configured)
+
+Analyzing: target //:output-system-required-test (164 packages loaded, 3697 targets configured)
+
+Analyzing: target //:output-system-required-test (164 packages loaded, 3806 targets configured)
+
+Analyzing: target //:output-system-required-test (166 packages loaded, 3856 targets configured)
+
+Analyzing: target //:output-system-required-test (168 packages loaded, 3945 targets configured)
+
+Analyzing: target //:output-system-required-test (169 packages loaded, 4014 targets configured)
+
+Analyzing: target //:output-system-required-test (170 packages loaded, 4040 targets configured)
+
+Analyzing: target //:output-system-required-test (171 packages loaded, 4090 targets configured)
+
+Analyzing: target //:output-system-required-test (173 packages loaded, 4121 targets configured)
+
+Analyzing: target //:output-system-required-test (174 packages loaded, 4159 targets configured)
+
+Analyzing: target //:output-system-required-test (176 packages loaded, 4173 targets configured)
+
+Analyzing: target //:output-system-required-test (177 packages loaded, 4259 targets configured)
+
+Analyzing: target //:output-system-required-test (178 packages loaded, 4304 targets configured)
+
+Analyzing: target //:output-system-required-test (179 packages loaded, 4507 targets configured)
+
+Analyzing: target //:output-system-required-test (181 packages loaded, 4541 targets configured)
+
+Analyzing: target //:output-system-required-test (181 packages loaded, 4585 targets configured)
+
+Analyzing: target //:output-system-required-test (182 packages loaded, 4618 targets configured)
+
+Analyzing: target //:output-system-required-test (184 packages loaded, 4640 targets configured)
+
+Analyzing: target //:output-system-required-test (185 packages loaded, 4666 targets configured)
+
+Analyzing: target //:output-system-required-test (186 packages loaded, 4680 targets configured)
+
+Analyzing: target //:output-system-required-test (188 packages loaded, 4697 targets configured)
+
+Analyzing: target //:output-system-required-test (188 packages loaded, 4724 targets configured)
+
+Analyzing: target //:output-system-required-test (190 packages loaded, 4755 targets configured)
+
+Analyzing: target //:output-system-required-test (192 packages loaded, 4814 targets configured)
+
+Analyzing: target //:output-system-required-test (193 packages loaded, 4842 targets configured)
+
+Analyzing: target //:output-system-required-test (194 packages loaded, 4877 targets configured)
+
+Analyzing: target //:output-system-required-test (195 packages loaded, 4945 targets configured)
+
+Analyzing: target //:output-system-required-test (197 packages loaded, 5006 targets configured)
+
+Analyzing: target //:output-system-required-test (199 packages loaded, 5086 targets configured)
+
+Analyzing: target //:output-system-required-test (201 packages loaded, 5110 targets configured)
+
+Analyzing: target //:output-system-required-test (201 packages loaded, 5119 targets configured)
+
+Analyzing: target //:output-system-required-test (202 packages loaded, 5165 targets configured)
+
+Analyzing: target //:output-system-required-test (204 packages loaded, 5199 targets configured)
+
+Analyzing: target //:output-system-required-test (204 packages loaded, 5265 targets configured)
+
+Analyzing: target //:output-system-required-test (206 packages loaded, 5333 targets configured)
+
+Analyzing: target //:output-system-required-test (206 packages loaded, 5468 targets configured)
+
+Analyzing: target //:output-system-required-test (209 packages loaded, 5487 targets configured)
+
+INFO: Analyzed target //:output-system-required-test (209 packages loaded, 5488 targets configured).
+[1 / 1] no actions running
+[1 / 9] checking cached actions
+[441 / 442] [Prepa] Testing //:output-system-required-test
+[441 / 442] Testing //:output-system-required-test; 1s local
+[441 / 442] Testing //:output-system-required-test; 30s local
+[441 / 442] Testing //:output-system-required-test; 31s local
+INFO: From Testing //:output-system-required-test:
+==================== Test output for //:output-system-required-test:
+
+running 6 tests
+test native_kernel_stress_executes_ten_thousand_pairs_and_finishes_neutral ... ok
+test native_probe_verifies_core28_identity_and_non_root_access ... ok
+test native_evdev_application_observes_every_core28_pair ... ok
+test selected_keyboard_open_queries_keys_held_before_reader_start ... ok
+test sigkill_destroys_the_owned_uinput_device_without_a_250ms_claim ... ok
+test planned_signals_are_application_observed_neutral_within_250ms ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 28.04s
+
+================================================================================
+INFO: Found 1 test target...
+[442 / 442] 1 / 1 tests; no actions running
+Target //:output-system-required-test up-to-date:
+  bazel-bin/output-system-required-test
+INFO: Elapsed time: 844.310s, Critical Path: 76.07s
+INFO: 2 processes: 440 action cache hit, 1 internal, 2 local.
+INFO: Build completed successfully, 2 total actions
+//:output-system-required-test                                           PASSED in 30.0s
+
+Executed 1 out of 1 test: 1 test passes.
+There were tests whose specified size is too big. Use the --test_verbose_timeout_warnings command line option to see which ones these are.

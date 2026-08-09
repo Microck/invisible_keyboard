@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="live-durability-syscall-test" tests="1" failures="0" errors="0">
+    <testcase name="live-durability-syscall-test" status="run" duration="34" time="34"></testcase>
+      <system-out>
+Generated test.log (if the file is not UTF-8, then this may be unreadable):
+<![CDATA[exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+Executing tests from //:live-durability-syscall-test
+-----------------------------------------------------------------------------
+{
+  "bundles": {
+    "current": {
+      "durable_status_started_at_trace_event": 433,
+      "footer_write_completed_at_trace_event": 407,
+      "manifest": "current-live-111911-0.manifest.json",
+      "manifest_fsync_completed_at_trace_event": 183,
+      "manifest_parent_fsync_completed_at_trace_event": 185,
+      "manifest_sha256": "c1eb9abe31357db1f864f83dd9eab61662156be5f70705e56401c12aec845fa3",
+      "neutral_status_started_at_trace_event": 429,
+      "pid": 111926,
+      "report": "current-live-111911-0.live-clock-report.json",
+      "report_fsync_completed_at_trace_event": 421,
+      "report_parent_fsync_completed_at_trace_event": 423,
+      "report_sha256": "9ffab9be6412fac2d019d41a354aa79028b660550b94f1c983b43a7a1ecbe460",
+      "session": "current-live-111911-0.iks",
+      "session_fsync_completed_at_trace_event": 408,
+      "session_parent_fsync_completed_at_trace_event": 410,
+      "session_sha256": "92bd91a5a7817191d44152f181fb1f379f846e8fe3b44d80dc4fd69127aa8078"
+    },
+    "reset": {
+      "durable_status_started_at_trace_event": 818,
+      "footer_write_completed_at_trace_event": 792,
+      "manifest": "reset-live-111911-1.manifest.json",
+      "manifest_fsync_completed_at_trace_event": 565,
+      "manifest_parent_fsync_completed_at_trace_event": 570,
+      "manifest_sha256": "f71a657dbb3fd780e838f9c1a5030c8282914ef42ec2b9ed06c6c84471f7fd77",
+      "neutral_status_started_at_trace_event": 814,
+      "pid": 111935,
+      "report": "reset-live-111911-1.live-clock-report.json",
+      "report_fsync_completed_at_trace_event": 806,
+      "report_parent_fsync_completed_at_trace_event": 808,
+      "report_sha256": "344bcd2a64655baad85b91730a79fb7a13c51258fd47ca645a8a17078f2719f9",
+      "session": "reset-live-111911-1.iks",
+      "session_fsync_completed_at_trace_event": 793,
+      "session_parent_fsync_completed_at_trace_event": 795,
+      "session_sha256": "75275a242947f93f612495c74686b191929a4c1e79dcc4ec60687a9a34e98ef3"
+    }
+  },
+  "claim_scope": "Linux syscall order for two real recording-mode CLI shutdowns; fsync semantics do not prove storage hardware beyond the operating-system contract",
+  "cli_sha256": "9b57ff02a07680c4a758fdec4de6afb62c9a1b31294f91cef462bd14f4440518",
+  "cli_test_sha256": "db10b91ab3ec592741ef02373e3eaa4610588c997874a98b646a036773ef46a5",
+  "schema": "invisible-keyboard-linux-durability-syscall-proof-v1",
+  "strace_version": "strace -- version 5.16",
+  "test": "calibrated_live_run_locks_current_and_reset_boots_into_artifact_bound_outputs",
+  "trace_sha256": "e8b1c5cee7edc08d8c888ae6d2ff1f0defd565e068b65aed607ab8ba8f2965da"
+}]]>
+      </system-out>
+    </testsuite>
+</testsuites>

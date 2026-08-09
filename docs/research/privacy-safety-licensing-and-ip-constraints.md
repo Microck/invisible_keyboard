@@ -1,6 +1,6 @@
 # Privacy, safety, licensing, and IP constraints
 
-Access date: 2026-08-09
+Access date: 2026-08-09. Source-integrity recheck: 2026-08-29.
 
 ## Decision
 
@@ -23,12 +23,15 @@ interoperability and security stage, not the first transport. Production BLE,
 USB marks, batteries, body-worn radio, and market access have qualification and
 test costs that the research BOM does not settle.
 
-There is one current hard reuse boundary: do not copy, adapt, distribute, or
-commercialize LapCal code, PCB layouts, CAD, datasets, or model artifacts in the
-canonical implementation. Its root applies CC BY-NC-SA 4.0 to "this work," has
-no separate commercial grant, and grants no patent rights. Read it as prior art
-and failure evidence. Implement a new design from independently written
-requirements.
+The project sets one hard artifact-reuse boundary: the canonical implementation
+must not import LapCal code, PCB layouts, CAD, datasets, model artifacts, or
+calibration values. Its root applies CC BY-NC-SA 4.0 to "this work," has no
+separate commercial grant, and grants no patent or trademark rights. This is a
+conservative project policy, not a statement of the full license grant.
+BY-NC-SA permits specified noncommercial exercises of the Licensed Rights under
+its conditions, and it does not govern a use for which copyright or similar
+rights permission is not required. Inspect and cite LapCal as prior-art and
+failure evidence, then implement from project-authored requirements.
 
 This report is architecture and risk research. It is not legal advice, a
 freedom-to-operate opinion, a product certification plan, a medical assessment,
@@ -228,7 +231,7 @@ link "authenticated."
   strings, scripts, paste buffers, or arbitrary HID descriptors.
 - Begin neutral, reject duplicate transitions, keep one owner of down-key state,
   release all keys on planned stop, and use a host/device watchdog to reach
-  application-observed neutral state within the Gate 0 deadline.
+  application-observed neutral state within the Gate 0S deadline.
 
 NISTIR 8259A supplies a useful voluntary baseline: device identification,
 configuration, data protection, logical access to interfaces, secure software
@@ -255,7 +258,7 @@ gate is a first screen, not proof of long-term safety.
 | USB power, ESD, short circuit, cable snag, or connector failure | Tethered and appliance paths | Current-limited source, fuse/protection, insulated boards, strain relief, neutral reset on disconnect | IEC 62368-1 and EMC/ESD lab plan for a finished product |
 | Body-worn RF exposure and antenna detuning | BLE wrist/ring | Use an authorized low-power module within integration conditions; fixed antenna and enclosure; measure current/power | FCC portable/body-worn RF exposure and target-market lab assessment; module grant review does not cover every host integration |
 | Mechanical breakage, small parts, ingress, and sharp edges | Wearables | Fastener retention, rounded enclosure, inspection, sweat barrier, drop and snag tests | Mechanical reliability, ingress, flammability, and age-grade review before sale |
-| False shortcuts, destructive input, or loss of control | All OS/HID paths | Harmless test target, allowlisted events, emergency disable, all-up watchdog, ordinary-movement negatives | Safety/security review before system-wide use; application-observed fault injection at Gates 0, 5, 8, and 9 |
+| False shortcuts, destructive input, or loss of control | All OS/HID paths | Harmless test target, allowlisted events, emergency disable, all-up watchdog, ordinary-movement negatives | Safety/security review before system-wide use; application-observed fault injection at Gates 0S, 5, 8, and 9 |
 | Exclusion or harm from accessibility claims | All | Preserve StickyKeys/FilterKeys and host repeat; disclose touch-typing, movement, vision, surface, and learning requirements | Co-design and test with the claimed disabled populations; accessibility and claims review before marketing |
 
 OSHA and NIOSH ergonomics guidance identifies repetition, awkward posture, and
@@ -274,19 +277,24 @@ regulatory classification.
 
 ### LapCal
 
-The local root `README.org` says, "This work is licensed under" CC BY-NC-SA
-4.0, and the root `LICENSE.md` contains that legal code. No root language
-separates software, firmware, PCB, CAD, data, or models. The conservative
-project rule is therefore to treat every original tracked artifact as covered
-unless its own file clearly states otherwise.
+The pinned root [`README.org`](https://github.com/xjjak/LapCal/blob/8638759168d84d32fa50ae461e053055a01c3dff/README.org)
+says, "This work is licensed under" CC BY-NC-SA 4.0, and its
+[`LICENSE.md`](https://github.com/xjjak/LapCal/blob/8638759168d84d32fa50ae461e053055a01c3dff/LICENSE.md)
+contains that legal code. No root language separates software, firmware, PCB,
+CAD, data, or models. The conservative project rule is therefore to treat every
+original tracked artifact as covered unless its own file clearly states
+otherwise.
 
-CC BY-NC-SA 4.0 grants reproduction and adaptation only for noncommercial
-purposes. Sharing requires attribution, license notice/link, modification
-notice, and ShareAlike for adapted material. The license defines NonCommercial
-as not primarily intended for or directed toward commercial advantage or
-monetary compensation. The boundary is purpose-specific and not equivalent to
-"free while pre-revenue." Section 2(b)(2) expressly does not license patent or
-trademark rights. Privacy, publicity, and third-party rights can also remain.
+Subject to its terms, CC BY-NC-SA 4.0 permits exercise of the Licensed Rights to
+reproduce and share licensed material, and to produce, reproduce, and share
+adapted material, for noncommercial purposes. Sharing requires attribution,
+license notice/link, modification notice, and ShareAlike for adapted material.
+The license defines NonCommercial as not primarily intended for or directed
+toward commercial advantage or monetary compensation. The boundary is
+purpose-specific and not equivalent to "free while pre-revenue." Where an
+exception or limitation applies and permission is unnecessary, the CC license
+does not apply. Section 2(b)(2) expressly does not license patent or trademark
+rights. Privacy, publicity, and third-party rights can also remain.
 
 Creative Commons says its licenses are not recommended for software or
 hardware. That poor fit creates interpretation and compatibility risk; it does
@@ -296,31 +304,33 @@ Artifact decisions:
 
 | Material | Decision | Reason |
 | --- | --- | --- |
-| LapCal prose, diagrams, photos, source, PCB/Gerber, and original CAD | Safe to study and cite; no commercial copying or adaptation | Blanket CC BY-NC-SA statement, NC/SA conditions, no patent grant |
-| LapCal datasets and trained TFLite/model files | Do not train, benchmark, ship, or redistribute | No separate subject consent, dataset license, model provenance, or commercial grant; a repository license cannot supply participant rights |
-| LapCal algorithms and lessons | Re-express as functional requirements and tests | Ideas and measured facts can inform a new design, but avoid copied expression, structure, constants, layouts, CAD, or weights; jurisdictional exceptions need counsel |
+| LapCal prose, diagrams, photos, source, PCB/Gerber, and original CAD | Project policy: permit inspection and citation for evidence, but exclude artifact reuse in the canonical implementation | Permission for a particular reproduction or adaptation depends on the Licensed Rights, license terms, and applicable exceptions or limitations; no patent or trademark rights are granted |
+| LapCal datasets and trained TFLite/model files | Project policy: do not train, benchmark, ship, or redistribute | No separate subject consent, dataset license, model provenance, or commercial grant; a repository license cannot supply participant rights |
+| LapCal algorithms and lessons | Project policy: re-express facts and lessons as functional requirements and tests | Ideas and measured facts can inform a new design, but avoid copied expression, structure, constants, layouts, CAD, or weights; jurisdictional exceptions need counsel |
 | LapCal Round-Anything submodule | MIT source may be used separately with its notice | Its own MIT license covers the dependency; it does not relicense LapCal's ring design or adaptations |
 
 ### Other relevant artifacts
 
 | Artifact | Verified license boundary | Reuse decision |
 | --- | --- | --- |
-| `facebookresearch/emg2qwerty` repository | Root is CC BY-NC-SA 4.0; repository is archived; hardware is unavailable | Paper and source are study material. Do not copy code, data, configuration, or weights into a commercial path without a separate grant and participant/provenance review |
+| `facebookresearch/emg2qwerty` repository | Root is CC BY-NC-SA 4.0; GitHub archived it read-only on 2026-08-01; the paper reports limited broader access to its proprietary research-grade sEMG hardware | Paper and source are study material. Do not copy code, data, configuration, or weights into a commercial path without a separate grant and participant/provenance review |
 | `DrustZ/TenFingerTyping` implementation | Root MIT license, copyright Mingrui Zhang | Code can be reused with the copyright and permission notice, but its external Google Drive model weight is not covered merely because the code is MIT. Do not use that weight without its own provenance and license |
 | Academic papers, PDFs, and performance tables | Publication access is not a software, dataset, CAD, model, or patent license | Cite ideas and facts; do not copy supplemental artifacts unless their own terms allow it |
 | Unlicensed GitHub prototypes, including repositories with no root license | Copyright remains reserved by default | Study public behavior and independently implement; do not copy source, assets, PCB, CAD, or models |
 | Vendor SDKs, HID stacks, hand trackers, and pretrained models | Terms vary by component, platform, field of use, redistribution, and model | Create a software/materials bill of materials and approve every transitive runtime, model, and dataset before freezing the prototype |
 
-### Canonical clean-room route
+### Independent-implementation provenance policy
 
-1. Keep this dossier as the evidence/requirements side. It records observable
-   behavior, hazards, tests, source citations, and known prior art without
-   importing LapCal implementation text.
+1. Keep this dossier as the evidence and requirements record. It records
+   observable behavior, hazards, tests, source citations, and known prior art
+   without importing LapCal implementation text into product artifacts.
 2. Write a fresh protocol, data schema, calibration procedure, key-state
    machine, PCB requirements, and mechanical constraints from the selected
    components and current standards.
-3. Have implementation contributors work from those requirements and vendor
-   datasheets. Do not give them LapCal source, PCB, CAD, data, or model files.
+3. Use project-authored requirements and vendor datasheets as implementation
+   inputs. If a contributor inspects LapCal for evidence, record that source and
+   do not copy its code, PCB, CAD, data, model, calibration values, or protected
+   expression into product artifacts.
 4. Record provenance for every source file, CAD element, footprint, model,
    training session, participant, dataset, font, and dependency in an SBOM and
    data/model bill of materials.
@@ -330,7 +340,9 @@ Artifact decisions:
    release. Ask LapCal's rights holders for a separate commercial license only
    if copying a specific artifact would materially outperform reimplementation.
 
-This process reduces copyright contamination. It does not resolve patents.
+This policy documents independent creation and reduces artifact-copying risk.
+It is not a legal safe harbor and does not establish a strict clean-room
+process. It does not resolve patents.
 
 ## Targeted patent landscape
 
@@ -388,14 +400,14 @@ Likelihood and impact are planning estimates before prototype evidence. `H`,
 
 | Priority | Risk | L/I | Evidence | Required mitigation | Owner | Gate | Residual uncertainty |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | Password, message, code, or health content enters logs, telemetry, or hosted correction | H/H | A keyboard necessarily sees inferred text; OS report already forbids password training/logging; GDPR content can expose special categories | Content-free production logs, generated secure-field tests, local correction, no network egress, explicit separate opt-in | Privacy + decoder | Before Gate 0; audit at Gates 3-5 and 9 | Frameworks and third-party crash reporters can log strings outside the adapter |
-| 2 | Unauthorized or destructive key injection through host privilege, radio, model, or update | M/H | `uinput` and HID emit system input; NIST baseline calls for interface access, data protection, and secure update | Privilege-separated adapter, local permissioned protocol, event allowlist, authenticated pairing, signed updates, no shell/clipboard/window APIs | Security + input adapter | Gate 0 and Gate 5 | OS-specific privileged surfaces and supply-chain compromise remain |
-| 3 | Stuck modifier/repeat after crash, disconnect, sleep, or update | M/H | Input-path report defines neutral start and all-up within 250 ms | One key-state owner, duplicate rejection, watchdog, all-up on stop/update, application-observed fault tests | Firmware + input adapter | Gate 0; repeat at Gates 5 and 9 | USB removal can prevent an explicit all-up report; host must observe neutral/device removal |
-| 4 | Optical frames capture bystanders, screens, rooms, or identities | H/H for optical; L/L for IMU | Optical co-lead sees the environment; GDPR and recording laws can apply before biometric use | On-device crop/mask, no audio, visible capture state, controlled room, bystander exclusion/notice, raw frames off by default | Privacy + optical | Before any capture; Gates 0 and 9 | Headset/vendor services may retain diagnostics outside project control |
+| 1 | Password, message, code, or health content enters logs, telemetry, or hosted correction | H/H | A keyboard necessarily sees inferred text; OS report already forbids password training/logging; GDPR content can expose special categories | Content-free production logs, generated secure-field tests, local correction, no network egress, explicit separate opt-in | Privacy + decoder | Before Gate 0A; audit at Gates 3-5 and 9 | Frameworks and third-party crash reporters can log strings outside the adapter |
+| 2 | Unauthorized or destructive key injection through host privilege, radio, model, or update | M/H | `uinput` and HID emit system input; NIST baseline calls for interface access, data protection, and secure update | Privilege-separated adapter, local permissioned protocol, event allowlist, authenticated pairing, signed updates, no shell/clipboard/window APIs | Security + input adapter | Gate 0S and Gate 5 | OS-specific privileged surfaces and supply-chain compromise remain |
+| 3 | Stuck modifier/repeat after crash, disconnect, sleep, or update | M/H | Input-path report defines neutral start and all-up within 250 ms | One key-state owner, duplicate rejection, watchdog, all-up on stop/update, application-observed fault tests | Firmware + input adapter | Gate 0S; repeat at Gates 5 and 9 | USB removal can prevent an explicit all-up report; host must observe neutral/device removal |
+| 4 | Optical frames capture bystanders, screens, rooms, or identities | H/H for optical; L/L for IMU | Optical co-lead sees the environment; GDPR and recording laws can apply before biometric use | On-device crop/mask, no audio, visible capture state, controlled room, bystander exclusion/notice, raw frames off by default | Privacy + optical | Before any capture; Gates 0A and 9 | Headset/vendor services may retain diagnostics outside project control |
 | 5 | Motion, hand geometry, sEMG, or cadence becomes identity data | M/H | GDPR purpose/identification test; BIPA expressly includes scans of hand geometry; state definitions differ | Prohibit identity/authentication use, random session IDs, no stable embeddings, DPIA/counsel gate for changed purpose | Privacy/legal + ML | Data design; Gate 6/7 | Models can encode identity even without an explicit identity head |
-| 6 | BLE Just Works link is encrypted but not MITM-authenticated; stale bonds enable reconnect | M/H on BLE | Bluetooth Security Manager association determines authentication; HOGP adds pairing/bonding complexity | Physical pair window, strongest supported LE Secure Connections association, clear bonds, separate research service, document achieved properties | Firmware/security | BLE Gate 0 and appliance proof | Host HOGP UX may force unauthenticated association |
-| 7 | Debug interface or unsigned/rollback update bypasses privacy and key controls | M/H | NIST/ETSI require secure update and controlled interfaces | Release signing, anti-rollback policy, power-loss recovery, protected keys, production debug policy, neutral update | Firmware/release | Before wearable human use; Gate 0 fault tests | MCU-specific readout/debug bypass resistance needs lab/vendor evidence |
-| 8 | LapCal or NC research artifacts contaminate commercial implementation | H/H if reused | Local root CC BY-NC-SA; patent rights excluded; no data/model grant | Study only, clean-room requirements, fresh code/PCB/CAD/data/model, provenance ledger, counsel before any exception | Project lead/legal | Before implementation and every release | Scope and copyrightability are fact/jurisdiction-specific |
+| 6 | BLE Just Works link is encrypted but not MITM-authenticated; stale bonds enable reconnect | M/H on BLE | Bluetooth Security Manager association determines authentication; HOGP adds pairing/bonding complexity | Physical pair window, strongest supported LE Secure Connections association, clear bonds, separate research service, document achieved properties | Firmware/security | Gate 0S and appliance proof | Host HOGP UX may force unauthenticated association |
+| 7 | Debug interface or unsigned/rollback update bypasses privacy and key controls | M/H | NIST/ETSI require secure update and controlled interfaces | Release signing, anti-rollback policy, power-loss recovery, protected keys, production debug policy, neutral update | Firmware/release | Before wearable human use; Gate 0S fault tests | MCU-specific readout/debug bypass resistance needs lab/vendor evidence |
+| 8 | LapCal or NC research artifacts contaminate commercial implementation | H/H if reused | Local root CC BY-NC-SA; patent rights excluded; no data/model grant | Independent implementation, no-artifact-reuse policy, fresh code/PCB/CAD/data/model, provenance ledger, counsel before any exception | Project lead/legal | Before implementation and every release | Scope and copyrightability are fact/jurisdiction-specific |
 | 9 | Unlicensed model weights, datasets, footprints, SDKs, or participant data enter build | M/H | TypeAnywhere code is MIT but external weight terms are not established; papers do not license artifacts | SBOM plus data/model BOM, per-artifact license and consent evidence, hashes, reject unknown provenance | ML + release | Before training; before distribution | Transitive SDK/model terms and generated-output rights can change |
 | 10 | Active or pending patent claims read on frozen sensing/decoder flow | M/H | Targeted records include a pending keyboardless continuation and active/pending gesture UI families | Counsel-led FTO after architecture freeze; claim chart, family/status/territory/prosecution review; design around or license | Project lead/patent counsel | Before design freeze or investment beyond prototype | Search is non-exhaustive; claims and status change |
 | 11 | Battery, thermal, charging, or RF hazard injures a wearer | M/H | CPSC battery hazards; IEC 62133-2/62368-1; FCC body-worn exposure | Start tethered, certified cell/module, protection and enclosure, no early charging while worn, safety/RF lab plan | Hardware/safety | Before Gate 9 wearable run; pre-market | Final antenna, enclosure, charger, and misuse determine result |
@@ -419,7 +431,7 @@ Likelihood and impact are planning estimates before prototype evidence. `H`,
 
 ### Before enabling system input
 
-- Pass deterministic Gate 0 through Linux `uinput` with privilege separation,
+- Pass deterministic Gate 0S through Linux `uinput` with privilege separation,
   allowlisted events, stage timestamps, ten forced faults, and neutral recovery.
 - Show that crash, cable/radio loss, sleep, focus change, and update cannot leave
   a destructive held state in the target application.
@@ -430,7 +442,7 @@ Likelihood and impact are planning estimates before prototype evidence. `H`,
 
 - Record pairing association, authentication, encryption, bond lifecycle, GATT
   exposure, update signature/rollback, debug policy, and power-loss recovery.
-- Re-run Gates 0, 5, 8, and 9 through the final transport.
+- Re-run Gates 0S, 5, 8, and 9 through the final transport.
 - Use development identities/marks lawfully; do not imply FCC, Bluetooth, USB,
   CE, or UKCA certification.
 
@@ -452,18 +464,19 @@ which privacy, counsel, lab, and qualification branches become real.
 
 ## Source registry
 
-All web sources were accessed 2026-08-09. Official law and regulator pages
-define the cited boundary. Standards catalogue pages establish scope, not a
-certificate. Patent status from Google Patents is a discovery aid and must be
-checked against each patent office.
+Web sources were first accessed 2026-08-09. The LapCal, Creative Commons,
+Copyright Act, and emg2qwerty boundaries were rechecked 2026-08-29. Official
+law and regulator pages define the cited boundary. Standards catalogue pages
+establish scope, not a certificate. Patent status from Google Patents is a
+discovery aid and must be checked against each patent office.
 
 | ID | Source | Boundary used |
 | --- | --- | --- |
-| R1 | [Local LapCal `README.org`](../../research/LapCal/README.org) and [`LICENSE.md`](../../research/LapCal/LICENSE.md) | Root "this work" statement; CC BY-NC-SA legal text, NC/SA/attribution, no patent grant |
+| R1 | [Immutable LapCal `README.org`](https://github.com/xjjak/LapCal/blob/8638759168d84d32fa50ae461e053055a01c3dff/README.org), [`LICENSE.md`](https://github.com/xjjak/LapCal/blob/8638759168d84d32fa50ae461e053055a01c3dff/LICENSE.md), and the [pinned local snapshot](../../research/LapCal/README.org) | Root "this work" statement; CC BY-NC-SA legal text, NC/SA/attribution, no patent or trademark grant |
 | R2 | [Creative Commons FAQ](https://creativecommons.org/faq/) | CC does not recommend CC licenses for software; license interpretation is not legal advice |
 | R3 | [CC BY-NC-SA 4.0 legal code](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode.en) | Canonical definitions, grant, conditions, other rights, termination |
 | R4 | [Round-Anything license](../../research/LapCal/CAD/rings/Round-Anything/LICENSE) | MIT terms for that submodule only |
-| R5 | [emg2qwerty license](https://raw.githubusercontent.com/facebookresearch/emg2qwerty/main/LICENSE) | Repository root CC BY-NC-SA 4.0 |
+| R5 | [emg2qwerty license](https://github.com/facebookresearch/emg2qwerty/blob/main/LICENSE) and [NeurIPS paper](https://proceedings.neurips.cc/paper_files/paper/2024/file/a64d53074d011e49af1dfc72c332fe4b-Paper-Datasets_and_Benchmarks_Track.pdf) | Repository root CC BY-NC-SA 4.0; physical-keyboard data collection and limited access to proprietary research-grade hardware |
 | R6 | [TenFingerTyping license](https://raw.githubusercontent.com/DrustZ/TenFingerTyping/master/LICENSE) | MIT code license; does not establish external weight terms |
 | R7 | [GDPR official text, Regulation (EU) 2016/679](https://eur-lex.europa.eu/eli/reg/2016/679/oj/eng) | Articles 4, 5, 6, 9, 13-17, 25, 32, and 35 |
 | R8 | [Illinois Biometric Information Privacy Act](https://www.ilga.gov/Legislation/ILCS/Articles?ActID=3004&ChapterID=57) | Enumerated identifiers, notice/consent, retention, disclosure, enforcement |
@@ -492,6 +505,7 @@ checked against each patent office.
 | R31 | [ECHA nickel restriction guidance](https://echa.europa.eu/documents/10162/17233/nickel_restriction_prolonged_contact_skin_en.pdf) | Direct/prolonged skin-contact nickel release concern |
 | R32 | [USB HID 1.11](https://www.usb.org/sites/default/files/hid1_11.pdf) | HID report/state protocol; not product certification |
 | R33 | [Patent records listed in the targeted landscape](#targeted-patent-landscape) | Titles, assignees, priority dates, and displayed status with explicit limits |
+| R34 | [17 U.S.C. Section 102(b)](https://www.copyright.gov/title17/92chap1.html#102) | US idea, procedure, process, system, method, concept, principle, and discovery exclusion; not a project-specific safe harbor |
 
 ## Source and tool limits
 
@@ -512,4 +526,3 @@ checked against each patent office.
   pre-market work list, not proof of conformity.
 - No participant consent, data-processing agreement, vendor contract, or model
   card was available for review. Paper availability never filled those gaps.
-

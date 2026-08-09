@@ -1,0 +1,18 @@
+manifest:
+  version: "1.2"
+
+  remotes:
+    - name: upstream
+      url-base: https://github.com/zephyrproject-rtos
+
+  projects:
+    - name: zephyr
+      remote: upstream
+      revision: 684c9e8f32e4373a21098559f748f06915f950c9
+      import:
+        name-allowlist:
+          - cmsis_6
+          - hal_nordic
+
+  self:
+    path: application

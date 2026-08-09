@@ -1,0 +1,334 @@
+OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Analyzing: 7 targets (1 packages loaded)
+Analyzing: 7 targets (5 packages loaded, 6 targets configured)
+Analyzing: 7 targets (5 packages loaded, 6 targets configured)
+
+Analyzing: 7 targets (18 packages loaded, 9 targets configured)
+
+Analyzing: 7 targets (65 packages loaded, 18 targets configured)
+
+Analyzing: 7 targets (81 packages loaded, 174 targets configured)
+
+Analyzing: 7 targets (101 packages loaded, 663 targets configured)
+
+Analyzing: 7 targets (133 packages loaded, 1957 targets configured)
+
+Analyzing: 7 targets (151 packages loaded, 2910 targets configured)
+
+Analyzing: 7 targets (177 packages loaded, 4140 targets configured)
+
+Analyzing: 7 targets (214 packages loaded, 5593 targets configured, 3 aspect applications)
+
+Analyzing: 7 targets (215 packages loaded, 5605 targets configured, 230 aspect applications)
+[93 / 430] checking cached actions
+INFO: Analyzed 7 targets (215 packages loaded, 5617 targets configured, 475 aspect applications).
+[174 / 475] checking cached actions
+[267 / 547] [Prepa] Rustfmt //:invisible_keyboard
+[278 / 547] [Prepa] Rustfmt //:calibration-engine-contract-test
+INFO: From Testing //:rustfmt-test:
+==================== Test output for //:rustfmt-test:
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/9/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/calibration-browser-fixture.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/9/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/invisible-keyboard.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/9/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/invisible_keyboard.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/9/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/unit-tests.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/9/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/cli-unit-tests.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/9/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/cli-contract-test.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/9/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/output-system-contract-test.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/9/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/output-system-required-test.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/9/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/controller-source-contract-test.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/9/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/artifact-contract-test.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/9/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/calibration-contract-test.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/9/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/calibration-app-contract-test.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/9/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/calibration-capture-contract-test.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/9/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/calibration-engine-contract-test.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/9/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/calibration-worker-contract-test.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/9/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/clock-contract-test.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/9/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/clock-epoch-contract-test.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/9/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/decoder-simulation-contract-test.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/9/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/device-transport-contract-test.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/9/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/evaluation-contract-test.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/9/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/gate0-contract-test.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/9/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/gate0-trace-contract-test.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/9/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/hardware-calibration-contract-test.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/9/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/layout-contract-test.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/9/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/label-contract-test.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/9/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/manifest-contract-test.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/9/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/neutral-contract-test.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/9/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/output-contract-test.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/9/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/physical-study-contract-test.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/9/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/pilot-contract-test.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/9/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/pipeline-contract-test.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/9/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/prompt-contract-test.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/9/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/replay-contract-test.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/9/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/protocol-contract-test.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/9/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/runtime-contract-test.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/9/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/session-contract-test.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/9/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/transport-contract-test.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/9/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/validation-contract-test.rustfmt.ok
+================================================================================
+[500 / 549] 1 / 7 tests; Clippy //:invisible_keyboard; 0s processwrapper-sandbox
+[501 / 549] 1 / 7 tests; [Prepa] Clippy //:unit-tests
+[501 / 549] 1 / 7 tests; Clippy //:unit-tests; 1s processwrapper-sandbox
+[504 / 549] 1 / 7 tests; checking cached actions
+[508 / 551] 1 / 7 tests; Clippy //:invisible-keyboard; 0s processwrapper-sandbox
+[510 / 551] 1 / 7 tests; Clippy //:cli-contract-test; 0s processwrapper-sandbox
+[511 / 551] 1 / 7 tests; [Prepa] Clippy //:output-system-contract-test
+[517 / 551] 1 / 7 tests; [Prepa] Clippy //:calibration-capture-contract-test
+[521 / 551] 1 / 7 tests; [Prepa] Clippy //:clock-epoch-contract-test
+[526 / 551] 1 / 7 tests; Clippy //:gate0-trace-contract-test; 0s processwrapper-sandbox
+[531 / 551] 1 / 7 tests; [Prepa] Clippy //:neutral-contract-test
+[536 / 551] 1 / 7 tests; [Prepa] Clippy //:prompt-contract-test
+[540 / 551] 1 / 7 tests; [Prepa] Clippy //:session-contract-test
+INFO: From Compiling Rust bin hardware-calibration-contract-test (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+[547 / 553] 1 / 7 tests; [Prepa] runfiles for //:hardware-calibration-contract-test
+[548 / 554] 1 / 7 tests; Testing //:unit-tests; 1s processwrapper-sandbox
+[548 / 554] 1 / 7 tests; Testing //:unit-tests; 8s processwrapper-sandbox
+INFO: From Testing //:unit-tests:
+==================== Test output for //:unit-tests:
+
+running 58 tests
+test calibration_capture::tests::capture_gate_rejects_gate0_controls_before_generic_integrity ... ok
+test calibration_capture::tests::causal_contact_emission_is_invariant_to_future_frames ... ok
+test calibration_capture::tests::contacts_after_the_bounded_gate_cannot_change_an_accepted_association ... ok
+test calibration_capture::tests::first_event_rule_reports_wrong_hand_wrong_finger_no_event_and_multiple_events ... ok
+test calibration_capture::tests::pre_cue_contact_is_ignored_without_hiding_the_first_post_cue_contact ... ok
+test calibration_capture::tests::rendered_receipt_opens_a_self_paced_gate_but_sensor_contact_anchors_the_label ... ok
+test calibration_capture::tests::scheduled_stillness_is_not_counted_as_ordinary_motion ... ok
+test calibration_capture::tests::target_cannot_reuse_a_threshold_or_null_parameter_window ... ok
+test calibration_capture::tests::target_identity_cannot_select_past_the_first_causal_event ... ok
+test calibration_capture::tests::target_truth_windows_reserve_all_source_records_against_later_targets ... ok
+test calibration_engine::tests::binder_allows_simultaneous_opposite_hand_truth_windows ... ok
+test calibration_engine::tests::binder_rejects_intersecting_target_truth_windows ... ok
+test calibration_engine::tests::binder_rejects_target_intersection_with_threshold_null_truth ... ok
+test calibration_engine::tests::clean_stream_gate_rejects_gate0_controls_before_generic_integrity ... ok
+test axis_characterization::tests::axis_search_recovers_every_proper_signed_rotation ... ok
+test clock_epoch::tests::timestamp_spool_is_private_and_removed_on_normal_drop ... ok
+test clock_epoch::tests::timestamp_spool_is_removed_when_a_fit_path_returns_an_error ... ok
+test decoder::tests::borrowed_split_window_reuses_storage_and_preserves_decode_order ... ok
+test hardware_calibration::tests::abort_lease_loss_and_source_fault_commit_typed_nonready_state ... ok
+test hardware_calibration::tests::capture_transition_preserves_a_split_frame_and_pending_candidates ... ok
+test hardware_calibration::tests::contended_keyboard_boundary_dispatches_only_one_batch_before_retry ... ok
+test hardware_calibration::tests::displayed_coverage_uses_a_canonical_complete_set_from_two_blocks ... ok
+test hardware_calibration::tests::finite_keyboard_warm_start_and_passive_threshold_plans_cover_their_contracts ... ok
+test hardware_calibration::tests::fitting_and_heldout_monitors_reject_acquisition_faults_and_keep_both_incidents ... ok
+test hardware_calibration::tests::healthy_freeze_preserves_interleaved_receipt_order ... ok
+test hardware_calibration::tests::keyboard_blocks_alternate_only_between_finite_prompt_passes ... ok
+test hardware_calibration::tests::keyboard_dispatch_yields_with_replenished_backlog_and_loses_no_events ... ok
+test hardware_calibration::tests::missing_passive_contact_preserves_original_fitting_and_heldout_capture ... ok
+test hardware_calibration::tests::monitor_successor_keeps_sequence_and_sensor_time_continuity ... ok
+test hardware_calibration::tests::observed_monitor_fault_cannot_be_erased_by_a_transport_handoff ... ok
+test hardware_calibration::tests::original_incident_file_conflict_prevents_terminal_commit_but_retains_other_evidence ... ok
+test hardware_calibration::tests::quiescent_keyboard_boundary_drains_the_full_bounded_queue_before_transition ... ok
+test hardware_calibration::tests::raw_prompt_attempts_do_not_change_matched_deficits_and_stop_at_the_cap ... ok
+test hardware_calibration::tests::selected_keyboard_state_survives_worker_boundaries_until_key_up ... ok
+test hardware_calibration::tests::timed_capture_needs_every_receipt_and_null_window_after_the_drain_horizon ... ok
+test hardware_calibration::tests::timed_plans_preserve_every_target_and_per_hand_motion_exposure ... ok
+test output::linux::tests::all_core28_usages_have_unique_kernel_codes ... ok
+test protocol::tests::checksum_valid_bad_magic_is_rejected ... ok
+test protocol::tests::checksum_valid_invalid_headers_are_rejected_semantically ... ok
+test protocol::tests::checksum_valid_unknown_flags_are_rejected ... ok
+test protocol::tests::crc32_matches_standard_check_value ... ok
+test reader_mailbox::tests::close_owns_the_full_queue_and_rejects_waiting_publishers ... ok
+test reader_mailbox::tests::close_snapshot_equals_the_publish_result_at_the_admission_race ... ok
+test reader_mailbox::tests::closed_receiver_disconnects_while_senders_are_still_alive ... ok
+test reader_mailbox::tests::freeing_space_admits_one_waiting_item_in_order ... ok
+test reader_mailbox::tests::receiver_drop_releases_the_lock_before_dropping_queued_values ... ok
+test reader_mailbox::tests::receiver_reports_disconnect_only_after_the_admitted_backlog ... ok
+test reader_mailbox::tests::two_publishers_keep_per_source_order_without_loss_or_duplication ... ok
+test session::tests::all_header_prefix_corruption_is_detected ... ok
+test session::tests::checksum_valid_candidate_length_contradiction_is_rejected ... ok
+test session::tests::checksum_valid_footer_count_mismatch_is_rejected ... ok
+test session::tests::checksum_valid_nonzero_record_reserved_bytes_are_rejected ... ok
+test session::tests::checksum_valid_unknown_record_kind_is_rejected ... ok
+test session::tests::clean_two_hand_stream_rejects_recorded_time_regressions ... ok
+test session::tests::oversized_payload_is_rejected_before_the_writer_changes ... ok
+test transport::tests::cobs_round_trips_zero_patterns_and_long_runs ... ok
+test transport::tests::malformed_cobs_run_is_rejected ... ok
+test hardware_calibration::tests::abort_and_lease_loss_preserve_original_capture_when_result_pending_or_dropped ... ok
+
+test result: ok. 58 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 8.80s
+
+================================================================================
+INFO: From Testing //:clock-epoch-contract-test:
+==================== Test output for //:clock-epoch-contract-test:
+
+running 10 tests
+test clock_fit_rejects_frames_from_an_undeclared_hand ... ok
+test clock_epoch_round_trip_binds_manifest_session_controller_and_boot ... ok
+test explicitly_unreliable_controller_clock_prevents_epoch_fit ... ok
+test live_clock_report_rejects_different_bytes_with_the_same_session_header ... ok
+test live_clock_report_separates_recent_operational_fits_from_offline_qualification ... ok
+test fresh_startup_frames_bootstrap_both_controller_fits_from_host_receipts ... ok
+test one_hand_clock_fit_preserves_the_declared_side ... ok
+test unknown_fields_and_wrong_hand_order_are_rejected ... ok
+test wrong_session_controller_or_boot_fails_closed ... ok
+test streamed_clock_fit_matches_the_in_memory_reference_exactly ... ok
+
+test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.19s
+
+================================================================================
+INFO: From Testing //:clippy-test:
+==================== Test output for //:clippy-test:
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/54/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/calibration-browser-fixture.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/54/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/invisible-keyboard.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/54/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/invisible_keyboard.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/54/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/unit-tests.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/54/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/cli-unit-tests.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/54/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/cli-contract-test.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/54/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/output-system-contract-test.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/54/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/output-system-required-test.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/54/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/controller-source-contract-test.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/54/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/artifact-contract-test.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/54/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/calibration-contract-test.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/54/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/calibration-app-contract-test.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/54/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/calibration-capture-contract-test.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/54/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/calibration-engine-contract-test.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/54/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/calibration-worker-contract-test.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/54/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/clock-contract-test.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/54/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/clock-epoch-contract-test.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/54/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/decoder-simulation-contract-test.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/54/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/device-transport-contract-test.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/54/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/evaluation-contract-test.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/54/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/gate0-contract-test.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/54/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/gate0-trace-contract-test.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/54/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/hardware-calibration-contract-test.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/54/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/layout-contract-test.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/54/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/label-contract-test.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/54/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/manifest-contract-test.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/54/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/neutral-contract-test.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/54/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/output-contract-test.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/54/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/physical-study-contract-test.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/54/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/pilot-contract-test.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/54/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/pipeline-contract-test.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/54/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/prompt-contract-test.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/54/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/replay-contract-test.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/54/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/protocol-contract-test.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/54/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/runtime-contract-test.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/54/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/session-contract-test.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/54/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/transport-contract-test.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/54/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/validation-contract-test.clippy.ok
+================================================================================
+[551 / 554] 4 / 7 tests; Testing //:calibration-worker-contract-test; 1s processwrapper-sandbox
+[551 / 554] 4 / 7 tests; Testing //:calibration-worker-contract-test; 10s processwrapper-sandbox
+[551 / 554] 4 / 7 tests; Testing //:calibration-worker-contract-test; 16s processwrapper-sandbox
+FAIL: //:calibration-worker-contract-test (Exit 101) (see /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/execroot/_main/bazel-out/aarch64-fastbuild/testlogs/calibration-worker-contract-test/test.log)
+INFO: From Testing //:calibration-worker-contract-test:
+==================== Test output for //:calibration-worker-contract-test:
+
+running 15 tests
+test decoded_same_identity_integrity_faults_retain_raw_suffix_and_first_cause ... ok
+test first_frame_rejects_out_of_range_sensor_time_without_discarding_raw_bytes ... ok
+test fitting_checkpoint_refuses_to_infer_layout_without_a_confirmation_receipt ... ok
+test fitting_finish_rejects_an_incomplete_surface_plan_before_matching ... ok
+test fitting_requires_a_retained_neutral_window_before_finalization ... ok
+test held_out_capture_inherits_the_frozen_rule_and_rejects_keyboard_labels ... ok
+test selected_keyboard_identity_change_faults_the_capture_permanently ... ok
+test terminal_capacity_rejection_retains_exact_worker_incident ... FAILED
+test terminal_late_publication_retains_exact_worker_incident ... FAILED
+test terminal_receipt_regression_retains_exact_worker_incident ... FAILED
+test concurrent_sensor_and_keyboard_capture_builds_source_bound_fitting_evidence ... ok
+test worker_integrity_preserves_wrapping_sequences_and_nondecreasing_sample_times ... ok
+test worker_refuses_to_bind_a_surface_plan_after_the_first_surface_fact ... ok
+test wrong_controller_frame_is_retained_and_faults_the_capture ... ok
+test transport_rejection_retention_bound_preserves_primary_cause ... FAILED
+
+failures:
+
+---- terminal_capacity_rejection_retains_exact_worker_incident stdout ----
+
+thread 'terminal_capacity_rejection_retains_exact_worker_incident' (46451) panicked at tests/calibration-worker-contract.rs:842:5:
+assertion `left == right` failed
+  left: 0
+ right: 3
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- terminal_late_publication_retains_exact_worker_incident stdout ----
+
+thread 'terminal_late_publication_retains_exact_worker_incident' (46452) panicked at tests/calibration-worker-contract.rs:842:5:
+assertion `left == right` failed
+  left: 1
+ right: 3
+
+---- terminal_receipt_regression_retains_exact_worker_incident stdout ----
+
+thread 'terminal_receipt_regression_retains_exact_worker_incident' (46453) panicked at tests/calibration-worker-contract.rs:842:5:
+assertion `left == right` failed
+  left: 0
+ right: 3
+
+---- transport_rejection_retention_bound_preserves_primary_cause stdout ----
+
+thread 'transport_rejection_retention_bound_preserves_primary_cause' (46454) panicked at tests/calibration-worker-contract.rs:723:5:
+assertion `left == right` failed
+  left: 0
+ right: 300000
+
+
+failures:
+    terminal_capacity_rejection_retains_exact_worker_incident
+    terminal_late_publication_retains_exact_worker_incident
+    terminal_receipt_regression_retains_exact_worker_incident
+    transport_rejection_retention_bound_preserves_primary_cause
+
+test result: FAILED. 11 passed; 4 failed; 0 ignored; 0 measured; 0 filtered out; finished in 16.56s
+
+================================================================================
+==================== Test output for //:neutral-contract-test:
+
+running 8 tests
+test acquisition_faults_bad_clocks_short_evidence_and_any_invalid_candidate_are_rejected ... ok
+test canonical_json_round_trip_and_source_bound_mutation_detection ... ok
+test manifest_clock_session_and_window_identities_must_all_match ... ok
+test missing_hands_sensors_invalid_frames_and_loss_fail_closed ... ok
+test neutral_authority_rejects_altered_clock_report_and_rebound_fingerprint ... ok
+test neutral_evidence_rejects_gate0_control_records_as_their_own_context_error ... ok
+test report_derives_inspectable_two_hand_six_sensor_evidence ... ok
+test neutral_authority_rejects_raw_receipt_faults_despite_passing_clock_statistics ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.50s
+
+================================================================================
+INFO: From Testing //:neutral-contract-test:
+[553 / 554] 6 / 7 tests, 1 failed; Testing //:hardware-calibration-contract-test; 0s processwrapper-sandbox
+==================== Test output for //:hardware-calibration-contract-test:
+
+running 11 tests
+test abort_closes_label_admission_before_incident_finalization ... ok
+test abort_incident_closes_buffered_suffix_at_original_receipt ... ok
+test invalid_sensor_frame_is_a_terminal_stream_integrity_failure ... ok
+test keyboard_checkpoint_can_freeze_the_rule_before_passive_threshold_evidence ... ok
+test matched_examples_across_two_blocks_clear_the_exact_position_deficit ... ok
+test missing_causal_window_keeps_raw_attempts_out_of_matched_coverage ... ok
+test repeated_labels_cannot_reuse_overlapping_causal_windows ... ok
+test saved_result_acknowledgement_uses_the_exact_bounded_deadline ... ok
+test source_payload_mismatch_keeps_closed_diagnostic_bytes ... ok
+test timed_out_acknowledgement_is_durable_and_does_not_claim_the_result_was_seen ... ok
+test bounded_label_retention_reports_an_incomplete_incident ... ok
+
+test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.77s
+
+================================================================================
+INFO: From Testing //:hardware-calibration-contract-test:
+INFO: Found 7 test targets...
+INFO: Elapsed time: 79.855s, Critical Path: 16.88s
+INFO: 56 processes: 498 action cache hit, 2 internal, 1 local, 60 processwrapper-sandbox.
+INFO: Build completed, 1 test FAILED, 56 total actions
+//:clippy-test                                                           PASSED in 0.0s
+//:clock-epoch-contract-test                                             PASSED in 0.2s
+//:hardware-calibration-contract-test                                    PASSED in 0.8s
+//:neutral-contract-test                                                 PASSED in 0.5s
+//:rustfmt-test                                                          PASSED in 0.0s
+//:unit-tests                                                            PASSED in 8.8s
+//:calibration-worker-contract-test                                      FAILED in 16.6s
+  /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/execroot/_main/bazel-out/aarch64-fastbuild/testlogs/calibration-worker-contract-test/test.log
+
+Executed 7 out of 7 tests: 6 tests pass and 1 fails locally.

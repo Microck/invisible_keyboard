@@ -1,0 +1,40 @@
+OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //.crabbox/ikb-stop-browser:stop-browser-fixture (1 packages loaded)
+Analyzing: target //.crabbox/ikb-stop-browser:stop-browser-fixture (5 packages loaded, 6 targets configured)
+Analyzing: target //.crabbox/ikb-stop-browser:stop-browser-fixture (5 packages loaded, 6 targets configured)
+
+Analyzing: target //.crabbox/ikb-stop-browser:stop-browser-fixture (9 packages loaded, 8 targets configured)
+
+Analyzing: target //.crabbox/ikb-stop-browser:stop-browser-fixture (60 packages loaded, 8 targets configured)
+
+Analyzing: target //.crabbox/ikb-stop-browser:stop-browser-fixture (81 packages loaded, 198 targets configured)
+
+Analyzing: target //.crabbox/ikb-stop-browser:stop-browser-fixture (108 packages loaded, 874 targets configured)
+
+Analyzing: target //.crabbox/ikb-stop-browser:stop-browser-fixture (123 packages loaded, 1598 targets configured)
+
+Analyzing: target //.crabbox/ikb-stop-browser:stop-browser-fixture (148 packages loaded, 3099 targets configured)
+
+Analyzing: target //.crabbox/ikb-stop-browser:stop-browser-fixture (191 packages loaded, 4871 targets configured)
+
+Analyzing: target //.crabbox/ikb-stop-browser:stop-browser-fixture (204 packages loaded, 5394 targets configured)
+
+INFO: Analyzed target //.crabbox/ikb-stop-browser:stop-browser-fixture (204 packages loaded, 5394 targets configured).
+[180 / 425] checking cached actions
+[423 / 425] [Prepa] Compiling Rust bin stop-browser-fixture (1 file)
+INFO: From Compiling Rust bin stop-browser-fixture (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+INFO: Found 1 target...
+Target //.crabbox/ikb-stop-browser:stop-browser-fixture up-to-date:
+  bazel-bin/.crabbox/ikb-stop-browser/stop-browser-fixture
+INFO: Elapsed time: 17.556s, Critical Path: 0.88s
+INFO: 6 processes: 419 action cache hit, 5 internal, 1 processwrapper-sandbox.
+INFO: Build completed successfully, 6 total actions

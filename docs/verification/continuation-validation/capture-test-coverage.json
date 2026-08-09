@@ -1,0 +1,32 @@
+{
+  "source_manifest_sha256": "5b6c2109e0a521d3470f895b87f8d4b9667e8a3c72da3fdd510ab234ffa478e6",
+  "discovered_case_count": 20,
+  "all_cases_passed_without_overlap": true,
+  "partitions": {
+    "native": [
+      "CaptureContractTests.test_analyzer_failure_aborts_recorder_and_suppresses_publication",
+      "CaptureContractTests.test_chunk_jump_beyond_stop_window_suppresses_publication",
+      "CaptureContractTests.test_invalid_final_analyzer_log_never_authorizes_a_recorder_footer",
+      "CaptureContractTests.test_production_wrapper_invocation_publishes_one_complete_set",
+      "CaptureContractTests.test_publication_rolls_back_finals_and_keeps_all_partials",
+      "CaptureContractTests.test_readiness_after_the_boot_window_suppresses_publication",
+      "CaptureContractTests.test_readiness_at_the_boot_window_boundary_preserves_the_full_capture",
+      "CaptureContractTests.test_readiness_requires_one_byte_followed_by_eof",
+      "CaptureContractTests.test_recorder_failure_aborts_analyzer_and_suppresses_publication",
+      "CaptureContractTests.test_recorder_log_quota_aborts_both_children",
+      "CaptureContractTests.test_signal_aborts_both_children_without_publication",
+      "FinalizationContractTests.test_crabbox_finalizer_hashes_large_inputs_and_resists_scorer_replacement",
+      "FinalizationContractTests.test_final_sidecar_and_report_publish_as_a_pair",
+      "FinalizationContractTests.test_finalizer_rejects_a_distinct_scorer_identity",
+      "FinalizationContractTests.test_log_binds_driver_stop_session_manifest_and_firmware",
+      "FinalizationContractTests.test_scorer_failure_is_fail_closed",
+      "FinalizationContractTests.test_scorer_stderr_quota_is_fail_closed",
+      "StaticCaptureStackContractTests.test_bazel_build_entrypoint_resolves_declared_inputs"
+    ],
+    "x86": [
+      "RealCaptureBinaryContractTests.test_missing_real_capture_binary_environment_fails_closed",
+      "RealCaptureBinaryContractTests.test_real_pinned_capture_binary_is_hash_bound_and_loadable"
+    ]
+  },
+  "reason": "Native Python exercises the unchanged 10 ms capture deadline; the x86 guest executes the pinned x86 binary. No test or application limit changed."
+}

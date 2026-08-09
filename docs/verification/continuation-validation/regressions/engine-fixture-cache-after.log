@@ -1,0 +1,104 @@
+OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //:calibration-engine-contract-test (1 packages loaded)
+Analyzing: target //:calibration-engine-contract-test (5 packages loaded, 6 targets configured)
+Analyzing: target //:calibration-engine-contract-test (5 packages loaded, 6 targets configured)
+
+Analyzing: target //:calibration-engine-contract-test (14 packages loaded, 9 targets configured)
+
+Analyzing: target //:calibration-engine-contract-test (66 packages loaded, 25 targets configured)
+
+Analyzing: target //:calibration-engine-contract-test (82 packages loaded, 453 targets configured)
+
+Analyzing: target //:calibration-engine-contract-test (112 packages loaded, 997 targets configured)
+
+Analyzing: target //:calibration-engine-contract-test (124 packages loaded, 1936 targets configured)
+
+Analyzing: target //:calibration-engine-contract-test (155 packages loaded, 3285 targets configured)
+
+Analyzing: target //:calibration-engine-contract-test (191 packages loaded, 4667 targets configured)
+
+INFO: Analyzed target //:calibration-engine-contract-test (206 packages loaded, 5419 targets configured).
+[1 / 1] no actions running
+[128 / 425] checking cached actions
+[423 / 425] [Prepa] Compiling Rust bin calibration-engine-contract-test (1 file)
+INFO: From Compiling Rust bin calibration-engine-contract-test (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+[424 / 425] [Prepa] runfiles for //:calibration-engine-contract-test
+[425 / 426] Testing //:calibration-engine-contract-test; 1s processwrapper-sandbox
+[425 / 426] Testing //:calibration-engine-contract-test; 10s processwrapper-sandbox
+[425 / 426] Testing //:calibration-engine-contract-test; 40s processwrapper-sandbox
+[425 / 426] Testing //:calibration-engine-contract-test; 100s processwrapper-sandbox
+[425 / 426] Testing //:calibration-engine-contract-test; 160s processwrapper-sandbox
+[425 / 426] Testing //:calibration-engine-contract-test; 220s processwrapper-sandbox
+[425 / 426] Testing //:calibration-engine-contract-test; 280s processwrapper-sandbox
+[425 / 426] Testing //:calibration-engine-contract-test; 340s processwrapper-sandbox
+[425 / 426] Testing //:calibration-engine-contract-test; 400s processwrapper-sandbox
+[425 / 426] Testing //:calibration-engine-contract-test; 460s processwrapper-sandbox
+[425 / 426] Testing //:calibration-engine-contract-test; 520s processwrapper-sandbox
+[425 / 426] Testing //:calibration-engine-contract-test; 580s processwrapper-sandbox
+[425 / 426] Testing //:calibration-engine-contract-test; 640s processwrapper-sandbox
+[425 / 426] Testing //:calibration-engine-contract-test; 700s processwrapper-sandbox
+[425 / 426] Testing //:calibration-engine-contract-test; 760s processwrapper-sandbox
+[425 / 426] Testing //:calibration-engine-contract-test; 820s processwrapper-sandbox
+[425 / 426] Testing //:calibration-engine-contract-test; 880s processwrapper-sandbox
+[425 / 426] Testing //:calibration-engine-contract-test; 900s processwrapper-sandbox
+
+TIMEOUT: //:calibration-engine-contract-test (Summary)
+      /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/execroot/_main/bazel-out/aarch64-fastbuild/testlogs/calibration-engine-contract-test/test.log
+INFO: From Testing //:calibration-engine-contract-test:
+==================== Test output for //:calibration-engine-contract-test:
+
+running 23 tests
+test canonical_surface_plan_completeness_is_enforced_before_fit ... ok
+test capture_bound_fit_locks_and_validates_two_hands has been running for over 60 seconds
+test derived_truth_windows_are_record_disjoint_within_each_session ... ok
+test diagnostic_evidence_json_cannot_enter_trusted_engine_apis has been running for over 60 seconds
+test capture_bound_fit_locks_and_validates_two_hands ... ok
+test diagnostic_evidence_json_cannot_enter_trusted_engine_apis ... ok
+test down_up_overlap_cannot_be_reused_as_passive_training_truth ... ok
+test down_up_overlap_cannot_tune_neutral_contact_thresholds ... ok
+test down_up_overlap_cannot_count_as_held_out_truth has been running for over 60 seconds
+test fitting_and_validation_reject_wrong_purpose_journals ... ok
+test down_up_overlap_cannot_count_as_held_out_truth ... ok
+test fitting_session_overlap_is_derived_from_artifact_sources ... ok
+test held_out_keyboard_identity_must_match_the_locked_artifact has been running for over 60 seconds
+test held_out_keyboard_identity_must_match_the_locked_artifact ... ok
+test held_out_plan_rejects_cross_artifact_reuse ... ok
+test held_out_plan_rejects_seed_mutation ... ok
+test held_out_readiness_requires_every_plan_owned_motion_segment ... ok
+test held_out_validation_cannot_mutate_the_locked_artifact has been running for over 60 seconds
+test held_out_validation_cannot_mutate_the_locked_artifact ... ok
+test held_out_validation_rederives_evidence_from_plan_bound_capture_journal has been running for over 60 seconds
+test immutable_identity_rejects_tampered_session_and_journal_binding ... ok
+test held_out_validation_rederives_evidence_from_plan_bound_capture_journal ... ok
+test keyboard_warm_start_labels_cannot_change_passive_fitted_artifact ... ok
+test offline_authority_consumers_reject_altered_valid_looking_clock_reports has been running for over 60 seconds
+test offline_authority_consumers_reject_forged_clock_statistics_and_fingerprints has been running for over 60 seconds
+test offline_authority_consumers_reject_altered_valid_looking_clock_reports ... ok
+test quiet_plan_windows_cannot_satisfy_ordinary_motion ... ok
+test offline_authority_consumers_reject_forged_clock_statistics_and_fingerprints ... ok
+test recorded_exposure_is_derived_from_matched_motion_windows has been running for over 60 seconds
+test recorded_exposure_is_derived_from_matched_motion_windows ... ok
+test signed_permutation_wire_axes_are_equivalent_through_fit_and_held_out_validation has been running for over 60 seconds
+test unlabeled_impulses_are_counted_as_spontaneous_false_activations has been running for over 60 seconds
+test unlabeled_impulses_are_counted_as_spontaneous_false_activations ... ok
+-- Test timed out at 2026-10-11 06:31:29 UTC --
+================================================================================
+INFO: Found 1 test target...
+Target //:calibration-engine-contract-test up-to-date:
+  bazel-bin/calibration-engine-contract-test
+INFO: Elapsed time: 918.185s, Critical Path: 901.57s
+INFO: 4 processes: 422 action cache hit, 2 internal, 3 processwrapper-sandbox.
+INFO: Build completed, 1 test FAILED, 4 total actions
+//:calibration-engine-contract-test                                     TIMEOUT in 900.0s
+  /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/execroot/_main/bazel-out/aarch64-fastbuild/testlogs/calibration-engine-contract-test/test.log
+
+Executed 1 out of 1 test: 1 fails locally.

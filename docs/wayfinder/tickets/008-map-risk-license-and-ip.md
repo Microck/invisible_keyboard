@@ -38,12 +38,15 @@ bystander/environment-capture review. Both must pass deterministic key-state,
 least-privilege, all-up recovery, password/logging, and explicit research
 capture controls before system input or participant data collection.
 
-LapCal is study-only for the canonical project. Its repo-wide CC BY-NC-SA 4.0
-statement blocks commercial copying/adaptation absent a separate grant, the
-dataset/model participant and provenance rights are unproved, and the license
-grants no patent rights. The report specifies a fresh clean-room implementation
-route. The targeted patent list is not an FTO opinion; counsel must chart the
-frozen architecture's live claims, families, status, ownership, and territories.
+Project policy keeps LapCal study-only for the canonical implementation and
+forbids importing its protected expression. CC BY-NC-SA 4.0 permits specified
+noncommercial exercises of licensed rights subject to its conditions, does not
+govern uses that require no copyright permission, and grants no patent rights.
+Dataset/model participant and provenance rights remain unproved. The report
+specifies an independent-implementation/no-artifact-reuse policy, not a legal
+safe harbor. The targeted patent list is not an FTO opinion; counsel must chart
+the frozen architecture's live claims, families, status, ownership, and
+territories.
 
 FCC/RED/GB market access, Bluetooth qualification, USB mark/VID use, body-worn
 RF, battery, electrical, material, ergonomics, and accessibility work become

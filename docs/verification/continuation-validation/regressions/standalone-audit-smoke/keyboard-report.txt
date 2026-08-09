@@ -1,0 +1,32 @@
+CaptureBuildReport {
+    raw_keyboard_events: 8,
+    accepted_key_downs: 1,
+    rejected_keyboard_events: 4,
+    matched_observations: 1,
+    unmatched_observations: 0,
+    matching_rule: CalibrationMatchingRule {
+        schema: "invisible-keyboard-causal-contact-rule-v1",
+        acquisition_manifest_sha256: "78a075fbefc74edd2c3ad79b1aff042b9a947788e317883212731d4814c5938d",
+        neutral_windows_sha256: "362d81d535b89823e5964d0d8396b027bc0cd79e204d268f055eaf9ab78580b2",
+        neutral_source_sha256: "7f5359ca13d3d9fa34bb383b7f183388bd9b165e71a729e68fa68400077076b4",
+        feature_schema: "dynamic-finger-to-dorsal-energy-v1",
+        thresholds: [
+            HandContactThresholds {
+                hand: Left,
+                low_energy: 1024,
+                high_energy: 4096,
+                motion_energy: 4096,
+            },
+            HandContactThresholds {
+                hand: Right,
+                low_energy: 1024,
+                high_energy: 4096,
+                motion_energy: 4096,
+            },
+        ],
+        debounce_windows: 2,
+        rearm_windows: 4,
+        response_start_ns: 0,
+        response_end_ns: 1500000000,
+    },
+}

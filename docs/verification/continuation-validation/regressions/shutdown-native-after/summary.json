@@ -1,0 +1,17 @@
+{
+  "mode": "native",
+  "command": [
+    "bazelisk",
+    "--batch",
+    "--host_jvm_args=-Xmx2g",
+    "test",
+    "//:clippy-test",
+    "//:rustfmt-test",
+    "//:output-system-contract-test",
+    "--nocache_test_results",
+    "--test_output=all",
+    "--jobs=1",
+    "--local_resources=memory=3072"
+  ],
+  "exit_code": 0
+}

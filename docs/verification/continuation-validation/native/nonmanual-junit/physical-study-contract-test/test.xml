@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="physical-study-contract-test" tests="1" failures="0" errors="0">
+    <testcase name="physical-study-contract-test" status="run" duration="117" time="117"></testcase>
+      <system-out>
+Generated test.log (if the file is not UTF-8, then this may be unreadable):
+<![CDATA[exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+Executing tests from //:physical-study-contract-test
+-----------------------------------------------------------------------------
+
+running 25 tests
+test analysis_plan_contents_cannot_be_retuned_after_collection ... ok
+test both_hands_are_required_in_every_heldout_remount ... ok
+test anticipatory_contact_events_cannot_pass_the_latency_gate ... ok
+test bounded_decoders_reject_cap_plus_one_before_deserialization ... ok
+test finger_fixture_covers_both_declared_hands ... ok
+test finite_participant_latency_uncertainty_precedes_cluster_resampling ... ok
+test complete_truth_windows_match_exact_timestamp_endpoints ... ok
+test frozen_roster_rejects_optional_stopping_or_row_removal ... ok
+test gate1_fits_only_train_selects_only_validation_and_scores_remounts ... ok
+test gate0b_scores_contact_timing_and_preserves_inconclusive ... ok
+test jsonl_encoder_reports_the_exact_full_size_after_crossing_the_cap ... ok
+test latency_and_class_recall_decisions_cluster_at_participant ... ok
+test gate2_enforces_fifty_per_position_and_scores_reserved_abstention ... ok
+test missing_mount_class_is_rejected_instead_of_reported_inconclusive ... ok
+test participant_identity_cannot_cross_a_split ... ok
+test negative_outputs_and_duplicate_contacts_are_decisive_failures ... ok
+test row_sealing_and_encoding_bound_constructed_feature_output ... ok
+test sealed_truth_window_overflow_is_rejected_before_scoring ... ok
+test row_hash_and_report_bytes_are_canonical ... ok
+test sealing_rejects_a_hash_that_pushes_the_final_row_over_the_cap ... ok
+test sealed_truth_window_underflow_is_rejected_before_scoring ... ok
+test semantic_tamper_is_rejected_before_scoring ... ok
+test single_row_decoder_accepts_pretty_unsealed_collection_input ... ok
+test token_negative_exposure_cannot_satisfy_a_heldout_stratum ... ok
+test source_artifact_cannot_cross_a_split ... ok
+
+test result: ok. 25 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 117.68s]]>
+      </system-out>
+    </testsuite>
+</testsuites>

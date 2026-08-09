@@ -1,0 +1,7 @@
+physical_study_round=frozen
+roster=/home/ubuntu/audit-regression-proof/study-boundary-cli-after/underflow/roster.jsonl
+manifest=/home/ubuntu/audit-regression-proof/study-boundary-cli-after/underflow/manifest.json
+manifest_sha256=e1dd39788b2b0789f5e6a19ddfb76b61771c11a3c4704dfcc033bf76fb9a30dd
+plan=/home/ubuntu/audit-regression-proof/study-boundary-cli-after/underflow/plan.json
+plan_sha256=8934c618a970bfb89c2c4357380becc8d1492af908905a3d74b9e4ee6f0f6a0a
+expected_rows=1

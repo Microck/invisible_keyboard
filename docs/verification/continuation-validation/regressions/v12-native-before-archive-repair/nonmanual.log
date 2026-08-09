@@ -1,0 +1,1360 @@
+OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Analyzing: 40 targets (2 packages loaded)
+Analyzing: 40 targets (6 packages loaded, 6 targets configured)
+Analyzing: 40 targets (6 packages loaded, 6 targets configured)
+
+Analyzing: 40 targets (12 packages loaded, 12 targets configured)
+
+Analyzing: 40 targets (64 packages loaded, 12 targets configured)
+
+Analyzing: 40 targets (85 packages loaded, 520 targets configured)
+
+Analyzing: 40 targets (114 packages loaded, 1108 targets configured)
+
+Analyzing: 40 targets (137 packages loaded, 1843 targets configured)
+
+Analyzing: 40 targets (149 packages loaded, 2951 targets configured)
+
+INFO: From Testing //firmware/zephyr:native-conformance-test:
+==================== Test output for //firmware/zephyr:native-conformance-test:
+================================================================================
+Analyzing: 40 targets (172 packages loaded, 3963 targets configured)
+[40 / 44] 1 / 4 tests; Testing //firmware/zephyr:native-conformance-test; 0s processwrapper-sandbox
+INFO: From Testing //:firmware-frame-conformance-test:
+==================== Test output for //:firmware-frame-conformance-test:
+frame_length=160
+frame_hex=494b42320200063f00000000000000000000000000000000111111111111111111111111111111111111111111111111111111111111111122222222222222222222222222222222000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000b6c63ee2
+transport_length=162
+transport_hex=06494b42320203063f01010101010101010101010101010131111111111111111111111111111111111111111111111111111111111111111122222222222222222222222222222222010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010105b6c63ee200
+================================================================================
+INFO: From Testing //:firmware-acquisition-conformance-test:
+==================== Test output for //:firmware-acquisition-conformance-test:
+================================================================================
+INFO: From Testing //firmware/zephyr:native-glue-conformance-test:
+==================== Test output for //firmware/zephyr:native-glue-conformance-test:
+================================================================================
+Analyzing: 40 targets (203 packages loaded, 4958 targets configured)
+[44 / 44] 4 / 4 tests; no actions running
+Analyzing: 40 targets (215 packages loaded, 5592 targets configured)
+[44 / 44] 4 / 4 tests; no actions running
+Analyzing: 40 targets (215 packages loaded, 5619 targets configured, 120 aspect applications)
+[175 / 562] 4 / 38 tests; checking cached actions
+Analyzing: 40 targets (216 packages loaded, 5634 targets configured, 445 aspect applications)
+[253 / 572] 4 / 39 tests; checking cached actions
+INFO: Analyzed 40 targets (216 packages loaded, 5635 targets configured, 475 aspect applications).
+[402 / 648] 4 / 40 tests; checking cached actions
+INFO: From Compiling Rust bin clock-contract-test (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+[577 / 648] 4 / 40 tests; [Prepa] runfiles for //:clock-contract-test
+INFO: From Compiling Rust bin output-system-contract-test (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+INFO: From Compiling Rust bin validation-contract-test (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+[585 / 650] 4 / 40 tests; [Prepa] runfiles for //:output-system-contract-test
+INFO: From Compiling Rust bin gate0-contract-test (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+[592 / 740] 4 / 40 tests; Compiling Rust bin gate0-trace-contract-test (1 file); 0s processwrapper-sandbox
+INFO: From Compiling Rust bin gate0-trace-contract-test (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+INFO: From Compiling Rust bin label-contract-test (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+[598 / 742] 4 / 40 tests; [Prepa] runfiles for //:label-contract-test
+INFO: From Compiling Rust bin hardware-calibration-contract-test (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+[601 / 743] 4 / 40 tests; Compiling Rust bin cli-unit-tests (1 file); 1s processwrapper-sandbox
+INFO: From Compiling Rust bin cli-unit-tests (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+INFO: From Compiling Rust bin manifest-contract-test (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+[605 / 745] 4 / 40 tests; [Prepa] runfiles for //:manifest-contract-test
+INFO: From Compiling Rust bin layout-contract-test (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+INFO: From Compiling Rust bin artifact-contract-test (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+[610 / 746] 4 / 40 tests; [Prepa] runfiles for //:layout-contract-test
+INFO: From Compiling Rust bin calibration-app-contract-test (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+[616 / 750] 4 / 40 tests; [Prepa] Compiling Rust bin pilot-contract-test (1 file)
+INFO: From Compiling Rust bin pilot-contract-test (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+[617 / 750] 4 / 40 tests; [Prepa] Compiling Rust bin calibration-contract-test (1 file)
+INFO: From Compiling Rust bin calibration-contract-test (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+[621 / 752] 4 / 40 tests; Compiling Rust bin output-contract-test (1 file); 0s processwrapper-sandbox
+INFO: From Compiling Rust bin output-contract-test (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+INFO: From Compiling Rust bin physical-study-contract-test (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+[629 / 756] 4 / 40 tests; [Prepa] Compiling Rust bin clock-epoch-contract-test (1 file)
+INFO: From Compiling Rust bin clock-epoch-contract-test (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+[630 / 756] 4 / 40 tests; [Prepa] runfiles for //:physical-study-contract-test
+INFO: From Compiling Rust bin controller-source-contract-test (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+INFO: From Compiling Rust bin protocol-contract-test (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+[637 / 760] 4 / 40 tests; [Prepa] runfiles for //:protocol-contract-test
+INFO: From Compiling Rust bin decoder-simulation-contract-test (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+INFO: From Compiling Rust bin prompt-contract-test (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+[640 / 761] 4 / 40 tests; [Prepa] runfiles for //:decoder-simulation-contract-test
+INFO: From Compiling Rust bin device-transport-contract-test (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+[646 / 765] 4 / 40 tests; Compiling Rust bin transport-contract-test (1 file); 0s processwrapper-sandbox
+INFO: From Compiling Rust bin transport-contract-test (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+INFO: From Compiling Rust bin evaluation-contract-test (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+INFO: From Compiling Rust bin session-contract-test (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+[650 / 766] 4 / 40 tests; [Prepa] runfiles for //:evaluation-contract-test
+INFO: From Testing //:clock-contract-test:
+==================== Test output for //:clock-contract-test:
+
+running 13 tests
+test affine_fit_recovers_offset_drift_and_bounded_residuals ... ok
+test implausible_drift_and_bad_residuals_fail ... ok
+test mapping_is_bound_to_one_boot_and_bounded_extrapolation ... ok
+test controller_and_host_regressions_are_not_repaired ... ok
+test online_clock_fits_only_the_maximal_recent_device_time_suffix ... ok
+test online_clock_holdover_is_bounded_by_fit_extrapolation ... ok
+test online_clock_holds_the_identical_last_good_fit_through_transient_bad_receipts ... ok
+test online_clock_bounds_history_and_rejects_sustained_excess_drift ... ok
+test online_clock_requires_explicit_reset_for_a_new_boot ... ok
+test online_clock_retries_early_receipt_jitter_without_arming_from_bad_evidence ... ok
+test online_clock_warms_on_past_only_samples_then_maps_the_current_frame ... ok
+test too_few_or_too_short_samples_fail_closed ... ok
+test online_clock_matches_the_direct_recent_suffix_after_history_wraps ... ok
+
+test result: ok. 13 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.06s
+
+================================================================================
+[653 / 768] 5 / 40 tests; Testing //:calibration-worker-contract-test; 1s processwrapper-sandbox
+[653 / 768] 5 / 40 tests; Testing //:calibration-worker-contract-test; 10s processwrapper-sandbox
+[653 / 768] 5 / 40 tests; Testing //:calibration-worker-contract-test; 28s processwrapper-sandbox
+INFO: From Testing //:calibration-worker-contract-test:
+==================== Test output for //:calibration-worker-contract-test:
+
+running 16 tests
+test decoded_same_identity_integrity_faults_retain_raw_suffix_and_first_cause ... ok
+test first_frame_rejects_out_of_range_sensor_time_without_discarding_raw_bytes ... ok
+test fitting_checkpoint_refuses_to_infer_layout_without_a_confirmation_receipt ... ok
+test fitting_finish_rejects_an_incomplete_surface_plan_before_matching ... ok
+test fitting_requires_a_retained_neutral_window_before_finalization ... ok
+test held_out_capture_inherits_the_frozen_rule_and_rejects_keyboard_labels ... ok
+test repeated_aggregate_with_advancing_offsets_faults_worker_and_retains_evidence ... ok
+test selected_keyboard_identity_change_faults_the_capture_permanently ... ok
+test terminal_capacity_rejection_retains_exact_worker_incident ... ok
+test terminal_late_publication_retains_exact_worker_incident ... ok
+test terminal_receipt_regression_retains_exact_worker_incident ... ok
+test concurrent_sensor_and_keyboard_capture_builds_source_bound_fitting_evidence ... ok
+test worker_integrity_preserves_wrapping_sequences_and_strictly_advancing_sample_times ... ok
+test worker_refuses_to_bind_a_surface_plan_after_the_first_surface_fact ... ok
+test wrong_controller_frame_is_retained_and_faults_the_capture ... ok
+test transport_rejection_retention_bound_preserves_primary_cause ... ok
+
+test result: ok. 16 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 28.95s
+
+================================================================================
+INFO: From Testing //:output-system-contract-test:
+==================== Test output for //:output-system-contract-test:
+
+running 6 tests
+test native_kernel_stress_executes_ten_thousand_pairs_and_finishes_neutral ... ok
+test native_evdev_application_observes_every_core28_pair ... ok
+test native_probe_verifies_core28_identity_and_non_root_access ... ok
+test planned_signals_are_application_observed_neutral_within_250ms ... ok
+test selected_keyboard_open_queries_keys_held_before_reader_start ... ok
+test sigkill_destroys_the_owned_uinput_device_without_a_250ms_claim ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+================================================================================
+INFO: From Testing //:gate0-contract-test:
+==================== Test output for //:gate0-contract-test:
+
+running 4 tests
+test gate0_constants_encode_the_decisive_roadmap_contract ... ok
+test one_hand_capture_target_preserves_physical_identity ... ok
+test one_hand_capture_target_rejects_two_hands ... ok
+test verdict_precedence_is_fail_then_inconclusive_then_pass ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+================================================================================
+[665 / 769] 8 / 40 tests; Testing //:gate0-trace-contract-test; 1s processwrapper-sandbox
+[665 / 769] 8 / 40 tests; Testing //:gate0-trace-contract-test; 10s processwrapper-sandbox
+[665 / 769] 8 / 40 tests; Testing //:gate0-trace-contract-test; 35s processwrapper-sandbox
+INFO: From Testing //:gate0-trace-contract-test:
+==================== Test output for //:gate0-trace-contract-test:
+
+running 39 tests
+test an_unmatched_edge_before_the_final_d8_is_never_forgiven ... ok
+test admitted_arming_edge_cannot_be_forgiven_before_first_mux ... ok
+test cache_replacement_derives_decimation_and_phase ... ok
+test canonical_raw_scan_uses_bounded_streaming_state ... ignored, full 14.44 GB logical scan; run explicitly in a Crabbox
+test configuration_keeps_int1_quiet_until_callbacks_are_installed ... ok
+test boot_marker_bus_decode_and_marker_order_are_waveform_derived ... ok
+test every_post_marker_logic_change_and_duplicate_marker_is_rejected ... ok
+test evidence_paths_are_real_files_not_decoder_mocks ... ok
+test final_cut_separates_shutdown_unadmitted_edges_from_acquisition_accounting ... ok
+test first_clean_cache_must_arrive_within_priming_cap ... ok
+test fixed_capture_settings_are_not_sidecar_choices ... ok
+test full_capture_read_rules_reject_semantic_mutations ... ok
+test host_sequence_gap_is_classified_without_payload_uniqueness ... ok
+test incomplete_arming_cannot_qualify ... ok
+test int1_during_enable_write_is_admitted_before_stop ... ok
+test known_quiet_sensor_pulse_before_enable_start_cannot_qualify ... ok
+test legacy_v1_capture_summary_is_rejected_after_hash_binding ... ok
+test only_leading_pre_host_snapshots_may_be_unlinked_and_cut_is_final ... ok
+test portable_c_startup_transcript_is_accepted_by_raw_reducer ... ok
+test pre_grid_and_grid_replacements_keep_complete_read_accounting ... ok
+test pre_snapshot_replacement_keeps_pending_edge_checks_strict ... ok
+test pre_snapshot_replacements_are_accounted_without_inventing_a_phase_grid ... ok
+test every_shutdown_transaction_is_covered_by_each_mutation_class ... ok
+test raw_fixture_never_uses_reserved_logic_bits_unless_requested ... ok
+test raw_format_rejects_an_incomplete_u16_word ... ok
+test raw_waveform_derives_every_read_and_links_host_frames ... ok
+test selected_firmware_boot_initializes_every_branch_before_acquisition ... ok
+test sidecar_artifact_paths_cannot_escape_the_evidence_bundle ... ok
+test sidecar_artifact_symlinks_cannot_escape_the_evidence_bundle ... ok
+test source_artifact_hashes_and_capture_log_fail_closed ... ok
+test startup_honors_mux_settle_and_busy_reset_retry_delays ... ok
+test premarker_and_terminal_idle_boundaries_are_exact ... ok
+test startup_rejects_premature_snapshot_or_commit ... ok
+test startup_reset_must_clear_within_firmware_poll_limit ... ok
+test terminal_marker_width_boundaries_and_stagger_are_exact ... ok
+test v2_summary_enforces_terminal_bindings_stop_window_and_field_order ... ok
+test violation_witnesses_are_bounded_while_total_is_not ... ok
+test wrapper_v2_summary_reaches_the_production_reducer_and_scorer ... ok
+test startup_missing_wrong_or_nacked_transfers_cannot_qualify ... ok
+
+test result: ok. 38 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 35.10s
+
+================================================================================
+INFO: From Testing //:label-contract-test:
+==================== Test output for //:label-contract-test:
+
+running 9 tests
+test deterministic_fake_source_uses_the_injected_shared_host_clock ... ok
+test alignment_is_one_to_one_in_the_shared_host_clock_domain ... ok
+test identity_change_during_a_source_read_cannot_leak_an_event ... ok
+test impulses_outside_the_frozen_window_remain_unmatched ... ok
+test linux_device_exposes_the_same_production_event_source_seam ... ok
+test modifiers_do_not_create_labels_or_overlap ... ok
+test only_a_clean_selected_left_shift_round_trip_identifies_the_keyboard ... ok
+test selected_keyboard_filter_preserves_down_up_and_rejection_reasons ... ok
+test source_identity_is_frozen_and_every_identity_mutation_disarms_labels ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+================================================================================
+[669 / 769] 10 / 40 tests; Testing //:hardware-calibration-contract-test; 0s processwrapper-sandbox
+INFO: From Testing //:hardware-calibration-contract-test:
+==================== Test output for //:hardware-calibration-contract-test:
+
+running 11 tests
+test abort_closes_label_admission_before_incident_finalization ... ok
+test abort_incident_closes_buffered_suffix_at_original_receipt ... ok
+test invalid_sensor_frame_is_a_terminal_stream_integrity_failure ... ok
+test keyboard_checkpoint_can_freeze_the_rule_before_passive_threshold_evidence ... ok
+test matched_examples_across_two_blocks_clear_the_exact_position_deficit ... ok
+test missing_causal_window_keeps_raw_attempts_out_of_matched_coverage ... ok
+test repeated_labels_cannot_reuse_overlapping_causal_windows ... ok
+test saved_result_acknowledgement_uses_the_exact_bounded_deadline ... ok
+test source_payload_mismatch_keeps_closed_diagnostic_bytes ... ok
+test timed_out_acknowledgement_is_durable_and_does_not_claim_the_result_was_seen ... ok
+test bounded_label_retention_reports_an_incomplete_incident ... ok
+
+test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.87s
+
+================================================================================
+INFO: From Testing //:cli-unit-tests:
+==================== Test output for //:cli-unit-tests:
+
+running 7 tests
+test gate0_footer_commit_tests::footer_claim_before_signal_store_remains_committed ... ok
+test gate0_footer_commit_tests::signal_store_before_footer_claim_wins_and_prevents_finish ... ok
+test live_evidence_tests::capacity_error_retains_trigger_and_mailbox_backlog ... ok
+test live_evidence_tests::evidence_retention_failure_is_attached_without_replacing_primary ... ok
+test live_evidence_tests::receipt_regression_retains_trigger_and_mailbox_backlog ... ok
+test live_evidence_tests::late_publication_retains_trigger_and_mailbox_backlog ... ok
+test live_evidence_tests::terminal_snapshot_closes_before_blocking_and_failed_evidence_io ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+================================================================================
+[673 / 769] 12 / 40 tests; Testing //:manifest-contract-test; 0s processwrapper-sandbox
+[673 / 769] 12 / 40 tests; Testing //:manifest-contract-test; 10s processwrapper-sandbox
+[673 / 769] 12 / 40 tests; Testing //:manifest-contract-test; 19s processwrapper-sandbox
+INFO: From Testing //:manifest-contract-test:
+==================== Test output for //:manifest-contract-test:
+
+running 38 tests
+test a_semantic_provenance_change_changes_the_manifest_identity ... ok
+test axis_maps_must_be_proper_signed_permutation_matrices ... ok
+test axis_report_recomputes_residuals_and_freezes_the_hand_carrier_convention ... ok
+test both_hands_use_canonical_roles_with_controller_local_interrupt_pins ... ok
+test checked_in_template_requires_real_identities_before_it_can_lock ... ok
+test axis_admission_rejects_report_selected_profiles_even_with_matching_hashes ... ok
+test commissioning_bootstraps_without_axis_evidence_and_replays_into_operational_binding ... ok
+test commissioning_rejects_unperformed_rig_checks_and_exact_binding_changes ... ok
+test commissioning_two_hand_dataset_preserves_order_and_anatomical_conventions ... ok
+test controller_boot_identity_is_required_and_canonical ... ok
+test every_declared_setting_must_match_the_canonical_acquisition_profile ... ok
+test every_hand_declares_exactly_six_sensors ... ok
+test evidence_byte_tampering_and_candidate_drift_fail_closed ... ok
+test exactly_one_sensor_per_hand_is_the_dorsal_reference ... ok
+test fixed_width_lowercase_hex_identities_round_trip_and_reject_other_forms ... ok
+test frame_canonicalizer_fails_closed_when_negation_exceeds_i16 ... ok
+test frame_canonicalizer_rotates_raw_vectors_once_and_preserves_metadata ... ok
+test hand_manifest_type_remains_owned_by_the_manifest_contract ... ok
+test invalid_hand_topology_and_empty_capture_provenance_are_rejected ... ok
+test legacy_hand_aggregate_sensor_fields_fail_closed ... ok
+test manifest_size_is_bounded_before_json_allocation ... ok
+test nonpassing_physical_or_axis_evidence_never_authorizes_operation ... ok
+test observed_session_hands_must_match_the_manifest_exactly ... ok
+test operational_manifest_binds_both_exact_artifacts_and_characterized_maps ... ok
+test physical_mux_routing_can_differ_from_canonical_sensor_order ... ok
+test placeholder_build_and_participant_identities_are_rejected ... ok
+test register_bits_and_manifest_declarations_share_one_canonical_profile ... ok
+test rehashed_but_different_characterized_axis_map_cannot_authorize_manifest_map ... ok
+test rig_evidence_is_bounded_strict_and_status_consistent ... ok
+test rig_evidence_template_keeps_every_unrun_physical_check_explicit ... ok
+test sensor_declarations_follow_canonical_index_and_role_order ... ok
+test sensor_indices_roles_and_mux_channels_are_unique ... ok
+test sensor_mount_wiring_and_interrupt_identities_are_required_and_unique ... ok
+test template_locks_only_observed_controller_boot_identities ... ok
+test template_rejects_prelocked_and_wrong_controller_identity ... ok
+test typed_manifest_round_trips_through_one_canonical_identity ... ok
+test unknown_and_missing_fields_fail_closed ... ok
+test commissioning_rejects_raw_motion_identity_timing_and_reflection_faults ... ok
+
+test result: ok. 38 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 19.59s
+
+================================================================================
+INFO: From Testing //:layout-contract-test:
+==================== Test output for //:layout-contract-test:
+
+running 8 tests
+test canonical_manifest_freezes_exact_core28_on_34_mapping ... ok
+test core28_contains_every_letter_once_plus_space_and_backspace ... ok
+test keyboard_warm_start_excludes_ambiguous_and_passive_only_positions ... ok
+test mapping_is_bidirectional_for_enabled_positions ... ok
+test physical_layout_has_34_unique_positions ... ok
+test reserved_positions_are_exact_and_explicit ... ok
+test unknown_positions_and_labels_do_not_resolve ... ok
+test unsupported_ascii_characters_do_not_enter_core28 ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+================================================================================
+INFO: From Testing //:artifact-contract-test:
+==================== Test output for //:artifact-contract-test:
+
+running 8 tests
+test artifact_round_trip_preserves_decoder_behavior_and_identity ... ok
+test every_sensor_provenance_field_and_matching_rule_is_part_of_artifact_identity ... ok
+test hand_decoders_clock_fits_and_sensor_bindings_must_have_the_same_topology ... ok
+test legacy_per_hand_mount_ids_and_invalid_matching_rule_hash_fail_closed ... ok
+test layout_confirmation_receipt_is_part_of_the_artifact_fingerprint ... ok
+test manifest_change_changes_artifact_fingerprint ... ok
+test unknown_fields_and_incomplete_coverage_fail_closed ... ok
+test one_session_may_supply_disjoint_roles_but_blocks_cannot_overlap ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.37s
+
+================================================================================
+[679 / 769] 15 / 40 tests; Testing //:neutral-contract-test; 0s processwrapper-sandbox
+INFO: From Testing //:neutral-contract-test:
+==================== Test output for //:neutral-contract-test:
+
+running 9 tests
+test acquisition_faults_bad_clocks_short_evidence_and_any_invalid_candidate_are_rejected ... ok
+test independently_derived_neutral_rejects_repeated_raw_sample_outside_selected_windows ... ok
+test canonical_json_round_trip_and_source_bound_mutation_detection ... ok
+test manifest_clock_session_and_window_identities_must_all_match ... ok
+test neutral_authority_rejects_altered_clock_report_and_rebound_fingerprint ... ok
+test missing_hands_sensors_invalid_frames_and_loss_fail_closed ... ok
+test neutral_evidence_rejects_gate0_control_records_as_their_own_context_error ... ok
+test report_derives_inspectable_two_hand_six_sensor_evidence ... ok
+test neutral_authority_rejects_raw_receipt_faults_despite_passing_clock_statistics ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.49s
+
+================================================================================
+[680 / 769] 16 / 40 tests; Testing //:calibration-app-contract-test; 1s processwrapper-sandbox
+[680 / 769] 16 / 40 tests; Testing //:calibration-app-contract-test; 5s processwrapper-sandbox
+INFO: From Testing //:calibration-app-contract-test:
+==================== Test output for //:calibration-app-contract-test:
+
+running 31 tests
+test a_published_saved_result_is_read_only_until_exact_acknowledgement ... ok
+test a_surface_label_requires_the_browser_to_acknowledge_the_rendered_instruction ... ok
+test abort_revokes_capture_and_cannot_leave_passed_validation ... ok
+test calibration_action_uses_one_typed_kebab_case_wire_vocabulary ... ok
+test calibration_failure_codes_are_stable_and_exhaustive ... ok
+test confirmed_layout_decision_is_idempotent_and_cannot_flip_to_rejection ... ok
+test capture_lease_liveness_uses_the_exact_service_revision ... ok
+test elapsed_seconds_are_exposed_as_exact_revision_stable_state ... ok
+test dropped_browser_watchdog_expires_capture_fail_closed ... ok
+test frontend_contains_the_accessible_seven_screen_contract ... ok
+test hardware_abort_accepts_stale_rendered_revision_after_elapsed_progress ... ok
+test hardware_capture_cannot_resume_or_label_after_pause ... ok
+test hardware_http_abort_accepts_stale_revision_only_with_loopback_authorization ... ok
+test hardware_lease_requires_one_persisted_layout_confirmation ... ok
+test hardware_stop_preserves_terminal_failure_after_rendered_state_changes ... ok
+test hardware_worker_events_drive_the_same_finite_seven_screen_state_machine ... ok
+test hidden_tab_expires_capture_and_blocks_further_labels ... ok
+test http_layout_confirmation_uses_connection_accept_time ... ok
+test http_surface_acknowledgement_preserves_first_accept_time_across_retries ... ok
+test layout_confirmation_uses_its_dedicated_revision_across_unrelated_state_updates ... ok
+test loopback_http_requires_the_per_process_token_and_origin ... ok
+test malformed_http_isolated_to_one_connection ... ok
+test no_data_keyboard_precheck_is_explicitly_unknown ... ok
+test progressing_http_body_has_a_cumulative_deadline ... ok
+test progressing_http_headers_have_a_cumulative_deadline ... ok
+test published_result_http_allows_reads_and_only_the_acknowledgement_action ... ok
+test rejected_keyboard_evidence_rotates_equal_score_prompts ... ok
+test rejected_layout_decision_is_typed_terminal_idempotent_and_irreversible ... ok
+test simulated_replay_visits_all_seven_screens_and_never_claims_hardware ... ok
+test stalled_http_connection_times_out_without_blocking_the_service ... ok
+test every_snapshot_visible_error_or_lease_loss_advances_the_revision ... ok
+
+test result: ok. 31 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 5.06s
+
+================================================================================
+[685 / 769] 17 / 40 tests; Testing //:pilot-contract-test; 1s processwrapper-sandbox
+[685 / 769] 17 / 40 tests; Testing //:pilot-contract-test; 11s processwrapper-sandbox
+[685 / 769] 17 / 40 tests; Testing //:pilot-contract-test; 41s processwrapper-sandbox
+[685 / 769] 17 / 40 tests; Testing //:pilot-contract-test; 101s processwrapper-sandbox
+[685 / 769] 17 / 40 tests; Testing //:pilot-contract-test; 161s processwrapper-sandbox
+[685 / 769] 17 / 40 tests; Testing //:pilot-contract-test; 221s processwrapper-sandbox
+[685 / 769] 17 / 40 tests; Testing //:pilot-contract-test; 226s processwrapper-sandbox
+INFO: From Testing //:pilot-contract-test:
+==================== Test output for //:pilot-contract-test:
+
+running 11 tests
+test activity_boundaries_do_not_reset_high_confirmation_or_latched_rearming ... ok
+test absent_physical_signal_stops_instead_of_turning_truth_into_successful_events ... ok
+test complete_independent_taps_include_reserved_positions_and_match_at_causal_emission_time ... ok
+test contact_labels_do_not_train_thresholds_or_choose_detection_fingers ... ok
+test bad_saturated_missing_and_identity_faults_cannot_support_a_build ... ok
+test dorsal_subtraction_and_measured_axis_rotation_share_the_canonical_signal ... ok
+test every_post_neutral_event_counts_even_outside_negative_intervals_and_later_motion_does_not_leak ... ok
+test incomplete_or_overlapping_truth_cannot_publish_a_report ... ok
+test misbound_session_manifest_truth_and_mapping_bytes_are_rejected ... ok
+test matching_is_inclusive_at_both_boundaries_but_never_accepts_early_contacts has been running for over 60 seconds
+test screening_uses_overall_and_per_position_recall_without_discarding_failed_trials has been running for over 60 seconds
+test matching_is_inclusive_at_both_boundaries_but_never_accepts_early_contacts ... ok
+test screening_uses_overall_and_per_position_recall_without_discarding_failed_trials ... ok
+
+test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 226.84s
+
+================================================================================
+INFO: From Testing //:calibration-contract-test:
+==================== Test output for //:calibration-contract-test:
+
+running 10 tests
+test a_validation_block_cannot_be_scored_twice_in_different_stages ... ok
+test complete_locked_validation_reaches_validation_passed ... ok
+test deterministic_prompts_cover_keyboard_then_all_surface_positions ... ok
+test duplicate_weak_position_hints_raise_the_target_only_once ... ok
+test elapsed_time_cap_terminates_instead_of_requesting_infinite_text ... ok
+test keyboard_validation_targets_weak_positions_and_stops_on_plateau ... ok
+test locked_surface_validation_cannot_mutate_training_state ... ok
+test rejected_examples_never_advance_coverage ... ok
+test training_and_validation_blocks_cannot_overlap ... ok
+test abort_revokes_a_validation_passed_state ... ok
+
+test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+================================================================================
+[688 / 769] 19 / 40 tests; Testing //:calibration-capture-contract-test; 1s processwrapper-sandbox
+[688 / 769] 19 / 40 tests; Testing //:calibration-capture-contract-test; 3s processwrapper-sandbox
+INFO: From Testing //:calibration-capture-contract-test:
+==================== Test output for //:calibration-capture-contract-test:
+
+running 18 tests
+test compressed_surface_timeline_is_rejected_even_when_each_receipt_is_internally_ordered ... ok
+test first_canonical_fitting_quiet_id_resolves_and_completes ... ok
+test held_out_capture_requires_the_frozen_matching_rule ... ok
+test held_out_keyboard_activity_is_state_only_keyboard_provenance ... ok
+test keyboard_completion::complete_press_waits_for_release_and_keeps_original_down_provenance ... ok
+test canonical_fitting_and_held_out_facts_round_trip_and_are_complete ... ok
+test keyboard_completion::modifier_after_down_invalidates_the_complete_press_including_state_only_events ... ok
+test keyboard_completion::unreleased_press_has_no_matched_observation_or_coverage_and_is_not_neutral ... ok
+test keyboard_completion::overlapping_presses_remain_raw_without_matched_observations_or_coverage ... ok
+test passive_surface_receipts_require_one_monotonic_rendered_revision ... ok
+test parser_rejects_role_block_and_null_kind_injection ... ok
+test persisted_plan_hash_cannot_be_rebound_after_capture ... ok
+test purpose_plan_artifact_and_seed_bindings_are_exact ... ok
+test same_finger_a_to_q_prompt_relabel_is_rejected_by_plan_order ... ok
+test quiet_prompt_cannot_be_reclassified_as_ordinary_motion ... ok
+test surface_fact_schema_has_no_role_block_position_null_or_hand_channel ... ok
+test surface_facts_reject_nonincreasing_prompt_time_and_revision ... ok
+test surface_facts_reject_unknown_duplicate_missing_and_reordered_prompt_ids ... ok
+
+test result: ok. 18 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 3.10s
+
+================================================================================
+INFO: From Testing //:output-contract-test:
+==================== Test output for //:output-contract-test:
+
+running 14 tests
+test a_fresh_session_starts_neutral_and_rejects_the_previous_session_lease ... ok
+test deterministic_replay_crosses_the_output_adapter_seam ... ok
+test core28_tap_is_one_down_up_pair ... ok
+test duplicate_down_and_orphan_up_never_reach_output ... ok
+test every_fault_releases_all_keys_in_stable_order ... ok
+test every_core28_usage_crosses_the_armed_output_session_as_one_pair ... ok
+test host_owned_transitions_remain_explicit_system_test_gates ... ok
+test output_failure_on_either_edge_recovers_neutral_and_revokes_the_lease ... ok
+test output_requires_declared_sources_and_one_run_owner ... ok
+test output_session_fails_closed_when_startup_neutralization_fails ... ok
+test run_revocation_releases_without_claiming_desktop_focus_control ... ok
+test source_loss_during_a_transition_releases_and_requires_a_fresh_lease ... ok
+test time_regression_fails_neutral_and_does_not_apply_requested_event ... ok
+test interrupt_and_terminate_shutdowns_release_after_continuous_dual_source_output ... ok
+
+test result: ok. 14 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+
+================================================================================
+INFO: From Testing //:pipeline-contract-test:
+==================== Test output for //:pipeline-contract-test:
+
+running 8 tests
+test contact_before_four_idle_windows_cannot_emit_a_repeat ... ok
+test continuous_stream_emits_exactly_one_key_decision_per_tap ... ok
+test idle_stream_never_emits_a_decision ... ok
+test device_time_regression_discards_all_buffered_context ... ok
+test quality_fault_during_repeat_suppression_is_still_emitted ... ok
+test reserved_position_emits_one_explicit_abstention ... ok
+test retained_short_impulse_is_timestamped_at_the_commit_frame ... ok
+test wrong_hand_frame_resets_the_pipeline_and_returns_an_error ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.09s
+
+================================================================================
+[695 / 769] 22 / 40 tests; Testing //:calibration-engine-contract-test; 1s processwrapper-sandbox
+[695 / 769] 22 / 40 tests; Testing //:calibration-engine-contract-test; 11s processwrapper-sandbox
+[695 / 769] 22 / 40 tests; Testing //:calibration-engine-contract-test; 41s processwrapper-sandbox
+[695 / 769] 22 / 40 tests; Testing //:calibration-engine-contract-test; 101s processwrapper-sandbox
+[695 / 769] 22 / 40 tests; Testing //:calibration-engine-contract-test; 161s processwrapper-sandbox
+[695 / 769] 22 / 40 tests; Testing //:calibration-engine-contract-test; 221s processwrapper-sandbox
+[695 / 769] 22 / 40 tests; Testing //:calibration-engine-contract-test; 281s processwrapper-sandbox
+[695 / 769] 22 / 40 tests; Testing //:calibration-engine-contract-test; 341s processwrapper-sandbox
+[695 / 769] 22 / 40 tests; Testing //:calibration-engine-contract-test; 401s processwrapper-sandbox
+[695 / 769] 22 / 40 tests; Testing //:calibration-engine-contract-test; 461s processwrapper-sandbox
+[695 / 769] 22 / 40 tests; Testing //:calibration-engine-contract-test; 521s processwrapper-sandbox
+[695 / 769] 22 / 40 tests; Testing //:calibration-engine-contract-test; 581s processwrapper-sandbox
+[695 / 769] 22 / 40 tests; Testing //:calibration-engine-contract-test; 641s processwrapper-sandbox
+[695 / 769] 22 / 40 tests; Testing //:calibration-engine-contract-test; 701s processwrapper-sandbox
+[695 / 769] 22 / 40 tests; Testing //:calibration-engine-contract-test; 761s processwrapper-sandbox
+[695 / 769] 22 / 40 tests; Testing //:calibration-engine-contract-test; 821s processwrapper-sandbox
+[695 / 769] 22 / 40 tests; Testing //:calibration-engine-contract-test; 881s processwrapper-sandbox
+[695 / 769] 22 / 40 tests; Testing //:calibration-engine-contract-test; 941s processwrapper-sandbox
+[695 / 769] 22 / 40 tests; Testing //:calibration-engine-contract-test; 1001s processwrapper-sandbox
+[695 / 769] 22 / 40 tests; Testing //:calibration-engine-contract-test; 1028s processwrapper-sandbox
+INFO: From Testing //:calibration-engine-contract-test:
+==================== Test output for //:calibration-engine-contract-test:
+
+running 29 tests
+test canonical_surface_plan_completeness_is_enforced_before_fit ... ok
+test capture_bound_fit_locks_and_validates_two_hands has been running for over 60 seconds
+test derived_truth_windows_are_record_disjoint_within_each_session ... ok
+test diagnostic_evidence_json_cannot_enter_trusted_engine_apis has been running for over 60 seconds
+test capture_bound_fit_locks_and_validates_two_hands ... ok
+test diagnostic_evidence_json_cannot_enter_trusted_engine_apis ... ok
+test down_up_overlap_cannot_be_reused_as_passive_training_truth ... ok
+test down_up_overlap_cannot_tune_neutral_contact_thresholds ... ok
+test fitting_and_precheck_reject_raw_suffix_fault_before_truth_selection ... ok
+test down_up_overlap_cannot_count_as_held_out_truth has been running for over 60 seconds
+test down_up_overlap_cannot_count_as_held_out_truth ... ok
+test fitting_and_validation_reject_wrong_purpose_journals ... ok
+test fitting_session_overlap_is_derived_from_artifact_sources ... ok
+test held_out_keyboard_identity_must_match_the_locked_artifact has been running for over 60 seconds
+test held_out_keyboard_identity_must_match_the_locked_artifact ... ok
+test held_out_plan_rejects_cross_artifact_reuse ... ok
+test held_out_plan_rejects_seed_mutation ... ok
+test held_out_readiness_requires_every_plan_owned_motion_segment ... ok
+test held_out_validation_cannot_mutate_the_locked_artifact has been running for over 60 seconds
+test held_out_validation_cannot_mutate_the_locked_artifact ... ok
+test held_out_validation_rederives_evidence_from_plan_bound_capture_journal has been running for over 60 seconds
+test held_out_validation_rederives_evidence_from_plan_bound_capture_journal ... ok
+test heldout_1001ns_clock_rejects_raw_sensor_repeat_outside_truth_windows has been running for over 60 seconds
+test heldout_1001ns_clock_rejects_raw_sensor_repeat_outside_truth_windows ... ok
+test heldout_999ns_clock_preserves_valid_raw_sensor_advance_at_skew_boundary has been running for over 60 seconds
+test immutable_identity_rejects_tampered_session_and_journal_binding ... ok
+test heldout_999ns_clock_preserves_valid_raw_sensor_advance_at_skew_boundary ... ok
+test keyboard_warm_start_labels_cannot_change_passive_fitted_artifact ... ok
+test offline_authority_consumers_reject_altered_valid_looking_clock_reports has been running for over 60 seconds
+test offline_authority_consumers_reject_forged_clock_statistics_and_fingerprints has been running for over 60 seconds
+test offline_authority_consumers_reject_altered_valid_looking_clock_reports ... ok
+test quiet_plan_windows_cannot_satisfy_ordinary_motion ... ok
+test raw_aggregate_repeat_with_advancing_sensor_times_is_rejected ... ok
+test raw_sensor_repeat_in_neutral_returns_source_error_without_panicking ... ok
+test raw_sensor_repeat_outside_neutral_is_rejected_under_1001ns_clocks ... ok
+test offline_authority_consumers_reject_forged_clock_statistics_and_fingerprints ... ok
+test recorded_exposure_is_derived_from_matched_motion_windows has been running for over 60 seconds
+test recorded_exposure_is_derived_from_matched_motion_windows ... ok
+test signed_permutation_wire_axes_are_equivalent_through_fit_and_held_out_validation has been running for over 60 seconds
+test unlabeled_impulses_are_counted_as_spontaneous_false_activations has been running for over 60 seconds
+test unlabeled_impulses_are_counted_as_spontaneous_false_activations ... ok
+test signed_permutation_wire_axes_are_equivalent_through_fit_and_held_out_validation ... ok
+
+test result: ok. 29 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1028.17s
+
+================================================================================
+[698 / 769] 23 / 40 tests; Testing //:physical-study-contract-test; 1s processwrapper-sandbox
+[698 / 769] 23 / 40 tests; Testing //:physical-study-contract-test; 11s processwrapper-sandbox
+[698 / 769] 23 / 40 tests; Testing //:physical-study-contract-test; 41s processwrapper-sandbox
+[698 / 769] 23 / 40 tests; Testing //:physical-study-contract-test; 101s processwrapper-sandbox
+[698 / 769] 23 / 40 tests; Testing //:physical-study-contract-test; 119s processwrapper-sandbox
+INFO: From Testing //:physical-study-contract-test:
+==================== Test output for //:physical-study-contract-test:
+
+running 25 tests
+test analysis_plan_contents_cannot_be_retuned_after_collection ... ok
+test both_hands_are_required_in_every_heldout_remount ... ok
+test bounded_decoders_reject_cap_plus_one_before_deserialization ... ok
+test anticipatory_contact_events_cannot_pass_the_latency_gate ... ok
+test finger_fixture_covers_both_declared_hands ... ok
+test complete_truth_windows_match_exact_timestamp_endpoints ... ok
+test finite_participant_latency_uncertainty_precedes_cluster_resampling ... ok
+test frozen_roster_rejects_optional_stopping_or_row_removal ... ok
+test gate1_fits_only_train_selects_only_validation_and_scores_remounts ... ok
+test gate0b_scores_contact_timing_and_preserves_inconclusive ... ok
+test jsonl_encoder_reports_the_exact_full_size_after_crossing_the_cap ... ok
+test gate2_enforces_fifty_per_position_and_scores_reserved_abstention ... ok
+test latency_and_class_recall_decisions_cluster_at_participant ... ok
+test missing_mount_class_is_rejected_instead_of_reported_inconclusive ... ok
+test participant_identity_cannot_cross_a_split ... ok
+test negative_outputs_and_duplicate_contacts_are_decisive_failures ... ok
+test row_sealing_and_encoding_bound_constructed_feature_output ... ok
+test row_hash_and_report_bytes_are_canonical ... ok
+test sealed_truth_window_overflow_is_rejected_before_scoring ... ok
+test sealing_rejects_a_hash_that_pushes_the_final_row_over_the_cap ... ok
+test sealed_truth_window_underflow_is_rejected_before_scoring ... ok
+test single_row_decoder_accepts_pretty_unsealed_collection_input ... ok
+test semantic_tamper_is_rejected_before_scoring ... ok
+test source_artifact_cannot_cross_a_split ... ok
+test token_negative_exposure_cannot_satisfy_a_heldout_stratum ... ok
+
+test result: ok. 25 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 119.79s
+
+================================================================================
+INFO: From Testing //:clock-epoch-contract-test:
+==================== Test output for //:clock-epoch-contract-test:
+
+running 10 tests
+test clock_fit_rejects_frames_from_an_undeclared_hand ... ok
+test explicitly_unreliable_controller_clock_prevents_epoch_fit ... ok
+test clock_epoch_round_trip_binds_manifest_session_controller_and_boot ... ok
+test live_clock_report_rejects_different_bytes_with_the_same_session_header ... ok
+test live_clock_report_separates_recent_operational_fits_from_offline_qualification ... ok
+test fresh_startup_frames_bootstrap_both_controller_fits_from_host_receipts ... ok
+test one_hand_clock_fit_preserves_the_declared_side ... ok
+test unknown_fields_and_wrong_hand_order_are_rejected ... ok
+test wrong_session_controller_or_boot_fails_closed ... ok
+test streamed_clock_fit_matches_the_in_memory_reference_exactly ... ok
+
+test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.21s
+
+================================================================================
+[701 / 769] 25 / 40 tests; Testing //:replay-contract-test; 1s processwrapper-sandbox
+[701 / 769] 25 / 40 tests; Testing //:replay-contract-test; 11s processwrapper-sandbox
+[701 / 769] 25 / 40 tests; Testing //:replay-contract-test; 41s processwrapper-sandbox
+[701 / 769] 25 / 40 tests; Testing //:replay-contract-test; 47s processwrapper-sandbox
+INFO: From Testing //:replay-contract-test:
+==================== Test output for //:replay-contract-test:
+
+running 55 tests
+test artifact_reference_and_calibration_sensitive_settings_fail_closed ... ok
+test calibrated_live_fails_when_startup_neutralization_fails ... ok
+test artifact_bound_two_hand_replay_emits_exact_core28_taps_and_neutralizes ... ok
+test calibrated_live_preserves_transport_primary_and_reports_failed_all_up ... ok
+test calibrated_replay_preserves_output_cause_and_independent_recovery_failure ... ok
+test calibrated_live_output_failure_recovers_and_finishes_neutral ... ok
+test calibrated_replay_rejects_gate0_control_records_instead_of_replaying_them ... ok
+test causal_live_path_warms_both_clocks_before_emitting_and_finishes_neutral ... ok
+test clean_finish_revokes_wear_session_without_recording_a_terminal_fault ... ok
+test calibrated_replay_rejects_forged_offline_clock_authority_before_output ... ok
+test evidence_invalidating_abstention_terminally_revokes ... ok
+test host_receipt_regression_remains_primary_when_independent_all_up_fails ... ok
+test host_receipt_regression_revokes_before_clock_or_output_progress ... ok
+test live_accepts_reader_receipts_older_than_a_later_processing_tick ... ok
+test live_acquisition_integrity_faults_during_initial_clock_warmup_terminally_revoke ... ok
+test live_acquisition_integrity_faults_with_only_one_clock_ready_terminally_revoke ... ok
+test live_cli_ingress_busy_watchdog_revokes_before_safe_horizon_flush ... ok
+test live_cli_ingress_healthy_receipt_merger_preserves_expected_output ... ok
+test live_cli_ingress_jitter_inversion_preserves_exact_core28_output ... ok
+test live_cli_ingress_revokes_merge_held_faults_before_signal_and_retains_incident ... ok
+test live_disconnect_discards_pending_work_resets_clocks_and_finishes_neutral ... ok
+test live_disconnect_prevents_finish_from_emitting_a_buffered_tap ... ok
+test live_host_clock_regression_revokes_without_watchdog_attribution ... ok
+test live_ingress_closes_admission_after_neutralization_before_releasing_any_evidence ... ok
+test live_ingress_update_cannot_be_released_by_another_authority ... ok
+test live_interleaved_retained_impulse_commits_preserve_healthy_output ... ok
+test live_malformed_ingress_precedes_a_later_acquisition_fault ... ok
+test live_merge_held_malformed_candidates_revoke_before_queued_output ... ok
+test live_negative_drift_consumes_allowed_skew_boundary_and_preserves_mapped_output ... ok
+test live_pending_capacity_terminally_revokes_without_rearm ... ok
+test live_planned_signals_stop_output_through_the_canonical_safety_owner ... ok
+test live_post_evidence_consumer_delay_revokes_before_candidate_flush ... ok
+test live_post_evidence_healthy_delays_preserve_exact_core28_output ... ok
+test live_rejects_an_unacceptable_mapping_before_it_can_arm_output ... ok
+test live_repeated_raw_aggregate_revokes_before_merger_or_evidence_io ... ok
+test live_sensor_time_regressions_revoke_before_clock_or_window_progress ... ok
+test live_sequence_gap_revokes_during_warmup_and_partial_window_fill ... ok
+test live_source_loss_revokes_the_instance_without_rearm ... ok
+test live_stale_bootstrap_warmup_cannot_arm_after_evidence_delay ... ok
+test live_warmup_integrity_preserves_primary_fault_when_neutralization_fails ... ok
+test live_watchdog_rejects_every_later_frame_without_new_confirmation ... ok
+test live_watchdog_revokes_when_right_stops_during_continuous_left_traffic ... ok
+test live_watchdog_terminally_revokes_and_cannot_rearm ... ok
+test malformed_oversized_and_unterminated_transport_terminally_revoke ... ok
+test nonidentity_finger_and_dorsal_axes_decode_identically_in_replay_and_live ... ok
+test post_arm_allowed_sensor_skew_with_forward_sample_remains_live ... ok
+test every_per_sensor_physical_provenance_change_fails_closed ... ok
+test recorded_replay_preserves_the_source_layout_confirmation_receipt ... ok
+test post_arm_partial_window_integrity_faults_revoke_before_output ... ok
+test replay_pending_capacity_fails_closed_with_a_typed_error ... ok
+test replay_negative_drift_preserves_raw_sensor_progress_and_mapped_output ... ok
+test replay_positive_drift_rejects_repeated_raw_sensor_before_mapping ... ok
+test runtime_binding_allows_only_new_boot_and_session_metadata ... ok
+test stale_device_backlog_then_fresh_timestamp_jump_never_arms_or_emits ... ok
+test runtime_artifact_reference_binds_the_frozen_matching_rule ... ok
+
+test result: ok. 55 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 47.28s
+
+================================================================================
+INFO: From Testing //:controller-source-contract-test:
+==================== Test output for //:controller-source-contract-test:
+
+running 8 tests
+test character_device_that_is_not_a_tty_fails_closed ... ok
+test gate0_controller_is_one_exclusive_duplex_raw_tty ... ok
+test gate0_controller_rejects_non_tty_sources ... ok
+test fifo_is_an_untouched_byte_stream ... ok
+test gate0_private_pipes_publish_once_and_preserve_stop_eof_as_a_separate_event ... ok
+test gate0_private_pipes_reject_aliases_standard_fds_files_and_reversed_access ... ok
+test real_pty_is_configured_and_read_back_as_byte_exact_raw_8n1 ... ok
+test regular_file_is_an_untouched_byte_stream ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+================================================================================
+INFO: From Testing //:protocol-contract-test:
+==================== Test output for //:protocol-contract-test:
+
+running 10 tests
+test encoder_and_decoder_reject_missing_physical_identity ... ok
+test canonical_frame_is_exactly_160_bytes ... ok
+test left_and_right_have_distinct_wire_values ... ok
+test quiesce_decoders_reject_lengths_checksums_and_checksum_valid_fixed_fields ... ok
+test quiesce_encoders_and_decoders_reject_zero_identities ... ok
+test quiesce_records_have_exact_layouts_and_round_trip ... ok
+test removed_fifo_status_bit_is_not_part_of_the_current_protocol ... ok
+test round_trip_preserves_every_field_and_signed_extremes ... ok
+test truncated_and_extended_frames_are_rejected ... ok
+test every_single_bit_payload_corruption_is_rejected ... ok
+
+test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+
+================================================================================
+INFO: From Testing //:decoder-simulation-contract-test:
+==================== Test output for //:decoder-simulation-contract-test:
+
+running 17 tests
+test any_sensor_dropout_abstains_instead_of_guessing ... ok
+test calibration_for_the_wrong_hand_is_rejected ... ok
+test calibration_rejects_a_window_with_missing_sensor_evidence ... ok
+test calibration_rejects_acquisition_fault_evidence ... ok
+test calibration_rejects_excessive_inter_sensor_timing_skew ... ok
+test every_acquisition_flag_poisoning_a_window_forces_abstention ... ok
+test excessive_inter_sensor_sample_skew_abstains ... ok
+test forward_sensor_timestamp_at_allowed_skew_boundary_remains_accepted ... ok
+test generator_is_byte_deterministic_for_the_same_seed_and_trial ... ok
+test incomplete_calibration_is_rejected ... ok
+test ordinary_shared_hand_motion_does_not_become_a_tap ... ok
+test per_sensor_sample_time_regression_is_structurally_rejected ... ok
+test repeated_sensor_timestamp_at_allowed_skew_boundary_is_rejected ... ok
+test sequence_discontinuity_abstains_instead_of_classifying_across_loss ... ok
+test simultaneous_finger_impulses_abstain ... ok
+test split_calibration_keeps_model_fitting_and_threshold_selection_disjoint ... ok
+test calibrated_decoder_recovers_all_34_synthetic_positions_after_small_remount ... ok
+
+test result: ok. 17 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.15s
+
+================================================================================
+INFO: From Testing //:prompt-contract-test:
+==================== Test output for //:prompt-contract-test:
+
+running 9 tests
+test corpus_has_natural_coverage_and_reserved_exercises ... ok
+test frozen_corpus_covers_every_keyboard_warm_start_position ... ok
+test corpus_identity_is_stable_and_content_is_ascii ... ok
+test held_out_null_intervals_are_explicit_and_meet_the_provisional_gate ... ok
+test held_out_roundtrip_requires_the_original_artifact_and_seed ... ok
+test prompt_selection_is_deterministic_and_targets_the_largest_deficit ... ok
+test surface_training_plan_is_frozen_in_manifest_order ... ok
+test training_plan_roundtrips_but_rejects_canonical_mutations ... ok
+test held_out_plan_is_artifact_bound_deterministic_and_balanced ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.23s
+
+================================================================================
+INFO: From Testing //:device-transport-contract-test:
+==================== Test output for //:device-transport-contract-test:
+
+running 19 tests
+test adversarial_chunking_keeps_each_source_cobs_state_isolated ... ok
+test bootstrap_discovers_both_boots_and_preserves_every_input_byte ... ok
+test bootstrap_rejects_empty_and_duplicate_topologies ... ok
+test bootstrap_rejects_wrong_controller_boot_change_timeout_and_unbounded_input ... ok
+test cross_thread_delivery_reorder_is_merged_by_receipt_time ... ok
+test default_merger_budgets_50_ms_for_reader_thread_delivery_reorder ... ok
+test bootstrap_admits_one_declared_hand_and_returns_all_identities_in_hand_order ... ok
+test gate0_dispatch_rejects_duplicate_requests_wrong_identity_and_time_regression ... ok
+test gate0_dispatch_rejects_every_byte_after_receipt_including_the_same_read ... ok
+test gate0_dispatch_requires_request_binding_and_a_post_request_clean_frame ... ok
+test malformed_candidate_on_one_source_does_not_poison_the_other_source ... ok
+test one_stream_disconnect_retains_its_partial_record_and_does_not_stop_the_other ... ok
+test oversized_candidate_retains_its_source_and_bounded_prefix ... ok
+test pending_candidate_capacity_is_hard_and_overflow_is_atomic ... ok
+test receipt_regression_late_delivery_and_source_silence_are_explicit ... ok
+test simultaneous_frames_have_a_deterministic_source_tie_break ... ok
+test source_configuration_is_unique_and_the_input_event_is_thread_friendly ... ok
+test wrong_hand_frames_are_retained_but_marked_as_identity_faults ... ok
+test gate0_dispatch_accepts_one_bound_receipt_after_its_immediate_clean_frame ... ok
+
+test result: ok. 19 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.03s
+
+================================================================================
+[712 / 769] 31 / 40 tests; Testing //:runtime-contract-test; 0s processwrapper-sandbox
+INFO: From Testing //:runtime-contract-test:
+==================== Test output for //:runtime-contract-test:
+
+running 18 tests
+test adapter_failure_after_key_down_forces_independent_all_up ... ok
+test adapter_failure_preserves_the_cause_and_independent_recovery_failure ... ok
+test bad_frame_checksum_never_enters_the_decoder ... ok
+test arbitrary_transport_chunks_reach_one_exact_key_pair ... ok
+test byte_and_candidate_runtime_paths_preserve_raw_commit_timestamps ... ok
+test decoded_frame_runtime_keeps_raw_offsets_and_projects_commit_time ... ok
+test evidence_abstention_remains_primary_when_neutralization_fails ... ok
+test disconnect_preserves_unterminated_evidence_and_forces_all_up ... ok
+test malformed_transport_forces_independent_all_up_and_resets_context ... ok
+test malformed_transport_remains_primary_when_neutralization_fails ... ok
+test planned_shutdown_stops_rearming_and_leaves_final_state_neutral ... ok
+test runtime_construction_fails_when_startup_neutralization_fails ... ok
+test one_and_two_hand_runtimes_arm_only_for_their_declared_sources ... ok
+test sequence_gap_reaches_one_explicit_abstention_and_forces_all_up ... ok
+test source_loss_revokes_run_ownership_until_the_declared_source_returns ... ok
+test two_hand_runtime_rejects_swapped_or_duplicate_decoder_topology ... ok
+test two_hand_runtime_dispatches_both_decoders_through_one_output_state ... ok
+test watchdog_timeout_resets_context_and_invokes_independent_all_up ... ok
+
+test result: ok. 18 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.19s
+
+================================================================================
+INFO: From Testing //:transport-contract-test:
+==================== Test output for //:transport-contract-test:
+
+running 10 tests
+test control_records_have_exact_cobs_lengths_and_survive_every_chunk_boundary ... ok
+test disconnect_preserves_an_unterminated_candidate ... ok
+test empty_delimiters_are_ignored ... ok
+test controller_dispatch_accepts_frames_and_receipts_but_rejects_outbound_requests ... ok
+test every_chunk_boundary_reconstructs_one_exact_frame ... ok
+test inserted_zero_and_nonzero_bytes_recover_by_the_next_clean_frame ... ok
+test malformed_record_does_not_shift_the_next_record ... ok
+test oversized_record_is_bounded_and_next_record_recovers ... ok
+test partial_and_oversized_control_candidates_fail_without_shifting_the_next_record ... ok
+test every_single_byte_deletion_recovers_by_the_third_frame ... ok
+
+test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+
+================================================================================
+[715 / 769] 33 / 40 tests; Testing //:evaluation-contract-test; 1s processwrapper-sandbox
+[715 / 769] 33 / 40 tests; Testing //:evaluation-contract-test; 10s processwrapper-sandbox
+[715 / 769] 33 / 40 tests; Testing //:evaluation-contract-test; 32s processwrapper-sandbox
+INFO: From Testing //:evaluation-contract-test:
+==================== Test output for //:evaluation-contract-test:
+
+running 5 tests
+test breakpoint_sweeps_expose_model_failure_instead_of_staying_all_green ... ok
+test nominal_report_does_not_claim_physical_evidence ... ok
+test default_synthetic_stress_suite_is_deterministic ... ok
+test stress_suite_covers_every_position_and_fault_dimension ... ok
+test simulated_latency_reaches_the_recording_output_after_the_causal_delay ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 32.78s
+
+================================================================================
+INFO: From Testing //:session-contract-test:
+==================== Test output for //:session-contract-test:
+
+running 30 tests
+test acquisition_specific_session_caps_match_their_exact_physical_contracts ... ok
+test complete_record_boundary_without_footer_is_rejected ... ok
+test control_records_round_trip_and_terminal_audit_returns_the_exact_binding ... ok
+test dropping_a_partial_writer_cannot_produce_a_finalized_session ... ok
+test every_candidate_retains_its_physical_controller_stream ... ok
+test every_partial_footer_is_rejected ... ok
+test every_partial_record_is_reported_as_truncated ... ok
+test flush_publishes_the_header_but_only_finish_writes_end3 ... ok
+test iks3_magic_is_a_hard_cut_and_checksum_valid_iks2_is_rejected ... ok
+test impossible_candidate_lengths_are_rejected_before_writing ... ok
+test nondecoded_provenance_cannot_be_bypassed_by_frame_shaped_bytes ... ok
+test raw_malformed_payload_is_preserved_and_counted ... ok
+test record_corruption_is_distinct_from_captured_frame_corruption ... ok
+test reference_session_round_trips_through_strict_audit ... ok
+test rejected_provenance_keeps_footer_closed_bytes_for_incident_diagnosis ... ok
+test same_inputs_produce_byte_identical_session_files ... ok
+test sequence_anomalies_and_clock_regressions_are_visible ... ok
+test sequence_wrap_is_in_order ... ok
+test streaming_audit_matches_owned_evidence_without_a_second_hash_path ... ok
+test streaming_audit_rejects_corruption_at_the_end_of_the_footer ... ok
+test strict_session_audit_rejects_semantically_invalid_control_records ... ok
+test terminal_audit_rejects_an_invalid_record_before_receipt ... ok
+test terminal_audit_rejects_timeout_binding_mismatch_and_dirty_final_frame ... ok
+test terminal_audit_requires_a_frame_immediately_before_receipt ... ok
+test terminal_audit_requires_receipt_last ... ok
+test trailing_bytes_after_footer_are_rejected ... ok
+test transport_candidate_provenance_survives_strict_replay ... ok
+test valid_records_round_trip_in_append_order ... ok
+test wrong_claimed_hand_is_accounted_and_strict_finalization_fails_closed ... ok
+test every_single_bit_record_corruption_is_rejected ... ok
+
+test result: ok. 30 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.10s
+
+================================================================================
+INFO: From Testing //:validation-contract-test:
+==================== Test output for //:validation-contract-test:
+
+running 6 tests
+test artifact_manifest_session_and_block_binding_fail_closed ... ok
+test every_physical_position_and_null_truth_need_evidence ... ok
+test every_validation_session_has_one_bound_evidence_sidecar ... ok
+test perfect_count_level_report_derives_metrics_and_passes ... ok
+test reserved_and_null_rows_expose_false_activations ... ok
+test matrix_shape_and_report_json_are_strict_and_stable ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+================================================================================
+[729 / 770] 36 / 40 tests; Testing //:unit-tests; 0s processwrapper-sandbox
+[729 / 770] 36 / 40 tests; Testing //:unit-tests; 9s processwrapper-sandbox
+INFO: From Testing //:unit-tests:
+==================== Test output for //:unit-tests:
+
+running 59 tests
+test calibration_capture::tests::capture_gate_rejects_gate0_controls_before_generic_integrity ... ok
+test calibration_capture::tests::causal_contact_emission_is_invariant_to_future_frames ... ok
+test calibration_capture::tests::contacts_after_the_bounded_gate_cannot_change_an_accepted_association ... ok
+test calibration_capture::tests::first_event_rule_reports_wrong_hand_wrong_finger_no_event_and_multiple_events ... ok
+test calibration_capture::tests::pre_cue_contact_is_ignored_without_hiding_the_first_post_cue_contact ... ok
+test calibration_capture::tests::rendered_receipt_opens_a_self_paced_gate_but_sensor_contact_anchors_the_label ... ok
+test calibration_capture::tests::scheduled_stillness_is_not_counted_as_ordinary_motion ... ok
+test calibration_capture::tests::target_cannot_reuse_a_threshold_or_null_parameter_window ... ok
+test calibration_capture::tests::target_identity_cannot_select_past_the_first_causal_event ... ok
+test calibration_capture::tests::target_truth_windows_reserve_all_source_records_against_later_targets ... ok
+test calibration_engine::tests::binder_allows_simultaneous_opposite_hand_truth_windows ... ok
+test calibration_engine::tests::binder_rejects_intersecting_target_truth_windows ... ok
+test calibration_engine::tests::binder_rejects_target_intersection_with_threshold_null_truth ... ok
+test axis_characterization::tests::axis_search_recovers_every_proper_signed_rotation ... ok
+test clock_epoch::tests::timestamp_spool_is_private_and_removed_on_normal_drop ... ok
+test calibration_engine::tests::clean_stream_gate_rejects_gate0_controls_before_generic_integrity ... ok
+test clock_epoch::tests::timestamp_spool_is_removed_when_a_fit_path_returns_an_error ... ok
+test decoder::tests::repeated_raw_aggregate_time_rejects_even_when_every_sensor_advances ... ok
+test decoder::tests::borrowed_split_window_reuses_storage_and_preserves_decode_order ... ok
+test hardware_calibration::tests::abort_lease_loss_and_source_fault_commit_typed_nonready_state ... ok
+test hardware_calibration::tests::capture_transition_preserves_a_split_frame_and_pending_candidates ... ok
+test hardware_calibration::tests::contended_keyboard_boundary_dispatches_only_one_batch_before_retry ... ok
+test hardware_calibration::tests::displayed_coverage_uses_a_canonical_complete_set_from_two_blocks ... ok
+test hardware_calibration::tests::finite_keyboard_warm_start_and_passive_threshold_plans_cover_their_contracts ... ok
+test hardware_calibration::tests::fitting_and_heldout_monitors_reject_acquisition_faults_and_keep_both_incidents ... ok
+test hardware_calibration::tests::healthy_freeze_preserves_interleaved_receipt_order ... ok
+test hardware_calibration::tests::keyboard_blocks_alternate_only_between_finite_prompt_passes ... ok
+test hardware_calibration::tests::keyboard_dispatch_yields_with_replenished_backlog_and_loses_no_events ... ok
+test hardware_calibration::tests::abort_and_lease_loss_preserve_original_capture_when_result_pending_or_dropped ... ok
+test hardware_calibration::tests::missing_passive_contact_preserves_original_fitting_and_heldout_capture ... ok
+test hardware_calibration::tests::observed_monitor_fault_cannot_be_erased_by_a_transport_handoff ... ok
+test hardware_calibration::tests::original_incident_file_conflict_prevents_terminal_commit_but_retains_other_evidence ... ok
+test hardware_calibration::tests::quiescent_keyboard_boundary_drains_the_full_bounded_queue_before_transition ... ok
+test hardware_calibration::tests::raw_prompt_attempts_do_not_change_matched_deficits_and_stop_at_the_cap ... ok
+test hardware_calibration::tests::selected_keyboard_state_survives_worker_boundaries_until_key_up ... ok
+test hardware_calibration::tests::timed_capture_needs_every_receipt_and_null_window_after_the_drain_horizon ... ok
+test hardware_calibration::tests::timed_plans_preserve_every_target_and_per_hand_motion_exposure ... ok
+test output::linux::tests::all_core28_usages_have_unique_kernel_codes ... ok
+test protocol::tests::checksum_valid_bad_magic_is_rejected ... ok
+test protocol::tests::checksum_valid_invalid_headers_are_rejected_semantically ... ok
+test protocol::tests::checksum_valid_unknown_flags_are_rejected ... ok
+test protocol::tests::crc32_matches_standard_check_value ... ok
+test reader_mailbox::tests::close_owns_the_full_queue_and_rejects_waiting_publishers ... ok
+test reader_mailbox::tests::close_snapshot_equals_the_publish_result_at_the_admission_race ... ok
+test reader_mailbox::tests::closed_receiver_disconnects_while_senders_are_still_alive ... ok
+test reader_mailbox::tests::freeing_space_admits_one_waiting_item_in_order ... ok
+test reader_mailbox::tests::receiver_drop_releases_the_lock_before_dropping_queued_values ... ok
+test reader_mailbox::tests::receiver_reports_disconnect_only_after_the_admitted_backlog ... ok
+test reader_mailbox::tests::two_publishers_keep_per_source_order_without_loss_or_duplication ... ok
+test session::tests::all_header_prefix_corruption_is_detected ... ok
+test session::tests::checksum_valid_candidate_length_contradiction_is_rejected ... ok
+test session::tests::checksum_valid_footer_count_mismatch_is_rejected ... ok
+test session::tests::checksum_valid_nonzero_record_reserved_bytes_are_rejected ... ok
+test session::tests::checksum_valid_unknown_record_kind_is_rejected ... ok
+test session::tests::clean_two_hand_stream_rejects_recorded_time_regressions ... ok
+test session::tests::oversized_payload_is_rejected_before_the_writer_changes ... ok
+test transport::tests::cobs_round_trips_zero_patterns_and_long_runs ... ok
+test transport::tests::malformed_cobs_run_is_rejected ... ok
+test hardware_calibration::tests::monitor_successor_keeps_sequence_and_sensor_time_continuity ... ok
+
+test result: ok. 59 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 9.43s
+
+================================================================================
+INFO: From Testing //:clippy-test:
+==================== Test output for //:clippy-test:
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/100/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/calibration-browser-fixture.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/100/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/invisible-keyboard.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/100/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/invisible_keyboard.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/100/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/unit-tests.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/100/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/cli-unit-tests.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/100/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/cli-contract-test.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/100/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/output-system-contract-test.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/100/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/output-system-required-test.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/100/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/controller-source-contract-test.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/100/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/artifact-contract-test.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/100/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/calibration-contract-test.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/100/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/calibration-app-contract-test.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/100/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/calibration-capture-contract-test.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/100/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/calibration-engine-contract-test.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/100/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/calibration-worker-contract-test.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/100/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/clock-contract-test.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/100/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/clock-epoch-contract-test.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/100/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/decoder-simulation-contract-test.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/100/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/device-transport-contract-test.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/100/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/evaluation-contract-test.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/100/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/gate0-contract-test.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/100/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/gate0-trace-contract-test.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/100/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/hardware-calibration-contract-test.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/100/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/layout-contract-test.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/100/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/label-contract-test.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/100/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/manifest-contract-test.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/100/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/neutral-contract-test.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/100/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/output-contract-test.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/100/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/physical-study-contract-test.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/100/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/pilot-contract-test.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/100/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/pipeline-contract-test.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/100/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/prompt-contract-test.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/100/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/replay-contract-test.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/100/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/protocol-contract-test.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/100/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/runtime-contract-test.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/100/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/session-contract-test.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/100/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/transport-contract-test.clippy.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/100/execroot/_main/bazel-out/aarch64-fastbuild/bin/clippy-test.runfiles/_main/validation-contract-test.clippy.ok
+================================================================================
+INFO: From Testing //:rustfmt-test:
+==================== Test output for //:rustfmt-test:
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/102/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/calibration-browser-fixture.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/102/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/invisible-keyboard.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/102/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/invisible_keyboard.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/102/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/unit-tests.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/102/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/cli-unit-tests.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/102/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/cli-contract-test.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/102/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/output-system-contract-test.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/102/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/output-system-required-test.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/102/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/controller-source-contract-test.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/102/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/artifact-contract-test.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/102/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/calibration-contract-test.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/102/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/calibration-app-contract-test.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/102/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/calibration-capture-contract-test.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/102/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/calibration-engine-contract-test.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/102/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/calibration-worker-contract-test.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/102/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/clock-contract-test.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/102/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/clock-epoch-contract-test.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/102/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/decoder-simulation-contract-test.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/102/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/device-transport-contract-test.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/102/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/evaluation-contract-test.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/102/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/gate0-contract-test.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/102/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/gate0-trace-contract-test.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/102/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/hardware-calibration-contract-test.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/102/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/layout-contract-test.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/102/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/label-contract-test.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/102/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/manifest-contract-test.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/102/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/neutral-contract-test.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/102/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/output-contract-test.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/102/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/physical-study-contract-test.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/102/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/pilot-contract-test.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/102/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/pipeline-contract-test.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/102/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/prompt-contract-test.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/102/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/replay-contract-test.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/102/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/protocol-contract-test.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/102/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/runtime-contract-test.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/102/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/session-contract-test.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/102/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/transport-contract-test.rustfmt.ok
+PASS /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/102/execroot/_main/bazel-out/aarch64-fastbuild/bin/rustfmt-test.runfiles/_main/validation-contract-test.rustfmt.ok
+================================================================================
+[771 / 772] 39 / 40 tests; Testing //:cli-contract-test; 1s processwrapper-sandbox
+[771 / 772] 39 / 40 tests; Testing //:cli-contract-test; 562s processwrapper-sandbox
+INFO: From Testing //:cli-contract-test:
+==================== Test output for //:cli-contract-test:
+
+running 76 tests
+test calibrated_live_ingress_fault_retains_the_whole_chunk_after_clock_warmup ... ok
+test calibrated_live_run_locks_current_and_reset_boots_into_artifact_bound_outputs ... ok
+test calibrated_live_run_rejects_reused_or_existing_outputs_before_device_open ... ok
+test calibrated_live_run_rejects_swapped_and_wrong_controller_identity_without_outputs ... ok
+test calibrated_live_run_requires_artifact_and_calibration_output_directory ... ok
+test calibrated_live_run_requires_fresh_wear_confirmation_before_reading_inputs ... ok
+test calibrated_live_run_retains_bootstrap_bytes_once_and_creates_nothing_before_lock ... ok
+test calibrated_live_run_times_out_a_missing_identity_without_outputs ... ok
+test calibrated_live_watchdog_revokes_during_continuous_empty_transport_traffic ... ok
+test calibrated_replay_rejects_a_runtime_manifest_from_another_physical_rig ... ok
+test calibrated_replay_requires_every_identity_sidecar ... ok
+test calibrated_replay_runs_only_after_recomputing_the_canonical_heldout_bundle ... ok
+test calibration_demo_rejects_invalid_ports_before_binding ... ok
+test capture_commands_never_overwrite_an_existing_session ... ok
+test capture_fails_before_creating_output_when_template_is_missing_or_invalid ... ok
+test commissioning_cli_abort_paths_retain_partial_evidence_without_publishing_reports ... ok
+test commissioning_cli_guides_all_right_hand_poses_and_replay_reproduces_the_report ... ok
+test commissioning_cli_rejects_noninteractive_capture_before_outputs_or_devices ... ok
+test commissioning_rig_hash_cli_uses_typed_canonical_bytes_not_input_formatting ... ok
+test delimited_stdin_capture_preserves_valid_and_invalid_candidates ... ok
+test evidence_bound_calibration_replay_requires_both_disjoint_bundles ... ok
+test firmware_and_host_frame_fixtures_are_byte_identical ... ok
+test gate0_quiesce_cli_contract::record_hand_abort_paths_never_write_a_footer ... ok
+test gate0_quiesce_cli_contract::record_hand_bounds_a_stalled_request_write_and_drain ... ok
+test gate0_quiesce_cli_contract::record_hand_completes_one_identity_bound_quiesce_transaction_over_real_kernel_io ... ok
+test gate0_quiesce_cli_contract::record_hand_observes_control_faults_during_stalled_transmission ... ok
+test gate0_quiesce_cli_contract::record_hand_receipt_deadline_applies_while_sensor_frames_keep_arriving ... ok
+test gate0_quiesce_cli_contract::record_hand_signals_before_the_footer_commit_abort_without_a_footer ... ok
+test gate0_quiesce_cli_contract::record_hand_waits_for_initial_usb_enumeration ... ok
+test gate0_quiesce_cli_contract::record_stream_signal_finishes_a_fragmented_record_without_a_partial_tail ... ok
+test generic_clock_fit_streams_a_healthy_session_beyond_the_setup_cap ... ok
+test hardware_calibration_rejects_reused_device_paths_before_opening_them ... ok
+test hardware_calibration_requires_two_controllers_keyboard_and_output_directory ... ok
+test help_names_the_hardware_free_commands ... ok
+test identity_bootstrap_rejects_a_boot_change_without_outputs ... ok
+test identity_bootstrap_rejects_the_wrong_controller_without_outputs ... ok
+test keyboard_discovery_is_a_runnable_bounded_diagnostic ... ok
+test layout_prints_all_34_positions_and_core28_count ... ok
+test live_transport_fault_remains_primary_when_secondary_finalization_fails ... ok
+test missing_input_is_reported_as_file_io_not_output_failure ... ok
+test operand_free_commands_reject_unexpected_arguments ... ok
+test physical_study_commands_reject_wrong_arity ... ok
+test physical_study_plan_failures_leave_no_partial_authoritative_pair ... ok
+test physical_study_plan_writes_the_exact_canonical_manifest_and_plan ... ok
+test physical_study_score_rejects_semantic_row_tamper_without_a_report ... ok
+test physical_study_score_waits_for_a_writer_and_never_publishes_its_stale_bytes ... ok
+test physical_study_score_writes_a_valid_bound_report_and_never_overwrites_it ... ok
+test physical_study_seal_appends_exact_rows_and_preserves_failures ... ok
+test physical_study_seal_serializes_concurrent_writers_at_the_total_byte_cap ... ok
+test planned_signals_finalize_an_open_stream_capture ... ok
+test planned_signals_finalize_calibrated_live_while_both_fifos_are_busy ... ok
+test record_hand_rejects_fifo_fixtures_because_gate0_requires_a_real_duplex_tty ... ok
+test record_hand_rejects_non_tty_character_device_before_identity_bootstrap ... ok
+test record_hand_rejects_wrong_topology_before_opening_any_controller_or_pipe ... ok
+test record_hand_requires_one_template_device_and_two_distinct_outputs ... ok
+test record_stream_finalizes_each_declared_single_hand_with_observed_boot_binding ... ok
+test record_stream_locks_wire_boots_into_the_manifest_before_recording ... ok
+test record_stream_rejects_device_count_mismatch_and_duplicate_sources_without_outputs ... ok
+test record_stream_requires_a_template_and_two_distinct_outputs ... ok
+test runtime_ignores_missing_corrupt_and_replaced_diagnostic_evidence ... ok
+test runtime_recomputes_and_rejects_a_real_failed_heldout_capture ... ok
+test runtime_rejects_invalid_capture_and_surface_plan_before_device_open ... ok
+test runtime_validation_rejects_forged_and_non_neutral_reports_in_live_and_replay ... ok
+test score_gate0a_reduces_raw_samples_and_writes_a_bound_report ... ok
+test score_gate0a_requires_native_capture_and_never_overwrites_a_report ... ok
+test score_pilot_reduces_bound_raw_evidence_without_authorizing_output ... ok
+test score_pilot_requires_the_complete_operand_layout ... ok
+test session_fixture_round_trips_through_cli_file_io ... ok
+test simulation_output_cannot_be_mistaken_for_physical_proof ... ok
+test source_fault_remains_primary_when_sigint_arrives_after_the_session_footer ... ok
+test sparse_oversized_json_and_gate0_session_fail_before_allocation ... ok
+test stream_capture_persists_oversized_and_unterminated_provenance ... ok
+test terminal_status_disconnect_cannot_erase_a_durable_live_bundle ... ok
+test two_hand_session_fixture_rejects_a_one_hand_manifest_before_file_creation ... ok
+test unknown_command_fails_with_a_direct_error ... ok
+test verification_rejects_a_different_acquisition_manifest ... ok
+
+test result: ok. 76 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 562.69s
+
+================================================================================
+INFO: Found 40 test targets...
+INFO: Elapsed time: 2163.143s, Critical Path: 1028.57s
+INFO: 91 processes: 681 action cache hit, 26 internal, 105 processwrapper-sandbox.
+INFO: Build completed successfully, 91 total actions
+//:artifact-contract-test                                                PASSED in 0.4s
+//:calibration-app-contract-test                                         PASSED in 5.1s
+//:calibration-capture-contract-test                                     PASSED in 3.1s
+//:calibration-contract-test                                             PASSED in 0.0s
+//:calibration-engine-contract-test                                      PASSED in 1028.2s
+//:calibration-worker-contract-test                                      PASSED in 29.0s
+//:cli-contract-test                                                     PASSED in 562.7s
+//:cli-unit-tests                                                        PASSED in 0.1s
+//:clippy-test                                                           PASSED in 0.0s
+//:clock-contract-test                                                   PASSED in 0.1s
+//:clock-epoch-contract-test                                             PASSED in 0.2s
+//:controller-source-contract-test                                       PASSED in 0.0s
+//:decoder-simulation-contract-test                                      PASSED in 0.2s
+//:device-transport-contract-test                                        PASSED in 0.1s
+//:evaluation-contract-test                                              PASSED in 32.8s
+//:firmware-acquisition-conformance-test                                 PASSED in 0.1s
+//:firmware-frame-conformance-test                                       PASSED in 0.1s
+//:gate0-contract-test                                                   PASSED in 0.1s
+//:gate0-trace-contract-test                                             PASSED in 35.1s
+//:hardware-calibration-contract-test                                    PASSED in 0.9s
+//:label-contract-test                                                   PASSED in 0.1s
+//:layout-contract-test                                                  PASSED in 0.0s
+//:manifest-contract-test                                                PASSED in 19.6s
+//:neutral-contract-test                                                 PASSED in 0.5s
+//:output-contract-test                                                  PASSED in 0.1s
+//:output-system-contract-test                                           PASSED in 0.0s
+//:physical-study-contract-test                                          PASSED in 119.8s
+//:pilot-contract-test                                                   PASSED in 226.9s
+//:pipeline-contract-test                                                PASSED in 0.1s
+//:prompt-contract-test                                                  PASSED in 0.3s
+//:protocol-contract-test                                                PASSED in 0.1s
+//:replay-contract-test                                                  PASSED in 47.3s
+//:runtime-contract-test                                                 PASSED in 0.2s
+//:rustfmt-test                                                          PASSED in 0.0s
+//:session-contract-test                                                 PASSED in 0.1s
+//:transport-contract-test                                               PASSED in 0.0s
+//:unit-tests                                                            PASSED in 9.5s
+//:validation-contract-test                                              PASSED in 0.0s
+//firmware/zephyr:native-conformance-test                                PASSED in 0.1s
+//firmware/zephyr:native-glue-conformance-test                           PASSED in 0.5s
+
+Executed 40 out of 40 tests: 40 tests pass.
+There were tests whose specified size is too big. Use the --test_verbose_timeout_warnings command line option to see which ones these are.

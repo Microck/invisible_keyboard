@@ -1,0 +1,89 @@
+OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Loading: 0 packages loaded
+    currently loading: 
+Analyzing: target //:live-durability-syscall-test (1 packages loaded)
+Analyzing: target //:live-durability-syscall-test (5 packages loaded, 6 targets configured)
+Analyzing: target //:live-durability-syscall-test (5 packages loaded, 6 targets configured)
+
+Analyzing: target //:live-durability-syscall-test (11 packages loaded, 8 targets configured)
+
+Analyzing: target //:live-durability-syscall-test (61 packages loaded, 8 targets configured)
+
+Analyzing: target //:live-durability-syscall-test (81 packages loaded, 146 targets configured)
+
+Analyzing: target //:live-durability-syscall-test (101 packages loaded, 642 targets configured)
+
+Analyzing: target //:live-durability-syscall-test (131 packages loaded, 1230 targets configured)
+
+Analyzing: target //:live-durability-syscall-test (144 packages loaded, 2542 targets configured)
+
+Analyzing: target //:live-durability-syscall-test (189 packages loaded, 4631 targets configured)
+
+INFO: Analyzed target //:live-durability-syscall-test (212 packages loaded, 5517 targets configured).
+[1 / 1] no actions running
+[147 / 446] checking cached actions
+[446 / 447] [Prepa] Testing //:live-durability-syscall-test
+[446 / 447] Testing //:live-durability-syscall-test; 1s local
+[446 / 447] Testing //:live-durability-syscall-test; 37s local
+INFO: From Testing //:live-durability-syscall-test:
+==================== Test output for //:live-durability-syscall-test:
+{
+  "bundles": {
+    "current": {
+      "durable_status_started_at_trace_event": 439,
+      "footer_write_completed_at_trace_event": 413,
+      "manifest": "current-live-118000-0.manifest.json",
+      "manifest_fsync_completed_at_trace_event": 185,
+      "manifest_parent_fsync_completed_at_trace_event": 187,
+      "manifest_sha256": "c1eb9abe31357db1f864f83dd9eab61662156be5f70705e56401c12aec845fa3",
+      "neutral_status_started_at_trace_event": 435,
+      "pid": 118005,
+      "report": "current-live-118000-0.live-clock-report.json",
+      "report_fsync_completed_at_trace_event": 427,
+      "report_parent_fsync_completed_at_trace_event": 429,
+      "report_sha256": "98c40a9d9f6a96da77084df1da1892cb4dcce2a0698ee755ac424f01e91e52ed",
+      "session": "current-live-118000-0.iks",
+      "session_fsync_completed_at_trace_event": 414,
+      "session_parent_fsync_completed_at_trace_event": 416,
+      "session_sha256": "7e15724bc370043a16fe07a3e53324e6f4dfa3d510bcb574abd4db1cfac89758"
+    },
+    "reset": {
+      "durable_status_started_at_trace_event": 826,
+      "footer_write_completed_at_trace_event": 800,
+      "manifest": "reset-live-118000-1.manifest.json",
+      "manifest_fsync_completed_at_trace_event": 572,
+      "manifest_parent_fsync_completed_at_trace_event": 577,
+      "manifest_sha256": "f71a657dbb3fd780e838f9c1a5030c8282914ef42ec2b9ed06c6c84471f7fd77",
+      "neutral_status_started_at_trace_event": 822,
+      "pid": 118016,
+      "report": "reset-live-118000-1.live-clock-report.json",
+      "report_fsync_completed_at_trace_event": 814,
+      "report_parent_fsync_completed_at_trace_event": 816,
+      "report_sha256": "c427755ebb723b4a565762727439ad934b80bbc70e10d00461dfabca024a3510",
+      "session": "reset-live-118000-1.iks",
+      "session_fsync_completed_at_trace_event": 801,
+      "session_parent_fsync_completed_at_trace_event": 803,
+      "session_sha256": "a51867a3ced804e564cd91bdfee1d74c0d829a6a064cf5c68f2ddd4815dbad4a"
+    }
+  },
+  "claim_scope": "Linux syscall order for two real recording-mode CLI shutdowns; fsync semantics do not prove storage hardware beyond the operating-system contract",
+  "cli_sha256": "9b57ff02a07680c4a758fdec4de6afb62c9a1b31294f91cef462bd14f4440518",
+  "cli_test_sha256": "db10b91ab3ec592741ef02373e3eaa4610588c997874a98b646a036773ef46a5",
+  "schema": "invisible-keyboard-linux-durability-syscall-proof-v1",
+  "strace_version": "strace -- version 5.16",
+  "test": "calibrated_live_run_locks_current_and_reset_boots_into_artifact_bound_outputs",
+  "trace_sha256": "a4df329d54375a736d7fa654eba9929f2b611ce12ebc7e12b9605ca8e30aaaa9"
+}
+================================================================================
+INFO: Found 1 test target...
+Target //:live-durability-syscall-test up-to-date:
+  bazel-bin/live-durability-syscall-test
+INFO: Elapsed time: 54.736s, Critical Path: 37.52s
+INFO: 2 processes: 445 action cache hit, 1 internal, 2 local.
+INFO: Build completed successfully, 2 total actions
+//:live-durability-syscall-test                                          PASSED in 37.0s
+
+Executed 1 out of 1 test: 1 test passes.

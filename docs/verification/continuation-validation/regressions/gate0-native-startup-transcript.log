@@ -1,0 +1,126 @@
+W 70 01
+D 10
+R 70 01
+W 6a 12 01
+WR 6a 12 00
+WR 6a 0f 6a
+W 6a 12 44
+WR 6a 12 44
+W 6a 10 58
+WR 6a 10 58
+W 6a 11 58
+WR 6a 11 58
+W 6a 0b 80
+WR 6a 0b 80
+W 6a 0d 00
+WR 6a 0d 00
+W 70 02
+D 10
+R 70 02
+W 6a 12 01
+WR 6a 12 00
+WR 6a 0f 6a
+W 6a 12 44
+WR 6a 12 44
+W 6a 10 58
+WR 6a 10 58
+W 6a 11 58
+WR 6a 11 58
+W 6a 0b 80
+WR 6a 0b 80
+W 6a 0d 00
+WR 6a 0d 00
+W 70 04
+D 10
+R 70 04
+W 6a 12 01
+WR 6a 12 00
+WR 6a 0f 6a
+W 6a 12 44
+WR 6a 12 44
+W 6a 10 58
+WR 6a 10 58
+W 6a 11 58
+WR 6a 11 58
+W 6a 0b 80
+WR 6a 0b 80
+W 6a 0d 00
+WR 6a 0d 00
+W 70 08
+D 10
+R 70 08
+W 6a 12 01
+WR 6a 12 00
+WR 6a 0f 6a
+W 6a 12 44
+WR 6a 12 44
+W 6a 10 58
+WR 6a 10 58
+W 6a 11 58
+WR 6a 11 58
+W 6a 0b 80
+WR 6a 0b 80
+W 6a 0d 00
+WR 6a 0d 00
+W 70 10
+D 10
+R 70 10
+W 6a 12 01
+WR 6a 12 00
+WR 6a 0f 6a
+W 6a 12 44
+WR 6a 12 44
+W 6a 10 58
+WR 6a 10 58
+W 6a 11 58
+WR 6a 11 58
+W 6a 0b 80
+WR 6a 0b 80
+W 6a 0d 00
+WR 6a 0d 00
+W 70 20
+D 10
+R 70 20
+W 6a 12 01
+WR 6a 12 00
+WR 6a 0f 6a
+W 6a 12 44
+WR 6a 12 44
+W 6a 10 58
+WR 6a 10 58
+W 6a 11 58
+WR 6a 11 58
+W 6a 0b 80
+WR 6a 0b 80
+W 6a 0d 00
+WR 6a 0d 00
+W 70 01
+D 10
+R 70 01
+W 6a 0d 01
+WR 6a 0d 01
+W 70 02
+D 10
+R 70 02
+W 6a 0d 01
+WR 6a 0d 01
+W 70 04
+D 10
+R 70 04
+W 6a 0d 01
+WR 6a 0d 01
+W 70 08
+D 10
+R 70 08
+W 6a 0d 01
+WR 6a 0d 01
+W 70 10
+D 10
+R 70 10
+W 6a 0d 01
+WR 6a 0d 01
+W 70 20
+D 10
+R 70 20
+W 6a 0d 01
+WR 6a 0d 01

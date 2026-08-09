@@ -1,0 +1,65 @@
+OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //:cli-contract-test (1 packages loaded)
+Analyzing: target //:cli-contract-test (5 packages loaded, 6 targets configured)
+Analyzing: target //:cli-contract-test (5 packages loaded, 6 targets configured)
+
+Analyzing: target //:cli-contract-test (14 packages loaded, 9 targets configured)
+
+Analyzing: target //:cli-contract-test (58 packages loaded, 9 targets configured)
+
+Analyzing: target //:cli-contract-test (82 packages loaded, 272 targets configured)
+
+Analyzing: target //:cli-contract-test (107 packages loaded, 781 targets configured)
+
+Analyzing: target //:cli-contract-test (130 packages loaded, 1524 targets configured)
+
+Analyzing: target //:cli-contract-test (149 packages loaded, 2794 targets configured)
+
+Analyzing: target //:cli-contract-test (187 packages loaded, 4502 targets configured)
+
+Analyzing: target //:cli-contract-test (211 packages loaded, 5505 targets configured)
+
+INFO: Analyzed target //:cli-contract-test (212 packages loaded, 5509 targets configured).
+[122 / 445] checking cached actions
+[439 / 445] [Prepa] Compiling Rust bin cli-contract-test (1 file)
+[439 / 445] Compiling Rust bin cli-contract-test (1 file); 1s processwrapper-sandbox
+INFO: From Compiling Rust bin cli-contract-test (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+[443 / 445] [Prepa] Compiling Rust bin invisible-keyboard (1 file)
+[443 / 445] Compiling Rust bin invisible-keyboard (1 file); 1s processwrapper-sandbox
+INFO: From Compiling Rust bin invisible-keyboard (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+[445 / 446] Testing //:cli-contract-test; 0s processwrapper-sandbox
+[445 / 446] Testing //:cli-contract-test; 13s processwrapper-sandbox
+INFO: From Testing //:cli-contract-test:
+==================== Test output for //:cli-contract-test:
+
+running 1 test
+test export_clock_domain_cli_fixtures ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 76 filtered out; finished in 13.77s
+
+================================================================================
+INFO: Found 1 test target...
+Target //:cli-contract-test up-to-date:
+  bazel-bin/cli-contract-test
+INFO: Elapsed time: 36.301s, Critical Path: 16.74s
+INFO: 5 processes: 441 action cache hit, 2 internal, 4 processwrapper-sandbox.
+INFO: Build completed successfully, 5 total actions
+//:cli-contract-test                                                     PASSED in 13.8s
+
+Executed 1 out of 1 test: 1 test passes.
+There were tests whose specified size is too big. Use the --test_verbose_timeout_warnings command line option to see which ones these are.

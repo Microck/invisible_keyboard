@@ -1,0 +1,4 @@
+# Requires a dedicated system group named `invisible-keyboard`. This removes
+# seat-wide uaccess ACLs and grants only that group the minimum device access.
+ACTION!="remove", SUBSYSTEM=="misc", KERNEL=="uinput", GROUP:="invisible-keyboard", MODE:="0660", TAG-="uaccess"
+ACTION!="remove", SUBSYSTEM=="input", KERNEL=="event*", ATTRS{id/bustype}=="0006", ATTRS{id/vendor}=="0000", ATTRS{id/product}=="0000", ATTRS{id/version}=="0001", ATTRS{phys}=="invisible-keyboard/core28", GROUP:="invisible-keyboard", MODE:="0640", TAG-="uaccess"

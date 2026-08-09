@@ -1,0 +1,4 @@
+physical_study_row=sealed-and-appended
+row=/home/ubuntu/study-boundary-cli-fixtures/underflow/boundary-row.json
+row_sha256=4f3f230b18b4c2d2ce31a1cc8f07d9a4160aea5b5b4bed3dbcdbeafcc1dd7e99
+evidence=/tmp/ikb-study-boundary-w5m6p5lb/evidence.jsonl

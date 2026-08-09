@@ -1,0 +1,59 @@
+OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //:calibration-engine-contract-test (1 packages loaded)
+Analyzing: target //:calibration-engine-contract-test (5 packages loaded, 6 targets configured)
+Analyzing: target //:calibration-engine-contract-test (5 packages loaded, 6 targets configured)
+
+Analyzing: target //:calibration-engine-contract-test (15 packages loaded, 9 targets configured)
+
+Analyzing: target //:calibration-engine-contract-test (65 packages loaded, 18 targets configured)
+
+Analyzing: target //:calibration-engine-contract-test (81 packages loaded, 186 targets configured)
+
+Analyzing: target //:calibration-engine-contract-test (103 packages loaded, 745 targets configured)
+
+Analyzing: target //:calibration-engine-contract-test (124 packages loaded, 1470 targets configured)
+
+Analyzing: target //:calibration-engine-contract-test (147 packages loaded, 3109 targets configured)
+
+Analyzing: target //:calibration-engine-contract-test (181 packages loaded, 4586 targets configured)
+
+Analyzing: target //:calibration-engine-contract-test (203 packages loaded, 5399 targets configured)
+
+INFO: Analyzed target //:calibration-engine-contract-test (206 packages loaded, 5419 targets configured).
+[154 / 425] checking cached actions
+[423 / 425] [Prepa] Compiling Rust bin calibration-engine-contract-test (1 file)
+ERROR: /home/ubuntu/work/cbx_42955e8aa2c5/invisible_keyboard/BUILD.bazel:292:14: Compiling Rust bin calibration-engine-contract-test (1 file) failed: (Exit 1): process_wrapper failed: error executing Rustc command (from rust_test rule target //:calibration-engine-contract-test) bazel-out/aarch64-opt-exec/bin/external/rules_rust+/util/process_wrapper/process_wrapper --arg-file bazel-out/aarch64-fastbuild/bin/external/rules_rust++crate+crates__radium-0.7.0/_bs.linksearchpaths ... (remaining 39 arguments skipped)
+
+Use --sandbox_debug to see verbose messages from the sandbox and retain the sandbox build root for debugging
+error[E0277]: `CalibrationValidationResult` doesn't implement `Debug`
+    --> tests/calibration-engine-contract.rs:2071:10
+     |
+2071 |         .expect_err("unlabeled suffix must not hide repeated raw sensor time under a 1001ns/us clock");
+     |          ^^^^^^^^^^ the trait `Debug` is not implemented for `CalibrationValidationResult`
+     |
+note: required by a bound in `Result::<T, E>::expect_err`
+    --> /rustc/4a4ef493e3a1488c6e321570238084b38948f6db/library/core/src/result.rs:1293:4
+
+error[E0277]: `CalibrationFitResult` doesn't implement `Debug`
+    --> tests/calibration-engine-contract.rs:2088:8
+     |
+2088 |     }).expect_err("fitting must admit the whole raw stream before neutral evidence and selection");
+     |        ^^^^^^^^^^ the trait `Debug` is not implemented for `CalibrationFitResult`
+     |
+note: required by a bound in `Result::<T, E>::expect_err`
+    --> /rustc/4a4ef493e3a1488c6e321570238084b38948f6db/library/core/src/result.rs:1293:4
+
+error: aborting due to 2 previous errors
+
+For more information about this error, try `rustc --explain E0277`.
+Target //:calibration-engine-contract-test failed to build
+Use --verbose_failures to see the command lines of failed build steps.
+INFO: Elapsed time: 17.793s, Critical Path: 0.69s
+INFO: 2 processes: 422 action cache hit, 2 internal.
+ERROR: Build did NOT complete successfully
+//:calibration-engine-contract-test                             FAILED TO BUILD
+
+Executed 0 out of 1 test: 1 fails to build.

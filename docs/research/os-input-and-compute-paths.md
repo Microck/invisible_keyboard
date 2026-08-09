@@ -171,12 +171,13 @@ error-prone than raw ioctls [S6].
 This is the canonical bench route:
 
 - Create one virtual keyboard with exactly the supported `KEY_*` capabilities.
-- Write access to `/dev/uinput` is privileged. Install a narrow udev/group rule
-  or a small privileged device-creation boundary; do not run the decoder and
-  model as root.
-- Wayland is not a blocker at this layer because the compositor receives a
-  kernel input device. Container, seat, and distribution policy still need
-  tests.
+- Opening `/dev/uinput` requires the device-node permission set by ownership,
+  group mode, ACLs, and udev policy; the kernel API does not require root as
+  such [S6][S34]. Install a narrow udev/group rule or a small privileged
+  device-creation boundary; do not run the decoder and model as root.
+- Wayland is not a blocker at this layer because the compositor receives input
+  through the kernel/libinput path [S32][S33]. Container, seat, and
+  distribution policy still need tests.
 - Hold behavior is event value 1 for down and 0 for up; Linux also defines value
   2 for autorepeat, but the product contract should let the active host own
   normal repeat unless a target-specific requirement proves otherwise.
@@ -389,9 +390,11 @@ failed update must fail silent as a keyboard, never leave a modifier down.
 2. **Neutral startup.** A new process, USB enumeration, BLE connection, IME
    binding, or focus session begins with no keys down. Never restore a held key
    from persistent state.
-3. **Fault deadline.** Planned shutdown sends all-up first. Unplanned transport
-   loss starts a host/device watchdog; Gate 0 requires application-observed
-   neutral state within 250 ms and zero stuck repeat/modifier state.
+3. **Output-neutralization deadline.** Planned shutdown and operational faults
+   send all-up before evidence I/O. Gate 0S requires independent
+   application-path observation of neutral state within 250 ms and zero stuck
+   repeat/modifier state. This deadline does not cover session footer sync,
+   strict audit, clock fitting, or report sync.
 4. **Host-owned repeat.** Hold one down state and let the host's active repeat
    delay/rate and accessibility settings act. Only an IME semantic-text mode may
    need an explicit repeat policy, which must be labeled and tested separately.
@@ -415,14 +418,21 @@ failed update must fail silent as a keyboard, never leave a modifier down.
 10. **Recovery is observable.** Surface disconnected, decoder-unready, pairing,
     permission, update, and degraded-power states. Silent fallback from raw key
     events to pasted/corrected text is forbidden.
+11. **Durable status follows durable bytes.** A live command can claim durable
+    evidence only after the complete session and exact-session-bound report,
+    including parent directories, have synced on the supported platform. A
+    status pipe is never the safety oracle. Evidence finalization has no
+    universal wall-clock bound.
 
-## Mapping to the ten feasibility gates
+## Mapping to the canonical feasibility gates
 
 | Gate | What this input path must prove |
 | --- | --- |
-| 0 - stream integrity | Full sensor-to-app topology for 60 minutes and 10,000 deterministic down/up records; sequence accounting; stage timestamps; 10 forced faults; p95 <= 100 ms, p99 <= 200 ms; all-up <= 250 ms |
-| 1 - isolated intent | The target application, not the adapter log, observes each isolated intended activation and quiet-period false activations |
-| 2 - finger/key identity | Physical-key mode preserves exact top-1 key class with language correction disabled; semantic-text mode cannot stand in for claim B |
+| 0A - acquisition integrity | The acquisition/session boundary preserves source identity, sequence and stage timestamps without treating an adapter log as sensor evidence; no live key output is needed for this gate |
+| 0S - deterministic output integrity | Linux `uinput` emits 10,000 deterministic down/up records into an independent evdev consumer; native fault cases reach observed all-up within 250 ms; p95 is at most 100 ms and p99 at most 200 ms; durable status follows durable evidence |
+| 0B - observable contact | Input remains disarmed while the frozen detector is scored against independent two-hand contact truth; contact evidence is not silently promoted to a key event |
+| 1 - acting finger | Input remains disarmed while the fixed classifier distinguishes the five acting fingers and abstains in every required negative condition |
+| 2 - exact 34-position/Core-28 identity | Physical-key mode preserves the exact top-1 physical position with language correction disabled, emits no enabled output for reserved positions, and never substitutes semantic-text evidence |
 | 3 - live uncorrected text | A focused ordinary application receives causal live text from current events; raw and final application text remain traceable |
 | 4 - corrected phrases | Correction runs before semantic commit or before physical events are chosen, and raw/pre-language/final streams remain separate |
 | 5 - arbitrary text/code | Every advertised key, key-up, hold, repeat, modifier, symbol, shortcut, layout, and rollover result is observed in an isolated target app; no stuck destructive state |
@@ -456,7 +466,7 @@ a terminal/editor, but score its final state rather than assuming delivery.
 | Disconnect | Remove cable/radio during each modifier and repeat | Target's held-state/repeat after 250 ms | Neutral by deadline, zero further repeat, clean neutral reconnect |
 | Sleep/wake/lock | Sleep host and device in every key state | Pre/post-wake target and OS state | No replay, no stuck key, explicit re-pair/reconnect status |
 | Crash/update | Kill decoder and reset/update output device mid-chord | Target state and supervisor status | All-up or device-removal neutral; restart refuses stale state |
-| Long run | Gate 0 and Gate 9 durations | Sequence/latency panel and final app snapshots | Meets gate bounds with application denominator, not firmware log denominator |
+| Long run | Gate 0A acquisition, Gate 0S output, and Gate 9 durations | Sequence/latency panel and final app snapshots | Meets each gate's bound with the required independent denominator, not a firmware-log denominator |
 
 Clock the stages separately: physical reference, first sensor sample, complete
 feature window, decoder decision, adapter call/report, OS acknowledgement where
@@ -464,12 +474,21 @@ available, application callback, and visible/rendered state. If two devices do
 not share a clock, establish and report the synchronization method and residual.
 Never subtract unrelated wall clocks and call the result latency.
 
+The current Linux acceptance lane uses an exclusively grabbed evdev consumer
+that is independent of the output adapter. It observes every Core-28 down/up
+pair and the planned all-up transition. This proves the native uinput-to-evdev
+boundary. The signal coordinator and durable recorder are covered by separate
+real-FIFO CLI contracts and a Linux syscall trace. Those proofs are
+compositional: they do not yet prove one full physical-controller,
+`run-calibrated uinput`, compositor, focus, IME, and rendered-application path.
+That whole path remains Gate 0S hardware and host integration work.
+
 ## Prototype and product recommendations
 
 ### Prototype 0: deterministic output contract
 
 Before connecting a gesture model, replay a deterministic event file through
-Linux `uinput` into the target harness. Pass Gate 0, including fault injection,
+Linux `uinput` into the target harness. Pass Gate 0S, including fault injection,
 layout, repeat, and state cleanup. Then connect the live sensor transport. This
 isolates decoder errors from injection errors.
 
@@ -523,15 +542,16 @@ packages, not one blended BOM:
 The largest avoidable software cost is a Windows or macOS virtual-HID driver
 and its signing/entitlement lifecycle. The largest avoidable hardware cost is a
 gateway before profiling proves it is needed. The decisive prototype ticket
-should therefore specify deterministic `uinput` Gate 0, live host decoding,
+should therefore specify deterministic `uinput` Gate 0S, live host decoding,
 then USB HID appliance proof in that order. It should not begin with BLE
 pairing polish, a custom driver, or a mobile extension.
 
 ## Sources
 
-All sources were accessed 2026-08-09. Standards and official platform/vendor
-documentation establish API and protocol boundaries. Sample firmware proves a
-supported implementation route, not product behavior.
+Sources S1-S31 were accessed 2026-08-09. The Linux architecture and udev
+sources S32-S34 were checked 2026-08-29. Standards and official
+platform/vendor documentation establish API and protocol boundaries. Sample
+firmware proves a supported implementation route, not product behavior.
 
 | ID | Source | What it establishes |
 | --- | --- | --- |
@@ -566,6 +586,9 @@ supported implementation route, not product behavior.
 | S29 | [Chrome, Connect to uncommon HID devices](https://developer.chrome.com/docs/capabilities/hid) | Chrome permissions and generic keyboard/security-sensitive HID blocking |
 | S30 | [Nordic, nRF52840](https://www.nordicsemi.com/Products/nRF52840) | MCU CPU, memory, USB/BLE class, not system runtime |
 | S31 | [Zephyr, TFLM Magic Wand](https://docs.zephyrproject.org/latest/samples/modules/tflite-micro/magic_wand/README.html) | Maintained 20 KB accelerometer gesture-model example |
+| S32 | [Wayland architecture](https://wayland.freedesktop.org/docs/book/Architecture.html) | Compositor and kernel input architecture |
+| S33 | [libinput architecture](https://wayland.freedesktop.org/libinput/doc/latest/architecture.html) | Kernel evdev to compositor input path |
+| S34 | [systemd udev](https://www.freedesktop.org/software/systemd/man/latest/udev.html) | Device-node ownership, permissions, groups, and rule policy |
 
 ## Confidence and unresolved facts
 

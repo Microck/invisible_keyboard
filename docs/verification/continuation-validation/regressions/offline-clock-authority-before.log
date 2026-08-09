@@ -1,0 +1,30 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+Executing tests from //:calibration-engine-contract-test
+-----------------------------------------------------------------------------
+
+running 2 tests
+test offline_authority_consumers_reject_altered_valid_looking_clock_reports has been running for over 60 seconds
+test offline_authority_consumers_reject_forged_clock_statistics_and_fingerprints has been running for over 60 seconds
+test offline_authority_consumers_reject_altered_valid_looking_clock_reports ... FAILED
+test offline_authority_consumers_reject_forged_clock_statistics_and_fingerprints ... FAILED
+
+failures:
+
+---- offline_authority_consumers_reject_altered_valid_looking_clock_reports stdout ----
+
+thread 'offline_authority_consumers_reject_altered_valid_looking_clock_reports' (42109) panicked at tests/calibration-engine-contract.rs:919:13:
+altered slope_ns_per_us cannot grant capture authority
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- offline_authority_consumers_reject_forged_clock_statistics_and_fingerprints stdout ----
+
+thread 'offline_authority_consumers_reject_forged_clock_statistics_and_fingerprints' (42110) panicked at tests/calibration-engine-contract.rs:886:13:
+matching raw hashes and claimed passing statistics cannot grant capture authority
+
+
+failures:
+    offline_authority_consumers_reject_altered_valid_looking_clock_reports
+    offline_authority_consumers_reject_forged_clock_statistics_and_fingerprints
+
+test result: FAILED. 0 passed; 2 failed; 0 ignored; 0 measured; 21 filtered out; finished in 109.33s
+

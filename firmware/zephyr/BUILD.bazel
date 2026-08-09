@@ -1,0 +1,119 @@
+load("@rules_cc//cc:cc_library.bzl", "cc_library")
+load("@rules_cc//cc:cc_test.bzl", "cc_test")
+
+package(default_visibility = ["//visibility:public"])
+
+C_COPTS = [
+    "-std=c11",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-pedantic",
+]
+
+cc_library(
+    name = "controller-core",
+    srcs = ["controller.c"],
+    hdrs = ["controller.h"],
+    copts = C_COPTS,
+    deps = ["//:firmware-acquisition"],
+)
+
+cc_library(
+    name = "identity",
+    srcs = ["identity.c"],
+    hdrs = ["identity.h"],
+    copts = C_COPTS,
+    deps = ["//:firmware-frame-protocol"],
+)
+
+cc_library(
+    name = "glue-policy",
+    srcs = ["glue-policy.c"],
+    hdrs = ["glue-policy.h"],
+    copts = C_COPTS,
+    deps = [":controller-core"],
+)
+
+cc_test(
+    name = "native-conformance-test",
+    srcs = ["native-conformance.c"],
+    copts = C_COPTS,
+    size = "small",
+    deps = [
+        ":controller-core",
+        ":glue-policy",
+        ":identity",
+        "//:firmware-acquisition",
+        "//:firmware-frame-protocol",
+    ],
+)
+
+cc_test(
+    name = "native-glue-conformance-test",
+    srcs = ["native-glue-conformance.c"],
+    copts = C_COPTS,
+    size = "small",
+    deps = [":glue-policy"],
+)
+
+ZEPHYR_CROSS_BUILD_INPUTS = [
+    "CMakeLists.txt",
+    "Kconfig",
+    "boards/xiao_ble_nrf52840_plus.overlay",
+    "controller.c",
+    "controller.h",
+    "glue-policy.c",
+    "glue-policy.h",
+    "identity.c",
+    "identity.h",
+    "left-hand.conf",
+    "main.c",
+    "prj.conf",
+    "right-hand.conf",
+    "west.lock.yml",
+    "west.yml",
+    "//:firmware/acquisition.c",
+    "//:firmware/acquisition.h",
+    "//:firmware/frame-protocol.c",
+    "//:firmware/frame-protocol.h",
+]
+
+# Keep all downloaded and generated toolchain state below this configuration's
+# Bazel output directory. This path is explicit, writable, isolated between
+# workspaces/configurations, and does not rely on an executor home directory.
+genrule(
+    name = "selected-board-firmware",
+    srcs = ZEPHYR_CROSS_BUILD_INPUTS,
+    outs = [
+        "invisible-keyboard-left-xiao-nrf52840-plus.elf",
+        "invisible-keyboard-left-xiao-nrf52840-plus.hex",
+        "invisible-keyboard-left-xiao-nrf52840-plus.uf2",
+        "invisible-keyboard-right-xiao-nrf52840-plus.elf",
+        "invisible-keyboard-right-xiao-nrf52840-plus.hex",
+        "invisible-keyboard-right-xiao-nrf52840-plus.uf2",
+        "invisible-keyboard-xiao-nrf52840-plus.provenance.txt",
+    ],
+    cmd = """
+      bash $(location :build-zephyr.sh) \
+        --source-dir $$(dirname $(location :CMakeLists.txt)) \
+        --manifest $(location :west.yml) \
+        --lock $(location :west.lock.yml) \
+        --cache-dir $(@D)/selected-board-firmware-cache \
+        --left-elf $(@D)/invisible-keyboard-left-xiao-nrf52840-plus.elf \
+        --left-hex $(@D)/invisible-keyboard-left-xiao-nrf52840-plus.hex \
+        --left-uf2 $(@D)/invisible-keyboard-left-xiao-nrf52840-plus.uf2 \
+        --right-elf $(@D)/invisible-keyboard-right-xiao-nrf52840-plus.elf \
+        --right-hex $(@D)/invisible-keyboard-right-xiao-nrf52840-plus.hex \
+        --right-uf2 $(@D)/invisible-keyboard-right-xiao-nrf52840-plus.uf2 \
+        --provenance $(@D)/invisible-keyboard-xiao-nrf52840-plus.provenance.txt
+    """,
+    local = True,
+    tags = ["requires-network"],
+    tools = ["build-zephyr.sh"],
+)
+
+filegroup(
+    name = "firmware",
+    srcs = [":selected-board-firmware"],
+)

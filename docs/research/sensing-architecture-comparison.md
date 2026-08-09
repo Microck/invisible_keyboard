@@ -274,9 +274,11 @@ Hybrids should combine missing physical observables, not simply add sensors.
 ## Decisive prototype evidence contract
 
 The LapCal audit changes how every option must be tested. A model result is
-inadmissible until the acquisition topology passes these gates.
+inadmissible until the acquisition topology satisfies these prerequisites.
+These headings are evidence requirements, not aliases for the canonical
+feasibility gates.
 
-### Gate 0: full-topology stream and synchronization
+### Acquisition prerequisite: full-topology stream and synchronization
 
 - Run every sensor, radio, host receiver, and label source in the intended
   topology, not one board in isolation.
@@ -289,7 +291,7 @@ inadmissible until the acquisition topology passes these gates.
 - Do not begin label collection or modeling until the full topology streams
   concurrently and the synchronization error is bounded for the target event.
 
-### Gate 1: immutable sessions
+### Immutable-evidence prerequisite: complete sessions
 
 - Write raw sensor packets, label events, layout registration, firmware and
   model versions, device placement, participant, surface/environment, and
@@ -300,7 +302,7 @@ inadmissible until the acquisition topology passes these gates.
   drinking, and hand rests. False activations per hour require continuous
   negative time, not balanced gesture clips.
 
-### Gate 2: leakage-resistant decoding
+### Evaluation prerequisite: leakage-resistant decoding
 
 - Assign whole sessions to train, validation, and test before windowing,
   overlap, feature extraction, augmentation, or personalization.
@@ -310,7 +312,7 @@ inadmissible until the acquisition topology passes these gates.
   decoding, language-model decoding, and correction as separate stages.
 - Keep the test set and negative sessions untouched while tuning.
 
-### Gate 3: live text and product measurements
+### Product-measurement prerequisite: live text and complete-system evidence
 
 - Report online WPM, CER/UER, corrected error, backspaces, substitutions,
   misses, false activations per hour, and p50/p95 end-to-end key latency.

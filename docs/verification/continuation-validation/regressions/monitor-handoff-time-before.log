@@ -1,0 +1,59 @@
+OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //:unit-tests (1 packages loaded)
+Analyzing: target //:unit-tests (5 packages loaded, 6 targets configured)
+Analyzing: target //:unit-tests (5 packages loaded, 6 targets configured)
+
+Analyzing: target //:unit-tests (12 packages loaded, 9 targets configured)
+
+Analyzing: target //:unit-tests (50 packages loaded, 9 targets configured)
+
+Analyzing: target //:unit-tests (80 packages loaded, 190 targets configured)
+
+Analyzing: target //:unit-tests (103 packages loaded, 772 targets configured)
+
+Analyzing: target //:unit-tests (129 packages loaded, 2002 targets configured)
+
+Analyzing: target //:unit-tests (142 packages loaded, 2879 targets configured)
+
+Analyzing: target //:unit-tests (174 packages loaded, 4330 targets configured)
+
+Analyzing: target //:unit-tests (203 packages loaded, 5352 targets configured)
+
+INFO: Analyzed target //:unit-tests (206 packages loaded, 5414 targets configured).
+[172 / 424] checking cached actions
+[424 / 425] [Prepa] Testing //:unit-tests
+FAIL: //:unit-tests (Exit 101) (see /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/execroot/_main/bazel-out/aarch64-fastbuild/testlogs/unit-tests/test.log)
+INFO: From Testing //:unit-tests:
+==================== Test output for //:unit-tests:
+
+running 1 test
+test hardware_calibration::tests::monitor_successor_keeps_sequence_and_sensor_time_continuity ... FAILED
+
+failures:
+
+---- hardware_calibration::tests::monitor_successor_keeps_sequence_and_sensor_time_continuity stdout ----
+
+thread 'hardware_calibration::tests::monitor_successor_keeps_sequence_and_sensor_time_continuity' (97999) panicked at src/hardware_calibration.rs:3690:17:
+the monitor-to-held-out handoff cannot reset stream continuity
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    hardware_calibration::tests::monitor_successor_keeps_sequence_and_sensor_time_continuity
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 58 filtered out; finished in 0.13s
+
+================================================================================
+INFO: Found 1 test target...
+Target //:unit-tests up-to-date:
+  bazel-bin/unit-tests
+INFO: Elapsed time: 17.254s, Critical Path: 0.50s
+INFO: 2 processes: 423 action cache hit, 1 internal, 2 processwrapper-sandbox.
+INFO: Build completed, 1 test FAILED, 2 total actions
+//:unit-tests                                                            FAILED in 0.2s
+  /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/execroot/_main/bazel-out/aarch64-fastbuild/testlogs/unit-tests/test.log
+
+Executed 1 out of 1 test: 1 fails locally.

@@ -3,3 +3,5 @@
 # part of this planning repository by accident.
 /research/
 
+# Bazel output symlinks are reproducible and must not enter research history.
+/bazel-*

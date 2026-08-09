@@ -1,6 +1,6 @@
 ---
 title: Confirm the first invisible-keyboard use case
-status: open
+status: closed
 labels:
   - wayfinder:grilling
 assignee:
@@ -29,3 +29,15 @@ This is a human decision. Do not resolve it from the historic under-EUR-200
 robotics conversation, because the current request does not restate all of
 those constraints.
 
+## Resolution
+
+The user resolved the product boundary on 2026-08-09. The product must type on
+passive surfaces with no surface sensors and should use LapCal's inexpensive
+wearable topology as its hard reference. Familiar split-QWERTY assignments are
+preferred, with a conservative first manifest and a defined expansion path.
+
+The exact contract is in the
+[passive-surface reference architecture](../../implementation/reference-architecture.md).
+The first target is a personal calibrated, two-hand, desk-contact prototype on
+Linux. The physical geometry has 34 positions; the first advertised manifest
+is Core-28: A-Z, Space, and Backspace.

@@ -1,0 +1,429 @@
+OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Analyzing: 8 targets (1 packages loaded)
+Analyzing: 8 targets (5 packages loaded, 6 targets configured)
+Analyzing: 8 targets (5 packages loaded, 6 targets configured)
+
+Analyzing: 8 targets (13 packages loaded, 9 targets configured)
+
+Analyzing: 8 targets (64 packages loaded, 17 targets configured)
+
+Analyzing: 8 targets (82 packages loaded, 300 targets configured)
+
+Analyzing: 8 targets (107 packages loaded, 846 targets configured)
+
+Analyzing: 8 targets (135 packages loaded, 2385 targets configured)
+
+Analyzing: 8 targets (156 packages loaded, 3199 targets configured)
+
+Analyzing: 8 targets (191 packages loaded, 4778 targets configured)
+
+Analyzing: 8 targets (206 packages loaded, 5432 targets configured)
+[1 / 1] no actions running
+INFO: Analyzed 8 targets (206 packages loaded, 5432 targets configured).
+[229 / 440] checking cached actions
+[443 / 460] [Prepa] Compiling Rust rlib invisible_keyboard (35 files)
+[443 / 460] Compiling Rust rlib invisible_keyboard (35 files); 1s processwrapper-sandbox
+[443 / 460] Compiling Rust rlib invisible_keyboard (35 files); 11s processwrapper-sandbox
+[444 / 460] [Prepa] Compiling Rust bin pipeline-contract-test (1 file)
+INFO: From Compiling Rust bin pipeline-contract-test (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+[446 / 461] Compiling Rust bin neutral-contract-test (1 file); 0s processwrapper-sandbox
+INFO: From Compiling Rust bin neutral-contract-test (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+INFO: From Compiling Rust bin calibration-worker-contract-test (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+[449 / 462] [Prepa] runfiles for //:calibration-worker-contract-test
+INFO: From Compiling Rust bin calibration-engine-contract-test (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+[451 / 463] [Prepa] runfiles for //:calibration-engine-contract-test
+[452 / 464] Compiling Rust bin replay-contract-test (1 file); 1s processwrapper-sandbox
+INFO: From Compiling Rust bin replay-contract-test (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+INFO: From Compiling Rust bin calibration-capture-contract-test (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+[455 / 465] [Prepa] runfiles for //:calibration-capture-contract-test
+INFO: From Compiling Rust bin runtime-contract-test (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+[458 / 467] Compiling Rust bin unit-tests (35 files); 0s processwrapper-sandbox
+[458 / 467] Compiling Rust bin unit-tests (35 files); 11s processwrapper-sandbox
+INFO: From Compiling Rust bin unit-tests (35 files):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+[459 / 467] [Prepa] runfiles for //:unit-tests
+[460 / 468] Testing //:unit-tests; 1s processwrapper-sandbox
+[460 / 468] Testing //:unit-tests; 9s processwrapper-sandbox
+INFO: From Testing //:unit-tests:
+==================== Test output for //:unit-tests:
+
+running 59 tests
+test calibration_capture::tests::capture_gate_rejects_gate0_controls_before_generic_integrity ... ok
+test calibration_capture::tests::causal_contact_emission_is_invariant_to_future_frames ... ok
+test calibration_capture::tests::contacts_after_the_bounded_gate_cannot_change_an_accepted_association ... ok
+test calibration_capture::tests::first_event_rule_reports_wrong_hand_wrong_finger_no_event_and_multiple_events ... ok
+test calibration_capture::tests::pre_cue_contact_is_ignored_without_hiding_the_first_post_cue_contact ... ok
+test calibration_capture::tests::rendered_receipt_opens_a_self_paced_gate_but_sensor_contact_anchors_the_label ... ok
+test calibration_capture::tests::scheduled_stillness_is_not_counted_as_ordinary_motion ... ok
+test calibration_capture::tests::target_cannot_reuse_a_threshold_or_null_parameter_window ... ok
+test calibration_capture::tests::target_identity_cannot_select_past_the_first_causal_event ... ok
+test calibration_capture::tests::target_truth_windows_reserve_all_source_records_against_later_targets ... ok
+test calibration_engine::tests::binder_allows_simultaneous_opposite_hand_truth_windows ... ok
+test calibration_engine::tests::binder_rejects_intersecting_target_truth_windows ... ok
+test calibration_engine::tests::binder_rejects_target_intersection_with_threshold_null_truth ... ok
+test calibration_engine::tests::clean_stream_gate_rejects_gate0_controls_before_generic_integrity ... ok
+test clock_epoch::tests::timestamp_spool_is_private_and_removed_on_normal_drop ... ok
+test clock_epoch::tests::timestamp_spool_is_removed_when_a_fit_path_returns_an_error ... ok
+test axis_characterization::tests::axis_search_recovers_every_proper_signed_rotation ... ok
+test decoder::tests::repeated_raw_aggregate_time_rejects_even_when_every_sensor_advances ... ok
+test decoder::tests::borrowed_split_window_reuses_storage_and_preserves_decode_order ... ok
+test hardware_calibration::tests::abort_lease_loss_and_source_fault_commit_typed_nonready_state ... ok
+test hardware_calibration::tests::capture_transition_preserves_a_split_frame_and_pending_candidates ... ok
+test hardware_calibration::tests::contended_keyboard_boundary_dispatches_only_one_batch_before_retry ... ok
+test hardware_calibration::tests::displayed_coverage_uses_a_canonical_complete_set_from_two_blocks ... ok
+test hardware_calibration::tests::finite_keyboard_warm_start_and_passive_threshold_plans_cover_their_contracts ... ok
+test hardware_calibration::tests::fitting_and_heldout_monitors_reject_acquisition_faults_and_keep_both_incidents ... ok
+test hardware_calibration::tests::healthy_freeze_preserves_interleaved_receipt_order ... ok
+test hardware_calibration::tests::keyboard_blocks_alternate_only_between_finite_prompt_passes ... ok
+test hardware_calibration::tests::keyboard_dispatch_yields_with_replenished_backlog_and_loses_no_events ... ok
+test hardware_calibration::tests::abort_and_lease_loss_preserve_original_capture_when_result_pending_or_dropped ... ok
+test hardware_calibration::tests::monitor_successor_keeps_sequence_and_sensor_time_continuity ... ok
+test hardware_calibration::tests::observed_monitor_fault_cannot_be_erased_by_a_transport_handoff ... ok
+test hardware_calibration::tests::original_incident_file_conflict_prevents_terminal_commit_but_retains_other_evidence ... ok
+test hardware_calibration::tests::quiescent_keyboard_boundary_drains_the_full_bounded_queue_before_transition ... ok
+test hardware_calibration::tests::raw_prompt_attempts_do_not_change_matched_deficits_and_stop_at_the_cap ... ok
+test hardware_calibration::tests::selected_keyboard_state_survives_worker_boundaries_until_key_up ... ok
+test hardware_calibration::tests::timed_capture_needs_every_receipt_and_null_window_after_the_drain_horizon ... ok
+test hardware_calibration::tests::missing_passive_contact_preserves_original_fitting_and_heldout_capture ... ok
+test output::linux::tests::all_core28_usages_have_unique_kernel_codes ... ok
+test protocol::tests::checksum_valid_bad_magic_is_rejected ... ok
+test protocol::tests::checksum_valid_invalid_headers_are_rejected_semantically ... ok
+test protocol::tests::checksum_valid_unknown_flags_are_rejected ... ok
+test protocol::tests::crc32_matches_standard_check_value ... ok
+test reader_mailbox::tests::close_owns_the_full_queue_and_rejects_waiting_publishers ... ok
+test reader_mailbox::tests::close_snapshot_equals_the_publish_result_at_the_admission_race ... ok
+test reader_mailbox::tests::closed_receiver_disconnects_while_senders_are_still_alive ... ok
+test reader_mailbox::tests::freeing_space_admits_one_waiting_item_in_order ... ok
+test reader_mailbox::tests::receiver_drop_releases_the_lock_before_dropping_queued_values ... ok
+test reader_mailbox::tests::receiver_reports_disconnect_only_after_the_admitted_backlog ... ok
+test reader_mailbox::tests::two_publishers_keep_per_source_order_without_loss_or_duplication ... ok
+test session::tests::all_header_prefix_corruption_is_detected ... ok
+test session::tests::checksum_valid_candidate_length_contradiction_is_rejected ... ok
+test session::tests::checksum_valid_footer_count_mismatch_is_rejected ... ok
+test session::tests::checksum_valid_nonzero_record_reserved_bytes_are_rejected ... ok
+test session::tests::checksum_valid_unknown_record_kind_is_rejected ... ok
+test session::tests::clean_two_hand_stream_rejects_recorded_time_regressions ... ok
+test session::tests::oversized_payload_is_rejected_before_the_writer_changes ... ok
+test transport::tests::cobs_round_trips_zero_patterns_and_long_runs ... ok
+test transport::tests::malformed_cobs_run_is_rejected ... ok
+test hardware_calibration::tests::timed_plans_preserve_every_target_and_per_hand_motion_exposure ... ok
+
+test result: ok. 59 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 9.36s
+
+================================================================================
+INFO: From Testing //:runtime-contract-test:
+==================== Test output for //:runtime-contract-test:
+
+running 18 tests
+test adapter_failure_preserves_the_cause_and_independent_recovery_failure ... ok
+test adapter_failure_after_key_down_forces_independent_all_up ... ok
+test bad_frame_checksum_never_enters_the_decoder ... ok
+test byte_and_candidate_runtime_paths_preserve_raw_commit_timestamps ... ok
+test arbitrary_transport_chunks_reach_one_exact_key_pair ... ok
+test decoded_frame_runtime_keeps_raw_offsets_and_projects_commit_time ... ok
+test disconnect_preserves_unterminated_evidence_and_forces_all_up ... ok
+test evidence_abstention_remains_primary_when_neutralization_fails ... ok
+test malformed_transport_forces_independent_all_up_and_resets_context ... ok
+test one_and_two_hand_runtimes_arm_only_for_their_declared_sources ... ok
+test planned_shutdown_stops_rearming_and_leaves_final_state_neutral ... ok
+test malformed_transport_remains_primary_when_neutralization_fails ... ok
+test runtime_construction_fails_when_startup_neutralization_fails ... ok
+test sequence_gap_reaches_one_explicit_abstention_and_forces_all_up ... ok
+test source_loss_revokes_run_ownership_until_the_declared_source_returns ... ok
+test two_hand_runtime_rejects_swapped_or_duplicate_decoder_topology ... ok
+test watchdog_timeout_resets_context_and_invokes_independent_all_up ... ok
+test two_hand_runtime_dispatches_both_decoders_through_one_output_state ... ok
+
+test result: ok. 18 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.21s
+
+================================================================================
+INFO: From Testing //:pipeline-contract-test:
+==================== Test output for //:pipeline-contract-test:
+
+running 8 tests
+test contact_before_four_idle_windows_cannot_emit_a_repeat ... ok
+test device_time_regression_discards_all_buffered_context ... ok
+test continuous_stream_emits_exactly_one_key_decision_per_tap ... ok
+test quality_fault_during_repeat_suppression_is_still_emitted ... ok
+test idle_stream_never_emits_a_decision ... ok
+test retained_short_impulse_is_timestamped_at_the_commit_frame ... ok
+test reserved_position_emits_one_explicit_abstention ... ok
+test wrong_hand_frame_resets_the_pipeline_and_returns_an_error ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.09s
+
+================================================================================
+[463 / 468] 3 / 8 tests; Testing //:neutral-contract-test; 0s processwrapper-sandbox
+INFO: From Testing //:neutral-contract-test:
+==================== Test output for //:neutral-contract-test:
+
+running 9 tests
+test acquisition_faults_bad_clocks_short_evidence_and_any_invalid_candidate_are_rejected ... ok
+test independently_derived_neutral_rejects_repeated_raw_sample_outside_selected_windows ... ok
+test canonical_json_round_trip_and_source_bound_mutation_detection ... ok
+test manifest_clock_session_and_window_identities_must_all_match ... ok
+test missing_hands_sensors_invalid_frames_and_loss_fail_closed ... ok
+test neutral_authority_rejects_raw_receipt_faults_despite_passing_clock_statistics ... ok
+test neutral_authority_rejects_altered_clock_report_and_rebound_fingerprint ... ok
+test neutral_evidence_rejects_gate0_control_records_as_their_own_context_error ... ok
+test report_derives_inspectable_two_hand_six_sensor_evidence ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.44s
+
+================================================================================
+[464 / 468] 4 / 8 tests; Testing //:calibration-capture-contract-test; 1s processwrapper-sandbox
+[464 / 468] 4 / 8 tests; Testing //:calibration-capture-contract-test; 2s processwrapper-sandbox
+INFO: From Testing //:calibration-capture-contract-test:
+==================== Test output for //:calibration-capture-contract-test:
+
+running 18 tests
+test compressed_surface_timeline_is_rejected_even_when_each_receipt_is_internally_ordered ... ok
+test first_canonical_fitting_quiet_id_resolves_and_completes ... ok
+test held_out_capture_requires_the_frozen_matching_rule ... ok
+test held_out_keyboard_activity_is_state_only_keyboard_provenance ... ok
+test canonical_fitting_and_held_out_facts_round_trip_and_are_complete ... ok
+test keyboard_completion::complete_press_waits_for_release_and_keeps_original_down_provenance ... ok
+test keyboard_completion::modifier_after_down_invalidates_the_complete_press_including_state_only_events ... ok
+test keyboard_completion::unreleased_press_has_no_matched_observation_or_coverage_and_is_not_neutral ... ok
+test keyboard_completion::overlapping_presses_remain_raw_without_matched_observations_or_coverage ... ok
+test passive_surface_receipts_require_one_monotonic_rendered_revision ... ok
+test parser_rejects_role_block_and_null_kind_injection ... ok
+test persisted_plan_hash_cannot_be_rebound_after_capture ... ok
+test purpose_plan_artifact_and_seed_bindings_are_exact ... ok
+test same_finger_a_to_q_prompt_relabel_is_rejected_by_plan_order ... ok
+test quiet_prompt_cannot_be_reclassified_as_ordinary_motion ... ok
+test surface_facts_reject_nonincreasing_prompt_time_and_revision ... ok
+test surface_facts_reject_unknown_duplicate_missing_and_reordered_prompt_ids ... ok
+test surface_fact_schema_has_no_role_block_position_null_or_hand_channel ... ok
+
+test result: ok. 18 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.86s
+
+================================================================================
+[465 / 468] 5 / 8 tests; Testing //:calibration-worker-contract-test; 1s processwrapper-sandbox
+[465 / 468] 5 / 8 tests; Testing //:calibration-worker-contract-test; 11s processwrapper-sandbox
+[465 / 468] 5 / 8 tests; Testing //:calibration-worker-contract-test; 28s processwrapper-sandbox
+INFO: From Testing //:calibration-worker-contract-test:
+==================== Test output for //:calibration-worker-contract-test:
+
+running 16 tests
+test decoded_same_identity_integrity_faults_retain_raw_suffix_and_first_cause ... ok
+test first_frame_rejects_out_of_range_sensor_time_without_discarding_raw_bytes ... ok
+test fitting_checkpoint_refuses_to_infer_layout_without_a_confirmation_receipt ... ok
+test fitting_finish_rejects_an_incomplete_surface_plan_before_matching ... ok
+test fitting_requires_a_retained_neutral_window_before_finalization ... ok
+test held_out_capture_inherits_the_frozen_rule_and_rejects_keyboard_labels ... ok
+test repeated_aggregate_with_advancing_offsets_faults_worker_and_retains_evidence ... ok
+test selected_keyboard_identity_change_faults_the_capture_permanently ... ok
+test terminal_capacity_rejection_retains_exact_worker_incident ... ok
+test terminal_late_publication_retains_exact_worker_incident ... ok
+test terminal_receipt_regression_retains_exact_worker_incident ... ok
+test concurrent_sensor_and_keyboard_capture_builds_source_bound_fitting_evidence ... ok
+test worker_integrity_preserves_wrapping_sequences_and_strictly_advancing_sample_times ... ok
+test worker_refuses_to_bind_a_surface_plan_after_the_first_surface_fact ... ok
+test wrong_controller_frame_is_retained_and_faults_the_capture ... ok
+test transport_rejection_retention_bound_preserves_primary_cause ... ok
+
+test result: ok. 16 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 28.92s
+
+================================================================================
+[466 / 468] 6 / 8 tests; Testing //:replay-contract-test; 1s processwrapper-sandbox
+[466 / 468] 6 / 8 tests; Testing //:replay-contract-test; 11s processwrapper-sandbox
+[466 / 468] 6 / 8 tests; Testing //:replay-contract-test; 41s processwrapper-sandbox
+[466 / 468] 6 / 8 tests; Testing //:replay-contract-test; 47s processwrapper-sandbox
+INFO: From Testing //:replay-contract-test:
+==================== Test output for //:replay-contract-test:
+
+running 55 tests
+test artifact_reference_and_calibration_sensitive_settings_fail_closed ... ok
+test calibrated_live_fails_when_startup_neutralization_fails ... ok
+test artifact_bound_two_hand_replay_emits_exact_core28_taps_and_neutralizes ... ok
+test calibrated_live_preserves_transport_primary_and_reports_failed_all_up ... ok
+test calibrated_live_output_failure_recovers_and_finishes_neutral ... ok
+test calibrated_replay_preserves_output_cause_and_independent_recovery_failure ... ok
+test calibrated_replay_rejects_gate0_control_records_instead_of_replaying_them ... ok
+test causal_live_path_warms_both_clocks_before_emitting_and_finishes_neutral ... ok
+test clean_finish_revokes_wear_session_without_recording_a_terminal_fault ... ok
+test calibrated_replay_rejects_forged_offline_clock_authority_before_output ... ok
+test evidence_invalidating_abstention_terminally_revokes ... ok
+test host_receipt_regression_remains_primary_when_independent_all_up_fails ... ok
+test host_receipt_regression_revokes_before_clock_or_output_progress ... ok
+test live_accepts_reader_receipts_older_than_a_later_processing_tick ... ok
+test live_acquisition_integrity_faults_during_initial_clock_warmup_terminally_revoke ... ok
+test live_acquisition_integrity_faults_with_only_one_clock_ready_terminally_revoke ... ok
+test live_cli_ingress_busy_watchdog_revokes_before_safe_horizon_flush ... ok
+test live_cli_ingress_healthy_receipt_merger_preserves_expected_output ... ok
+test live_cli_ingress_jitter_inversion_preserves_exact_core28_output ... ok
+test live_cli_ingress_revokes_merge_held_faults_before_signal_and_retains_incident ... ok
+test live_disconnect_discards_pending_work_resets_clocks_and_finishes_neutral ... ok
+test live_disconnect_prevents_finish_from_emitting_a_buffered_tap ... ok
+test live_host_clock_regression_revokes_without_watchdog_attribution ... ok
+test live_ingress_closes_admission_after_neutralization_before_releasing_any_evidence ... ok
+test live_ingress_update_cannot_be_released_by_another_authority ... ok
+test live_interleaved_retained_impulse_commits_preserve_healthy_output ... ok
+test live_malformed_ingress_precedes_a_later_acquisition_fault ... ok
+test live_merge_held_malformed_candidates_revoke_before_queued_output ... ok
+test live_negative_drift_consumes_allowed_skew_boundary_and_preserves_mapped_output ... ok
+test live_pending_capacity_terminally_revokes_without_rearm ... ok
+test live_planned_signals_stop_output_through_the_canonical_safety_owner ... ok
+test live_post_evidence_consumer_delay_revokes_before_candidate_flush ... ok
+test live_post_evidence_healthy_delays_preserve_exact_core28_output ... ok
+test live_rejects_an_unacceptable_mapping_before_it_can_arm_output ... ok
+test live_repeated_raw_aggregate_revokes_before_merger_or_evidence_io ... ok
+test live_sensor_time_regressions_revoke_before_clock_or_window_progress ... ok
+test live_sequence_gap_revokes_during_warmup_and_partial_window_fill ... ok
+test live_source_loss_revokes_the_instance_without_rearm ... ok
+test live_stale_bootstrap_warmup_cannot_arm_after_evidence_delay ... ok
+test live_warmup_integrity_preserves_primary_fault_when_neutralization_fails ... ok
+test live_watchdog_rejects_every_later_frame_without_new_confirmation ... ok
+test live_watchdog_revokes_when_right_stops_during_continuous_left_traffic ... ok
+test live_watchdog_terminally_revokes_and_cannot_rearm ... ok
+test malformed_oversized_and_unterminated_transport_terminally_revoke ... ok
+test every_per_sensor_physical_provenance_change_fails_closed ... ok
+test post_arm_allowed_sensor_skew_with_forward_sample_remains_live ... ok
+test post_arm_partial_window_integrity_faults_revoke_before_output ... ok
+test recorded_replay_preserves_the_source_layout_confirmation_receipt ... ok
+test replay_negative_drift_preserves_raw_sensor_progress_and_mapped_output ... ok
+test replay_pending_capacity_fails_closed_with_a_typed_error ... ok
+test replay_positive_drift_rejects_repeated_raw_sensor_before_mapping ... ok
+test nonidentity_finger_and_dorsal_axes_decode_identically_in_replay_and_live ... ok
+test runtime_binding_allows_only_new_boot_and_session_metadata ... ok
+test stale_device_backlog_then_fresh_timestamp_jump_never_arms_or_emits ... ok
+test runtime_artifact_reference_binds_the_frozen_matching_rule ... ok
+
+test result: ok. 55 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 47.30s
+
+================================================================================
+[467 / 468] 7 / 8 tests; Testing //:calibration-engine-contract-test; 1s processwrapper-sandbox
+[467 / 468] 7 / 8 tests; Testing //:calibration-engine-contract-test; 11s processwrapper-sandbox
+[467 / 468] 7 / 8 tests; Testing //:calibration-engine-contract-test; 41s processwrapper-sandbox
+[467 / 468] 7 / 8 tests; Testing //:calibration-engine-contract-test; 101s processwrapper-sandbox
+[467 / 468] 7 / 8 tests; Testing //:calibration-engine-contract-test; 161s processwrapper-sandbox
+[467 / 468] 7 / 8 tests; Testing //:calibration-engine-contract-test; 221s processwrapper-sandbox
+[467 / 468] 7 / 8 tests; Testing //:calibration-engine-contract-test; 281s processwrapper-sandbox
+[467 / 468] 7 / 8 tests; Testing //:calibration-engine-contract-test; 341s processwrapper-sandbox
+[467 / 468] 7 / 8 tests; Testing //:calibration-engine-contract-test; 401s processwrapper-sandbox
+[467 / 468] 7 / 8 tests; Testing //:calibration-engine-contract-test; 461s processwrapper-sandbox
+[467 / 468] 7 / 8 tests; Testing //:calibration-engine-contract-test; 521s processwrapper-sandbox
+[467 / 468] 7 / 8 tests; Testing //:calibration-engine-contract-test; 581s processwrapper-sandbox
+[467 / 468] 7 / 8 tests; Testing //:calibration-engine-contract-test; 641s processwrapper-sandbox
+[467 / 468] 7 / 8 tests; Testing //:calibration-engine-contract-test; 701s processwrapper-sandbox
+[467 / 468] 7 / 8 tests; Testing //:calibration-engine-contract-test; 761s processwrapper-sandbox
+[467 / 468] 7 / 8 tests; Testing //:calibration-engine-contract-test; 821s processwrapper-sandbox
+[467 / 468] 7 / 8 tests; Testing //:calibration-engine-contract-test; 881s processwrapper-sandbox
+[467 / 468] 7 / 8 tests; Testing //:calibration-engine-contract-test; 941s processwrapper-sandbox
+[467 / 468] 7 / 8 tests; Testing //:calibration-engine-contract-test; 1001s processwrapper-sandbox
+[467 / 468] 7 / 8 tests; Testing //:calibration-engine-contract-test; 1021s processwrapper-sandbox
+INFO: From Testing //:calibration-engine-contract-test:
+==================== Test output for //:calibration-engine-contract-test:
+
+running 29 tests
+test canonical_surface_plan_completeness_is_enforced_before_fit ... ok
+test capture_bound_fit_locks_and_validates_two_hands has been running for over 60 seconds
+test derived_truth_windows_are_record_disjoint_within_each_session ... ok
+test diagnostic_evidence_json_cannot_enter_trusted_engine_apis has been running for over 60 seconds
+test capture_bound_fit_locks_and_validates_two_hands ... ok
+test diagnostic_evidence_json_cannot_enter_trusted_engine_apis ... ok
+test down_up_overlap_cannot_be_reused_as_passive_training_truth ... ok
+test down_up_overlap_cannot_tune_neutral_contact_thresholds ... ok
+test fitting_and_precheck_reject_raw_suffix_fault_before_truth_selection ... ok
+test down_up_overlap_cannot_count_as_held_out_truth has been running for over 60 seconds
+test down_up_overlap_cannot_count_as_held_out_truth ... ok
+test fitting_and_validation_reject_wrong_purpose_journals ... ok
+test fitting_session_overlap_is_derived_from_artifact_sources ... ok
+test held_out_keyboard_identity_must_match_the_locked_artifact has been running for over 60 seconds
+test held_out_keyboard_identity_must_match_the_locked_artifact ... ok
+test held_out_plan_rejects_cross_artifact_reuse ... ok
+test held_out_plan_rejects_seed_mutation ... ok
+test held_out_readiness_requires_every_plan_owned_motion_segment ... ok
+test held_out_validation_cannot_mutate_the_locked_artifact has been running for over 60 seconds
+test held_out_validation_cannot_mutate_the_locked_artifact ... ok
+test held_out_validation_rederives_evidence_from_plan_bound_capture_journal has been running for over 60 seconds
+test held_out_validation_rederives_evidence_from_plan_bound_capture_journal ... ok
+test heldout_1001ns_clock_rejects_raw_sensor_repeat_outside_truth_windows has been running for over 60 seconds
+test heldout_1001ns_clock_rejects_raw_sensor_repeat_outside_truth_windows ... ok
+test immutable_identity_rejects_tampered_session_and_journal_binding ... ok
+test heldout_999ns_clock_preserves_valid_raw_sensor_advance_at_skew_boundary has been running for over 60 seconds
+test heldout_999ns_clock_preserves_valid_raw_sensor_advance_at_skew_boundary ... ok
+test keyboard_warm_start_labels_cannot_change_passive_fitted_artifact ... ok
+test offline_authority_consumers_reject_altered_valid_looking_clock_reports has been running for over 60 seconds
+test offline_authority_consumers_reject_forged_clock_statistics_and_fingerprints has been running for over 60 seconds
+test offline_authority_consumers_reject_altered_valid_looking_clock_reports ... ok
+test quiet_plan_windows_cannot_satisfy_ordinary_motion ... ok
+test raw_aggregate_repeat_with_advancing_sensor_times_is_rejected ... ok
+test raw_sensor_repeat_in_neutral_returns_source_error_without_panicking ... ok
+test raw_sensor_repeat_outside_neutral_is_rejected_under_1001ns_clocks ... ok
+test offline_authority_consumers_reject_forged_clock_statistics_and_fingerprints ... ok
+test recorded_exposure_is_derived_from_matched_motion_windows has been running for over 60 seconds
+test recorded_exposure_is_derived_from_matched_motion_windows ... ok
+test signed_permutation_wire_axes_are_equivalent_through_fit_and_held_out_validation has been running for over 60 seconds
+test unlabeled_impulses_are_counted_as_spontaneous_false_activations has been running for over 60 seconds
+test unlabeled_impulses_are_counted_as_spontaneous_false_activations ... ok
+test signed_permutation_wire_axes_are_equivalent_through_fit_and_held_out_validation ... ok
+
+test result: ok. 29 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1021.40s
+
+================================================================================
+INFO: Found 8 test targets...
+INFO: Elapsed time: 1163.147s, Critical Path: 1037.79s
+INFO: 26 processes: 442 action cache hit, 9 internal, 25 processwrapper-sandbox.
+INFO: Build completed successfully, 26 total actions
+//:calibration-capture-contract-test                                     PASSED in 2.9s
+//:calibration-engine-contract-test                                      PASSED in 1021.4s
+//:calibration-worker-contract-test                                      PASSED in 29.0s
+//:neutral-contract-test                                                 PASSED in 0.5s
+//:pipeline-contract-test                                                PASSED in 0.1s
+//:replay-contract-test                                                  PASSED in 47.3s
+//:runtime-contract-test                                                 PASSED in 0.3s
+//:unit-tests                                                            PASSED in 9.4s
+
+Executed 8 out of 8 tests: 8 tests pass.

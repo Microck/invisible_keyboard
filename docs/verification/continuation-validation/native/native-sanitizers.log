@@ -1,0 +1,53 @@
+OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Loading: 2 packages loaded
+Analyzing: 4 targets (6 packages loaded, 6 targets configured)
+Analyzing: 4 targets (6 packages loaded, 7 targets configured)
+
+Analyzing: 4 targets (12 packages loaded, 10 targets configured)
+
+Analyzing: 4 targets (53 packages loaded, 10 targets configured)
+
+Analyzing: 4 targets (78 packages loaded, 170 targets configured)
+
+Analyzing: 4 targets (102 packages loaded, 1137 targets configured)
+
+INFO: Analyzed 4 targets (103 packages loaded, 1146 targets configured).
+[11 / 25] [Prepa] Linking firmware-frame-conformance-test
+[23 / 35] Compiling firmware/zephyr/native-conformance.c; 0s processwrapper-sandbox
+[40 / 44] Testing //firmware/zephyr:native-glue-conformance-test; 0s processwrapper-sandbox
+[40 / 44] Testing //firmware/zephyr:native-glue-conformance-test; 3s processwrapper-sandbox
+INFO: From Testing //firmware/zephyr:native-glue-conformance-test:
+==================== Test output for //firmware/zephyr:native-glue-conformance-test:
+================================================================================
+[41 / 44] 1 / 4 tests; Testing //:firmware-frame-conformance-test; 1s processwrapper-sandbox
+[41 / 44] 1 / 4 tests; Testing //:firmware-frame-conformance-test; 3s processwrapper-sandbox
+INFO: From Testing //:firmware-frame-conformance-test:
+==================== Test output for //:firmware-frame-conformance-test:
+frame_length=160
+frame_hex=494b42320200063f00000000000000000000000000000000111111111111111111111111111111111111111111111111111111111111111122222222222222222222222222222222000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000b6c63ee2
+transport_length=162
+transport_hex=06494b42320203063f01010101010101010101010101010131111111111111111111111111111111111111111111111111111111111111111122222222222222222222222222222222010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010105b6c63ee200
+================================================================================
+[42 / 44] 2 / 4 tests; Testing //:firmware-acquisition-conformance-test; 1s processwrapper-sandbox
+[42 / 44] 2 / 4 tests; Testing //:firmware-acquisition-conformance-test; 3s processwrapper-sandbox
+INFO: From Testing //:firmware-acquisition-conformance-test:
+==================== Test output for //:firmware-acquisition-conformance-test:
+================================================================================
+[43 / 44] 3 / 4 tests; Testing //firmware/zephyr:native-conformance-test; 1s processwrapper-sandbox
+[43 / 44] 3 / 4 tests; Testing //firmware/zephyr:native-conformance-test; 3s processwrapper-sandbox
+INFO: From Testing //firmware/zephyr:native-conformance-test:
+==================== Test output for //firmware/zephyr:native-conformance-test:
+================================================================================
+INFO: Found 4 test targets...
+INFO: Elapsed time: 27.186s, Critical Path: 4.53s
+INFO: 32 processes: 12 action cache hit, 10 internal, 26 processwrapper-sandbox.
+INFO: Build completed successfully, 32 total actions
+//:firmware-acquisition-conformance-test                                 PASSED in 3.4s
+//:firmware-frame-conformance-test                                       PASSED in 3.3s
+//firmware/zephyr:native-conformance-test                                PASSED in 3.3s
+//firmware/zephyr:native-glue-conformance-test                           PASSED in 4.0s
+
+Executed 4 out of 4 tests: 4 tests pass.

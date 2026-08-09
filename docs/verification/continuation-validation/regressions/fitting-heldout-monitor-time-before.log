@@ -1,0 +1,60 @@
+OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Loading: 0 packages loaded
+    currently loading: 
+Analyzing: target //:unit-tests (1 packages loaded)
+Analyzing: target //:unit-tests (5 packages loaded, 6 targets configured)
+Analyzing: target //:unit-tests (5 packages loaded, 6 targets configured)
+
+Analyzing: target //:unit-tests (14 packages loaded, 9 targets configured)
+
+Analyzing: target //:unit-tests (65 packages loaded, 20 targets configured)
+
+Analyzing: target //:unit-tests (84 packages loaded, 495 targets configured)
+
+Analyzing: target //:unit-tests (105 packages loaded, 836 targets configured)
+
+Analyzing: target //:unit-tests (121 packages loaded, 1923 targets configured)
+
+Analyzing: target //:unit-tests (156 packages loaded, 3227 targets configured)
+
+Analyzing: target //:unit-tests (181 packages loaded, 4563 targets configured)
+
+INFO: Analyzed target //:unit-tests (206 packages loaded, 5414 targets configured).
+[1 / 1] no actions running
+[180 / 424] checking cached actions
+[424 / 425] [Prepa] Testing //:unit-tests
+FAIL: //:unit-tests (Exit 101) (see /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/execroot/_main/bazel-out/aarch64-fastbuild/testlogs/unit-tests/test.log)
+INFO: From Testing //:unit-tests:
+==================== Test output for //:unit-tests:
+
+running 1 test
+test hardware_calibration::tests::fitting_and_heldout_monitors_reject_acquisition_faults_and_keep_both_incidents ... FAILED
+
+failures:
+
+---- hardware_calibration::tests::fitting_and_heldout_monitors_reject_acquisition_faults_and_keep_both_incidents stdout ----
+
+thread 'hardware_calibration::tests::fitting_and_heldout_monitors_reject_acquisition_faults_and_keep_both_incidents' (97507) panicked at src/hardware_calibration.rs:3565:26:
+the monitor must reject bad completed frames before merge release: ()
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    hardware_calibration::tests::fitting_and_heldout_monitors_reject_acquisition_faults_and_keep_both_incidents
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 58 filtered out; finished in 0.61s
+
+================================================================================
+INFO: Found 1 test target...
+Target //:unit-tests up-to-date:
+  bazel-bin/unit-tests
+INFO: Elapsed time: 17.846s, Critical Path: 1.05s
+INFO: 2 processes: 423 action cache hit, 1 internal, 2 processwrapper-sandbox.
+INFO: Build completed, 1 test FAILED, 2 total actions
+//:unit-tests                                                            FAILED in 0.6s
+  /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/execroot/_main/bazel-out/aarch64-fastbuild/testlogs/unit-tests/test.log
+
+Executed 1 out of 1 test: 1 fails locally.

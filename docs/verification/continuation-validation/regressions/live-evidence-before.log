@@ -1,0 +1,55 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+Executing tests from //:cli-unit-tests
+-----------------------------------------------------------------------------
+
+running 5 tests
+test live_evidence_tests::evidence_retention_failure_is_attached_without_replacing_primary ... FAILED
+test live_evidence_tests::capacity_error_retains_trigger_and_mailbox_backlog ... FAILED
+test live_evidence_tests::late_publication_retains_trigger_and_mailbox_backlog ... FAILED
+test live_evidence_tests::receipt_regression_retains_trigger_and_mailbox_backlog ... FAILED
+test live_evidence_tests::terminal_snapshot_closes_before_blocking_and_failed_evidence_io ... FAILED
+
+failures:
+
+---- live_evidence_tests::evidence_retention_failure_is_attached_without_replacing_primary stdout ----
+
+thread 'live_evidence_tests::evidence_retention_failure_is_attached_without_replacing_primary' (20778) panicked at src/main.rs:3951:22:
+missing evidence-retention failure: device transport failed: device transport source Left receipt regressed from 100 ns to 90 ns
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- live_evidence_tests::capacity_error_retains_trigger_and_mailbox_backlog stdout ----
+
+thread 'live_evidence_tests::capacity_error_retains_trigger_and_mailbox_backlog' (20777) panicked at src/main.rs:3887:9:
+assertion `left == right` failed
+  left: 3
+ right: 8
+
+---- live_evidence_tests::late_publication_retains_trigger_and_mailbox_backlog stdout ----
+
+thread 'live_evidence_tests::late_publication_retains_trigger_and_mailbox_backlog' (20780) panicked at src/main.rs:3887:9:
+assertion `left == right` failed
+  left: 3
+ right: 8
+
+---- live_evidence_tests::receipt_regression_retains_trigger_and_mailbox_backlog stdout ----
+
+thread 'live_evidence_tests::receipt_regression_retains_trigger_and_mailbox_backlog' (20781) panicked at src/main.rs:3887:9:
+assertion `left == right` failed
+  left: 3
+ right: 8
+
+---- live_evidence_tests::terminal_snapshot_closes_before_blocking_and_failed_evidence_io stdout ----
+
+thread 'live_evidence_tests::terminal_snapshot_closes_before_blocking_and_failed_evidence_io' (20782) panicked at src/main.rs:4010:35:
+evidence write begins: Error { kind: UnexpectedEof, message: "failed to fill whole buffer" }
+
+
+failures:
+    live_evidence_tests::capacity_error_retains_trigger_and_mailbox_backlog
+    live_evidence_tests::evidence_retention_failure_is_attached_without_replacing_primary
+    live_evidence_tests::late_publication_retains_trigger_and_mailbox_backlog
+    live_evidence_tests::receipt_regression_retains_trigger_and_mailbox_backlog
+    live_evidence_tests::terminal_snapshot_closes_before_blocking_and_failed_evidence_io
+
+test result: FAILED. 0 passed; 5 failed; 0 ignored; 0 measured; 2 filtered out; finished in 0.01s
+

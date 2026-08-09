@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="calibration-token" content="__CALIBRATION_TOKEN__">
+    <meta name="core28-layout-sha256" content="__CORE28_LAYOUT_SHA256__">
+    <title>Invisible Keyboard Setup</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to setup</a>
+    <main id="main-content" class="shell" tabindex="-1">
+      <header class="masthead">
+        <div>
+          <h1>Invisible Keyboard Setup</h1>
+        </div>
+        <p id="recording-state" class="recording" aria-live="polite">Local service connected</p>
+      </header>
+
+      <aside id="evidence-banner" class="evidence" aria-live="polite"></aside>
+
+      <section class="progress-panel" aria-labelledby="progress-title">
+        <div class="progress-copy">
+          <h2 id="progress-title">Setup progress</h2>
+          <span id="progress-label">0 percent</span>
+        </div>
+        <progress id="setup-progress" max="10000" value="0" aria-labelledby="progress-title progress-label">0 percent</progress>
+        <p>Coverage and validation are separate. This is not an accuracy score.</p>
+        <p>Elapsed setup time: <span id="elapsed-seconds">0</span> seconds.</p>
+        <p>Plan for 10-20 minutes. The engineering build stops and fails closed at 20 minutes.</p>
+      </section>
+
+      <section id="screen-connect" class="screen" data-screen="connect" hidden>
+        <p class="step">Step 1 of 7</p>
+        <h2>Connect the wearables</h2>
+        <p>Connect both controllers. Core-28 on a 34-position physical grid requires all six sensors on each hand.</p>
+        <div class="status-grid">
+          <article><h3>Left hand</h3><p id="left-status">Waiting</p></article>
+          <article><h3>Right hand</h3><p id="right-status">Waiting</p></article>
+        </div>
+        <p class="plain-rule">No keyboard angle or switch measurements are needed.</p>
+      </section>
+
+      <section id="screen-sensor-check" class="screen" data-screen="sensor-check" hidden>
+        <p class="step">Step 2 of 7</p>
+        <h2>Check all sensors</h2>
+        <p>The service checks six sensors per hand, sample order, loss, clock fit, and timing skew.</p>
+        <dl class="facts"><dt>Hardware health</dt><dd id="hardware-health">Checking</dd></dl>
+      </section>
+
+      <section id="screen-identify-keyboard" class="screen" data-screen="identify-keyboard" hidden>
+        <p class="step">Step 3 of 7</p>
+        <h2>Identify the regular keyboard</h2>
+        <p>Press left Shift on the keyboard that will supply setup labels. Device selection does not identify its layout.</p>
+        <dl class="facts">
+          <dt>Selected device</dt><dd id="keyboard-device">Waiting for a device</dd>
+          <dt>Supported layout</dt><dd id="supported-keyboard-layout">US QWERTY physical positions</dd>
+          <dt>Confirmation</dt><dd id="keyboard-layout-confirmation">Waiting for device selection</dd>
+        </dl>
+        <p id="keyboard-layout-copy">__SUPPORTED_KEYBOARD_LAYOUT_COPY__</p>
+        <section class="position-tutorial" aria-labelledby="position-tutorial-title">
+          <h3 id="position-tutorial-title">Core-28 on a 34-position physical grid</h3>
+          <p>Reviewing this map is not scored. Follow the exact hand and finger ownership shown during every later target.</p>
+          <div class="keyboard-map tutorial-map" role="grid" aria-label="Core-28 on a 34-position physical grid">
+            __CORE28_TUTORIAL_LAYOUT__
+          </div>
+          <div class="ownership-grid" aria-label="Exact Core-28 finger ownership on the 34-position grid">
+            __CORE28_OWNERSHIP_LAYOUT__
+          </div>
+          <p class="plain-rule">Six reserved positions are deliberate negative examples: left outer thumb, comma, period, semicolon, slash, and right outer thumb. They emit no key.</p>
+        </section>
+        <p>Confirm both the US QWERTY positions and the finger ownership before sensor capture starts.</p>
+        <div class="layout-confirmation" aria-label="Keyboard layout confirmation">
+          <button type="button" data-layout-decision data-action="confirm-us-qwerty" hidden>Confirm layout and ownership</button>
+          <button type="button" data-layout-decision data-action="reject-us-qwerty" hidden>Stop: layout does not match</button>
+        </div>
+      </section>
+
+      <section id="screen-neutral-pose" class="screen" data-screen="neutral-pose" hidden>
+        <p class="step">Step 4 of 7</p>
+        <h2>Rest in a comfortable home pose</h2>
+        <p>Keep both hands still for three seconds. The sensors record a neutral motion baseline. They cannot detect later removal, movement, or loosening.</p>
+        <div class="countdown" aria-label="Neutral pose countdown"><span id="neutral-seconds">3</span> seconds</div>
+      </section>
+
+      <section id="screen-keyboard-typing" class="screen" data-screen="keyboard-typing" hidden>
+        <p class="step">Step 5 of 7</p>
+        <h2>Type on the regular keyboard</h2>
+        <p id="keyboard-prompt" class="prompt" aria-live="polite">Waiting for the next prompt</p>
+        <dl class="facts">
+          <dt>Keyboard targets completed</dt><dd id="keyboard-coverage">0 of 0</dd>
+          <dt>Rejected sensor events</dt><dd id="rejected-count">0</dd>
+          <dt>Signal check</dt><dd id="keyboard-precheck">No evidence-backed keyboard check has run.</dd>
+          <dt>Key accuracy</dt><dd id="keyboard-accuracy">Key-identity accuracy is not available from the keyboard precheck.</dd>
+        </dl>
+      </section>
+
+      <section id="screen-surface-transfer" class="screen" data-screen="surface-transfer" hidden>
+        <p class="step">Step 6 of 7</p>
+        <h2>Move the keyboard away</h2>
+        <p id="surface-stage">Passive-surface fitting is active. Follow each cue on the plain surface.</p>
+        <p>Use the plain surface. Tap the highlighted imagined position, then return to the home pose.</p>
+        <p>A target counts as complete only after causal sensor evidence confirms the prompted hand and finger. Showing or acknowledging the cue does not record contact.</p>
+        <div id="surface-prompt" class="key-target" aria-live="polite">Waiting for a target</div>
+        <div id="surface-layout" class="keyboard-map target-map" role="grid" aria-label="Current Core-28 target map on the 34-position grid">
+          __CORE28_TARGET_LAYOUT__
+        </div>
+        <dl class="facts"><dt>Training targets completed</dt><dd id="surface-coverage">0 of 0</dd></dl>
+      </section>
+
+      <section id="screen-validation-result" class="screen" data-screen="validation-result" hidden>
+        <p class="step">Step 7 of 7</p>
+        <h2>Validate the locked setup</h2>
+        <p id="validation-status" class="result" aria-live="polite">Validation has not run.</p>
+        <p id="validation-cause" role="alert"></p>
+        <h3>What validation covers</h3>
+        <p>Held-out validation checks the locked Core-28 key outputs, reserved-position no-key behavior, sensor integrity, per-hand ordinary motion, and a neutral final key state. It does not prove future mounts, long-term accuracy, or live typing authority.</p>
+        <p id="wearable-warning" class="plain-rule">Keep both wearables on and in the same position. The system cannot detect removal, movement, or loosening. If either wearable moved, revalidate before typing.</p>
+        <p id="result-acknowledgement-status" role="status">The saved result is not ready for acknowledgement.</p>
+        <button id="acknowledge-result" type="button" aria-describedby="result-acknowledgement-status wearable-warning" data-result-acknowledgement data-action="acknowledge-result" hidden>Acknowledge saved result</button>
+      </section>
+
+      <div class="actions" aria-label="Setup controls">
+        <button id="advance-demo" type="button" data-action="advance-simulated-replay" hidden>Advance replay evidence</button>
+        <button id="pause" type="button" data-action="pause">Pause</button>
+        <button id="resume" type="button" data-action="resume" hidden>Resume</button>
+        <button id="abort" class="danger" type="button" data-action="abort">Stop setup</button>
+      </div>
+
+      <details class="engineering">
+        <summary>Engineering details</summary>
+        <pre id="engineering-details">No state received.</pre>
+      </details>
+    </main>
+  </body>
+</html>

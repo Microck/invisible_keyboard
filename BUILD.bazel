@@ -1,0 +1,415 @@
+load(
+    "@rules_rust//rust:defs.bzl",
+    "rust_binary",
+    "rust_clippy_test",
+    "rust_library",
+    "rust_test",
+    "rustfmt_test",
+)
+load("@rules_cc//cc:cc_library.bzl", "cc_library")
+load("@rules_cc//cc:cc_test.bzl", "cc_test")
+load("@rules_shell//shell:sh_binary.bzl", "sh_binary")
+load("@rules_shell//shell:sh_test.bzl", "sh_test")
+
+package(default_visibility = ["//visibility:public"])
+
+exports_files([
+    "configs/72-invisible-keyboard-uinput.rules",
+    "configs/invisible-keyboard-uinput.conf",
+    "firmware/acquisition.c",
+    "firmware/acquisition.h",
+    "firmware/frame-protocol.c",
+    "firmware/frame-protocol.h",
+])
+
+RUST_EDITION = "2024"
+RUSTC_FLAGS = [
+    "-Dwarnings",
+    # Unsafe remains denied by default. Narrow libc FFI boundaries opt in at
+    # the item level, where each call carries its local safety proof.
+    "-Dunsafe-code",
+]
+C_COPTS = [
+    "-std=c11",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-pedantic",
+]
+
+rust_library(
+    name = "invisible_keyboard",
+    srcs = glob(["src/*.rs"], exclude = ["src/main.rs"]),
+    compile_data = [
+        "web/calibration-app.js",
+        "web/calibration.css",
+        "web/calibration.html",
+    ],
+    crate_name = "invisible_keyboard",
+    crate_root = "src/lib.rs",
+    edition = RUST_EDITION,
+    rustc_flags = RUSTC_FLAGS,
+    deps = select({
+        "@platforms//os:linux": [
+            "@crates//:evdev",
+            "@crates//:libc",
+        ],
+        "//conditions:default": [],
+    }) + [
+        "@crates//:serde",
+        "@crates//:serde_json",
+        "@crates//:sha2",
+    ],
+)
+
+rust_binary(
+    name = "invisible-keyboard",
+    srcs = ["src/main.rs"],
+    crate_name = "invisible_keyboard_cli",
+    edition = RUST_EDITION,
+    rustc_flags = RUSTC_FLAGS,
+    deps = [
+        ":invisible_keyboard",
+        "@crates//:serde_json",
+        "@crates//:signal-hook",
+    ],
+)
+
+rust_binary(
+    name = "calibration-browser-fixture",
+    srcs = ["tests/calibration-browser-fixture.rs"],
+    crate_name = "calibration_browser_fixture",
+    crate_root = "tests/calibration-browser-fixture.rs",
+    edition = RUST_EDITION,
+    rustc_flags = RUSTC_FLAGS,
+    deps = [
+        ":invisible_keyboard",
+        "@crates//:libc",
+        "@crates//:serde_json",
+    ],
+)
+
+cc_library(
+    name = "firmware-frame-protocol",
+    srcs = ["firmware/frame-protocol.c"],
+    hdrs = ["firmware/frame-protocol.h"],
+    copts = C_COPTS,
+)
+
+cc_library(
+    name = "firmware-acquisition",
+    srcs = ["firmware/acquisition.c"],
+    hdrs = ["firmware/acquisition.h"],
+    copts = C_COPTS,
+    deps = [":firmware-frame-protocol"],
+)
+
+cc_test(
+    name = "firmware-frame-conformance-test",
+    srcs = ["firmware/frame-protocol-conformance.c"],
+    size = "small",
+    deps = [":firmware-frame-protocol"],
+)
+
+cc_test(
+    name = "firmware-acquisition-conformance-test",
+    srcs = ["firmware/acquisition-conformance.c"],
+    size = "small",
+    deps = [":firmware-acquisition"],
+)
+
+# The capture executable itself is compiled by the pinned Box-only recipe.
+# These Bazel targets own the project wrappers and their contract suite so
+# Bazel remains the canonical command surface without adding a Python ruleset.
+sh_binary(
+    name = "build-gate0a-capture-stack",
+    srcs = ["tools/build-gate0a-capture-stack.sh"],
+    data = [
+        "third_party/gate0a-capture-stack-provenance.md",
+        "third_party/libsigrok-0bc2487-dslogic-gate0a.patch",
+    ],
+    env = {
+        "IKB_GATE0A_PATCH_RLOCATION": "$(rlocationpath third_party/libsigrok-0bc2487-dslogic-gate0a.patch)",
+        "IKB_GATE0A_PROVENANCE_RLOCATION": "$(rlocationpath third_party/gate0a-capture-stack-provenance.md)",
+    },
+    # The launcher exports RUNFILES_DIR or RUNFILES_MANIFEST_FILE before it
+    # enters the recipe. The recipe refuses to guess paths outside that tree.
+    use_bash_launcher = True,
+)
+
+sh_binary(
+    name = "capture-gate0a",
+    srcs = ["tools/capture-gate0a.py"],
+)
+
+sh_binary(
+    name = "finalize-gate0a-capture",
+    srcs = ["tools/finalize-gate0a-capture.py"],
+)
+
+sh_test(
+    name = "gate0a-capture-stack-test",
+    srcs = ["tools/test-gate0a-capture-stack.py"],
+    data = [
+        ":build-gate0a-capture-stack",
+        "docs/implementation/gate0a-capture-stack.md",
+        "third_party/gate0a-capture-stack-provenance.md",
+        "third_party/libsigrok-0bc2487-dslogic-gate0a.patch",
+        "tools/build-gate0a-capture-stack.sh",
+        "tools/capture-gate0a.py",
+        "tools/finalize-gate0a-capture.py",
+    ],
+    env = {
+        "IKB_GATE0A_BUILD_RLOCATION": "$(rlocationpath :build-gate0a-capture-stack)",
+        "IKB_GATE0A_PATCH_RLOCATION": "$(rlocationpath third_party/libsigrok-0bc2487-dslogic-gate0a.patch)",
+        "IKB_GATE0A_PROVENANCE_RLOCATION": "$(rlocationpath third_party/gate0a-capture-stack-provenance.md)",
+    },
+    # This suite hashes a 14.44 GB logical capture; slow storage must not turn
+    # that intentional resource test into a one-minute harness timeout.
+    size = "large",
+    # The generated capture binary and firmware tar are supplied only by the
+    # explicit Crabbox lane. Missing --test_env inputs fail, never skip.
+    tags = ["manual"],
+)
+
+# This manual Linux oracle follows the real CLI with ptrace and rejects any
+# durable-status publication that precedes the END3 footer plus file and parent
+# directory fsyncs for the manifest, session, and exact-session-bound report.
+sh_test(
+    name = "live-durability-syscall-test",
+    srcs = ["tools/test-live-durability-syscalls.py"],
+    data = [
+        ":cli-contract-test",
+        ":invisible-keyboard",
+    ],
+    env = {
+        "IKB_DURABILITY_CLI_TEST_RLOCATION": "$(rlocationpath :cli-contract-test)",
+        "INVISIBLE_KEYBOARD_RLOCATION": "$(rlocationpath :invisible-keyboard)",
+    },
+    size = "medium",
+    tags = [
+        "exclusive",
+        "manual",
+        "no-sandbox",
+    ],
+    target_compatible_with = ["@platforms//os:linux"],
+)
+
+# Real Chrome exercises the production UI and loopback HTTP service while a
+# loopback-only proxy withholds one accepted acknowledgement response.
+sh_test(
+    name = "calibration-browser-receipt-test",
+    srcs = ["tools/test-calibration-browser-receipts.py"],
+    data = [":calibration-browser-fixture"],
+    env = {
+        "IKB_CALIBRATION_BROWSER_FIXTURE_RLOCATION": "$(rlocationpath :calibration-browser-fixture)",
+    },
+    size = "medium",
+    tags = [
+        "exclusive",
+        "manual",
+        "no-sandbox",
+    ],
+)
+
+rust_test(
+    name = "unit-tests",
+    crate = ":invisible_keyboard",
+    rustc_flags = RUSTC_FLAGS,
+    size = "small",
+)
+
+rust_test(
+    name = "cli-unit-tests",
+    crate = ":invisible-keyboard",
+    rustc_flags = RUSTC_FLAGS,
+    size = "small",
+    deps = select({
+        "@platforms//os:linux": ["@crates//:libc"],
+        "//conditions:default": [],
+    }),
+)
+
+INTEGRATION_TESTS = {
+    "artifact-contract-test": "tests/artifact-contract.rs",
+    "calibration-contract-test": "tests/calibration-contract.rs",
+    "calibration-app-contract-test": "tests/calibration-app-contract.rs",
+    "calibration-capture-contract-test": "tests/calibration-capture-contract.rs",
+    "calibration-engine-contract-test": "tests/calibration-engine-contract.rs",
+    "calibration-worker-contract-test": "tests/calibration-worker-contract.rs",
+    "clock-contract-test": "tests/clock-contract.rs",
+    "clock-epoch-contract-test": "tests/clock-epoch-contract.rs",
+    "decoder-simulation-contract-test": "tests/decoder-simulation-contract.rs",
+    "device-transport-contract-test": "tests/device-transport-contract.rs",
+    "evaluation-contract-test": "tests/evaluation-contract.rs",
+    "gate0-contract-test": "tests/gate0-contract.rs",
+    "gate0-trace-contract-test": "tests/gate0-trace-contract.rs",
+    "hardware-calibration-contract-test": "tests/hardware-calibration-contract.rs",
+    "layout-contract-test": "tests/layout-contract.rs",
+    "label-contract-test": "tests/label-contract.rs",
+    "manifest-contract-test": "tests/manifest-contract.rs",
+    "neutral-contract-test": "tests/neutral-contract.rs",
+    "output-contract-test": "tests/output-contract.rs",
+    "physical-study-contract-test": "tests/physical-study-contract.rs",
+    "pilot-contract-test": "tests/pilot-contract.rs",
+    "pipeline-contract-test": "tests/pipeline-contract.rs",
+    "prompt-contract-test": "tests/prompt-contract.rs",
+    "replay-contract-test": "tests/replay-contract.rs",
+    "protocol-contract-test": "tests/protocol-contract.rs",
+    "runtime-contract-test": "tests/runtime-contract.rs",
+    "session-contract-test": "tests/session-contract.rs",
+    "transport-contract-test": "tests/transport-contract.rs",
+    "validation-contract-test": "tests/validation-contract.rs",
+}
+
+rust_test(
+    name = "controller-source-contract-test",
+    srcs = ["tests/controller-source-contract.rs"],
+    crate_root = "tests/controller-source-contract.rs",
+    edition = RUST_EDITION,
+    rustc_flags = RUSTC_FLAGS,
+    size = "small",
+    target_compatible_with = ["@platforms//os:linux"],
+    deps = [
+        ":invisible_keyboard",
+        "@crates//:libc",
+    ],
+)
+
+# Full raw-session and axis-equivalence engine checks exceed the 900-second
+# large-test limit in Crabbox. Test resource sizes do not change application
+# deadlines or durability assertions.
+INTEGRATION_TEST_SIZES = {
+    "calibration-engine-contract-test": "enormous",
+    "evaluation-contract-test": "large",
+    "physical-study-contract-test": "large",
+    "pilot-contract-test": "large",
+    "replay-contract-test": "medium",
+    "manifest-contract-test": "medium",
+}
+
+[
+    rust_test(
+        name = name,
+        srcs = [source],
+        crate_root = source,
+        compile_data = [
+            "configs/acquisition-template.example.json",
+            "configs/axis-characterization-template.example.json",
+            "configs/rig-evidence-template.example.json",
+        ],
+        edition = RUST_EDITION,
+        rustc_flags = RUSTC_FLAGS,
+        data = ["//firmware/zephyr:native-conformance-test"] if name == "gate0-trace-contract-test" else [],
+        env = {
+            "IKB_STARTUP_FIXTURE_RLOCATION": "$(rlocationpath //firmware/zephyr:native-conformance-test)",
+        } if name == "gate0-trace-contract-test" else {},
+        # Replay and manifest suites repeatedly reduce evidence-bound fixtures.
+        # A cold parallel firmware build can push these beyond 60 seconds.
+        size = INTEGRATION_TEST_SIZES.get(name, "small"),
+        deps = [
+            ":invisible_keyboard",
+            "@crates//:serde_json",
+        ],
+    )
+    for name, source in INTEGRATION_TESTS.items()
+]
+
+# This target uses Linux uinput plus an exclusively grabbed evdev consumer.
+# It skips when the capability is absent unless the caller sets
+# INVISIBLE_KEYBOARD_REQUIRE_UINPUT=1.
+rust_test(
+    name = "output-system-contract-test",
+    srcs = ["tests/output-system-contract.rs"],
+    crate_root = "tests/output-system-contract.rs",
+    edition = RUST_EDITION,
+    rustc_flags = RUSTC_FLAGS,
+    size = "medium",
+    target_compatible_with = ["@platforms//os:linux"],
+    deps = [
+        ":invisible_keyboard",
+        "@crates//:evdev",
+        "@crates//:libc",
+        "@crates//:signal-hook",
+    ],
+)
+
+# Explicit hardware-backed acceptance lane. The environment variable turns
+# every otherwise portable uinput skip into a test failure, while no-sandbox
+# exposes the Box host's real /dev/uinput device to the test process.
+rust_test(
+    name = "output-system-required-test",
+    srcs = ["tests/output-system-contract.rs"],
+    crate_root = "tests/output-system-contract.rs",
+    edition = RUST_EDITION,
+    env = {"INVISIBLE_KEYBOARD_REQUIRE_UINPUT": "1"},
+    rustc_flags = RUSTC_FLAGS,
+    size = "medium",
+    tags = [
+        "exclusive",
+        "manual",
+        "no-sandbox",
+    ],
+    target_compatible_with = ["@platforms//os:linux"],
+    deps = [
+        ":invisible_keyboard",
+        "@crates//:evdev",
+        "@crates//:libc",
+        "@crates//:signal-hook",
+    ],
+)
+
+rust_test(
+    name = "cli-contract-test",
+    args = ["--test-threads=1"],
+    srcs = ["tests/cli-contract.rs"],
+    crate_root = "tests/cli-contract.rs",
+    data = [
+        ":firmware-frame-conformance-test",
+        ":invisible-keyboard",
+    ],
+    edition = RUST_EDITION,
+    env = {
+        "FIRMWARE_FIXTURE_RLOCATION": "$(rlocationpath :firmware-frame-conformance-test)",
+        "INVISIBLE_KEYBOARD_RLOCATION": "$(rlocationpath :invisible-keyboard)",
+    },
+    rustc_flags = RUSTC_FLAGS,
+    size = "large",
+    # The sequential CLI suite includes full synthetic and sparse-file runs;
+    # its total runtime can exceed the medium target's five-minute allowance.
+    # Several cases drive two real FIFOs and assert that the causal live clock
+    # arms. CPU starvation is expected to keep output disarmed or fail closed.
+    # `exclusive` isolates this binary from other Bazel tests; the explicit
+    # harness argument also prevents the long resource case from starving the
+    # timing-sensitive live cases inside this same test binary.
+    tags = ["exclusive"],
+    deps = [
+        ":invisible_keyboard",
+        "@crates//:libc",
+        "@crates//:serde_json",
+    ],
+)
+
+ALL_RUST_TARGETS = [
+    ":calibration-browser-fixture",
+    ":invisible-keyboard",
+    ":invisible_keyboard",
+    ":unit-tests",
+    ":cli-unit-tests",
+    ":cli-contract-test",
+    ":output-system-contract-test",
+    ":output-system-required-test",
+    ":controller-source-contract-test",
+] + [":" + name for name in INTEGRATION_TESTS]
+
+rustfmt_test(
+    name = "rustfmt-test",
+    size = "small",
+    targets = ALL_RUST_TARGETS,
+)
+
+rust_clippy_test(
+    name = "clippy-test",
+    size = "small",
+    targets = ALL_RUST_TARGETS,
+)

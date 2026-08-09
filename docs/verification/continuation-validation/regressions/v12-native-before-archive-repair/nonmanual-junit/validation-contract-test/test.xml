@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="validation-contract-test" tests="1" failures="0" errors="0">
+    <testcase name="validation-contract-test" status="run" duration="0" time="0"></testcase>
+      <system-out>
+Generated test.log (if the file is not UTF-8, then this may be unreadable):
+<![CDATA[exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+Executing tests from //:validation-contract-test
+-----------------------------------------------------------------------------
+
+running 6 tests
+test artifact_manifest_session_and_block_binding_fail_closed ... ok
+test every_physical_position_and_null_truth_need_evidence ... ok
+test every_validation_session_has_one_bound_evidence_sidecar ... ok
+test perfect_count_level_report_derives_metrics_and_passes ... ok
+test reserved_and_null_rows_expose_false_activations ... ok
+test matrix_shape_and_report_json_are_strict_and_stable ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s]]>
+      </system-out>
+    </testsuite>
+</testsuites>

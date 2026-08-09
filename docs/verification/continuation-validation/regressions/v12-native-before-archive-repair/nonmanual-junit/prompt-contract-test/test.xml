@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="prompt-contract-test" tests="1" failures="0" errors="0">
+    <testcase name="prompt-contract-test" status="run" duration="0" time="0"></testcase>
+      <system-out>
+Generated test.log (if the file is not UTF-8, then this may be unreadable):
+<![CDATA[exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+Executing tests from //:prompt-contract-test
+-----------------------------------------------------------------------------
+
+running 9 tests
+test corpus_has_natural_coverage_and_reserved_exercises ... ok
+test frozen_corpus_covers_every_keyboard_warm_start_position ... ok
+test corpus_identity_is_stable_and_content_is_ascii ... ok
+test held_out_null_intervals_are_explicit_and_meet_the_provisional_gate ... ok
+test held_out_roundtrip_requires_the_original_artifact_and_seed ... ok
+test prompt_selection_is_deterministic_and_targets_the_largest_deficit ... ok
+test surface_training_plan_is_frozen_in_manifest_order ... ok
+test training_plan_roundtrips_but_rejects_canonical_mutations ... ok
+test held_out_plan_is_artifact_bound_deterministic_and_balanced ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.23s]]>
+      </system-out>
+    </testsuite>
+</testsuites>

@@ -1,0 +1,61 @@
+OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //:replay-contract-test (1 packages loaded)
+Analyzing: target //:replay-contract-test (5 packages loaded, 6 targets configured)
+Analyzing: target //:replay-contract-test (5 packages loaded, 6 targets configured)
+
+Analyzing: target //:replay-contract-test (13 packages loaded, 9 targets configured)
+
+Analyzing: target //:replay-contract-test (61 packages loaded, 9 targets configured)
+
+Analyzing: target //:replay-contract-test (83 packages loaded, 363 targets configured)
+
+Analyzing: target //:replay-contract-test (105 packages loaded, 815 targets configured)
+
+Analyzing: target //:replay-contract-test (131 packages loaded, 2510 targets configured)
+
+Analyzing: target //:replay-contract-test (157 packages loaded, 3421 targets configured)
+
+Analyzing: target //:replay-contract-test (200 packages loaded, 5130 targets configured)
+
+INFO: Analyzed target //:replay-contract-test (206 packages loaded, 5419 targets configured).
+[1 / 1] no actions running
+[158 / 425] checking cached actions
+[425 / 426] [Prepa] Testing //:replay-contract-test
+[425 / 426] Testing //:replay-contract-test; 1s processwrapper-sandbox
+[425 / 426] Testing //:replay-contract-test; 11s processwrapper-sandbox
+[425 / 426] Testing //:replay-contract-test; 13s processwrapper-sandbox
+FAIL: //:replay-contract-test (Exit 101) (see /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/execroot/_main/bazel-out/aarch64-fastbuild/testlogs/replay-contract-test/test.log)
+INFO: From Testing //:replay-contract-test:
+==================== Test output for //:replay-contract-test:
+
+running 1 test
+test live_cli_ingress_revokes_merge_held_faults_before_signal_and_retains_incident ... FAILED
+
+failures:
+
+---- live_cli_ingress_revokes_merge_held_faults_before_signal_and_retains_incident stdout ----
+
+thread 'live_cli_ingress_revokes_merge_held_faults_before_signal_and_retains_incident' (76715) panicked at tests/replay-contract.rs:3065:13:
+a completed faulty frame must revoke inside the upstream receipt interval
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    live_cli_ingress_revokes_merge_held_faults_before_signal_and_retains_incident
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 47 filtered out; finished in 13.58s
+
+================================================================================
+INFO: Found 1 test target...
+Target //:replay-contract-test up-to-date:
+  bazel-bin/replay-contract-test
+INFO: Elapsed time: 30.311s, Critical Path: 13.94s
+INFO: 2 processes: 424 action cache hit, 1 internal, 2 processwrapper-sandbox.
+INFO: Build completed, 1 test FAILED, 2 total actions
+//:replay-contract-test                                                  FAILED in 13.6s
+  /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/execroot/_main/bazel-out/aarch64-fastbuild/testlogs/replay-contract-test/test.log
+
+Executed 1 out of 1 test: 1 fails locally.

@@ -246,62 +246,99 @@ change, and decoder crash, report:
 
 ## Stage-gate protocol
 
-The gates are cumulative. Do not train around a failed gate. Find the physical,
+Gate 0A and Gate 0S are independent prerequisites. The physical gates after
+them are cumulative. Do not train around a failed gate. Find the physical,
 data, or interaction cause, change the design, and rerun that gate with a new
 versioned artifact.
 
-### Gate 0 - bench stream integrity
+### Gate 0A - acquisition integrity
 
-**Protocol:** Run the complete topology for at least 60 minutes, inject at least
-10,000 deterministic press/release records, and force 10 disconnect/reconnect or
-power-cycle events. For fused sensors, generate shared timing edges visible to
-all channels.
+**Protocol:** Run the complete one-hand topology through the native
+logic-analyzer and host-session path. The decisive artifact contains at least
+3,601 scored seconds, with every analyzer word, sensor edge, read, collision,
+cache-eligibility boundary, aggregate snapshot, selected read, and deliberate
+decimation retained or derived from the raw capture.
 
 **Go:**
 
-- 100 percent of sequence numbers are accounted for (E);
-- receipt is at least 99.9 percent, with no silent timestamp reset, corruption,
-  duplicate delivery, or reordered delivery to the model (P);
-- cross-stream synchronization residual is at most the smaller of 5 ms or 10
-  percent of the shortest feature used by the classifier (P);
-- end-to-end p95 is at most 100 ms and p99 at most 200 ms (P, with the 200 ms
-  correction-risk condition anchored by [S7]); and
-- every forced fault reaches all-keys-up within 250 ms, with zero stuck modifier
-  or repeat state (P).
+- 100 percent of raw words, sequence numbers, and acquisition outcomes are
+  accounted for exactly once (E);
+- valid host receipt is at least 99.9 percent, with no silent timestamp reset,
+  corruption, duplicate delivery, or reorder into the model (P);
+- inter-sensor spread is at most 5 ms, or an alignment ablation passes before
+  the decoder uses the affected phase (P); and
+- every selected source read completes before its observable snapshot boundary
+  (E).
 
-**Stop:** Any loss that cannot be detected, any clock ambiguity, any stuck key,
-or any metric computed only on received packets without the sent denominator.
+**Stop:** Evidence is silent or multiply classified, clocks or payload linkage
+are ambiguous, external or decoded summaries replace native raw evidence, or
+the full topology has an unexpected overrun or selection schedule.
 
-### Gate 1 - isolated tap intent
+### Gate 0S - deterministic output integrity
 
-**Protocol:** Use at least 5 participants, two complete mounts per person, and at
-least 50 randomized intended activations per finger or supported actuator in
-each mount. Use synchronized physical contact, high-speed video, or another
-reference independent of the candidate sensor. Include equal-duration quiet and
-scripted non-tap blocks.
+**Protocol:** Replay at least 10,000 deterministic down/up records through Linux
+`uinput` into an independent evdev consumer. Force the native neutralization
+fault cases and separately exercise the real coordinator and durable-evidence
+ordering.
 
-**Go:** The one-sided 95 percent upper confidence bound for misses is at most 5
-percent, p95 intent-to-event latency is at most 100 ms, p99 is at most 200 ms,
-and no class has point recall below 80 percent (all P). Report false activations
-per hour, but reserve the decisive ordinary-movement test for Gate 8.
+**Go:** Application-path p95 is at most 100 ms, p99 is at most 200 ms, every
+forced fault is observed all-up within 250 ms, and no modifier or repeat state
+sticks (P). Terminal durable status follows durable session and report bytes;
+evidence finalization does not inherit the 250 ms safety deadline.
 
-**Stop:** Ground truth depends on the same sensor under test, timestamps cannot
-be aligned, or balanced isolated windows are the only negative evidence.
+**Stop:** Any key event is untraceable, any key remains down, a status claim
+precedes durable evidence, or compositional tests are presented as one measured
+physical-controller-to-application deadline.
 
-### Gate 2 - finger and key identity
+### Gate 0B - observable contact
 
-**Protocol:** Use at least 8 participants, two mounts, and at least 50 randomized
-events per advertised class per mount. Freeze session-held-out splits. For A,
-the target may be finger identity. For B, it must be exact key intent with the
-language model disabled.
+**Protocol:** Freeze the contact detector, then use both hands, at least 5
+held-out participants, two real mounts per participant, and at least 50
+intentional taps per finger, hand, participant, and mount. Use independent
+contact truth and equal 60-second quiet and scripted-motion exposure in every
+hand/participant/mount slice.
 
-**Go:** The lower 95 percent participant-level confidence bound for macro-F1 is
-at least 0.90, the event error upper bound is at most 10 percent, and every
-class has point recall of at least 0.80 (P). Show the full null-inclusive
-confusion matrix.
+**Go:** The one-sided 95 percent participant-level miss bound is at most 5
+percent, the p95/p99 latency bounds are at most 100/200 ms, every finger's
+recall bound is at least 80 percent, signed latency is never negative, and
+there are zero extra contacts or negative false activations (P).
 
-**Stop:** Same-finger keys are unobservable while B is claimed, top-k or word
-correction replaces top-1 identity, or windows from one event cross a split.
+**Stop:** The candidate detector supplies its own truth, either hand or a real
+remount is absent, timestamps cannot be aligned, or the frozen roster is
+changed after outcomes are inspected.
+
+### Gate 1 - acting finger
+
+**Protocol:** Keep the Gate 0B detector frozen. Use both hands, at least 5
+held-out participants, two real mounts per participant, and at least 50
+intentional taps per finger, hand, participant, and mount. Include at least 60
+seconds per slice of quiet, shared motion, physical-keyboard typing, desk
+tapping, and simultaneous ambiguous activity.
+
+**Go:** The participant-level event-error upper bound is at most 10 percent,
+the macro-F1 lower bound is at least 0.90, every finger's recall bound is at
+least 0.80, p95/p99 latency bounds are at most 100/200 ms, and there are zero
+extra outputs or negative false activations (P).
+
+**Stop:** Ground truth depends on the candidate sensor, the test participant or
+mount enters fitting, or a winner is chosen after simultaneous ambiguous input.
+
+### Gate 2 - exact 34-position/Core-28 identity
+
+**Protocol:** Freeze participant-disjoint train, validation, and held-out
+splits. Use both hands, at least 8 held-out participants, two real mounts per
+participant, and at least 50 randomized events for each of all 34 physical
+positions in every participant/mount slice. Disable language correction.
+
+**Go:** The participant-level macro-F1 lower bound across the 28 enabled
+outputs is at least 0.90, the event-error upper bound is at most 10 percent,
+every one of the 34 physical positions has a recall bound of at least 0.80,
+and the six reserved positions produce zero enabled outputs (P). Show the full
+null-inclusive confusion matrix.
+
+**Stop:** Same-finger positions are unobservable, top-k or word correction
+replaces top-1 identity, a held-out person enters fitting, or windows from one
+event cross a split.
 
 ### Gate 3 - live uncorrected text
 
@@ -313,7 +350,8 @@ transcription snapshot.
 
 **Go:** On participant-level estimates, the one-sided 95 percent lower bound is
 at least 15 WPM and the upper bound is at most 10 percent UER; task completion is
-at least 95 percent; Gate 0 latency and key-state conditions still hold (P).
+at least 95 percent; Gate 0A acquisition and Gate 0S latency/key-state conditions
+still hold (P).
 
 **Stop:** Only offline replay works, a final string cannot be traced to causal
 events, or the decoder silently uses phrase knowledge.
@@ -523,9 +561,11 @@ Copy this for every immutable build and link every result to raw artifacts.
 ## Gates
 | Gate | Claim | Target and label | Result with 95% interval | Artifact | Pass/fail/inconclusive |
 | --- | --- | --- | --- | --- | --- |
-| 0 stream integrity | all | see contract | | | |
-| 1 isolated intent | all | see contract | | | |
-| 2 finger/key identity | A/B | see contract | | | |
+| 0A acquisition integrity | all | see contract | | | |
+| 0S deterministic output integrity | all | see contract | | | |
+| 0B observable contact | all | see contract | | | |
+| 1 acting finger | A/B | see contract | | | |
+| 2 exact 34-position/Core-28 identity | B | see contract | | | |
 | 3 live uncorrected text | A/B | see contract | | | |
 | 4 corrected phrase text | A | see contract | | | |
 | 5 arbitrary text/code | B | see contract | | | |
@@ -573,10 +613,11 @@ Copy this for every immutable build and link every result to raw artifacts.
   key-intent, and language-corrected outputs. A decoder may optimize A without
   turning that result into B. Training, calibration, and evaluation units must
   be complete sessions or people before any derived windows exist.
-- **Specify the decisive prototype:** implement Gate 0 first, then the earliest
-  claim-specific gate. Do not build a polished keyboard service until stream
-  integrity, continuous intent, and ordinary negatives are measurable. The
-  scorecard is the prototype's acceptance artifact.
+- **Specify the decisive prototype:** implement Gate 0A and Gate 0S, then Gate
+  0B and the earliest claim-specific gate. Do not build a polished keyboard
+  service until acquisition integrity, continuous intent, and ordinary
+  negatives are measurable. The scorecard is the prototype's acceptance
+  artifact.
 
 ## Sources
 

@@ -1,0 +1,12 @@
+{
+  "pid": 128357,
+  "command": [
+    "python3",
+    "/home/ubuntu/ikb-native-proof.py",
+    "/home/ubuntu/work/cbx_42955e8aa2c5/invisible_keyboard",
+    "/home/ubuntu/continuation-proof-native-v13-complete",
+    "/home/ubuntu/current-source-snapshot-v13",
+    "--resume"
+  ],
+  "started_utc": "2026-10-13T03:01:41.325896+00:00"
+}

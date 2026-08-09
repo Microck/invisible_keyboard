@@ -1,0 +1,27 @@
+LiveCalibratedReport {
+    total_candidates: 43,
+    decoded_frames: 43,
+    left_frames: 21,
+    right_frames: 22,
+    clock_warmup_frames: 41,
+    armed_transitions: 1,
+    invalid_candidates: 0,
+    reordered_frames: 0,
+    decisions: 0,
+    key_decisions: 0,
+    abstentions: 0,
+    output_events: 0,
+    watchdog_timeouts: 0,
+    left_watchdog_timeouts: 0,
+    right_watchdog_timeouts: 0,
+    maximum_pending_frames: 1,
+    runtime_faults: [],
+    terminal_reason: Some(
+        EvidenceInvalidatingAbstention(
+            AcquisitionFault,
+        ),
+    ),
+    finished_cleanly: false,
+    final_key_state_neutral: true,
+    output_neutrality_confirmed: true,
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="hardware-calibration-contract-test" tests="1" failures="0" errors="0">
+    <testcase name="hardware-calibration-contract-test" status="run" duration="0" time="0"></testcase>
+      <system-out>
+Generated test.log (if the file is not UTF-8, then this may be unreadable):
+<![CDATA[exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+Executing tests from //:hardware-calibration-contract-test
+-----------------------------------------------------------------------------
+
+running 11 tests
+test abort_closes_label_admission_before_incident_finalization ... ok
+test abort_incident_closes_buffered_suffix_at_original_receipt ... ok
+test invalid_sensor_frame_is_a_terminal_stream_integrity_failure ... ok
+test keyboard_checkpoint_can_freeze_the_rule_before_passive_threshold_evidence ... ok
+test matched_examples_across_two_blocks_clear_the_exact_position_deficit ... ok
+test missing_causal_window_keeps_raw_attempts_out_of_matched_coverage ... ok
+test repeated_labels_cannot_reuse_overlapping_causal_windows ... ok
+test saved_result_acknowledgement_uses_the_exact_bounded_deadline ... ok
+test source_payload_mismatch_keeps_closed_diagnostic_bytes ... ok
+test timed_out_acknowledgement_is_durable_and_does_not_claim_the_result_was_seen ... ok
+test bounded_label_retention_reports_an_incomplete_incident ... ok
+
+test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.87s]]>
+      </system-out>
+    </testsuite>
+</testsuites>

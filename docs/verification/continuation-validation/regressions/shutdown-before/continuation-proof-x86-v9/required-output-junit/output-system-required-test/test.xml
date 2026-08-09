@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="output-system-required-test" tests="1" failures="0" errors="1">
+    <testcase name="output-system-required-test" status="run" duration="17" time="17"><error message="exited with error code 101"></error></testcase>
+      <system-out>
+Generated test.log (if the file is not UTF-8, then this may be unreadable):
+<![CDATA[exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+Executing tests from //:output-system-required-test
+-----------------------------------------------------------------------------
+
+running 6 tests
+test native_kernel_stress_executes_ten_thousand_pairs_and_finishes_neutral ... ok
+test native_probe_verifies_core28_identity_and_non_root_access ... ok
+test native_evdev_application_observes_every_core28_pair ... ok
+test selected_keyboard_open_queries_keys_held_before_reader_start ... ok
+test planned_signals_are_application_observed_neutral_within_250ms ... FAILED
+test sigkill_destroys_the_owned_uinput_device_without_a_250ms_claim ... ok
+
+failures:
+
+---- planned_signals_are_application_observed_neutral_within_250ms stdout ----
+
+thread 'planned_signals_are_application_observed_neutral_within_250ms' (57565) panicked at tests/output-system-contract.rs:404:13:
+assertion failed: parent_observation <= Duration::from_millis(250)
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    planned_signals_are_application_observed_neutral_within_250ms
+
+test result: FAILED. 5 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 10.99s]]>
+      </system-out>
+    </testsuite>
+</testsuites>

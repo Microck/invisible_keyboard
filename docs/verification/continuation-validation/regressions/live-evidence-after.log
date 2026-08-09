@@ -1,0 +1,15 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+Executing tests from //:cli-unit-tests
+-----------------------------------------------------------------------------
+
+running 7 tests
+test gate0_footer_commit_tests::footer_claim_before_signal_store_remains_committed ... ok
+test gate0_footer_commit_tests::signal_store_before_footer_claim_wins_and_prevents_finish ... ok
+test live_evidence_tests::capacity_error_retains_trigger_and_mailbox_backlog ... ok
+test live_evidence_tests::evidence_retention_failure_is_attached_without_replacing_primary ... ok
+test live_evidence_tests::late_publication_retains_trigger_and_mailbox_backlog ... ok
+test live_evidence_tests::receipt_regression_retains_trigger_and_mailbox_backlog ... ok
+test live_evidence_tests::terminal_snapshot_closes_before_blocking_and_failed_evidence_io ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+

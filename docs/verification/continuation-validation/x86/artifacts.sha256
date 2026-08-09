@@ -1,0 +1,13 @@
+fddd7d22fb033981dc147e9ce9045870bc30fd55317fd5d0cce1c82001d40878  /home/tester/invisible_keyboard/bazel-bin/invisible-keyboard
+618ca3da68259269af4bace22b21832dd6526e180bed99b54748e4394fb2dd3f  /home/tester/invisible_keyboard/bazel-bin/firmware/zephyr/invisible-keyboard-right-xiao-nrf52840-plus.hex
+349a9f4a1646687d578c1d5815191998feebbe4279b35411c785dc5e9689f81e  /home/tester/invisible_keyboard/bazel-bin/firmware/zephyr/invisible-keyboard-left-xiao-nrf52840-plus.hex
+4aca05334f623b0f806106b472f12aafce888ba7c8f800773522e9b09e32be9a  /home/tester/invisible_keyboard/bazel-bin/firmware/zephyr/invisible-keyboard-right-xiao-nrf52840-plus.elf
+446bbaec5fb42e42eddaa9e4dfb829eb6193829db7353fcbc1213448ab6dd258  /home/tester/invisible_keyboard/bazel-bin/firmware/zephyr/invisible-keyboard-xiao-nrf52840-plus.provenance.txt
+4786fe648e31e281191fe669434480b3495f223334d3aa2d90264886246e5831  /home/tester/invisible_keyboard/bazel-bin/firmware/zephyr/invisible-keyboard-right-xiao-nrf52840-plus.uf2
+8c31c4e9fdeec457db4548587d3f00421803164d884de703d6503544d692134a  /home/tester/invisible_keyboard/bazel-bin/firmware/zephyr/invisible-keyboard-left-xiao-nrf52840-plus.uf2
+5aaa2502f6495725d0a907760b0f7dae4f47d024824829c601fe965c9d19fcba  /home/tester/invisible_keyboard/bazel-bin/firmware/zephyr/invisible-keyboard-left-xiao-nrf52840-plus.elf
+bc85f870076a05aaa82393f341b2fca6b33b22deda92bf873e4979f0d645f8de  /home/tester/gate0a-stack-build-v3/artifacts/gate0a-dslogic-plus-firmware.tar
+0fcb2d7e6ebb9593173cbbbba74502a225111e3e0a2c97a684d5101f7c738268  /home/tester/gate0a-stack-build-v3/artifacts/BUILD-INFO.txt
+55d354597a5573315a16408112cf4dfbbda8976842b428c42681dbbc986bd10d  /home/tester/gate0a-stack-build-v3/artifacts/libsigrok-gate0a.patch
+1665066921d1163bb2dddd45ae2ea20b55cf6970ac8de46ef5b0dbd2804e65c3  /home/tester/gate0a-stack-build-v3/artifacts/sigrok-cli-gate0a
+2699c511e1fdf03501fa1df1e12de72217e9b53dc8d395c1059735c55a80086d  /home/tester/gate0a-stack-build-v3/artifacts/capture-stack-provenance.md

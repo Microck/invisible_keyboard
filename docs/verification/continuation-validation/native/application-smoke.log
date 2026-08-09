@@ -1,0 +1,54 @@
+{"scenario": "progressing-request-after-fix", "status": "HTTP/1.1 408 Request Timeout", "elapsed_seconds": 0.11820743593852967, "next_status": "HTTP/1.1 200 OK"}
+
+running 1 test
+test score_pilot_reduces_bound_raw_evidence_without_authorizing_output ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 75 filtered out; finished in 45.61s
+
+pilot_disposition=stop
+evidence=replay-tested
+hardware_truth=not-asserted
+diagnostic=non-armable
+manifest=/home/ubuntu/continuation-proof-native-v13/application-smoke/pilot-fixture/pilot-cli-manifest-118062.json
+manifest_sha256=77db90b30a0a86c5c44d3e64af15722e6f7c5593bd6fa1b24848a7d255a798f1
+session=/home/ubuntu/continuation-proof-native-v13/application-smoke/pilot-fixture/pilot-cli-manifest-118062.iks
+session_sha256=8a341611b9e5abed8391c9d5265c59866efa3d5ab49f0308b50a4368e235d697
+report=/home/ubuntu/continuation-proof-native-v13/application-smoke/pilot-direct-report.json
+report_sha256=5422ebf8712f24c82b7dcbf0e33694ee28b612a9e9275db7f962fcd174a4ee20
+{"scenario": "direct-pilot-reduction", "disposition": "stop", "contacts": 170, "correct": 0, "missing": 170, "hardware_evidence": false}
+{"case": "underflow", "command": "physical-study-plan", "exit_code": 0, "stdout": "physical_study_round=frozen\nroster=/home/ubuntu/study-boundary-cli-fixtures/underflow/roster.jsonl\nmanifest=/tmp/ikb-study-boundary-pwlh7c_v/manifest.json\nmanifest_sha256=473a4b34d1e2304059c1312cfa340993c036a0d0076fc7da31e4376552f68dd0\nplan=/tmp/ikb-study-boundary-pwlh7c_v/plan.json\nplan_sha256=1c86ce00b370544cefaa0318e1dc632b3cbb601bf74882f1c5ce68b5ebd747bc\nexpected_rows=5041\n", "stderr": ""}
+{"case": "underflow", "command": "physical-study-seal", "exit_code": 0, "stdout": "physical_study_row=sealed-and-appended\nrow=/home/ubuntu/study-boundary-cli-fixtures/underflow/boundary-row.json\nrow_sha256=4f3f230b18b4c2d2ce31a1cc8f07d9a4160aea5b5b4bed3dbcdbeafcc1dd7e99\nevidence=/tmp/ikb-study-boundary-pwlh7c_v/evidence.jsonl\n", "stderr": ""}
+{"case": "underflow", "command": "physical-study-score", "exit_code": 1, "stdout": "", "stderr": "error: physical study failed: invalid evidence row underflow-prompt-000000: intentional taps require a truth event with complete 50,000us before and 250,000us after\n"}
+{"case": "overflow", "command": "physical-study-plan", "exit_code": 0, "stdout": "physical_study_round=frozen\nroster=/home/ubuntu/study-boundary-cli-fixtures/overflow/roster.jsonl\nmanifest=/tmp/ikb-study-boundary-wxmn0kl3/manifest.json\nmanifest_sha256=d9231ca37d487bf0a3fc66d36ba3995a32ac1e9ba70df9f103c239bb509764c1\nplan=/tmp/ikb-study-boundary-wxmn0kl3/plan.json\nplan_sha256=afbf5564463aa310fdcac74c14f41bb0bc97fdba33549865e804d677ab2735d1\nexpected_rows=5041\n", "stderr": ""}
+{"case": "overflow", "command": "physical-study-seal", "exit_code": 0, "stdout": "physical_study_row=sealed-and-appended\nrow=/home/ubuntu/study-boundary-cli-fixtures/overflow/boundary-row.json\nrow_sha256=d1db21c2248dc68cf436c24640e5ccc6d4c9efe5667038d5863a9f86aca5b529\nevidence=/tmp/ikb-study-boundary-wxmn0kl3/evidence.jsonl\n", "stderr": ""}
+{"case": "overflow", "command": "physical-study-score", "exit_code": 1, "stdout": "", "stderr": "error: physical study failed: invalid evidence row overflow-prompt-000000: intentional taps require a truth event with complete 50,000us before and 250,000us after\n"}
+{"case": "complete-lower", "command": "physical-study-plan", "exit_code": 0, "stdout": "physical_study_round=frozen\nroster=/home/ubuntu/study-boundary-cli-fixtures/complete-lower/roster.jsonl\nmanifest=/tmp/ikb-study-boundary-knq7dimo/manifest.json\nmanifest_sha256=5ba8072bee9c15c7600a43136896a91f527ea553cdc5ba7cfd6997e9e52e9f2d\nplan=/tmp/ikb-study-boundary-knq7dimo/plan.json\nplan_sha256=643620d3b12c4bb3a507460e78aec3d4d45d6dbd038055df3186624f90e7d7d0\nexpected_rows=5041\n", "stderr": ""}
+{"case": "complete-lower", "command": "physical-study-seal", "exit_code": 0, "stdout": "physical_study_row=sealed-and-appended\nrow=/home/ubuntu/study-boundary-cli-fixtures/complete-lower/boundary-row.json\nrow_sha256=a27d40e31f8093d350e67db401e5aa3f54441ac0a139336f90857bdc3f6f4f1d\nevidence=/tmp/ikb-study-boundary-knq7dimo/evidence.jsonl\n", "stderr": ""}
+{"case": "complete-lower", "command": "physical-study-score", "exit_code": 0, "stdout": "physical_study=deterministically-scored\ndisposition=no-go\nevidence=/tmp/ikb-study-boundary-knq7dimo/evidence.jsonl\nmanifest=/tmp/ikb-study-boundary-knq7dimo/manifest.json\nplan=/tmp/ikb-study-boundary-knq7dimo/plan.json\nreport=/home/ubuntu/continuation-proof-native-v13/application-smoke/study-boundary-cli/complete-lower/report.json\nreport_sha256=c1b9d8955dcd6d18c2d8580aed0c96528cab806095cda4880da6ad2638fec6c4\n", "stderr": ""}
+{"case": "complete-upper", "command": "physical-study-plan", "exit_code": 0, "stdout": "physical_study_round=frozen\nroster=/home/ubuntu/study-boundary-cli-fixtures/complete-upper/roster.jsonl\nmanifest=/tmp/ikb-study-boundary-obz_k50g/manifest.json\nmanifest_sha256=a916cfe08bd2c53a0e56bb305ba828f47f9df1229afda5587d0b1e8a76610df1\nplan=/tmp/ikb-study-boundary-obz_k50g/plan.json\nplan_sha256=4f25ae906153a4df004df4f408e39039268e474401543ef679a7bc3909c4e357\nexpected_rows=5041\n", "stderr": ""}
+{"case": "complete-upper", "command": "physical-study-seal", "exit_code": 0, "stdout": "physical_study_row=sealed-and-appended\nrow=/home/ubuntu/study-boundary-cli-fixtures/complete-upper/boundary-row.json\nrow_sha256=19ef9dc7ba863377c8be65d08fbf9a19cda9d3c0bf0d6f2968d83e2e1a63e849\nevidence=/tmp/ikb-study-boundary-obz_k50g/evidence.jsonl\n", "stderr": ""}
+{"case": "complete-upper", "command": "physical-study-score", "exit_code": 0, "stdout": "physical_study=deterministically-scored\ndisposition=go\nevidence=/tmp/ikb-study-boundary-obz_k50g/evidence.jsonl\nmanifest=/tmp/ikb-study-boundary-obz_k50g/manifest.json\nplan=/tmp/ikb-study-boundary-obz_k50g/plan.json\nreport=/home/ubuntu/continuation-proof-native-v13/application-smoke/study-boundary-cli/complete-upper/report.json\nreport_sha256=ccb65289427901346ce1c7cb1fba5f5df6700eb26f3bf5853921e4237dfa4f7c\n", "stderr": ""}
+{"study_boundary_cli_smoke": "passed", "hardware_evidence": false, "cases": [{"case": "underflow", "interval_admitted": false, "score_exit_code": 1, "evidence_sha256": "2791af444726ed7c52aa783728039c231bdb794da278e375f07fdbee591a5673", "manifest_sha256": "473a4b34d1e2304059c1312cfa340993c036a0d0076fc7da31e4376552f68dd0", "plan_sha256": "1c86ce00b370544cefaa0318e1dc632b3cbb601bf74882f1c5ce68b5ebd747bc"}, {"case": "overflow", "interval_admitted": false, "score_exit_code": 1, "evidence_sha256": "3bbe667bd32dac4c57e3be894b120e07ad049c103cad49c536ba51ff7b7ed248", "manifest_sha256": "d9231ca37d487bf0a3fc66d36ba3995a32ac1e9ba70df9f103c239bb509764c1", "plan_sha256": "afbf5564463aa310fdcac74c14f41bb0bc97fdba33549865e804d677ab2735d1"}, {"case": "complete-lower", "interval_admitted": true, "score_exit_code": 0, "evidence_sha256": "343d9e5927cc91b124bb697fce83ab444f080762a5cd5a7c18f8264b45b01959", "manifest_sha256": "5ba8072bee9c15c7600a43136896a91f527ea553cdc5ba7cfd6997e9e52e9f2d", "plan_sha256": "643620d3b12c4bb3a507460e78aec3d4d45d6dbd038055df3186624f90e7d7d0", "computed_disposition": "no-go", "matched_events": 5001}, {"case": "complete-upper", "interval_admitted": true, "score_exit_code": 0, "evidence_sha256": "afb3a25a13750d8684da5f025ea0c00cdb8da8741629c6db77fd73a4c166af71", "manifest_sha256": "a916cfe08bd2c53a0e56bb305ba828f47f9df1229afda5587d0b1e8a76610df1", "plan_sha256": "4f25ae906153a4df004df4f408e39039268e474401543ef679a7bc3909c4e357", "computed_disposition": "go", "matched_events": 5001}]}
+evidence=replay-tested
+limitation=Recorded or generated replay does not establish physical typing feasibility.
+records=202
+decoded_frames=202
+left_frames=101
+right_frames=101
+invalid_candidates=0
+reordered_records=0
+decisions=2
+key_decisions=2
+abstentions=0
+runtime_faults=0
+output_events=4
+processing_p50_ns=32840 processing_p90_ns=35041 processing_p95_ns=36561 processing_p99_ns=46641 processing_max_ns=57280
+mapped_receipt_p50_ns=0 mapped_receipt_p95_ns=0 mapped_receipt_p99_ns=0 mapped_receipt_max_ns=0
+final_key_state_neutral=true
+event=0 usage=A state=Down time_us=6413585
+event=1 usage=A state=Up time_us=6413585
+event=2 usage=H state=Down time_us=6414585
+event=3 usage=H state=Up time_us=6414585
+{"scenario": "healthy-negative-drift", "slope_ns_per_us": 999, "exit_code": 0, "session_sha256": "50b099d5768746e6c6b22a57a5bde34d9b5f0f5472db1f3748aa855cf72526f5", "events": ["event=0 usage=A state=Down time_us=6413585", "event=1 usage=A state=Up time_us=6413585", "event=2 usage=H state=Down time_us=6414585", "event=3 usage=H state=Up time_us=6414585"], "hardware_evidence": false}
+error: calibrated replay failed: runtime Left record 2 raw frame is invalid: tap window sensor 0 sample time does not strictly advance
+{"scenario": "invalid-positive-drift", "slope_ns_per_us": 1001, "exit_code": 1, "session_sha256": "958886405e29cf3cd7866197e05b671f15296b38429daaf69049240815957eff", "events": [], "hardware_evidence": false}

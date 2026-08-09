@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="gate0a-capture-stack-test" tests="1" failures="0" errors="0">
+    <testcase name="gate0a-capture-stack-test" status="run" duration="19" time="19"></testcase>
+      <system-out>
+Generated test.log (if the file is not UTF-8, then this may be unreadable):
+<![CDATA[exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+Executing tests from //:gate0a-capture-stack-test
+-----------------------------------------------------------------------------
+test_analyzer_failure_aborts_recorder_and_suppresses_publication (__main__.CaptureContractTests) ... ok
+test_chunk_jump_beyond_stop_window_suppresses_publication (__main__.CaptureContractTests) ... ok
+test_invalid_final_analyzer_log_never_authorizes_a_recorder_footer (__main__.CaptureContractTests) ... ok
+test_production_wrapper_invocation_publishes_one_complete_set (__main__.CaptureContractTests) ... ok
+test_publication_rolls_back_finals_and_keeps_all_partials (__main__.CaptureContractTests) ... ok
+test_readiness_after_the_boot_window_suppresses_publication (__main__.CaptureContractTests) ... ok
+test_readiness_at_the_boot_window_boundary_preserves_the_full_capture (__main__.CaptureContractTests) ... ok
+test_readiness_requires_one_byte_followed_by_eof (__main__.CaptureContractTests) ... ok
+test_recorder_failure_aborts_analyzer_and_suppresses_publication (__main__.CaptureContractTests) ... ok
+test_recorder_log_quota_aborts_both_children (__main__.CaptureContractTests) ... ok
+test_signal_aborts_both_children_without_publication (__main__.CaptureContractTests) ... ok
+test_crabbox_finalizer_hashes_large_inputs_and_resists_scorer_replacement (__main__.FinalizationContractTests) ... ok
+test_final_sidecar_and_report_publish_as_a_pair (__main__.FinalizationContractTests) ... ok
+test_finalizer_rejects_a_distinct_scorer_identity (__main__.FinalizationContractTests) ... ok
+test_log_binds_driver_stop_session_manifest_and_firmware (__main__.FinalizationContractTests) ... ok
+test_scorer_failure_is_fail_closed (__main__.FinalizationContractTests) ... ok
+test_scorer_stderr_quota_is_fail_closed (__main__.FinalizationContractTests) ... ok
+test_bazel_build_entrypoint_resolves_declared_inputs (__main__.StaticCaptureStackContractTests) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 19.205s
+
+OK]]>
+      </system-out>
+    </testsuite>
+</testsuites>

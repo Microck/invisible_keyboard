@@ -1,0 +1,154 @@
+OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Loading: 0 packages loaded
+    currently loading: 
+Analyzing: 3 targets (5 packages loaded, 6 targets configured)
+Analyzing: 3 targets (5 packages loaded, 6 targets configured)
+
+Analyzing: 3 targets (28 packages loaded, 9 targets configured)
+
+Analyzing: 3 targets (80 packages loaded, 160 targets configured)
+
+Analyzing: 3 targets (102 packages loaded, 693 targets configured)
+
+Analyzing: 3 targets (139 packages loaded, 2459 targets configured)
+
+Analyzing: 3 targets (173 packages loaded, 3905 targets configured)
+
+Analyzing: 3 targets (209 packages loaded, 5496 targets configured)
+[1 / 1] no actions running
+INFO: Analyzed 3 targets (209 packages loaded, 5496 targets configured).
+[195 / 445] checking cached actions
+[440 / 450] [Prepa] Compiling Rust rlib invisible_keyboard (35 files)
+[440 / 450] Compiling Rust rlib invisible_keyboard (35 files); 1s processwrapper-sandbox
+[440 / 450] Compiling Rust rlib invisible_keyboard (35 files); 10s processwrapper-sandbox
+[443 / 450] [Prepa] Compiling Rust bin replay-contract-test (1 file)
+INFO: From Compiling Rust bin replay-contract-test (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+[444 / 450] [Prepa] runfiles for //:replay-contract-test
+[445 / 451] Compiling Rust bin invisible-keyboard (1 file); 1s processwrapper-sandbox
+INFO: From Compiling Rust bin invisible-keyboard (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+INFO: From Compiling Rust bin cli-unit-tests (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+[447 / 451] [Prepa] Compiling Rust bin pipeline-contract-test (1 file)
+INFO: From Compiling Rust bin pipeline-contract-test (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+INFO: From Testing //:cli-unit-tests:
+==================== Test output for //:cli-unit-tests:
+
+running 7 tests
+test gate0_footer_commit_tests::signal_store_before_footer_claim_wins_and_prevents_finish ... ok
+test gate0_footer_commit_tests::footer_claim_before_signal_store_remains_committed ... ok
+test live_evidence_tests::capacity_error_retains_trigger_and_mailbox_backlog ... ok
+test live_evidence_tests::evidence_retention_failure_is_attached_without_replacing_primary ... ok
+test live_evidence_tests::receipt_regression_retains_trigger_and_mailbox_backlog ... ok
+test live_evidence_tests::late_publication_retains_trigger_and_mailbox_backlog ... ok
+test live_evidence_tests::terminal_snapshot_closes_before_blocking_and_failed_evidence_io ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+================================================================================
+[451 / 453] 1 / 3 tests; Testing //:replay-contract-test; 0s processwrapper-sandbox
+[451 / 453] 1 / 3 tests; Testing //:replay-contract-test; 11s processwrapper-sandbox
+[451 / 453] 1 / 3 tests; Testing //:replay-contract-test; 39s processwrapper-sandbox
+INFO: From Testing //:replay-contract-test:
+==================== Test output for //:replay-contract-test:
+
+running 45 tests
+test artifact_reference_and_calibration_sensitive_settings_fail_closed ... ok
+test calibrated_live_fails_when_startup_neutralization_fails ... ok
+test artifact_bound_two_hand_replay_emits_exact_core28_taps_and_neutralizes ... ok
+test calibrated_live_preserves_transport_primary_and_reports_failed_all_up ... ok
+test calibrated_live_output_failure_recovers_and_finishes_neutral ... ok
+test calibrated_replay_preserves_output_cause_and_independent_recovery_failure ... ok
+test calibrated_replay_rejects_gate0_control_records_instead_of_replaying_them ... ok
+test causal_live_path_warms_both_clocks_before_emitting_and_finishes_neutral ... ok
+test clean_finish_revokes_wear_session_without_recording_a_terminal_fault ... ok
+test calibrated_replay_rejects_forged_offline_clock_authority_before_output ... ok
+test evidence_invalidating_abstention_terminally_revokes ... ok
+test host_receipt_regression_remains_primary_when_independent_all_up_fails ... ok
+test host_receipt_regression_revokes_before_clock_or_output_progress ... ok
+test live_accepts_reader_receipts_older_than_a_later_processing_tick ... ok
+test live_acquisition_integrity_faults_during_initial_clock_warmup_terminally_revoke ... ok
+test live_acquisition_integrity_faults_with_only_one_clock_ready_terminally_revoke ... ok
+test live_cli_ingress_healthy_receipt_merger_preserves_expected_output ... ok
+test live_cli_ingress_revokes_merge_held_faults_before_signal_and_retains_incident ... ok
+test live_disconnect_discards_pending_work_resets_clocks_and_finishes_neutral ... ok
+test live_disconnect_prevents_finish_from_emitting_a_buffered_tap ... ok
+test live_host_clock_regression_revokes_without_watchdog_attribution ... ok
+test live_ingress_closes_admission_after_neutralization_before_releasing_any_evidence ... ok
+test live_ingress_update_cannot_be_released_by_another_authority ... ok
+test live_interleaved_retained_impulse_commits_preserve_healthy_output ... ok
+test live_malformed_ingress_precedes_a_later_acquisition_fault ... ok
+test live_merge_held_malformed_candidates_revoke_before_queued_output ... ok
+test live_pending_capacity_terminally_revokes_without_rearm ... ok
+test live_planned_signals_stop_output_through_the_canonical_safety_owner ... ok
+test live_rejects_an_unacceptable_mapping_before_it_can_arm_output ... ok
+test live_sensor_time_regressions_revoke_before_clock_or_window_progress ... ok
+test live_sequence_gap_revokes_during_warmup_and_partial_window_fill ... ok
+test live_source_loss_revokes_the_instance_without_rearm ... ok
+test live_warmup_integrity_preserves_primary_fault_when_neutralization_fails ... ok
+test live_watchdog_rejects_every_later_frame_without_new_confirmation ... ok
+test live_watchdog_revokes_when_right_stops_during_continuous_left_traffic ... ok
+test live_watchdog_terminally_revokes_and_cannot_rearm ... ok
+test malformed_oversized_and_unterminated_transport_terminally_revoke ... ok
+test every_per_sensor_physical_provenance_change_fails_closed ... ok
+test post_arm_partial_window_integrity_faults_revoke_before_output ... ok
+test recorded_replay_preserves_the_source_layout_confirmation_receipt ... ok
+test replay_pending_capacity_fails_closed_with_a_typed_error ... ok
+test nonidentity_finger_and_dorsal_axes_decode_identically_in_replay_and_live ... ok
+test runtime_binding_allows_only_new_boot_and_session_metadata ... ok
+test stale_device_backlog_then_fresh_timestamp_jump_never_arms_or_emits ... ok
+test runtime_artifact_reference_binds_the_frozen_matching_rule ... ok
+
+test result: ok. 45 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 39.06s
+
+================================================================================
+INFO: From Testing //:pipeline-contract-test:
+==================== Test output for //:pipeline-contract-test:
+
+running 8 tests
+test contact_before_four_idle_windows_cannot_emit_a_repeat ... ok
+test continuous_stream_emits_exactly_one_key_decision_per_tap ... ok
+test device_time_regression_discards_all_buffered_context ... ok
+test idle_stream_never_emits_a_decision ... ok
+test quality_fault_during_repeat_suppression_is_still_emitted ... ok
+test reserved_position_emits_one_explicit_abstention ... ok
+test retained_short_impulse_is_timestamped_at_the_commit_frame ... ok
+test wrong_hand_frame_resets_the_pipeline_and_returns_an_error ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.06s
+
+================================================================================
+INFO: Found 3 test targets...
+INFO: Elapsed time: 70.100s, Critical Path: 53.85s
+INFO: 12 processes: 441 action cache hit, 4 internal, 11 processwrapper-sandbox.
+INFO: Build completed successfully, 12 total actions
+//:cli-unit-tests                                                        PASSED in 0.0s
+//:pipeline-contract-test                                                PASSED in 0.1s
+//:replay-contract-test                                                  PASSED in 39.1s
+
+Executed 3 out of 3 tests: 3 tests pass.

@@ -1,0 +1,207 @@
+{
+  "schema": "invisible-keyboard-rig-evidence-v1",
+  "record_id": "rig-evidence-pending-001",
+  "recorded_at_utc": "2026-08-30T00:00:00Z",
+  "operator_id": "local-rig-operator-001",
+  "controller_board": "Seeed XIAO nRF52840 Plus SKU 102010672",
+  "sensor_model": "LSM6DS3TR-C",
+  "hands": [
+    {
+      "hand": "left",
+      "assembly_id": "left-wearable-assembly-001",
+      "controller_id": "invisible-keyboard-left-001",
+      "total_mass_milligrams": null,
+      "mass_measurement": {
+        "status": "not-yet-run",
+        "artifact_sha256": null
+      },
+      "sensors": [
+        {
+          "sensor_index": 0,
+          "mux_channel": 0,
+          "role": "thumb",
+          "mount_id": "left-thumb-ring-001",
+          "wiring_id": "left-harness-channel-0",
+          "interrupt_pin": "left:P0.02",
+          "mass_milligrams": null
+        },
+        {
+          "sensor_index": 1,
+          "mux_channel": 1,
+          "role": "index",
+          "mount_id": "left-index-ring-001",
+          "wiring_id": "left-harness-channel-1",
+          "interrupt_pin": "left:P0.03",
+          "mass_milligrams": null
+        },
+        {
+          "sensor_index": 2,
+          "mux_channel": 2,
+          "role": "middle",
+          "mount_id": "left-middle-ring-001",
+          "wiring_id": "left-harness-channel-2",
+          "interrupt_pin": "left:P0.28",
+          "mass_milligrams": null
+        },
+        {
+          "sensor_index": 3,
+          "mux_channel": 3,
+          "role": "ring",
+          "mount_id": "left-ring-ring-001",
+          "wiring_id": "left-harness-channel-3",
+          "interrupt_pin": "left:P0.29",
+          "mass_milligrams": null
+        },
+        {
+          "sensor_index": 4,
+          "mux_channel": 4,
+          "role": "pinky",
+          "mount_id": "left-pinky-ring-001",
+          "wiring_id": "left-harness-channel-4",
+          "interrupt_pin": "left:P1.11",
+          "mass_milligrams": null
+        },
+        {
+          "sensor_index": 5,
+          "mux_channel": 5,
+          "role": "dorsal",
+          "mount_id": "left-dorsal-strap-001",
+          "wiring_id": "left-harness-channel-5",
+          "interrupt_pin": "left:P1.12",
+          "mass_milligrams": null
+        }
+      ]
+    },
+    {
+      "hand": "right",
+      "assembly_id": "right-wearable-assembly-001",
+      "controller_id": "invisible-keyboard-right-001",
+      "total_mass_milligrams": null,
+      "mass_measurement": {
+        "status": "not-yet-run",
+        "artifact_sha256": null
+      },
+      "sensors": [
+        {
+          "sensor_index": 0,
+          "mux_channel": 0,
+          "role": "thumb",
+          "mount_id": "right-thumb-ring-001",
+          "wiring_id": "right-harness-channel-0",
+          "interrupt_pin": "right:P0.02",
+          "mass_milligrams": null
+        },
+        {
+          "sensor_index": 1,
+          "mux_channel": 1,
+          "role": "index",
+          "mount_id": "right-index-ring-001",
+          "wiring_id": "right-harness-channel-1",
+          "interrupt_pin": "right:P0.03",
+          "mass_milligrams": null
+        },
+        {
+          "sensor_index": 2,
+          "mux_channel": 2,
+          "role": "middle",
+          "mount_id": "right-middle-ring-001",
+          "wiring_id": "right-harness-channel-2",
+          "interrupt_pin": "right:P0.28",
+          "mass_milligrams": null
+        },
+        {
+          "sensor_index": 3,
+          "mux_channel": 3,
+          "role": "ring",
+          "mount_id": "right-ring-ring-001",
+          "wiring_id": "right-harness-channel-3",
+          "interrupt_pin": "right:P0.29",
+          "mass_milligrams": null
+        },
+        {
+          "sensor_index": 4,
+          "mux_channel": 4,
+          "role": "pinky",
+          "mount_id": "right-pinky-ring-001",
+          "wiring_id": "right-harness-channel-4",
+          "interrupt_pin": "right:P1.11",
+          "mass_milligrams": null
+        },
+        {
+          "sensor_index": 5,
+          "mux_channel": 5,
+          "role": "dorsal",
+          "mount_id": "right-dorsal-strap-001",
+          "wiring_id": "right-harness-channel-5",
+          "interrupt_pin": "right:P1.12",
+          "mass_milligrams": null
+        }
+      ]
+    }
+  ],
+  "continuity": {
+    "fact": {
+      "status": "not-yet-run",
+      "artifact_sha256": null
+    },
+    "checked_path_count": null
+  },
+  "photos": {
+    "fact": {
+      "status": "not-yet-run",
+      "artifact_sha256": null
+    },
+    "photo_count": 0
+  },
+  "power": {
+    "fact": {
+      "status": "not-yet-run",
+      "artifact_sha256": null
+    },
+    "supply_millivolts": null,
+    "idle_current_microamps": null,
+    "peak_current_microamps": null
+  },
+  "analyzer": {
+    "fact": {
+      "status": "not-yet-run",
+      "artifact_sha256": null
+    },
+    "sample_rate_hz": null,
+    "capture_duration_milliseconds": null
+  },
+  "surface": {
+    "surface_id": "reference-laminate-surface-001",
+    "material": "high-pressure-laminate",
+    "thickness_micrometers": null,
+    "fact": {
+      "status": "not-yet-run",
+      "artifact_sha256": null
+    }
+  },
+  "posture": {
+    "posture_id": "seated-neutral-forearms-001",
+    "description": "seated with forearms supported and wrists neutral",
+    "fact": {
+      "status": "not-yet-run",
+      "artifact_sha256": null
+    }
+  },
+  "truth_device": {
+    "device_id": "contact-truth-device-001",
+    "model": "independent-contact-switch-array-001",
+    "capture_method": "hardware-timestamped-contact-edges",
+    "fact": {
+      "status": "not-yet-run",
+      "artifact_sha256": null
+    }
+  },
+  "alignment": {
+    "fixture_id": "six-face-alignment-fixture-001",
+    "maximum_error_millidegrees": null,
+    "fact": {
+      "status": "not-yet-run",
+      "artifact_sha256": null
+    }
+  }
+}

@@ -32,13 +32,15 @@ Resolved in
 [Cost viable prototype paths](../../research/cost-viable-prototype-paths.md).
 The cheapest evidence-producing cash BOM is a tethered, host-decoded pair of
 XIAO nRF52840 Sense boards with a spare, at USD 95 minimum, USD 180 realistic,
-or USD 310 upper before tax. Only its first two cases fit the historic EUR 200
-cash ceiling (USD 230.70 at the latest ECB reference rate); labor and participant
-payments do not. Already-owned optical hardware can also produce cheap geometry
+or USD 310 upper before tax. Its first two cases fit the report's USD 230.70
+planning conversion for the historic EUR 200 cash ceiling. That conversion was
+recorded on 2026-08-09; the linked moving ECB daily feed does not independently
+reproduce the historic rate. Labor and participant payments remain outside the
+cash ceiling. Already-owned optical hardware can also produce cheap geometry
 evidence, while all-new optical, custom IMU, decisive radar, magnetic scientific,
-and sEMG paths exceed that ceiling.
+and sEMG paths exceed that planning ceiling.
 
 The report keeps eight paths separate, dates price and stock evidence, marks
 quote-only or unavailable systems unknown, separates cash/participants/labor,
-and ties spend releases and stop-losses to Gates 0-9. It does not select an
-architecture or authorize a purchase.
+and ties spend releases and stop-losses to the canonical Gate 0A, 0S, 0B, and
+1-9 sequence. It does not select an architecture or authorize a purchase.

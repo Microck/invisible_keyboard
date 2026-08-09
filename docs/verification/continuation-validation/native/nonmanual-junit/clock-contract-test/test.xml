@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="clock-contract-test" tests="1" failures="0" errors="0">
+    <testcase name="clock-contract-test" status="run" duration="0" time="0"></testcase>
+      <system-out>
+Generated test.log (if the file is not UTF-8, then this may be unreadable):
+<![CDATA[exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+Executing tests from //:clock-contract-test
+-----------------------------------------------------------------------------
+
+running 13 tests
+test affine_fit_recovers_offset_drift_and_bounded_residuals ... ok
+test controller_and_host_regressions_are_not_repaired ... ok
+test implausible_drift_and_bad_residuals_fail ... ok
+test mapping_is_bound_to_one_boot_and_bounded_extrapolation ... ok
+test online_clock_fits_only_the_maximal_recent_device_time_suffix ... ok
+test online_clock_holdover_is_bounded_by_fit_extrapolation ... ok
+test online_clock_holds_the_identical_last_good_fit_through_transient_bad_receipts ... ok
+test online_clock_bounds_history_and_rejects_sustained_excess_drift ... ok
+test online_clock_requires_explicit_reset_for_a_new_boot ... ok
+test online_clock_retries_early_receipt_jitter_without_arming_from_bad_evidence ... ok
+test online_clock_warms_on_past_only_samples_then_maps_the_current_frame ... ok
+test too_few_or_too_short_samples_fail_closed ... ok
+test online_clock_matches_the_direct_recent_suffix_after_history_wraps ... ok
+
+test result: ok. 13 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.08s]]>
+      </system-out>
+    </testsuite>
+</testsuites>

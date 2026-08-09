@@ -1,0 +1,11 @@
+{
+  "pid": 64120,
+  "command": [
+    "python3",
+    "/home/tester/ikb-x86-proof.py",
+    "/home/tester/invisible_keyboard",
+    "/home/tester/continuation-proof-x86-v13",
+    "/home/tester/current-source-v13.sha256"
+  ],
+  "started_utc": "2026-10-13T01:34:25.673457+00:00"
+}

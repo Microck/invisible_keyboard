@@ -1,0 +1,11 @@
+FROZEN_SOURCE_MANIFEST_SHA256=5b6c2109e0a521d3470f895b87f8d4b9667e8a3c72da3fdd510ab234ffa478e6
+RETAINED nonmanual exit=0
+RETAINED durability-1 exit=0
+RETAINED durability-2 exit=0
+RETAINED durability-3 exit=0
+Traceback (most recent call last):
+  File "/home/ubuntu/ikb-native-proof.py", line 99, in <module>
+    run('application-smoke', ['python3', '/home/ubuntu/ikb-after-smoke.py', str(root), str(proof / 'application-smoke')])
+  File "/home/ubuntu/ikb-native-proof.py", line 60, in run
+    assert previous['lane'] == name and previous['command'] == command and previous['exit_code'] == 0, 'completed lanes must be the unchanged successful command prefix'
+AssertionError: completed lanes must be the unchanged successful command prefix

@@ -1,0 +1,49 @@
+OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Loading: 0 packages loaded
+    currently loading: 
+Analyzing: target //:cli-contract-test (1 packages loaded)
+Analyzing: target //:cli-contract-test (5 packages loaded, 6 targets configured)
+Analyzing: target //:cli-contract-test (5 packages loaded, 6 targets configured)
+
+Analyzing: target //:cli-contract-test (13 packages loaded, 9 targets configured)
+
+Analyzing: target //:cli-contract-test (65 packages loaded, 18 targets configured)
+
+Analyzing: target //:cli-contract-test (84 packages loaded, 519 targets configured)
+
+Analyzing: target //:cli-contract-test (112 packages loaded, 800 targets configured)
+
+Analyzing: target //:cli-contract-test (123 packages loaded, 1635 targets configured)
+
+Analyzing: target //:cli-contract-test (156 packages loaded, 3195 targets configured)
+
+Analyzing: target //:cli-contract-test (200 packages loaded, 5171 targets configured)
+
+INFO: Analyzed target //:cli-contract-test (212 packages loaded, 5509 targets configured).
+[1 / 1] no actions running
+[158 / 445] checking cached actions
+[445 / 446] [Prepa] Testing //:cli-contract-test
+[445 / 446] Testing //:cli-contract-test; 1s processwrapper-sandbox
+[445 / 446] Testing //:cli-contract-test; 25s processwrapper-sandbox
+INFO: From Testing //:cli-contract-test:
+==================== Test output for //:cli-contract-test:
+
+running 1 test
+test calibrated_live_watchdog_revokes_during_continuous_empty_transport_traffic ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 75 filtered out; finished in 25.79s
+
+================================================================================
+INFO: Found 1 test target...
+Target //:cli-contract-test up-to-date:
+  bazel-bin/cli-contract-test
+INFO: Elapsed time: 42.682s, Critical Path: 26.21s
+INFO: 2 processes: 444 action cache hit, 1 internal, 2 processwrapper-sandbox.
+INFO: Build completed successfully, 2 total actions
+//:cli-contract-test                                                     PASSED in 25.8s
+
+Executed 1 out of 1 test: 1 test passes.
+There were tests whose specified size is too big. Use the --test_verbose_timeout_warnings command line option to see which ones these are.

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="calibration-contract-test" tests="1" failures="0" errors="0">
+    <testcase name="calibration-contract-test" status="run" duration="0" time="0"></testcase>
+      <system-out>
+Generated test.log (if the file is not UTF-8, then this may be unreadable):
+<![CDATA[exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+Executing tests from //:calibration-contract-test
+-----------------------------------------------------------------------------
+
+running 10 tests
+test a_validation_block_cannot_be_scored_twice_in_different_stages ... ok
+test complete_locked_validation_reaches_validation_passed ... ok
+test deterministic_prompts_cover_keyboard_then_all_surface_positions ... ok
+test duplicate_weak_position_hints_raise_the_target_only_once ... ok
+test elapsed_time_cap_terminates_instead_of_requesting_infinite_text ... ok
+test keyboard_validation_targets_weak_positions_and_stops_on_plateau ... ok
+test locked_surface_validation_cannot_mutate_training_state ... ok
+test rejected_examples_never_advance_coverage ... ok
+test training_and_validation_blocks_cannot_overlap ... ok
+test abort_revokes_a_validation_passed_state ... ok
+
+test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s]]>
+      </system-out>
+    </testsuite>
+</testsuites>

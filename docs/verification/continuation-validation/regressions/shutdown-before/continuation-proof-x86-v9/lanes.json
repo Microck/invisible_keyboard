@@ -1,0 +1,19 @@
+[
+  {
+    "lane": "required-output",
+    "command": [
+      "bazelisk",
+      "--batch",
+      "--host_jvm_args=-Xmx2g",
+      "test",
+      "//:output-system-required-test",
+      "--nocache_test_results",
+      "--test_output=all",
+      "--jobs=2",
+      "--local_resources=memory=3072"
+    ],
+    "started_utc": "2026-10-11T05:29:09.587756+00:00",
+    "finished_utc": "2026-10-11T09:56:41.272203+00:00",
+    "exit_code": 3
+  }
+]

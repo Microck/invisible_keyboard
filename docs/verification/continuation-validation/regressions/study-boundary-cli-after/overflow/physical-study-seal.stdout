@@ -1,0 +1,4 @@
+physical_study_row=sealed-and-appended
+row=/home/ubuntu/audit-regression-proof/study-boundary-cli-after/overflow/row.json
+row_sha256=16ebde8c326de48f2dd7eed10394610360787b76d2ce4fdc4512aa0ad49a1ec4
+evidence=/home/ubuntu/audit-regression-proof/study-boundary-cli-after/overflow/evidence.jsonl

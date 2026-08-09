@@ -1,0 +1,73 @@
+OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Loading: 1 packages loaded
+Analyzing: target //:replay-contract-test (5 packages loaded, 6 targets configured)
+Analyzing: target //:replay-contract-test (5 packages loaded, 6 targets configured)
+
+Analyzing: target //:replay-contract-test (9 packages loaded, 9 targets configured)
+
+Analyzing: target //:replay-contract-test (54 packages loaded, 9 targets configured)
+
+Analyzing: target //:replay-contract-test (78 packages loaded, 184 targets configured)
+
+Analyzing: target //:replay-contract-test (95 packages loaded, 672 targets configured)
+
+Analyzing: target //:replay-contract-test (128 packages loaded, 1837 targets configured)
+
+Analyzing: target //:replay-contract-test (142 packages loaded, 2804 targets configured)
+
+Analyzing: target //:replay-contract-test (188 packages loaded, 4825 targets configured)
+
+Analyzing: target //:replay-contract-test (203 packages loaded, 5333 targets configured)
+
+INFO: Analyzed target //:replay-contract-test (206 packages loaded, 5419 targets configured).
+[148 / 425] checking cached actions
+[422 / 425] [Prepa] Compiling Rust rlib invisible_keyboard (35 files)
+[422 / 425] Compiling Rust rlib invisible_keyboard (35 files); 1s processwrapper-sandbox
+[422 / 425] Compiling Rust rlib invisible_keyboard (35 files); 11s processwrapper-sandbox
+[423 / 425] [Prepa] Compiling Rust bin replay-contract-test (1 file)
+[423 / 425] Compiling Rust bin replay-contract-test (1 file); 1s processwrapper-sandbox
+INFO: From Compiling Rust bin replay-contract-test (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+[425 / 426] Testing //:replay-contract-test; 1s processwrapper-sandbox
+[425 / 426] Testing //:replay-contract-test; 11s processwrapper-sandbox
+[425 / 426] Testing //:replay-contract-test; 13s processwrapper-sandbox
+FAIL: //:replay-contract-test (Exit 101) (see /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/execroot/_main/bazel-out/aarch64-fastbuild/testlogs/replay-contract-test/test.log)
+INFO: From Testing //:replay-contract-test:
+==================== Test output for //:replay-contract-test:
+
+running 1 test
+test replay_positive_drift_rejects_repeated_raw_sensor_before_mapping ... FAILED
+
+failures:
+
+---- replay_positive_drift_rejects_repeated_raw_sensor_before_mapping stdout ----
+
+thread 'replay_positive_drift_rejects_repeated_raw_sensor_before_mapping' (93721) panicked at tests/replay-contract.rs:4171:18:
+positive drift must not hide repeated raw sensor time
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    replay_positive_drift_rejects_repeated_raw_sensor_before_mapping
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 54 filtered out; finished in 13.52s
+
+================================================================================
+INFO: Found 1 test target...
+Target //:replay-contract-test up-to-date:
+  bazel-bin/replay-contract-test
+INFO: Elapsed time: 47.975s, Critical Path: 30.70s
+INFO: 5 processes: 421 action cache hit, 2 internal, 4 processwrapper-sandbox.
+INFO: Build completed, 1 test FAILED, 5 total actions
+//:replay-contract-test                                                  FAILED in 13.6s
+  /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/execroot/_main/bazel-out/aarch64-fastbuild/testlogs/replay-contract-test/test.log
+
+Executed 1 out of 1 test: 1 fails locally.

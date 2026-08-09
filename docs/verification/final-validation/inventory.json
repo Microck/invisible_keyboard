@@ -1,0 +1,520 @@
+{
+  "lanes": [
+    {
+      "lane": "browser",
+      "exit_code": 0,
+      "started_utc": "2026-09-07T22:18:38Z",
+      "finished_utc": "2026-09-07T22:19:00Z",
+      "command": "bazelisk --batch test //:calibration-browser-receipt-test --nocache_test_results --test_output=all --jobs=2 --test_env=PATH --test_env=AGENT_BROWSER_BIN=/home/user/.nvm/versions/node/v24.18.1/bin/agent-browser"
+    },
+    {
+      "lane": "capture",
+      "exit_code": 0,
+      "started_utc": "2026-09-07T22:19:00Z",
+      "finished_utc": "2026-09-07T22:20:29Z",
+      "command": "bazelisk --batch test //:gate0a-capture-stack-test --nocache_test_results --test_output=all --jobs=2 --test_env=IKB_GATE0A_TEST_CAPTURE_BINARY=/home/user/ikb-capture-complete/artifacts/sigrok-cli-gate0a --test_env=IKB_GATE0A_TEST_FIRMWARE_BUNDLE=/home/user/ikb-capture-complete/artifacts/gate0a-dslogic-plus-firmware.tar"
+    },
+    {
+      "lane": "durability",
+      "exit_code": 0,
+      "started_utc": "2026-09-07T22:17:51Z",
+      "finished_utc": "2026-09-07T22:18:38Z",
+      "command": "bazelisk --batch test //:live-durability-syscall-test --nocache_test_results --test_output=all --jobs=2"
+    },
+    {
+      "lane": "nonmanual",
+      "exit_code": 0,
+      "started_utc": "2026-09-07T22:05:03Z",
+      "finished_utc": "2026-09-07T22:17:33Z",
+      "command": "bazelisk --batch test //... --build_tag_filters=-manual --test_tag_filters=-manual --nocache_test_results --test_output=errors --jobs=8"
+    },
+    {
+      "lane": "required-output",
+      "exit_code": 0,
+      "started_utc": "2026-09-07T22:17:33Z",
+      "finished_utc": "2026-09-07T22:17:51Z",
+      "command": "bazelisk --batch test //:output-system-required-test --nocache_test_results --test_output=all --test_arg=--nocapture --jobs=2"
+    },
+    {
+      "lane": "source-unchanged",
+      "exit_code": 0,
+      "started_utc": "2026-09-07T22:20:29Z",
+      "finished_utc": "2026-09-07T22:20:29Z",
+      "command": "cmp /home/user/ikb-final-proof-complete/source-before.sha256 /home/user/ikb-final-proof-complete/source-after.sha256"
+    }
+  ],
+  "test_targets": [
+    {
+      "target": "//:artifact-contract-test",
+      "junit_cases": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "rust_tests": {
+        "passed": 8,
+        "failed": 0,
+        "ignored": 0
+      }
+    },
+    {
+      "target": "//:calibration-app-contract-test",
+      "junit_cases": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "rust_tests": {
+        "passed": 26,
+        "failed": 0,
+        "ignored": 0
+      }
+    },
+    {
+      "target": "//:calibration-browser-receipt-test",
+      "junit_cases": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "target": "//:calibration-capture-contract-test",
+      "junit_cases": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "rust_tests": {
+        "passed": 14,
+        "failed": 0,
+        "ignored": 0
+      }
+    },
+    {
+      "target": "//:calibration-contract-test",
+      "junit_cases": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "rust_tests": {
+        "passed": 10,
+        "failed": 0,
+        "ignored": 0
+      }
+    },
+    {
+      "target": "//:calibration-engine-contract-test",
+      "junit_cases": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "rust_tests": {
+        "passed": 21,
+        "failed": 0,
+        "ignored": 0
+      }
+    },
+    {
+      "target": "//:calibration-worker-contract-test",
+      "junit_cases": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "rust_tests": {
+        "passed": 8,
+        "failed": 0,
+        "ignored": 0
+      }
+    },
+    {
+      "target": "//:cli-contract-test",
+      "junit_cases": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "rust_tests": {
+        "passed": 62,
+        "failed": 0,
+        "ignored": 0
+      }
+    },
+    {
+      "target": "//:cli-unit-tests",
+      "junit_cases": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "rust_tests": {
+        "passed": 2,
+        "failed": 0,
+        "ignored": 0
+      }
+    },
+    {
+      "target": "//:clippy-test",
+      "junit_cases": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "target": "//:clock-contract-test",
+      "junit_cases": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "rust_tests": {
+        "passed": 13,
+        "failed": 0,
+        "ignored": 0
+      }
+    },
+    {
+      "target": "//:clock-epoch-contract-test",
+      "junit_cases": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "rust_tests": {
+        "passed": 9,
+        "failed": 0,
+        "ignored": 0
+      }
+    },
+    {
+      "target": "//:controller-source-contract-test",
+      "junit_cases": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "rust_tests": {
+        "passed": 8,
+        "failed": 0,
+        "ignored": 0
+      }
+    },
+    {
+      "target": "//:decoder-simulation-contract-test",
+      "junit_cases": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "rust_tests": {
+        "passed": 15,
+        "failed": 0,
+        "ignored": 0
+      }
+    },
+    {
+      "target": "//:device-transport-contract-test",
+      "junit_cases": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "rust_tests": {
+        "passed": 19,
+        "failed": 0,
+        "ignored": 0
+      }
+    },
+    {
+      "target": "//:evaluation-contract-test",
+      "junit_cases": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "rust_tests": {
+        "passed": 5,
+        "failed": 0,
+        "ignored": 0
+      }
+    },
+    {
+      "target": "//firmware/zephyr:native-conformance-test",
+      "junit_cases": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "target": "//firmware/zephyr:native-glue-conformance-test",
+      "junit_cases": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "target": "//:firmware-acquisition-conformance-test",
+      "junit_cases": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "target": "//:firmware-frame-conformance-test",
+      "junit_cases": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "target": "//:gate0-contract-test",
+      "junit_cases": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "rust_tests": {
+        "passed": 4,
+        "failed": 0,
+        "ignored": 0
+      }
+    },
+    {
+      "target": "//:gate0-trace-contract-test",
+      "junit_cases": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "rust_tests": {
+        "passed": 23,
+        "failed": 0,
+        "ignored": 1
+      }
+    },
+    {
+      "target": "//:gate0a-capture-stack-test",
+      "junit_cases": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "python_tests_run": 21
+    },
+    {
+      "target": "//:hardware-calibration-contract-test",
+      "junit_cases": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "rust_tests": {
+        "passed": 9,
+        "failed": 0,
+        "ignored": 0
+      }
+    },
+    {
+      "target": "//:label-contract-test",
+      "junit_cases": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "rust_tests": {
+        "passed": 9,
+        "failed": 0,
+        "ignored": 0
+      }
+    },
+    {
+      "target": "//:layout-contract-test",
+      "junit_cases": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "rust_tests": {
+        "passed": 8,
+        "failed": 0,
+        "ignored": 0
+      }
+    },
+    {
+      "target": "//:live-durability-syscall-test",
+      "junit_cases": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "target": "//:manifest-contract-test",
+      "junit_cases": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "rust_tests": {
+        "passed": 33,
+        "failed": 0,
+        "ignored": 0
+      }
+    },
+    {
+      "target": "//:neutral-contract-test",
+      "junit_cases": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "rust_tests": {
+        "passed": 6,
+        "failed": 0,
+        "ignored": 0
+      }
+    },
+    {
+      "target": "//:output-contract-test",
+      "junit_cases": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "rust_tests": {
+        "passed": 14,
+        "failed": 0,
+        "ignored": 0
+      }
+    },
+    {
+      "target": "//:output-system-contract-test",
+      "junit_cases": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "rust_tests": {
+        "passed": 6,
+        "failed": 0,
+        "ignored": 0
+      }
+    },
+    {
+      "target": "//:output-system-required-test",
+      "junit_cases": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "rust_tests": {
+        "passed": 6,
+        "failed": 0,
+        "ignored": 0
+      }
+    },
+    {
+      "target": "//:physical-study-contract-test",
+      "junit_cases": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "rust_tests": {
+        "passed": 22,
+        "failed": 0,
+        "ignored": 0
+      }
+    },
+    {
+      "target": "//:pipeline-contract-test",
+      "junit_cases": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "rust_tests": {
+        "passed": 7,
+        "failed": 0,
+        "ignored": 0
+      }
+    },
+    {
+      "target": "//:prompt-contract-test",
+      "junit_cases": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "rust_tests": {
+        "passed": 9,
+        "failed": 0,
+        "ignored": 0
+      }
+    },
+    {
+      "target": "//:protocol-contract-test",
+      "junit_cases": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "rust_tests": {
+        "passed": 10,
+        "failed": 0,
+        "ignored": 0
+      }
+    },
+    {
+      "target": "//:replay-contract-test",
+      "junit_cases": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "rust_tests": {
+        "passed": 31,
+        "failed": 0,
+        "ignored": 0
+      }
+    },
+    {
+      "target": "//:runtime-contract-test",
+      "junit_cases": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "rust_tests": {
+        "passed": 16,
+        "failed": 0,
+        "ignored": 0
+      }
+    },
+    {
+      "target": "//:rustfmt-test",
+      "junit_cases": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "target": "//:session-contract-test",
+      "junit_cases": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "rust_tests": {
+        "passed": 30,
+        "failed": 0,
+        "ignored": 0
+      }
+    },
+    {
+      "target": "//:transport-contract-test",
+      "junit_cases": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "rust_tests": {
+        "passed": 10,
+        "failed": 0,
+        "ignored": 0
+      }
+    },
+    {
+      "target": "//:unit-tests",
+      "junit_cases": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "rust_tests": {
+        "passed": 47,
+        "failed": 0,
+        "ignored": 0
+      }
+    },
+    {
+      "target": "//:validation-contract-test",
+      "junit_cases": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "rust_tests": {
+        "passed": 6,
+        "failed": 0,
+        "ignored": 0
+      }
+    }
+  ]
+}

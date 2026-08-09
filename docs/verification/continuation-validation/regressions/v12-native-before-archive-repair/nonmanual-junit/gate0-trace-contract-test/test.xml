@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="gate0-trace-contract-test" tests="1" failures="0" errors="0">
+    <testcase name="gate0-trace-contract-test" status="run" duration="35" time="35"></testcase>
+      <system-out>
+Generated test.log (if the file is not UTF-8, then this may be unreadable):
+<![CDATA[exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+Executing tests from //:gate0-trace-contract-test
+-----------------------------------------------------------------------------
+
+running 39 tests
+test an_unmatched_edge_before_the_final_d8_is_never_forgiven ... ok
+test admitted_arming_edge_cannot_be_forgiven_before_first_mux ... ok
+test cache_replacement_derives_decimation_and_phase ... ok
+test canonical_raw_scan_uses_bounded_streaming_state ... ignored, full 14.44 GB logical scan; run explicitly in a Crabbox
+test configuration_keeps_int1_quiet_until_callbacks_are_installed ... ok
+test boot_marker_bus_decode_and_marker_order_are_waveform_derived ... ok
+test every_post_marker_logic_change_and_duplicate_marker_is_rejected ... ok
+test evidence_paths_are_real_files_not_decoder_mocks ... ok
+test final_cut_separates_shutdown_unadmitted_edges_from_acquisition_accounting ... ok
+test first_clean_cache_must_arrive_within_priming_cap ... ok
+test fixed_capture_settings_are_not_sidecar_choices ... ok
+test full_capture_read_rules_reject_semantic_mutations ... ok
+test host_sequence_gap_is_classified_without_payload_uniqueness ... ok
+test incomplete_arming_cannot_qualify ... ok
+test int1_during_enable_write_is_admitted_before_stop ... ok
+test known_quiet_sensor_pulse_before_enable_start_cannot_qualify ... ok
+test legacy_v1_capture_summary_is_rejected_after_hash_binding ... ok
+test only_leading_pre_host_snapshots_may_be_unlinked_and_cut_is_final ... ok
+test portable_c_startup_transcript_is_accepted_by_raw_reducer ... ok
+test pre_grid_and_grid_replacements_keep_complete_read_accounting ... ok
+test pre_snapshot_replacement_keeps_pending_edge_checks_strict ... ok
+test pre_snapshot_replacements_are_accounted_without_inventing_a_phase_grid ... ok
+test every_shutdown_transaction_is_covered_by_each_mutation_class ... ok
+test raw_fixture_never_uses_reserved_logic_bits_unless_requested ... ok
+test raw_format_rejects_an_incomplete_u16_word ... ok
+test raw_waveform_derives_every_read_and_links_host_frames ... ok
+test selected_firmware_boot_initializes_every_branch_before_acquisition ... ok
+test sidecar_artifact_paths_cannot_escape_the_evidence_bundle ... ok
+test sidecar_artifact_symlinks_cannot_escape_the_evidence_bundle ... ok
+test source_artifact_hashes_and_capture_log_fail_closed ... ok
+test startup_honors_mux_settle_and_busy_reset_retry_delays ... ok
+test premarker_and_terminal_idle_boundaries_are_exact ... ok
+test startup_rejects_premature_snapshot_or_commit ... ok
+test startup_reset_must_clear_within_firmware_poll_limit ... ok
+test terminal_marker_width_boundaries_and_stagger_are_exact ... ok
+test v2_summary_enforces_terminal_bindings_stop_window_and_field_order ... ok
+test violation_witnesses_are_bounded_while_total_is_not ... ok
+test wrapper_v2_summary_reaches_the_production_reducer_and_scorer ... ok
+test startup_missing_wrong_or_nacked_transfers_cannot_qualify ... ok
+
+test result: ok. 38 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 35.10s]]>
+      </system-out>
+    </testsuite>
+</testsuites>

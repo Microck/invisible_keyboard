@@ -13,7 +13,7 @@ The source boundary for this pass is:
 | --- | --- | --- |
 | `research/n6epfy8ck7izu7f2.md` | Saved ChatGPT session | Historic user constraints and unverified product leads |
 | `research/lapcal-issue-analysis.md` | Prior local analysis | Useful orientation, not an independent source |
-| `research/LapCal` at main commit `8638759168d84d32fa50ae461e053055a01c3dff` | Abandoned reference implementation | Hardware, firmware, software, CAD, and authored project notes |
+| `research/LapCal` at main commit `8638759168d84d32fa50ae461e053055a01c3dff` | Reference implementation; current activity not verified | Hardware, firmware, software, CAD, and authored project notes |
 | Unmerged local `origin/*` refs in `research/LapCal` | Later experiments | Click-detection and data-collection work absent from main |
 
 Generated KiCad output, vendored libraries, compiled model binaries, and media
@@ -121,8 +121,8 @@ end-to-end output cannot settle feasibility.
   are first-order problems rather than cleanup work.
 - Decomposing a keyboard by finger or key zone can reduce the classification
   problem, but LapCal did not validate a complete 34-key system.
-- The repository is a valuable failure archive and mechanical starting point,
-  not a working invisible keyboard.
+- The repository is a valuable failure archive and source of test requirements,
+  not a reusable mechanical starting point or a working invisible keyboard.
 
 ## What remains unproven
 
@@ -147,4 +147,3 @@ classifier accuracy. The first human decision must also define what
 "invisible" excludes, where typing happens, and whether a personal calibrated
 prototype is an acceptable first product. Those choices are open tickets
 because the user is away and the saved session cannot answer for them.
-

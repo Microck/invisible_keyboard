@@ -1,0 +1,53 @@
+OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Loading: 0 packages loaded
+    currently loading: 
+Analyzing: target //:cli-contract-test (5 packages loaded, 6 targets configured)
+Analyzing: target //:cli-contract-test (5 packages loaded, 6 targets configured)
+
+Analyzing: target //:cli-contract-test (25 packages loaded, 9 targets configured)
+
+Analyzing: target //:cli-contract-test (76 packages loaded, 57 targets configured)
+
+Analyzing: target //:cli-contract-test (104 packages loaded, 722 targets configured)
+
+Analyzing: target //:cli-contract-test (126 packages loaded, 1323 targets configured)
+
+Analyzing: target //:cli-contract-test (165 packages loaded, 3621 targets configured)
+
+Analyzing: target //:cli-contract-test (211 packages loaded, 5480 targets configured)
+
+INFO: Analyzed target //:cli-contract-test (212 packages loaded, 5509 targets configured).
+[174 / 445] checking cached actions
+[443 / 445] [Prepa] Compiling Rust bin cli-contract-test (1 file)
+[443 / 445] Compiling Rust bin cli-contract-test (1 file); 1s processwrapper-sandbox
+INFO: From Compiling Rust bin cli-contract-test (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+[445 / 446] Testing //:cli-contract-test; 1s processwrapper-sandbox
+[445 / 446] Testing //:cli-contract-test; 23s processwrapper-sandbox
+INFO: From Testing //:cli-contract-test:
+==================== Test output for //:cli-contract-test:
+
+running 1 test
+test calibrated_live_watchdog_revokes_during_continuous_empty_transport_traffic ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 75 filtered out; finished in 23.65s
+
+================================================================================
+INFO: Found 1 test target...
+Target //:cli-contract-test up-to-date:
+  bazel-bin/cli-contract-test
+INFO: Elapsed time: 38.849s, Critical Path: 26.16s
+INFO: 4 processes: 442 action cache hit, 2 internal, 3 processwrapper-sandbox.
+INFO: Build completed successfully, 4 total actions
+//:cli-contract-test                                                     PASSED in 23.7s
+
+Executed 1 out of 1 test: 1 test passes.
+There were tests whose specified size is too big. Use the --test_verbose_timeout_warnings command line option to see which ones these are.

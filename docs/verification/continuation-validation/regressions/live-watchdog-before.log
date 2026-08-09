@@ -1,0 +1,74 @@
+OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //:cli-contract-test (1 packages loaded)
+Analyzing: target //:cli-contract-test (5 packages loaded, 6 targets configured)
+Analyzing: target //:cli-contract-test (5 packages loaded, 6 targets configured)
+
+Analyzing: target //:cli-contract-test (13 packages loaded, 9 targets configured)
+
+Analyzing: target //:cli-contract-test (62 packages loaded, 9 targets configured)
+
+Analyzing: target //:cli-contract-test (82 packages loaded, 395 targets configured)
+
+Analyzing: target //:cli-contract-test (113 packages loaded, 854 targets configured)
+
+Analyzing: target //:cli-contract-test (127 packages loaded, 1508 targets configured)
+
+Analyzing: target //:cli-contract-test (155 packages loaded, 3136 targets configured)
+
+Analyzing: target //:cli-contract-test (189 packages loaded, 4554 targets configured)
+
+Analyzing: target //:cli-contract-test (211 packages loaded, 5505 targets configured)
+
+INFO: Analyzed target //:cli-contract-test (212 packages loaded, 5509 targets configured).
+[144 / 445] checking cached actions
+[442 / 445] [Prepa] Compiling Rust bin cli-contract-test (1 file)
+[442 / 445] Compiling Rust bin cli-contract-test (1 file); 1s processwrapper-sandbox
+INFO: From Compiling Rust bin cli-contract-test (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+[444 / 445] [Prepa] runfiles for //:cli-contract-test
+[445 / 446] Testing //:cli-contract-test; 1s processwrapper-sandbox
+[445 / 446] Testing //:cli-contract-test; 26s processwrapper-sandbox
+FAIL: //:cli-contract-test (Exit 101) (see /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/execroot/_main/bazel-out/aarch64-fastbuild/testlogs/cli-contract-test/test.log)
+INFO: From Testing //:cli-contract-test:
+==================== Test output for //:cli-contract-test:
+
+running 1 test
+test calibrated_live_watchdog_revokes_during_continuous_empty_transport_traffic ... FAILED
+
+failures:
+
+---- calibrated_live_watchdog_revokes_during_continuous_empty_transport_traffic stdout ----
+
+thread 'calibrated_live_watchdog_revokes_during_continuous_empty_transport_traffic' (63268) panicked at tests/cli-contract.rs:6956:5:
+valid-frame watchdog starved by raw bytes
+wear_session=user-attested-unmoved
+User-attested wear session active. Stop typing before moving or removing either wearable.
+
+
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    calibrated_live_watchdog_revokes_during_continuous_empty_transport_traffic
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 75 filtered out; finished in 26.69s
+
+================================================================================
+INFO: Found 1 test target...
+Target //:cli-contract-test up-to-date:
+  bazel-bin/cli-contract-test
+INFO: Elapsed time: 47.191s, Critical Path: 29.61s
+INFO: 4 processes: 442 action cache hit, 2 internal, 3 processwrapper-sandbox.
+INFO: Build completed, 1 test FAILED, 4 total actions
+//:cli-contract-test                                                     FAILED in 26.7s
+  /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/execroot/_main/bazel-out/aarch64-fastbuild/testlogs/cli-contract-test/test.log
+
+Executed 1 out of 1 test: 1 fails locally.

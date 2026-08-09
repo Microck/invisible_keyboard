@@ -1,0 +1,22 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+Executing tests from //:neutral-contract-test
+-----------------------------------------------------------------------------
+
+running 2 tests
+test neutral_authority_rejects_altered_clock_report_and_rebound_fingerprint ... FAILED
+test neutral_authority_rejects_raw_receipt_faults_despite_passing_clock_statistics ... ok
+
+failures:
+
+---- neutral_authority_rejects_altered_clock_report_and_rebound_fingerprint stdout ----
+
+thread 'neutral_authority_rejects_altered_clock_report_and_rebound_fingerprint' (42149) panicked at tests/neutral-contract.rs:240:9:
+altered slope_ns_per_us cannot authorize neutral evidence
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    neutral_authority_rejects_altered_clock_report_and_rebound_fingerprint
+
+test result: FAILED. 1 passed; 1 failed; 0 ignored; 0 measured; 6 filtered out; finished in 0.17s
+

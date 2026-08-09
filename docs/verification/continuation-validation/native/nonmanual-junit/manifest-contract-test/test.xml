@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="manifest-contract-test" tests="1" failures="0" errors="0">
+    <testcase name="manifest-contract-test" status="run" duration="19" time="19"></testcase>
+      <system-out>
+Generated test.log (if the file is not UTF-8, then this may be unreadable):
+<![CDATA[exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+Executing tests from //:manifest-contract-test
+-----------------------------------------------------------------------------
+
+running 38 tests
+test a_semantic_provenance_change_changes_the_manifest_identity ... ok
+test axis_maps_must_be_proper_signed_permutation_matrices ... ok
+test axis_admission_rejects_report_selected_profiles_even_with_matching_hashes ... ok
+test both_hands_use_canonical_roles_with_controller_local_interrupt_pins ... ok
+test axis_report_recomputes_residuals_and_freezes_the_hand_carrier_convention ... ok
+test checked_in_template_requires_real_identities_before_it_can_lock ... ok
+test commissioning_bootstraps_without_axis_evidence_and_replays_into_operational_binding ... ok
+test commissioning_rejects_unperformed_rig_checks_and_exact_binding_changes ... ok
+test commissioning_two_hand_dataset_preserves_order_and_anatomical_conventions ... ok
+test controller_boot_identity_is_required_and_canonical ... ok
+test every_declared_setting_must_match_the_canonical_acquisition_profile ... ok
+test every_hand_declares_exactly_six_sensors ... ok
+test evidence_byte_tampering_and_candidate_drift_fail_closed ... ok
+test exactly_one_sensor_per_hand_is_the_dorsal_reference ... ok
+test fixed_width_lowercase_hex_identities_round_trip_and_reject_other_forms ... ok
+test frame_canonicalizer_fails_closed_when_negation_exceeds_i16 ... ok
+test frame_canonicalizer_rotates_raw_vectors_once_and_preserves_metadata ... ok
+test hand_manifest_type_remains_owned_by_the_manifest_contract ... ok
+test invalid_hand_topology_and_empty_capture_provenance_are_rejected ... ok
+test legacy_hand_aggregate_sensor_fields_fail_closed ... ok
+test manifest_size_is_bounded_before_json_allocation ... ok
+test nonpassing_physical_or_axis_evidence_never_authorizes_operation ... ok
+test observed_session_hands_must_match_the_manifest_exactly ... ok
+test operational_manifest_binds_both_exact_artifacts_and_characterized_maps ... ok
+test physical_mux_routing_can_differ_from_canonical_sensor_order ... ok
+test placeholder_build_and_participant_identities_are_rejected ... ok
+test register_bits_and_manifest_declarations_share_one_canonical_profile ... ok
+test rehashed_but_different_characterized_axis_map_cannot_authorize_manifest_map ... ok
+test rig_evidence_is_bounded_strict_and_status_consistent ... ok
+test rig_evidence_template_keeps_every_unrun_physical_check_explicit ... ok
+test sensor_declarations_follow_canonical_index_and_role_order ... ok
+test sensor_indices_roles_and_mux_channels_are_unique ... ok
+test sensor_mount_wiring_and_interrupt_identities_are_required_and_unique ... ok
+test template_locks_only_observed_controller_boot_identities ... ok
+test template_rejects_prelocked_and_wrong_controller_identity ... ok
+test typed_manifest_round_trips_through_one_canonical_identity ... ok
+test unknown_and_missing_fields_fail_closed ... ok
+test commissioning_rejects_raw_motion_identity_timing_and_reflection_faults ... ok
+
+test result: ok. 38 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 19.73s]]>
+      </system-out>
+    </testsuite>
+</testsuites>

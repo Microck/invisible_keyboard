@@ -1,0 +1,150 @@
+{
+  "schema": "invisible-keyboard-acquisition-template-v4",
+  "layout_id": "invisible-keyboard-core28-v1",
+  "protocol_version": 2,
+  "hands": [
+    {
+      "hand": "left",
+      "controller_id": "invisible-keyboard-left-001",
+      "boot_id": "00000000000000000000000000000000",
+      "sensors": [
+        {
+          "sensor_index": 0,
+          "mux_channel": 0,
+          "role": "thumb",
+          "mount_id": "left-thumb-ring-001",
+          "wiring_id": "left-harness-channel-0",
+          "interrupt_pin": "left:P0.02",
+          "axis_map": [1, 0, 0, 0, 1, 0, 0, 0, 1]
+        },
+        {
+          "sensor_index": 1,
+          "mux_channel": 1,
+          "role": "index",
+          "mount_id": "left-index-ring-001",
+          "wiring_id": "left-harness-channel-1",
+          "interrupt_pin": "left:P0.03",
+          "axis_map": [1, 0, 0, 0, 1, 0, 0, 0, 1]
+        },
+        {
+          "sensor_index": 2,
+          "mux_channel": 2,
+          "role": "middle",
+          "mount_id": "left-middle-ring-001",
+          "wiring_id": "left-harness-channel-2",
+          "interrupt_pin": "left:P0.28",
+          "axis_map": [1, 0, 0, 0, 1, 0, 0, 0, 1]
+        },
+        {
+          "sensor_index": 3,
+          "mux_channel": 3,
+          "role": "ring",
+          "mount_id": "left-ring-ring-001",
+          "wiring_id": "left-harness-channel-3",
+          "interrupt_pin": "left:P0.29",
+          "axis_map": [1, 0, 0, 0, 1, 0, 0, 0, 1]
+        },
+        {
+          "sensor_index": 4,
+          "mux_channel": 4,
+          "role": "pinky",
+          "mount_id": "left-pinky-ring-001",
+          "wiring_id": "left-harness-channel-4",
+          "interrupt_pin": "left:P1.11",
+          "axis_map": [1, 0, 0, 0, 1, 0, 0, 0, 1]
+        },
+        {
+          "sensor_index": 5,
+          "mux_channel": 5,
+          "role": "dorsal",
+          "mount_id": "left-dorsal-strap-001",
+          "wiring_id": "left-harness-channel-5",
+          "interrupt_pin": "left:P1.12",
+          "axis_map": [1, 0, 0, 0, 1, 0, 0, 0, 1]
+        }
+      ]
+    },
+    {
+      "hand": "right",
+      "controller_id": "invisible-keyboard-right-001",
+      "boot_id": "00000000000000000000000000000000",
+      "sensors": [
+        {
+          "sensor_index": 0,
+          "mux_channel": 0,
+          "role": "thumb",
+          "mount_id": "right-thumb-ring-001",
+          "wiring_id": "right-harness-channel-0",
+          "interrupt_pin": "right:P0.02",
+          "axis_map": [1, 0, 0, 0, 1, 0, 0, 0, 1]
+        },
+        {
+          "sensor_index": 1,
+          "mux_channel": 1,
+          "role": "index",
+          "mount_id": "right-index-ring-001",
+          "wiring_id": "right-harness-channel-1",
+          "interrupt_pin": "right:P0.03",
+          "axis_map": [1, 0, 0, 0, 1, 0, 0, 0, 1]
+        },
+        {
+          "sensor_index": 2,
+          "mux_channel": 2,
+          "role": "middle",
+          "mount_id": "right-middle-ring-001",
+          "wiring_id": "right-harness-channel-2",
+          "interrupt_pin": "right:P0.28",
+          "axis_map": [1, 0, 0, 0, 1, 0, 0, 0, 1]
+        },
+        {
+          "sensor_index": 3,
+          "mux_channel": 3,
+          "role": "ring",
+          "mount_id": "right-ring-ring-001",
+          "wiring_id": "right-harness-channel-3",
+          "interrupt_pin": "right:P0.29",
+          "axis_map": [1, 0, 0, 0, 1, 0, 0, 0, 1]
+        },
+        {
+          "sensor_index": 4,
+          "mux_channel": 4,
+          "role": "pinky",
+          "mount_id": "right-pinky-ring-001",
+          "wiring_id": "right-harness-channel-4",
+          "interrupt_pin": "right:P1.11",
+          "axis_map": [1, 0, 0, 0, 1, 0, 0, 0, 1]
+        },
+        {
+          "sensor_index": 5,
+          "mux_channel": 5,
+          "role": "dorsal",
+          "mount_id": "right-dorsal-strap-001",
+          "wiring_id": "right-harness-channel-5",
+          "interrupt_pin": "right:P1.12",
+          "axis_map": [1, 0, 0, 0, 1, 0, 0, 0, 1]
+        }
+      ]
+    }
+  ],
+  "controller_board": "Seeed XIAO nRF52840 Plus SKU 102010672",
+  "firmware_build": "replace-with-exact-firmware-build-id",
+  "host_build": "replace-with-exact-host-build-id",
+  "sensor_model": "LSM6DS3TR-C",
+  "sensors_per_hand": 6,
+  "sensor_odr_hz": 208,
+  "accelerometer_range_g": 4,
+  "gyroscope_range_dps": 1000,
+  "filter_profile": "gate0-raw-v1",
+  "i2c_bus_hz": 400000,
+  "nominal_period_us": 5000,
+  "prompt_corpus_sha256": "4441bf5853bbcc57d564eb229d2491741ea59f86cc9de9462d062424473eb4e2",
+  "study_id": "guided-current-mount-calibration",
+  "split_id": "locked-before-held-out-validation",
+  "participant_alias": "replace-with-local-alias",
+  "consent_record": "local-self-test",
+  "retention_policy": "local-delete-after-analysis-v1",
+  "rig_evidence_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "axis_characterization_sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+  "calibration_artifact_sha256": null,
+  "calibration_validation_sha256": null
+}

@@ -1,0 +1,7 @@
+physical_study_round=frozen
+roster=/home/ubuntu/audit-regression-proof/study-boundary-cli-after/overflow/roster.jsonl
+manifest=/home/ubuntu/audit-regression-proof/study-boundary-cli-after/overflow/manifest.json
+manifest_sha256=71dfad55a71c3146971f78015785e94d62eebb6f0fd299728b1525b18fb31624
+plan=/home/ubuntu/audit-regression-proof/study-boundary-cli-after/overflow/plan.json
+plan_sha256=8828fceff517eb55ea731cb5cfcd012ce63e2b88c25b62ba9ccc85f5fc13918e
+expected_rows=1

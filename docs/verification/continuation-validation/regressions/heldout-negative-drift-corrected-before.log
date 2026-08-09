@@ -1,0 +1,63 @@
+OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Loading: 1 packages loaded
+Analyzing: target //:calibration-engine-contract-test (5 packages loaded, 6 targets configured)
+Analyzing: target //:calibration-engine-contract-test (5 packages loaded, 6 targets configured)
+
+Analyzing: target //:calibration-engine-contract-test (10 packages loaded, 9 targets configured)
+
+Analyzing: target //:calibration-engine-contract-test (64 packages loaded, 16 targets configured)
+
+Analyzing: target //:calibration-engine-contract-test (84 packages loaded, 367 targets configured)
+
+Analyzing: target //:calibration-engine-contract-test (111 packages loaded, 1072 targets configured)
+
+Analyzing: target //:calibration-engine-contract-test (128 packages loaded, 2163 targets configured)
+
+Analyzing: target //:calibration-engine-contract-test (156 packages loaded, 3403 targets configured)
+
+Analyzing: target //:calibration-engine-contract-test (199 packages loaded, 5089 targets configured)
+
+INFO: Analyzed target //:calibration-engine-contract-test (206 packages loaded, 5419 targets configured).
+[1 / 1] no actions running
+[136 / 425] checking cached actions
+[425 / 426] [Prepa] Testing //:calibration-engine-contract-test
+[425 / 426] Testing //:calibration-engine-contract-test; 1s processwrapper-sandbox
+[425 / 426] Testing //:calibration-engine-contract-test; 11s processwrapper-sandbox
+[425 / 426] Testing //:calibration-engine-contract-test; 41s processwrapper-sandbox
+[425 / 426] Testing //:calibration-engine-contract-test; 77s processwrapper-sandbox
+FAIL: //:calibration-engine-contract-test (Exit 101) (see /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/execroot/_main/bazel-out/aarch64-fastbuild/testlogs/calibration-engine-contract-test/test.log)
+INFO: From Testing //:calibration-engine-contract-test:
+==================== Test output for //:calibration-engine-contract-test:
+
+running 1 test
+test heldout_999ns_clock_preserves_valid_raw_sensor_advance_at_skew_boundary has been running for over 60 seconds
+test heldout_999ns_clock_preserves_valid_raw_sensor_advance_at_skew_boundary ... FAILED
+
+failures:
+
+---- heldout_999ns_clock_preserves_valid_raw_sensor_advance_at_skew_boundary stdout ----
+
+thread 'heldout_999ns_clock_preserves_valid_raw_sensor_advance_at_skew_boundary' (101420) panicked at tests/calibration-engine-contract.rs:2072:10:
+complete held-out stream keeps raw +1us sample progress at allowed skew under a 999ns/us clock: Pipeline(InvalidWindow(SensorTimeRegression { sensor: 0 }))
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    heldout_999ns_clock_preserves_valid_raw_sensor_advance_at_skew_boundary
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 28 filtered out; finished in 77.17s
+
+================================================================================
+INFO: Found 1 test target...
+Target //:calibration-engine-contract-test up-to-date:
+  bazel-bin/calibration-engine-contract-test
+INFO: Elapsed time: 94.284s, Critical Path: 77.61s
+INFO: 2 processes: 424 action cache hit, 1 internal, 2 processwrapper-sandbox.
+INFO: Build completed, 1 test FAILED, 2 total actions
+//:calibration-engine-contract-test                                      FAILED in 77.2s
+  /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/execroot/_main/bazel-out/aarch64-fastbuild/testlogs/calibration-engine-contract-test/test.log
+
+Executed 1 out of 1 test: 1 fails locally.

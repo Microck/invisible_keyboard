@@ -1,0 +1,28 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+Executing tests from //:unit-tests
+-----------------------------------------------------------------------------
+
+running 2 tests
+test hardware_calibration::tests::monitor_successor_keeps_sequence_and_sensor_time_continuity ... FAILED
+test hardware_calibration::tests::fitting_and_heldout_monitors_reject_acquisition_faults_and_keep_both_incidents ... FAILED
+
+failures:
+
+---- hardware_calibration::tests::monitor_successor_keeps_sequence_and_sensor_time_continuity stdout ----
+
+thread 'hardware_calibration::tests::monitor_successor_keeps_sequence_and_sensor_time_continuity' (42839) panicked at src/hardware_calibration.rs:3593:17:
+the monitor-to-held-out handoff cannot reset stream continuity
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- hardware_calibration::tests::fitting_and_heldout_monitors_reject_acquisition_faults_and_keep_both_incidents stdout ----
+
+thread 'hardware_calibration::tests::fitting_and_heldout_monitors_reject_acquisition_faults_and_keep_both_incidents' (42838) panicked at src/hardware_calibration.rs:3527:24:
+the computation monitor must reject same-identity bad frames: ()
+
+
+failures:
+    hardware_calibration::tests::fitting_and_heldout_monitors_reject_acquisition_faults_and_keep_both_incidents
+    hardware_calibration::tests::monitor_successor_keeps_sequence_and_sensor_time_continuity
+
+test result: FAILED. 0 passed; 2 failed; 0 ignored; 0 measured; 55 filtered out; finished in 0.11s
+

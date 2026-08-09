@@ -1,0 +1,40 @@
+//! Independently written, no-artifact-reuse reference stack for the
+//! passive-surface invisible keyboard.
+
+pub mod artifact;
+#[path = "axis-characterization.rs"]
+pub mod axis_characterization;
+pub mod calibration;
+pub mod calibration_app;
+pub mod calibration_capture;
+pub mod calibration_engine;
+pub mod calibration_worker;
+pub mod clock;
+pub mod clock_epoch;
+#[cfg(target_os = "linux")]
+pub mod controller_source;
+pub mod decoder;
+pub mod device_transport;
+pub mod evaluation;
+pub mod gate0;
+pub mod gate0_trace;
+#[cfg(target_os = "linux")]
+pub mod hardware_calibration;
+pub mod labels;
+pub mod layout;
+pub mod live;
+pub mod manifest;
+pub mod neutral;
+pub mod output;
+pub mod physical_study;
+pub mod pilot;
+pub mod pipeline;
+pub mod prompts;
+pub mod protocol;
+pub mod reader_mailbox;
+pub mod replay;
+pub mod runtime;
+pub mod session;
+pub mod simulation;
+pub mod transport;
+pub mod validation;

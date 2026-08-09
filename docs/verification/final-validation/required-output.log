@@ -1,0 +1,55 @@
+OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //:output-system-required-test (1 packages loaded)
+Analyzing: target //:output-system-required-test (5 packages loaded, 6 targets configured)
+Analyzing: target //:output-system-required-test (5 packages loaded, 6 targets configured)
+
+Analyzing: target //:output-system-required-test (77 packages loaded, 122 targets configured)
+
+Analyzing: target //:output-system-required-test (135 packages loaded, 1979 targets configured)
+
+Analyzing: target //:output-system-required-test (206 packages loaded, 5468 targets configured)
+
+INFO: Analyzed target //:output-system-required-test (209 packages loaded, 5485 targets configured).
+[148 / 441] checking cached actions
+[441 / 442] [Prepa] Testing //:output-system-required-test
+[441 / 442] Testing //:output-system-required-test; 1s local
+[441 / 442] Testing //:output-system-required-test; 2s local
+INFO: From Testing //:output-system-required-test:
+==================== Test output for //:output-system-required-test:
+
+running 6 tests
+test selected_keyboard_open_queries_keys_held_before_reader_start ... ok
+native uinput probe: node=/dev/input/event8, effective_uid=1000, effective_gid=985, /dev/uinput=0660 0:996, event=0640 0:985, identity=BUS_VIRTUAL 0000:0000 version 0001 phys=invisible-keyboard/core28, observed=[1, 0], stuck_keys=0
+test native_probe_verifies_core28_identity_and_non_root_access ... ok
+SIGKILL device destruction observed after 62.990867ms; this is not a 250 ms all-up guarantee
+native uinput stress: UinputStressReport {
+    evidence_label: "linux-kernel-event-node-readback",
+    device_node: "/dev/input/event10",
+    tap_pairs: 10000,
+    fault_release_cycles: 10,
+    observed_key_events: 20020,
+    round_trip_p95_us: 24,
+    round_trip_p99_us: 41,
+    stuck_keys: 0,
+}
+test native_kernel_stress_executes_ten_thousand_pairs_and_finishes_neutral ... ok
+test native_evdev_application_observes_every_core28_pair ... ok
+test sigkill_destroys_the_owned_uinput_device_without_a_250ms_claim ... ok
+test planned_signals_are_application_observed_neutral_within_250ms ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.12s
+
+================================================================================
+INFO: Found 1 test target...
+Target //:output-system-required-test up-to-date:
+  bazel-bin/output-system-required-test
+INFO: Elapsed time: 16.164s, Critical Path: 3.77s
+INFO: 2 processes: 440 action cache hit, 1 internal, 2 local.
+INFO: Build completed successfully, 2 total actions
+//:output-system-required-test                                           PASSED in 2.2s
+
+Executed 1 out of 1 test: 1 test passes.
+There were tests whose specified size is too big. Use the --test_verbose_timeout_warnings command line option to see which ones these are.

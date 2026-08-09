@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="pilot-contract-test" tests="1" failures="0" errors="0">
+    <testcase name="pilot-contract-test" status="run" duration="228" time="228"></testcase>
+      <system-out>
+Generated test.log (if the file is not UTF-8, then this may be unreadable):
+<![CDATA[exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+Executing tests from //:pilot-contract-test
+-----------------------------------------------------------------------------
+
+running 11 tests
+test absent_physical_signal_stops_instead_of_turning_truth_into_successful_events ... ok
+test activity_boundaries_do_not_reset_high_confirmation_or_latched_rearming ... ok
+test complete_independent_taps_include_reserved_positions_and_match_at_causal_emission_time ... ok
+test contact_labels_do_not_train_thresholds_or_choose_detection_fingers ... ok
+test bad_saturated_missing_and_identity_faults_cannot_support_a_build ... ok
+test dorsal_subtraction_and_measured_axis_rotation_share_the_canonical_signal ... ok
+test every_post_neutral_event_counts_even_outside_negative_intervals_and_later_motion_does_not_leak ... ok
+test incomplete_or_overlapping_truth_cannot_publish_a_report ... ok
+test misbound_session_manifest_truth_and_mapping_bytes_are_rejected ... ok
+test matching_is_inclusive_at_both_boundaries_but_never_accepts_early_contacts has been running for over 60 seconds
+test screening_uses_overall_and_per_position_recall_without_discarding_failed_trials has been running for over 60 seconds
+test matching_is_inclusive_at_both_boundaries_but_never_accepts_early_contacts ... ok
+test screening_uses_overall_and_per_position_recall_without_discarding_failed_trials ... ok
+
+test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 228.38s]]>
+      </system-out>
+    </testsuite>
+</testsuites>

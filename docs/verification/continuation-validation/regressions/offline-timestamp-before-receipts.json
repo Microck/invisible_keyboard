@@ -1,0 +1,65 @@
+[
+  {
+    "lane": "neutral-sensor-time-corrected-before",
+    "exit_code": 3,
+    "expected_failing_case": "raw_sensor_repeat_in_neutral_returns_source_error_without_panicking",
+    "observed_expected_failure": true,
+    "failures": [
+      "raw_sensor_repeat_in_neutral_returns_source_error_without_panicking"
+    ]
+  },
+  {
+    "lane": "offline-unselected-time-corrected-before",
+    "exit_code": 3,
+    "expected_failing_case": "raw_sensor_repeat_outside_neutral_is_rejected_under_1001ns_clocks",
+    "observed_expected_failure": true,
+    "failures": [
+      "raw_sensor_repeat_outside_neutral_is_rejected_under_1001ns_clocks"
+    ]
+  },
+  {
+    "lane": "offline-aggregate-time-corrected-before",
+    "exit_code": 3,
+    "expected_failing_case": "raw_aggregate_repeat_with_advancing_sensor_times_is_rejected",
+    "observed_expected_failure": true,
+    "failures": [
+      "raw_aggregate_repeat_with_advancing_sensor_times_is_rejected"
+    ]
+  },
+  {
+    "lane": "heldout-negative-drift-corrected-before",
+    "exit_code": 3,
+    "expected_failing_case": "heldout_999ns_clock_preserves_valid_raw_sensor_advance_at_skew_boundary",
+    "observed_expected_failure": true,
+    "failures": [
+      "heldout_999ns_clock_preserves_valid_raw_sensor_advance_at_skew_boundary"
+    ]
+  },
+  {
+    "lane": "heldout-positive-drift-corrected-before",
+    "exit_code": 3,
+    "expected_failing_case": "heldout_1001ns_clock_rejects_raw_sensor_repeat_outside_truth_windows",
+    "observed_expected_failure": true,
+    "failures": [
+      "heldout_1001ns_clock_rejects_raw_sensor_repeat_outside_truth_windows"
+    ]
+  },
+  {
+    "lane": "fitting-precheck-source-corrected-before",
+    "exit_code": 3,
+    "expected_failing_case": "fitting_and_precheck_reject_raw_suffix_fault_before_truth_selection",
+    "observed_expected_failure": true,
+    "failures": [
+      "fitting_and_precheck_reject_raw_suffix_fault_before_truth_selection"
+    ]
+  },
+  {
+    "lane": "independent-neutral-time-before",
+    "exit_code": 3,
+    "expected_failing_case": "independently_derived_neutral_rejects_repeated_raw_sample_outside_selected_windows",
+    "observed_expected_failure": true,
+    "failures": [
+      "independently_derived_neutral_rejects_repeated_raw_sample_outside_selected_windows"
+    ]
+  }
+]

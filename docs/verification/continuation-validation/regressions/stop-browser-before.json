@@ -1,0 +1,10 @@
+{
+  "evidence": "Real Chromium and production HTTP server inside Crabbox; synthetic hardware-mode coordinator fixture",
+  "postedRevision": 345,
+  "status": 400,
+  "responseBody": "Y2FsaWJyYXRpb24gc3RhdGUgcmV2aXNpb24gaXMgc3RhbGU6IGV4cGVjdGVkIDM0Niwgc3VwcGxpZWQgMzQ1",
+  "currentRevision": 346,
+  "phase": "surface-validate",
+  "paused": false,
+  "captureLease": 5
+}

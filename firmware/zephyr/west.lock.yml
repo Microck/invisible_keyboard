@@ -1,0 +1,15 @@
+# Exact inputs consumed by build-zephyr.sh. The Zephyr module revisions mirror
+# the imported v4.4.0 manifest; SDK digests come from the v1.0.1 GitHub release.
+lock:
+  zephyr_version: "4.4.0"
+  zephyr_commit: "684c9e8f32e4373a21098559f748f06915f950c9"
+  cmsis_6_commit: "30a859f44ef8ab4dc8f84b03ed586fd16ccf9d74"
+  hal_nordic_commit: "44fd3d44b15cb75f80a25b4679f91d2787e28664"
+  west_version: "1.5.0"
+  sdk_version: "1.0.1"
+  sdk_minimal_url: "https://github.com/zephyrproject-rtos/sdk-ng/releases/download/v1.0.1/zephyr-sdk-1.0.1_linux-x86_64_minimal.tar.xz"
+  sdk_minimal_sha256: "ca9bc0ff66fafca1dac9d592a36d953cf16d096a9d09b1c0357f021cf9f6a7eb"
+  sdk_arm_url: "https://github.com/zephyrproject-rtos/sdk-ng/releases/download/v1.0.1/toolchain_gnu_linux-x86_64_arm-zephyr-eabi.tar.xz"
+  sdk_arm_sha256: "21b85981cb5a1818d9bc53d82af80f208946ec038b982ff1907287572ed3a634"
+  board: "xiao_ble/nrf52840"
+  plus_pin_source_commit: "8663ae88fd144a7992793f96a55e17c642620135"

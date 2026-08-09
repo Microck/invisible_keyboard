@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Invisible keyboard: completed work and remaining gates</title>
+  <style>
+    :root { color-scheme: dark; --canvas: #000; --ink: #fff; --secondary: #b3b3b3; --line: #333; }
+    * { box-sizing: border-box; }
+    html { background: var(--canvas); color: var(--ink); }
+    body { margin: 0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 16px; line-height: 1.6; }
+    main { max-width: 960px; margin: 0 auto; padding: 32px 32px 64px; }
+    h1, h2, h3, p, ul, ol { margin: 0; }
+    h1 { max-width: 30ch; font-size: clamp(24px, 4vw, 32px); font-weight: 600; line-height: 1.2; letter-spacing: -.025em; }
+    h2 { margin-bottom: 16px; font-size: 22px; font-weight: 600; line-height: 1.3; letter-spacing: -.015em; }
+    h3 { margin-bottom: 4px; font-size: 17px; font-weight: 600; }
+    p { max-width: 72ch; }
+    p + p { margin-top: 12px; }
+    header > p { margin-top: 16px; }
+    .metadata { color: var(--secondary); font-size: 14px; }
+    nav { display: flex; flex-wrap: wrap; gap: 8px 24px; margin-top: 24px; }
+    a { color: var(--ink); text-underline-offset: 4px; }
+    nav a { display: inline-flex; align-items: center; min-height: 44px; }
+    a:focus-visible, summary:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
+    section { margin-top: 48px; scroll-margin-top: 24px; }
+    table { width: 100%; border-collapse: collapse; table-layout: fixed; text-align: left; font-size: 15px; }
+    caption { text-align: left; color: var(--secondary); margin-bottom: 12px; }
+    th, td { padding: 12px 16px 12px 0; vertical-align: top; border-bottom: 1px solid var(--line); overflow-wrap: anywhere; }
+    thead th { padding-top: 0; font-weight: 600; }
+    tbody th { font-weight: 500; }
+    th:first-child { width: 29%; }
+    th:last-child, td:last-child { padding-right: 0; }
+    .scope { margin-top: 20px; }
+    .notes { margin-top: 20px; }
+    ol, ul { padding-left: 24px; }
+    .gates > li + li { margin-top: 24px; }
+    .gates p + p { margin-top: 8px; }
+    .criterion { color: var(--secondary); }
+    .parts { margin-top: 16px; }
+    .parts li + li { margin-top: 4px; }
+    details { margin-top: 24px; }
+    summary { width: fit-content; max-width: 100%; min-height: 44px; padding: 8px 0; cursor: pointer; text-decoration: underline; text-underline-offset: 4px; }
+    details p { margin-top: 12px; }
+    code { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: .9em; overflow-wrap: anywhere; }
+    .identity { display: block; margin-top: 8px; }
+    footer { margin-top: 48px; color: var(--secondary); font-size: 14px; }
+    @media (max-width: 600px) {
+      main { padding: 24px 16px 48px; }
+      h2 { font-size: 20px; }
+      section { margin-top: 36px; }
+      table { font-size: 14px; }
+      th:first-child { width: 34%; }
+      th, td { padding: 12px 12px 12px 0; }
+      nav { gap: 4px 20px; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Invisible keyboard: what is done and what is left</h1>
+    <p>The hardware-independent software is complete and verified. A working physical keyboard is still unproved. The next step is to build and measure one wired hand, then decide whether its sensor signals justify continuing.</p>
+    <p class="metadata">Verification completed 13 October 2026. Frozen software version v13.</p>
+    <nav aria-label="Report sections">
+      <a href="#done">Completed work</a>
+      <a href="#proof">Verification</a>
+      <a href="#remaining">Remaining work</a>
+      <a href="#next">Next step</a>
+    </nav>
+  </header>
+
+  <section id="done" aria-labelledby="done-heading">
+    <h2 id="done-heading">Completed work</h2>
+    <table>
+      <thead><tr><th scope="col">Area</th><th scope="col">What I implemented and repaired</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Controller firmware</th><td>Six-sensor acquisition per hand, timestamped samples, framed USB transport, capture markers and a deterministic stop-and-drain protocol. Both pinned left-hand and right-hand firmware images build.</td></tr>
+        <tr><th scope="row">Host input and timing</th><td>The Rust host reads both controller streams, checks frame identity and ordering, fits their clocks and rejects stale or repeated sensor time. Repairs separate raw sensor time from mapped output time and preserve faults through the live pipeline.</td></tr>
+        <tr><th scope="row">Calibration</th><td>A browser-guided setup, selected-keyboard labels, sensor-derived contact checks, personal decoder fitting and separate held-out validation. Bound plans, journals and session hashes prevent unrelated or overlapping evidence from authorizing a model.</td></tr>
+        <tr><th scope="row">Live output and replay</th><td>The same decoding rules drive recorded-session replay and Linux key output. Watchdogs and input, clock or output faults revoke the live instance. Every restart needs fresh wear-session confirmation; the software cannot detect that a wearable moved.</td></tr>
+        <tr><th scope="row">Recording and capture</th><td>Streaming recording and verification, checksummed finalization, durable file ordering, lossless incident evidence and a pinned analyzer capture/finalization workflow. Shutdown and delayed-I/O repairs preserve evidence instead of silently treating faults as successful completion.</td></tr>
+        <tr><th scope="row">Physical experiments</th><td>A finite one-hand pilot and physical-study plan, seal and score commands. Insufficient contacts and clipped truth windows fail admission. Synthetic test results never claim that hardware or human typing succeeded.</td></tr>
+        <tr><th scope="row">Build and handoff</th><td>Pinned Bazel and Zephyr builds, regression coverage, source provenance, assembly instructions, power constraints, a first-build roadmap and retained validation logs, binaries, source bundles and audit reports.</td></tr>
+      </tbody>
+    </table>
+    <p class="scope">The product boundary is unchanged: 28 enabled outputs, A–Z plus Space and Backspace, on a 34-position physical layout. Six positions emit nothing. There is no language model, and a regular keyboard is setup equipment rather than part of invisible typing. The application is independently written under the no-artifact-reuse policy.</p>
+  </section>
+
+  <section id="proof" aria-labelledby="proof-heading">
+    <h2 id="proof-heading">What the verification actually proved</h2>
+    <table>
+      <caption>Accepted results for the frozen v13 source. All accepted software validation ran inside Crabbox.</caption>
+      <thead><tr><th scope="col">Check</th><th scope="col">Observed result</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Nonmanual suite</th><td>40 of 40 targets passed, including Clippy, Rustfmt and native C conformance.</td></tr>
+        <tr><th scope="row">Durability</th><td>Three consecutive uncached syscall-durability passes on the same source and binaries. No durability assertion or application deadline was relaxed.</td></tr>
+        <tr><th scope="row">Linux output</th><td>All six required nonroot checks passed against a real uinput device. They covered 10,000 tap pairs, the enabled key set, held-key behavior and process shutdown.</td></tr>
+        <tr><th scope="row">Terminal and finalization</th><td>All nine required PTY and post-footer ptrace checks passed.</td></tr>
+        <tr><th scope="row">Capture stack</th><td>All 20 cases passed: 18 timing-sensitive process/finalizer cases ran natively, and two pinned x86 binary cases ran in the guest. The two sets exactly cover the discovered suite.</td></tr>
+        <tr><th scope="row">Full-size processing</th><td>The reducer scanned all 14,440,000,000 bytes and correctly rejected the fixture's stale hash. This establishes the streaming rejection path, not a valid physical capture.</td></tr>
+        <tr><th scope="row">C sanitizers</th><td>All four portable C targets passed with AddressSanitizer and UndefinedBehaviorSanitizer, with no runtime-error diagnostics.</td></tr>
+        <tr><th scope="row">Firmware builds</th><td>Both hands produced ELF, HEX and UF2 images with provenance. No physical controller executed these images.</td></tr>
+        <tr><th scope="row">Actual applications</th><td>The built CLI and real Chrome exercised replay, timeout recovery, study admission, cue acknowledgments, retries and stale or invalid browser receipts.</td></tr>
+        <tr><th scope="row">Independent review</th><td>Two consecutive independent completion audits found no material source or evidence defects in the final deliverable.</td></tr>
+      </tbody>
+    </table>
+    <p class="notes">These checks establish software behavior under the recorded conditions. They do not establish useful sensor signals, real cue perception, typing accuracy, comfort or safe wear. No physical controller, IMU, analyzer or wearable was attached or flashed.</p>
+    <details>
+      <summary>Execution limits and process disclosure</summary>
+      <p>The full x86-emulated capture run missed the unchanged 10 ms polling limit. The timing-sensitive cases then passed natively in the same Crabbox. Binary identity and loadability checks stayed on x86. No production code or assertion changed to make this partition pass.</p>
+      <p>The browser run included synthetic fault injection. Its proxy rewrote Origin, so it does not prove direct Origin rejection, pixel paint, occlusion or physical sensor truth. Successful process-kill cleanup also does not establish a 250 ms all-up guarantee for SIGKILL.</p>
+      <p>One reviewer ran a host-side manifest comparison against the sandbox-only rule. That result was withdrawn and excluded. The accepted source comparisons ran inside Crabbox.</p>
+    </details>
+  </section>
+
+  <section id="remaining" aria-labelledby="remaining-heading">
+    <h2 id="remaining-heading">Remaining work</h2>
+    <p>The open work requires real parts, measurements and human use. Those experiments may require firmware, decoder or hardware changes. Passing the software checks does not guarantee that the sensing approach will work.</p>
+    <ol class="gates" style="margin-top: 24px">
+      <li>
+        <h3>Qualify the parts and assemble the wired rig</h3>
+        <p>Check the exact boards, wiring, power envelope, thermal behavior and wear conditions against the assembly contract. Keep <code>PWR_LINK</code> open until the specified checks permit connection.</p>
+        <p class="criterion">Required evidence: accepted parts, harness and power/wear measurements for Gates A, B and E.</p>
+      </li>
+      <li>
+        <h3>Measure the actual acquisition path</h3>
+        <p>Flash and read back the controllers, then measure sensor registers, interrupt edges, I2C, USB delivery, capture markers, quiesce and idle-tail behavior. Run the sustained analyzer capture.</p>
+        <p class="criterion">Required evidence: a physical Gate 0A capture that satisfies the timing and integrity contract.</p>
+      </li>
+      <li>
+        <h3>Commission the sensor axes and run the pilot</h3>
+        <p>Record real six-face axis poses and complete the finite nine-attempt one-hand pilot. A failure is a stop decision, not permission to relabel or relax the evidence.</p>
+        <p class="criterion">Required evidence: bound axis characterization and an admissible pilot result from the actual rig.</p>
+      </li>
+      <li>
+        <h3>Prove that the positions are distinguishable</h3>
+        <p>Measure contact and acting-finger detection, then test all 34 positions with the 28-output policy. Hold out data for validation. Test remounts, surfaces, people and ordinary movement without treating training performance as proof.</p>
+        <p class="criterion">The central unresolved question is whether several keys assigned to the same finger remain distinguishable after remounting and during ordinary motion.</p>
+      </li>
+      <li>
+        <h3>Prove usable and safe typing</h3>
+        <p>Test real application focus, input methods, suspend and disconnect behavior. Then measure live text entry, speed, error rate, comfort and safety.</p>
+        <p class="criterion">Required evidence: the real-host gate and physical use-study gates. Kernel event tests alone do not establish these outcomes.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section id="next" aria-labelledby="next-heading">
+    <h2 id="next-heading">The next concrete step</h2>
+    <p>Build the one-hand wired measurement rig in the first-build roadmap:</p>
+    <ul class="parts">
+      <li>One Seeed Studio XIAO nRF52840 Plus controller.</li>
+      <li>One Adafruit TCA9548A I2C multiplexer.</li>
+      <li>Six identical Adafruit LSM6DS3TR-C IMU breakouts.</li>
+      <li>One IMU per finger and one on the back of the hand, with six direct data-ready lines.</li>
+    </ul>
+    <p class="notes">Complete parts and power qualification before connecting the gated power link, then follow bring-up, axis commissioning and the finite pilot. Defer BLE, batteries, custom PCBs and a consumer enclosure until the physical evidence supports continuing.</p>
+  </section>
+
+  <footer>
+    <p>The full validation report and retained evidence accompany the source. The completed verification environment, including its nested VM, was removed after evidence collection.</p>
+    <p>The v13 verification manifest identifies 146 source, test, build, configuration and documentation files. This delivery explanation was written afterward and does not change the tested implementation.</p>
+    <p>Frozen source manifest SHA-256:<code class="identity">5b6c2109e0a521d3470f895b87f8d4b9667e8a3c72da3fdd510ab234ffa478e6</code></p>
+  </footer>
+</main>
+</body>
+</html>

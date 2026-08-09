@@ -1,0 +1,299 @@
+OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //:gate0a-capture-stack-test (1 packages loaded)
+Analyzing: target //:gate0a-capture-stack-test (5 packages loaded, 6 targets configured)
+Analyzing: target //:gate0a-capture-stack-test (5 packages loaded, 6 targets configured)
+
+Analyzing: target //:gate0a-capture-stack-test (14 packages loaded, 8 targets configured)
+
+Analyzing: target //:gate0a-capture-stack-test (63 packages loaded, 13 targets configured)
+
+Analyzing: target //:gate0a-capture-stack-test (83 packages loaded, 404 targets configured)
+
+Analyzing: target //:gate0a-capture-stack-test (86 packages loaded, 1026 targets configured)
+
+INFO: Analyzed target //:gate0a-capture-stack-test (86 packages loaded, 1026 targets configured).
+FAIL: //:gate0a-capture-stack-test (Exit 1) (see /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/execroot/_main/bazel-out/aarch64-fastbuild/testlogs/gate0a-capture-stack-test/test.log)
+INFO: From Testing //:gate0a-capture-stack-test:
+==================== Test output for //:gate0a-capture-stack-test:
+test_analyzer_failure_aborts_recorder_and_suppresses_publication (__main__.CaptureContractTests) ... ERROR
+test_chunk_jump_beyond_stop_window_suppresses_publication (__main__.CaptureContractTests) ... ERROR
+test_invalid_final_analyzer_log_never_authorizes_a_recorder_footer (__main__.CaptureContractTests) ... test_production_wrapper_invocation_publishes_one_complete_set (__main__.CaptureContractTests) ... ERROR
+test_publication_rolls_back_finals_and_keeps_all_partials (__main__.CaptureContractTests) ... ok
+test_readiness_after_the_boot_window_suppresses_publication (__main__.CaptureContractTests) ... ERROR
+test_readiness_at_the_boot_window_boundary_preserves_the_full_capture (__main__.CaptureContractTests) ... ERROR
+test_readiness_requires_one_byte_followed_by_eof (__main__.CaptureContractTests) ... ERROR
+test_recorder_failure_aborts_analyzer_and_suppresses_publication (__main__.CaptureContractTests) ... ERROR
+test_recorder_log_quota_aborts_both_children (__main__.CaptureContractTests) ... ERROR
+test_signal_aborts_both_children_without_publication (__main__.CaptureContractTests) ... ERROR
+test_crabbox_finalizer_hashes_large_inputs_and_resists_scorer_replacement (__main__.FinalizationContractTests) ... ERROR
+test_final_sidecar_and_report_publish_as_a_pair (__main__.FinalizationContractTests) ... ok
+test_finalizer_rejects_a_distinct_scorer_identity (__main__.FinalizationContractTests) ... ERROR
+test_log_binds_driver_stop_session_manifest_and_firmware (__main__.FinalizationContractTests) ... ok
+test_scorer_failure_is_fail_closed (__main__.FinalizationContractTests) ... ok
+test_scorer_stderr_quota_is_fail_closed (__main__.FinalizationContractTests) ... ok
+test_bazel_build_entrypoint_resolves_declared_inputs (__main__.StaticCaptureStackContractTests) ... ok
+
+======================================================================
+ERROR: test_analyzer_failure_aborts_recorder_and_suppresses_publication (__main__.CaptureContractTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 686, in test_analyzer_failure_aborts_recorder_and_suppresses_publication
+    self.assert_failed_pair("analyzer-failure", "success", "status 7")
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 647, in assert_failed_pair
+    arguments, output = wrapper_arguments(
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 554, in wrapper_arguments
+    str(firmware_bundle()),
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 530, in firmware_bundle
+    return required_external_file(os.environ, FIRMWARE_BUNDLE_ENV)
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 75, in required_external_file
+    raise RuntimeError(
+RuntimeError: IKB_GATE0A_TEST_FIRMWARE_BUNDLE is required; invoke this manual target with Bazel --test_env
+
+======================================================================
+ERROR: test_chunk_jump_beyond_stop_window_suppresses_publication (__main__.CaptureContractTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 683, in test_chunk_jump_beyond_stop_window_suppresses_publication
+    self.assert_failed_pair("jump", "success", "stop window ends")
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 647, in assert_failed_pair
+    arguments, output = wrapper_arguments(
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 554, in wrapper_arguments
+    str(firmware_bundle()),
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 530, in firmware_bundle
+    return required_external_file(os.environ, FIRMWARE_BUNDLE_ENV)
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 75, in required_external_file
+    raise RuntimeError(
+RuntimeError: IKB_GATE0A_TEST_FIRMWARE_BUNDLE is required; invoke this manual target with Bazel --test_env
+
+======================================================================
+ERROR: test_invalid_final_analyzer_log_never_authorizes_a_recorder_footer (__main__.CaptureContractTests) (log_fault='missing-receipt')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 680, in test_invalid_final_analyzer_log_never_authorizes_a_recorder_footer
+    self.assert_failed_pair("success", "success", message, log_fault=log_fault)
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 647, in assert_failed_pair
+    arguments, output = wrapper_arguments(
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 554, in wrapper_arguments
+    str(firmware_bundle()),
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 530, in firmware_bundle
+    return required_external_file(os.environ, FIRMWARE_BUNDLE_ENV)
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 75, in required_external_file
+    raise RuntimeError(
+RuntimeError: IKB_GATE0A_TEST_FIRMWARE_BUNDLE is required; invoke this manual target with Bazel --test_env
+
+======================================================================
+ERROR: test_invalid_final_analyzer_log_never_authorizes_a_recorder_footer (__main__.CaptureContractTests) (log_fault='duplicate-receipt')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 680, in test_invalid_final_analyzer_log_never_authorizes_a_recorder_footer
+    self.assert_failed_pair("success", "success", message, log_fault=log_fault)
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 647, in assert_failed_pair
+    arguments, output = wrapper_arguments(
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 554, in wrapper_arguments
+    str(firmware_bundle()),
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 530, in firmware_bundle
+    return required_external_file(os.environ, FIRMWARE_BUNDLE_ENV)
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 75, in required_external_file
+    raise RuntimeError(
+RuntimeError: IKB_GATE0A_TEST_FIRMWARE_BUNDLE is required; invoke this manual target with Bazel --test_env
+
+======================================================================
+ERROR: test_invalid_final_analyzer_log_never_authorizes_a_recorder_footer (__main__.CaptureContractTests) (log_fault='failure-marker')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 680, in test_invalid_final_analyzer_log_never_authorizes_a_recorder_footer
+    self.assert_failed_pair("success", "success", message, log_fault=log_fault)
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 647, in assert_failed_pair
+    arguments, output = wrapper_arguments(
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 554, in wrapper_arguments
+    str(firmware_bundle()),
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 530, in firmware_bundle
+    return required_external_file(os.environ, FIRMWARE_BUNDLE_ENV)
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 75, in required_external_file
+    raise RuntimeError(
+RuntimeError: IKB_GATE0A_TEST_FIRMWARE_BUNDLE is required; invoke this manual target with Bazel --test_env
+
+======================================================================
+ERROR: test_invalid_final_analyzer_log_never_authorizes_a_recorder_footer (__main__.CaptureContractTests) (log_fault='firmware-open-count')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 680, in test_invalid_final_analyzer_log_never_authorizes_a_recorder_footer
+    self.assert_failed_pair("success", "success", message, log_fault=log_fault)
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 647, in assert_failed_pair
+    arguments, output = wrapper_arguments(
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 554, in wrapper_arguments
+    str(firmware_bundle()),
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 530, in firmware_bundle
+    return required_external_file(os.environ, FIRMWARE_BUNDLE_ENV)
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 75, in required_external_file
+    raise RuntimeError(
+RuntimeError: IKB_GATE0A_TEST_FIRMWARE_BUNDLE is required; invoke this manual target with Bazel --test_env
+
+======================================================================
+ERROR: test_invalid_final_analyzer_log_never_authorizes_a_recorder_footer (__main__.CaptureContractTests) (log_fault='final-log-overflow')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 680, in test_invalid_final_analyzer_log_never_authorizes_a_recorder_footer
+    self.assert_failed_pair("success", "success", message, log_fault=log_fault)
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 647, in assert_failed_pair
+    arguments, output = wrapper_arguments(
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 554, in wrapper_arguments
+    str(firmware_bundle()),
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 530, in firmware_bundle
+    return required_external_file(os.environ, FIRMWARE_BUNDLE_ENV)
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 75, in required_external_file
+    raise RuntimeError(
+RuntimeError: IKB_GATE0A_TEST_FIRMWARE_BUNDLE is required; invoke this manual target with Bazel --test_env
+
+======================================================================
+ERROR: test_production_wrapper_invocation_publishes_one_complete_set (__main__.CaptureContractTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 605, in test_production_wrapper_invocation_publishes_one_complete_set
+    arguments, output = wrapper_arguments(
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 554, in wrapper_arguments
+    str(firmware_bundle()),
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 530, in firmware_bundle
+    return required_external_file(os.environ, FIRMWARE_BUNDLE_ENV)
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 75, in required_external_file
+    raise RuntimeError(
+RuntimeError: IKB_GATE0A_TEST_FIRMWARE_BUNDLE is required; invoke this manual target with Bazel --test_env
+
+======================================================================
+ERROR: test_readiness_after_the_boot_window_suppresses_publication (__main__.CaptureContractTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 695, in test_readiness_after_the_boot_window_suppresses_publication
+    self.assert_failed_pair("late-boot", "late-readiness", "boot window")
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 647, in assert_failed_pair
+    arguments, output = wrapper_arguments(
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 554, in wrapper_arguments
+    str(firmware_bundle()),
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 530, in firmware_bundle
+    return required_external_file(os.environ, FIRMWARE_BUNDLE_ENV)
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 75, in required_external_file
+    raise RuntimeError(
+RuntimeError: IKB_GATE0A_TEST_FIRMWARE_BUNDLE is required; invoke this manual target with Bazel --test_env
+
+======================================================================
+ERROR: test_readiness_at_the_boot_window_boundary_preserves_the_full_capture (__main__.CaptureContractTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 699, in test_readiness_at_the_boot_window_boundary_preserves_the_full_capture
+    arguments, output = wrapper_arguments(
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 554, in wrapper_arguments
+    str(firmware_bundle()),
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 530, in firmware_bundle
+    return required_external_file(os.environ, FIRMWARE_BUNDLE_ENV)
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 75, in required_external_file
+    raise RuntimeError(
+RuntimeError: IKB_GATE0A_TEST_FIRMWARE_BUNDLE is required; invoke this manual target with Bazel --test_env
+
+======================================================================
+ERROR: test_readiness_requires_one_byte_followed_by_eof (__main__.CaptureContractTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 692, in test_readiness_requires_one_byte_followed_by_eof
+    self.assert_failed_pair("wait", "bad-readiness", "readiness must be exactly")
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 647, in assert_failed_pair
+    arguments, output = wrapper_arguments(
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 554, in wrapper_arguments
+    str(firmware_bundle()),
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 530, in firmware_bundle
+    return required_external_file(os.environ, FIRMWARE_BUNDLE_ENV)
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 75, in required_external_file
+    raise RuntimeError(
+RuntimeError: IKB_GATE0A_TEST_FIRMWARE_BUNDLE is required; invoke this manual target with Bazel --test_env
+
+======================================================================
+ERROR: test_recorder_failure_aborts_analyzer_and_suppresses_publication (__main__.CaptureContractTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 689, in test_recorder_failure_aborts_analyzer_and_suppresses_publication
+    self.assert_failed_pair("wait", "recorder-failure", "recorder exited with status 9")
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 647, in assert_failed_pair
+    arguments, output = wrapper_arguments(
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 554, in wrapper_arguments
+    str(firmware_bundle()),
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 530, in firmware_bundle
+    return required_external_file(os.environ, FIRMWARE_BUNDLE_ENV)
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 75, in required_external_file
+    raise RuntimeError(
+RuntimeError: IKB_GATE0A_TEST_FIRMWARE_BUNDLE is required; invoke this manual target with Bazel --test_env
+
+======================================================================
+ERROR: test_recorder_log_quota_aborts_both_children (__main__.CaptureContractTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 708, in test_recorder_log_quota_aborts_both_children
+    self.assert_failed_pair("wait", "log-overflow", "recorder log exceeded")
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 647, in assert_failed_pair
+    arguments, output = wrapper_arguments(
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 554, in wrapper_arguments
+    str(firmware_bundle()),
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 530, in firmware_bundle
+    return required_external_file(os.environ, FIRMWARE_BUNDLE_ENV)
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 75, in required_external_file
+    raise RuntimeError(
+RuntimeError: IKB_GATE0A_TEST_FIRMWARE_BUNDLE is required; invoke this manual target with Bazel --test_env
+
+======================================================================
+ERROR: test_signal_aborts_both_children_without_publication (__main__.CaptureContractTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 713, in test_signal_aborts_both_children_without_publication
+    arguments, output = wrapper_arguments(
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 554, in wrapper_arguments
+    str(firmware_bundle()),
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 530, in firmware_bundle
+    return required_external_file(os.environ, FIRMWARE_BUNDLE_ENV)
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 75, in required_external_file
+    raise RuntimeError(
+RuntimeError: IKB_GATE0A_TEST_FIRMWARE_BUNDLE is required; invoke this manual target with Bazel --test_env
+
+======================================================================
+ERROR: test_crabbox_finalizer_hashes_large_inputs_and_resists_scorer_replacement (__main__.FinalizationContractTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 795, in test_crabbox_finalizer_hashes_large_inputs_and_resists_scorer_replacement
+    arguments, output = wrapper_arguments(
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 554, in wrapper_arguments
+    str(firmware_bundle()),
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 530, in firmware_bundle
+    return required_external_file(os.environ, FIRMWARE_BUNDLE_ENV)
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 75, in required_external_file
+    raise RuntimeError(
+RuntimeError: IKB_GATE0A_TEST_FIRMWARE_BUNDLE is required; invoke this manual target with Bazel --test_env
+
+======================================================================
+ERROR: test_finalizer_rejects_a_distinct_scorer_identity (__main__.FinalizationContractTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 861, in test_finalizer_rejects_a_distinct_scorer_identity
+    arguments, output = wrapper_arguments(
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 554, in wrapper_arguments
+    str(firmware_bundle()),
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 530, in firmware_bundle
+    return required_external_file(os.environ, FIRMWARE_BUNDLE_ENV)
+  File "/home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/sandbox/processwrapper-sandbox/1/execroot/_main/bazel-out/aarch64-fastbuild/bin/gate0a-capture-stack-test.runfiles/_main/gate0a-capture-stack-test", line 75, in required_external_file
+    raise RuntimeError(
+RuntimeError: IKB_GATE0A_TEST_FIRMWARE_BUNDLE is required; invoke this manual target with Bazel --test_env
+
+----------------------------------------------------------------------
+Ran 18 tests in 0.293s
+
+FAILED (errors=16)
+================================================================================
+INFO: Found 1 test target...
+Target //:gate0a-capture-stack-test up-to-date:
+  bazel-bin/gate0a-capture-stack-test
+INFO: Elapsed time: 9.821s, Critical Path: 0.65s
+INFO: 8 processes: 7 internal, 2 processwrapper-sandbox.
+INFO: Build completed, 1 test FAILED, 8 total actions
+//:gate0a-capture-stack-test                                             FAILED in 0.5s
+  /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/execroot/_main/bazel-out/aarch64-fastbuild/testlogs/gate0a-capture-stack-test/test.log
+
+Executed 1 out of 1 test: 1 fails locally.

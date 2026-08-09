@@ -1,0 +1,169 @@
+[
+  {
+    "lane": "nonmanual",
+    "command": [
+      "bazelisk",
+      "--batch",
+      "--host_jvm_args=-Xmx2g",
+      "test",
+      "//...",
+      "--build_tests_only",
+      "--nocache_test_results",
+      "--test_output=all",
+      "--jobs=1",
+      "--local_resources=memory=3072"
+    ],
+    "started_utc": "2026-10-11T10:11:04.976017+00:00",
+    "finished_utc": "2026-10-11T10:47:05.569319+00:00",
+    "exit_code": 0
+  },
+  {
+    "lane": "durability-1",
+    "command": [
+      "bazelisk",
+      "--batch",
+      "--host_jvm_args=-Xmx2g",
+      "test",
+      "//:live-durability-syscall-test",
+      "--nocache_test_results",
+      "--test_output=all",
+      "--jobs=1",
+      "--local_resources=memory=3072"
+    ],
+    "started_utc": "2026-10-11T10:47:05.584750+00:00",
+    "finished_utc": "2026-10-11T10:48:02.877792+00:00",
+    "exit_code": 0
+  },
+  {
+    "lane": "durability-2",
+    "command": [
+      "bazelisk",
+      "--batch",
+      "--host_jvm_args=-Xmx2g",
+      "test",
+      "//:live-durability-syscall-test",
+      "--nocache_test_results",
+      "--test_output=all",
+      "--jobs=1",
+      "--local_resources=memory=3072"
+    ],
+    "started_utc": "2026-10-11T10:48:03.389153+00:00",
+    "finished_utc": "2026-10-11T10:48:59.775561+00:00",
+    "exit_code": 0
+  },
+  {
+    "lane": "durability-3",
+    "command": [
+      "bazelisk",
+      "--batch",
+      "--host_jvm_args=-Xmx2g",
+      "test",
+      "//:live-durability-syscall-test",
+      "--nocache_test_results",
+      "--test_output=all",
+      "--jobs=1",
+      "--local_resources=memory=3072"
+    ],
+    "started_utc": "2026-10-11T10:49:00.158306+00:00",
+    "finished_utc": "2026-10-11T10:49:56.875498+00:00",
+    "exit_code": 0
+  },
+  {
+    "lane": "application-smoke",
+    "command": [
+      "python3",
+      "/home/ubuntu/ikb-after-smoke.py",
+      "/home/ubuntu/work/cbx_42955e8aa2c5/invisible_keyboard",
+      "/home/ubuntu/continuation-proof-native-v13/application-smoke"
+    ],
+    "started_utc": "2026-10-11T10:49:57.277239+00:00",
+    "finished_utc": "2026-10-11T10:51:33.891239+00:00",
+    "exit_code": 0
+  },
+  {
+    "lane": "browser",
+    "command": [
+      "bazelisk",
+      "--batch",
+      "--host_jvm_args=-Xmx2g",
+      "test",
+      "//:calibration-browser-receipt-test",
+      "--nocache_test_results",
+      "--test_output=all",
+      "--jobs=1",
+      "--local_resources=memory=3072",
+      "--test_env=PATH",
+      "--test_env=AGENT_BROWSER_BIN",
+      "--test_env=AGENT_BROWSER_EXECUTABLE_PATH"
+    ],
+    "started_utc": "2026-10-11T10:51:33.892733+00:00",
+    "finished_utc": "2026-10-11T10:51:59.009128+00:00",
+    "exit_code": 0
+  },
+  {
+    "lane": "full-size-reducer",
+    "command": [
+      "bazelisk",
+      "--batch",
+      "--host_jvm_args=-Xmx2g",
+      "test",
+      "//:gate0-trace-contract-test",
+      "--nocache_test_results",
+      "--test_output=all",
+      "--jobs=1",
+      "--local_resources=memory=3072",
+      "--test_arg=--ignored",
+      "--test_arg=--exact",
+      "--test_arg=canonical_raw_scan_uses_bounded_streaming_state",
+      "--test_timeout=2400"
+    ],
+    "started_utc": "2026-10-13T01:32:33.146571+00:00",
+    "finished_utc": "2026-10-13T01:54:45.394400+00:00",
+    "exit_code": 0
+  },
+  {
+    "lane": "native-sanitizers",
+    "command": [
+      "bazelisk",
+      "--batch",
+      "--host_jvm_args=-Xmx2g",
+      "test",
+      "//:firmware-frame-conformance-test",
+      "//:firmware-acquisition-conformance-test",
+      "//firmware/zephyr:native-conformance-test",
+      "//firmware/zephyr:native-glue-conformance-test",
+      "--nocache_test_results",
+      "--test_output=all",
+      "--jobs=1",
+      "--local_resources=memory=3072",
+      "--copt=-fsanitize=address,undefined",
+      "--copt=-fno-omit-frame-pointer",
+      "--linkopt=-fsanitize=address,undefined"
+    ],
+    "started_utc": "2026-10-13T01:54:45.395201+00:00",
+    "finished_utc": "2026-10-13T01:55:15.714815+00:00",
+    "exit_code": 0
+  },
+  {
+    "lane": "capture-stack-processes",
+    "command": [
+      "bazelisk",
+      "--batch",
+      "--host_jvm_args=-Xmx2g",
+      "test",
+      "//:gate0a-capture-stack-test",
+      "--nocache_test_results",
+      "--test_output=all",
+      "--jobs=1",
+      "--local_resources=memory=3072",
+      "--test_arg=CaptureContractTests",
+      "--test_arg=FinalizationContractTests",
+      "--test_arg=StaticCaptureStackContractTests",
+      "--test_env=IKB_GATE0A_TEST_FIRMWARE_BUNDLE=/home/ubuntu/gate0a-dslogic-plus-firmware-v3.tar",
+      "--test_timeout=3600"
+    ],
+    "started_utc": "2026-10-13T03:06:08.930674+00:00",
+    "finished_utc": "2026-10-13T03:06:36.279559+00:00",
+    "exit_code": 0
+  }
+]

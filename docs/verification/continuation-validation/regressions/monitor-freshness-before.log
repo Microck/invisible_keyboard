@@ -1,0 +1,74 @@
+OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Loading: 0 packages loaded
+    currently loading: 
+Analyzing: target //:unit-tests (1 packages loaded)
+Analyzing: target //:unit-tests (5 packages loaded, 6 targets configured)
+Analyzing: target //:unit-tests (5 packages loaded, 6 targets configured)
+
+Analyzing: target //:unit-tests (15 packages loaded, 9 targets configured)
+
+Analyzing: target //:unit-tests (62 packages loaded, 9 targets configured)
+
+Analyzing: target //:unit-tests (82 packages loaded, 182 targets configured)
+
+Analyzing: target //:unit-tests (108 packages loaded, 880 targets configured)
+
+Analyzing: target //:unit-tests (126 packages loaded, 1697 targets configured)
+
+Analyzing: target //:unit-tests (154 packages loaded, 3209 targets configured)
+
+Analyzing: target //:unit-tests (183 packages loaded, 4636 targets configured)
+
+Analyzing: target //:unit-tests (203 packages loaded, 5396 targets configured)
+
+INFO: Analyzed target //:unit-tests (206 packages loaded, 5414 targets configured).
+[126 / 424] checking cached actions
+[422 / 424] [Prepa] Compiling Rust bin unit-tests (35 files)
+[422 / 424] Compiling Rust bin unit-tests (35 files); 1s processwrapper-sandbox
+[422 / 424] Compiling Rust bin unit-tests (35 files); 10s processwrapper-sandbox
+INFO: From Compiling Rust bin unit-tests (35 files):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+[423 / 424] [Prepa] runfiles for //:unit-tests
+FAIL: //:unit-tests (Exit 101) (see /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/execroot/_main/bazel-out/aarch64-fastbuild/testlogs/unit-tests/test.log)
+INFO: From Testing //:unit-tests:
+==================== Test output for //:unit-tests:
+
+running 1 test
+test hardware_calibration::tests::fitting_and_heldout_monitors_reject_acquisition_faults_and_keep_both_incidents ... FAILED
+
+failures:
+
+---- hardware_calibration::tests::fitting_and_heldout_monitors_reject_acquisition_faults_and_keep_both_incidents stdout ----
+
+thread 'hardware_calibration::tests::fitting_and_heldout_monitors_reject_acquisition_faults_and_keep_both_incidents' (75726) panicked at src/hardware_calibration.rs:3559:26:
+the monitor must reject bad completed frames before merge release: ()
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+thread '<unnamed>' (75736) panicked at src/hardware_calibration.rs:3761:25:
+called `Result::unwrap()` on an `Err` value: RecvError
+
+
+failures:
+    hardware_calibration::tests::fitting_and_heldout_monitors_reject_acquisition_faults_and_keep_both_incidents
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 57 filtered out; finished in 0.49s
+
+================================================================================
+INFO: Found 1 test target...
+Target //:unit-tests up-to-date:
+  bazel-bin/unit-tests
+INFO: Elapsed time: 30.927s, Critical Path: 13.17s
+INFO: 4 processes: 421 action cache hit, 2 internal, 3 processwrapper-sandbox.
+INFO: Build completed, 1 test FAILED, 4 total actions
+//:unit-tests                                                            FAILED in 0.5s
+  /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/execroot/_main/bazel-out/aarch64-fastbuild/testlogs/unit-tests/test.log
+
+Executed 1 out of 1 test: 1 fails locally.

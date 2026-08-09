@@ -1,0 +1,5 @@
+{
+  "baseline_manifest_sha256": "a5675d1a9269009ddbb97eafa44adae5bc2c0c2912b55c251d3a2fdb6ebce78b",
+  "production_matches_frozen_baseline": true,
+  "test_overlay_sha256": "3b5c2fca68b5ae444c4c239c22853cf174e2e03e09f7e7a05c722b4b50163474"
+}

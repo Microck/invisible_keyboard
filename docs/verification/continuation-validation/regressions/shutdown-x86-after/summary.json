@@ -1,0 +1,16 @@
+{
+  "mode": "x86",
+  "command": [
+    "bazelisk",
+    "--batch",
+    "--host_jvm_args=-Xmx2g",
+    "test",
+    "//:output-system-required-test",
+    "--nocache_test_results",
+    "--test_output=all",
+    "--jobs=2",
+    "--local_resources=memory=3072"
+  ],
+  "exit_code": 0,
+  "test_binary_sha256": "1245825b10a25c83e3d8e29dd9df8286349f7c1bd9e9858de68da0c9351791ea"
+}

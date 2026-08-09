@@ -1,0 +1,877 @@
+{
+  "schema": "invisible-keyboard-continuation-validation-v1",
+  "collected_utc": "2026-10-13T03:09:51.909566+00:00",
+  "crabbox_id": "cbx_42955e8aa2c5",
+  "provider": "external Docker; x86-64 capability VM runs under QEMU inside the same ARM64 Crabbox",
+  "source_manifest_sha256": "5b6c2109e0a521d3470f895b87f8d4b9667e8a3c72da3fdd510ab234ffa478e6",
+  "source_file_count": 146,
+  "source_identical_before_after_and_across_platforms": true,
+  "nonmanual_target_count": 40,
+  "uncached_test_results": true,
+  "lanes": [
+    {
+      "lane": "nonmanual",
+      "command": [
+        "bazelisk",
+        "--batch",
+        "--host_jvm_args=-Xmx2g",
+        "test",
+        "//...",
+        "--build_tests_only",
+        "--nocache_test_results",
+        "--test_output=all",
+        "--jobs=1",
+        "--local_resources=memory=3072"
+      ],
+      "started_utc": "2026-10-11T10:11:04.976017+00:00",
+      "finished_utc": "2026-10-11T10:47:05.569319+00:00",
+      "exit_code": 0,
+      "platform": "native",
+      "log": "native/nonmanual.log"
+    },
+    {
+      "lane": "durability-1",
+      "command": [
+        "bazelisk",
+        "--batch",
+        "--host_jvm_args=-Xmx2g",
+        "test",
+        "//:live-durability-syscall-test",
+        "--nocache_test_results",
+        "--test_output=all",
+        "--jobs=1",
+        "--local_resources=memory=3072"
+      ],
+      "started_utc": "2026-10-11T10:47:05.584750+00:00",
+      "finished_utc": "2026-10-11T10:48:02.877792+00:00",
+      "exit_code": 0,
+      "platform": "native",
+      "log": "native/durability-1.log"
+    },
+    {
+      "lane": "durability-2",
+      "command": [
+        "bazelisk",
+        "--batch",
+        "--host_jvm_args=-Xmx2g",
+        "test",
+        "//:live-durability-syscall-test",
+        "--nocache_test_results",
+        "--test_output=all",
+        "--jobs=1",
+        "--local_resources=memory=3072"
+      ],
+      "started_utc": "2026-10-11T10:48:03.389153+00:00",
+      "finished_utc": "2026-10-11T10:48:59.775561+00:00",
+      "exit_code": 0,
+      "platform": "native",
+      "log": "native/durability-2.log"
+    },
+    {
+      "lane": "durability-3",
+      "command": [
+        "bazelisk",
+        "--batch",
+        "--host_jvm_args=-Xmx2g",
+        "test",
+        "//:live-durability-syscall-test",
+        "--nocache_test_results",
+        "--test_output=all",
+        "--jobs=1",
+        "--local_resources=memory=3072"
+      ],
+      "started_utc": "2026-10-11T10:49:00.158306+00:00",
+      "finished_utc": "2026-10-11T10:49:56.875498+00:00",
+      "exit_code": 0,
+      "platform": "native",
+      "log": "native/durability-3.log"
+    },
+    {
+      "lane": "application-smoke",
+      "command": [
+        "python3",
+        "/home/ubuntu/ikb-after-smoke.py",
+        "/home/ubuntu/work/cbx_42955e8aa2c5/invisible_keyboard",
+        "/home/ubuntu/continuation-proof-native-v13/application-smoke"
+      ],
+      "started_utc": "2026-10-11T10:49:57.277239+00:00",
+      "finished_utc": "2026-10-11T10:51:33.891239+00:00",
+      "exit_code": 0,
+      "platform": "native",
+      "log": "native/application-smoke.log"
+    },
+    {
+      "lane": "browser",
+      "command": [
+        "bazelisk",
+        "--batch",
+        "--host_jvm_args=-Xmx2g",
+        "test",
+        "//:calibration-browser-receipt-test",
+        "--nocache_test_results",
+        "--test_output=all",
+        "--jobs=1",
+        "--local_resources=memory=3072",
+        "--test_env=PATH",
+        "--test_env=AGENT_BROWSER_BIN",
+        "--test_env=AGENT_BROWSER_EXECUTABLE_PATH"
+      ],
+      "started_utc": "2026-10-11T10:51:33.892733+00:00",
+      "finished_utc": "2026-10-11T10:51:59.009128+00:00",
+      "exit_code": 0,
+      "platform": "native",
+      "log": "native/browser.log"
+    },
+    {
+      "lane": "full-size-reducer",
+      "command": [
+        "bazelisk",
+        "--batch",
+        "--host_jvm_args=-Xmx2g",
+        "test",
+        "//:gate0-trace-contract-test",
+        "--nocache_test_results",
+        "--test_output=all",
+        "--jobs=1",
+        "--local_resources=memory=3072",
+        "--test_arg=--ignored",
+        "--test_arg=--exact",
+        "--test_arg=canonical_raw_scan_uses_bounded_streaming_state",
+        "--test_timeout=2400"
+      ],
+      "started_utc": "2026-10-13T01:32:33.146571+00:00",
+      "finished_utc": "2026-10-13T01:54:45.394400+00:00",
+      "exit_code": 0,
+      "platform": "native",
+      "log": "native/full-size-reducer.log"
+    },
+    {
+      "lane": "native-sanitizers",
+      "command": [
+        "bazelisk",
+        "--batch",
+        "--host_jvm_args=-Xmx2g",
+        "test",
+        "//:firmware-frame-conformance-test",
+        "//:firmware-acquisition-conformance-test",
+        "//firmware/zephyr:native-conformance-test",
+        "//firmware/zephyr:native-glue-conformance-test",
+        "--nocache_test_results",
+        "--test_output=all",
+        "--jobs=1",
+        "--local_resources=memory=3072",
+        "--copt=-fsanitize=address,undefined",
+        "--copt=-fno-omit-frame-pointer",
+        "--linkopt=-fsanitize=address,undefined"
+      ],
+      "started_utc": "2026-10-13T01:54:45.395201+00:00",
+      "finished_utc": "2026-10-13T01:55:15.714815+00:00",
+      "exit_code": 0,
+      "platform": "native",
+      "log": "native/native-sanitizers.log"
+    },
+    {
+      "lane": "capture-stack-processes",
+      "command": [
+        "bazelisk",
+        "--batch",
+        "--host_jvm_args=-Xmx2g",
+        "test",
+        "//:gate0a-capture-stack-test",
+        "--nocache_test_results",
+        "--test_output=all",
+        "--jobs=1",
+        "--local_resources=memory=3072",
+        "--test_arg=CaptureContractTests",
+        "--test_arg=FinalizationContractTests",
+        "--test_arg=StaticCaptureStackContractTests",
+        "--test_env=IKB_GATE0A_TEST_FIRMWARE_BUNDLE=/home/ubuntu/gate0a-dslogic-plus-firmware-v3.tar",
+        "--test_timeout=3600"
+      ],
+      "started_utc": "2026-10-13T03:06:08.930674+00:00",
+      "finished_utc": "2026-10-13T03:06:36.279559+00:00",
+      "exit_code": 0,
+      "platform": "native",
+      "log": "native/capture-stack-processes.log"
+    },
+    {
+      "lane": "required-output",
+      "command": [
+        "bazelisk",
+        "--host_jvm_args=-Xmx2g",
+        "test",
+        "//:output-system-required-test",
+        "--nocache_test_results",
+        "--test_output=all",
+        "--jobs=2",
+        "--local_resources=memory=3072"
+      ],
+      "started_utc": "2026-10-13T01:34:28.116449+00:00",
+      "finished_utc": "2026-10-13T01:48:47.485340+00:00",
+      "exit_code": 0,
+      "platform": "x86",
+      "log": "x86/required-output.log"
+    },
+    {
+      "lane": "x86-tty-and-footer",
+      "command": [
+        "bazelisk",
+        "--host_jvm_args=-Xmx2g",
+        "test",
+        "//:cli-contract-test",
+        "--nocache_test_results",
+        "--test_output=all",
+        "--jobs=2",
+        "--local_resources=memory=3072",
+        "--test_arg=gate0_quiesce_cli_contract::"
+      ],
+      "started_utc": "2026-10-13T01:48:47.729498+00:00",
+      "finished_utc": "2026-10-13T01:53:45.759104+00:00",
+      "exit_code": 0,
+      "platform": "x86",
+      "log": "x86/x86-tty-and-footer.log"
+    },
+    {
+      "lane": "selected-board-firmware",
+      "command": [
+        "bazelisk",
+        "--host_jvm_args=-Xmx2g",
+        "build",
+        "//firmware/zephyr:firmware",
+        "--jobs=2",
+        "--local_resources=memory=3072",
+        "--action_env=CMAKE_BUILD_PARALLEL_LEVEL=2",
+        "--action_env=HOME=/home/tester"
+      ],
+      "started_utc": "2026-10-13T01:53:45.979285+00:00",
+      "finished_utc": "2026-10-13T02:45:20.393190+00:00",
+      "exit_code": 0,
+      "platform": "x86",
+      "log": "x86/selected-board-firmware.log"
+    },
+    {
+      "lane": "capture-stack-binary",
+      "command": [
+        "bazelisk",
+        "--host_jvm_args=-Xmx2g",
+        "test",
+        "//:gate0a-capture-stack-test",
+        "--nocache_test_results",
+        "--test_output=all",
+        "--jobs=2",
+        "--local_resources=memory=3072",
+        "--test_arg=RealCaptureBinaryContractTests",
+        "--test_env=IKB_GATE0A_TEST_CAPTURE_BINARY=/home/tester/gate0a-stack-build-v3/artifacts/sigrok-cli-gate0a",
+        "--test_env=IKB_GATE0A_TEST_FIRMWARE_BUNDLE=/home/tester/gate0a-stack-build-v3/artifacts/gate0a-dslogic-plus-firmware.tar",
+        "--test_timeout=3600"
+      ],
+      "started_utc": "2026-10-13T02:57:24.148394+00:00",
+      "finished_utc": "2026-10-13T02:57:53.995116+00:00",
+      "exit_code": 0,
+      "platform": "x86",
+      "log": "x86/capture-stack-binary.log"
+    }
+  ],
+  "targets": [
+    {
+      "platform": "native",
+      "lane": "nonmanual",
+      "target": "//:artifact-contract-test",
+      "junit_cases": 1,
+      "junit_sha256": "80783070b61f19d0805c04e9e8ccaed6592242490bd81a7b9a78149607ae2cd7",
+      "junit": "native/nonmanual-junit/artifact-contract-test/test.xml",
+      "inner_summaries": [
+        "test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.38s"
+      ]
+    },
+    {
+      "platform": "native",
+      "lane": "nonmanual",
+      "target": "//:calibration-app-contract-test",
+      "junit_cases": 1,
+      "junit_sha256": "b3f5c2fad6b443b818aac26d280b04a7528a1d8d3b31a6e133efe2cdf13d6b52",
+      "junit": "native/nonmanual-junit/calibration-app-contract-test/test.xml",
+      "inner_summaries": [
+        "test result: ok. 31 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 5.07s"
+      ]
+    },
+    {
+      "platform": "native",
+      "lane": "nonmanual",
+      "target": "//:calibration-capture-contract-test",
+      "junit_cases": 1,
+      "junit_sha256": "dd0bb113cc8634d08a6f147059e11f29468f9f660c37c310e107169163b0efd0",
+      "junit": "native/nonmanual-junit/calibration-capture-contract-test/test.xml",
+      "inner_summaries": [
+        "test result: ok. 18 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 2.99s"
+      ]
+    },
+    {
+      "platform": "native",
+      "lane": "nonmanual",
+      "target": "//:calibration-contract-test",
+      "junit_cases": 1,
+      "junit_sha256": "03ce9147d6da8921118c9e41f4002a07e037d318a764bf32e7bea58e0f3b75d0",
+      "junit": "native/nonmanual-junit/calibration-contract-test/test.xml",
+      "inner_summaries": [
+        "test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s"
+      ]
+    },
+    {
+      "platform": "native",
+      "lane": "nonmanual",
+      "target": "//:calibration-engine-contract-test",
+      "junit_cases": 1,
+      "junit_sha256": "fd750b21bcf6725adb70a0a5994e6be8e85dc6f10ea0ad3d296380916d1e2771",
+      "junit": "native/nonmanual-junit/calibration-engine-contract-test/test.xml",
+      "inner_summaries": [
+        "test result: ok. 29 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1032.51s"
+      ]
+    },
+    {
+      "platform": "native",
+      "lane": "nonmanual",
+      "target": "//:calibration-worker-contract-test",
+      "junit_cases": 1,
+      "junit_sha256": "577a5aab094ce27565cf6132007f0f594811df06672455f44c85b0af7fd30ec9",
+      "junit": "native/nonmanual-junit/calibration-worker-contract-test/test.xml",
+      "inner_summaries": [
+        "test result: ok. 16 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 29.39s"
+      ]
+    },
+    {
+      "platform": "native",
+      "lane": "nonmanual",
+      "target": "//:cli-contract-test",
+      "junit_cases": 1,
+      "junit_sha256": "c526b4d73c76458f7d5f4dbbc1a1f1b0a2ae67b1cc84cdc4e2922acfe12c3e71",
+      "junit": "native/nonmanual-junit/cli-contract-test/test.xml",
+      "inner_summaries": [
+        "test result: ok. 76 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 573.44s"
+      ]
+    },
+    {
+      "platform": "native",
+      "lane": "nonmanual",
+      "target": "//:cli-unit-tests",
+      "junit_cases": 1,
+      "junit_sha256": "3541d0542f68884d9aee23b91c5b501fb72b17f44ea40ddeee5dc851b2aa726c",
+      "junit": "native/nonmanual-junit/cli-unit-tests/test.xml",
+      "inner_summaries": [
+        "test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s"
+      ]
+    },
+    {
+      "platform": "native",
+      "lane": "nonmanual",
+      "target": "//:clippy-test",
+      "junit_cases": 1,
+      "junit_sha256": "2f5fcb92bca7065bb274e51ac5343fd5cbed7bc09ec72f448e75d6e711e36cf2",
+      "junit": "native/nonmanual-junit/clippy-test/test.xml",
+      "inner_summaries": []
+    },
+    {
+      "platform": "native",
+      "lane": "nonmanual",
+      "target": "//:clock-contract-test",
+      "junit_cases": 1,
+      "junit_sha256": "0e3f39cd8ac97e748d114114f75b62871761b99b222430fbb0272cfa5bd3a459",
+      "junit": "native/nonmanual-junit/clock-contract-test/test.xml",
+      "inner_summaries": [
+        "test result: ok. 13 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.08s"
+      ]
+    },
+    {
+      "platform": "native",
+      "lane": "nonmanual",
+      "target": "//:clock-epoch-contract-test",
+      "junit_cases": 1,
+      "junit_sha256": "822f6c5eaad5ff769ff9e8cf14b454d0a2ee0da7c1851edf571ff136dfc02443",
+      "junit": "native/nonmanual-junit/clock-epoch-contract-test/test.xml",
+      "inner_summaries": [
+        "test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.22s"
+      ]
+    },
+    {
+      "platform": "native",
+      "lane": "nonmanual",
+      "target": "//:controller-source-contract-test",
+      "junit_cases": 1,
+      "junit_sha256": "aa71c9041dc16d224186b86d79cf67eaae40d5bd0e03ebddde52b97a81cd8c83",
+      "junit": "native/nonmanual-junit/controller-source-contract-test/test.xml",
+      "inner_summaries": [
+        "test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s"
+      ]
+    },
+    {
+      "platform": "native",
+      "lane": "nonmanual",
+      "target": "//:decoder-simulation-contract-test",
+      "junit_cases": 1,
+      "junit_sha256": "7922c77afeccb3617ca797e7ebb0671b7baeeafc224b62324221ee68766388ab",
+      "junit": "native/nonmanual-junit/decoder-simulation-contract-test/test.xml",
+      "inner_summaries": [
+        "test result: ok. 17 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.16s"
+      ]
+    },
+    {
+      "platform": "native",
+      "lane": "nonmanual",
+      "target": "//:device-transport-contract-test",
+      "junit_cases": 1,
+      "junit_sha256": "584616d12a19c39edf5fce0b3643b0ed30174c8f03d4589edac9de00762e8020",
+      "junit": "native/nonmanual-junit/device-transport-contract-test/test.xml",
+      "inner_summaries": [
+        "test result: ok. 19 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.03s"
+      ]
+    },
+    {
+      "platform": "native",
+      "lane": "nonmanual",
+      "target": "//:evaluation-contract-test",
+      "junit_cases": 1,
+      "junit_sha256": "968c6e762e3b4c7d4605bd73a2ba8da5be7eb4168ea3c60245b165794caa6894",
+      "junit": "native/nonmanual-junit/evaluation-contract-test/test.xml",
+      "inner_summaries": [
+        "test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 33.09s"
+      ]
+    },
+    {
+      "platform": "native",
+      "lane": "nonmanual",
+      "target": "//firmware/zephyr:native-conformance-test",
+      "junit_cases": 1,
+      "junit_sha256": "119057f30cad099cf8448cacf2d9f53efc09e8b9a90018ee679f53e2778f7d65",
+      "junit": "native/nonmanual-junit/firmware/zephyr/native-conformance-test/test.xml",
+      "inner_summaries": []
+    },
+    {
+      "platform": "native",
+      "lane": "nonmanual",
+      "target": "//firmware/zephyr:native-glue-conformance-test",
+      "junit_cases": 1,
+      "junit_sha256": "41b4515c610100f80fe68d4a88ec04131b86686a62df62fdf65b088c9b67581f",
+      "junit": "native/nonmanual-junit/firmware/zephyr/native-glue-conformance-test/test.xml",
+      "inner_summaries": []
+    },
+    {
+      "platform": "native",
+      "lane": "nonmanual",
+      "target": "//:firmware-acquisition-conformance-test",
+      "junit_cases": 1,
+      "junit_sha256": "ce631a5f728447476f6f3c99c92d50dd0e34644e81c5b1fed79a7eb547a84796",
+      "junit": "native/nonmanual-junit/firmware-acquisition-conformance-test/test.xml",
+      "inner_summaries": []
+    },
+    {
+      "platform": "native",
+      "lane": "nonmanual",
+      "target": "//:firmware-frame-conformance-test",
+      "junit_cases": 1,
+      "junit_sha256": "78bafdc1f62d568e44ce0367695e8bbe56d93db32746f71743e1873264fb1895",
+      "junit": "native/nonmanual-junit/firmware-frame-conformance-test/test.xml",
+      "inner_summaries": []
+    },
+    {
+      "platform": "native",
+      "lane": "nonmanual",
+      "target": "//:gate0-contract-test",
+      "junit_cases": 1,
+      "junit_sha256": "081362fe0c9b5ea63b78cf1b216e28be1c0eeed066dae91d8c7c6aa489a577e8",
+      "junit": "native/nonmanual-junit/gate0-contract-test/test.xml",
+      "inner_summaries": [
+        "test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s"
+      ]
+    },
+    {
+      "platform": "native",
+      "lane": "nonmanual",
+      "target": "//:gate0-trace-contract-test",
+      "junit_cases": 1,
+      "junit_sha256": "f8fb9372d26eb4d07ca5a6c8cf18a6d87aec7de7a61e76b6adce7350f50c82fb",
+      "junit": "native/nonmanual-junit/gate0-trace-contract-test/test.xml",
+      "inner_summaries": [
+        "test result: ok. 38 passed; 0 failed; 1 ignored; 0 measured; 0 filtered out; finished in 34.53s"
+      ]
+    },
+    {
+      "platform": "native",
+      "lane": "nonmanual",
+      "target": "//:hardware-calibration-contract-test",
+      "junit_cases": 1,
+      "junit_sha256": "099a34dad6cc1285325c4197d3d06b1489a5d3c416eece4f0e1587dacc7619e1",
+      "junit": "native/nonmanual-junit/hardware-calibration-contract-test/test.xml",
+      "inner_summaries": [
+        "test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.85s"
+      ]
+    },
+    {
+      "platform": "native",
+      "lane": "nonmanual",
+      "target": "//:label-contract-test",
+      "junit_cases": 1,
+      "junit_sha256": "168896e5ff1bc336c17f7ace27f328477835f4332a450af847fb707f03699558",
+      "junit": "native/nonmanual-junit/label-contract-test/test.xml",
+      "inner_summaries": [
+        "test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s"
+      ]
+    },
+    {
+      "platform": "native",
+      "lane": "nonmanual",
+      "target": "//:layout-contract-test",
+      "junit_cases": 1,
+      "junit_sha256": "11b5533f2e6bd190b391a27c9998e057b2d8133969883ced08e0e507b326df72",
+      "junit": "native/nonmanual-junit/layout-contract-test/test.xml",
+      "inner_summaries": [
+        "test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s"
+      ]
+    },
+    {
+      "platform": "native",
+      "lane": "nonmanual",
+      "target": "//:manifest-contract-test",
+      "junit_cases": 1,
+      "junit_sha256": "1e40aaaa7ec22997524745e9274374fe235897b4abfc15e3be18255911a0cec4",
+      "junit": "native/nonmanual-junit/manifest-contract-test/test.xml",
+      "inner_summaries": [
+        "test result: ok. 38 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 19.73s"
+      ]
+    },
+    {
+      "platform": "native",
+      "lane": "nonmanual",
+      "target": "//:neutral-contract-test",
+      "junit_cases": 1,
+      "junit_sha256": "e336f80bd0ab281e3a573728ea7f1698dac284f03871741514d16b733bab5c73",
+      "junit": "native/nonmanual-junit/neutral-contract-test/test.xml",
+      "inner_summaries": [
+        "test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.57s"
+      ]
+    },
+    {
+      "platform": "native",
+      "lane": "nonmanual",
+      "target": "//:output-contract-test",
+      "junit_cases": 1,
+      "junit_sha256": "db7e7e81dbd4bd7dec5a05f75261f9c492417209190d0f91ab88e2667b557246",
+      "junit": "native/nonmanual-junit/output-contract-test/test.xml",
+      "inner_summaries": [
+        "test result: ok. 14 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s"
+      ]
+    },
+    {
+      "platform": "native",
+      "lane": "nonmanual",
+      "target": "//:output-system-contract-test",
+      "junit_cases": 1,
+      "junit_sha256": "0186a27d646eea5937ee64058449bf20bb29114f993b81c4c7680289d4c535aa",
+      "junit": "native/nonmanual-junit/output-system-contract-test/test.xml",
+      "inner_summaries": [
+        "test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s"
+      ]
+    },
+    {
+      "platform": "native",
+      "lane": "nonmanual",
+      "target": "//:physical-study-contract-test",
+      "junit_cases": 1,
+      "junit_sha256": "3ba6bfef9c3b412f7c1e4948e27240a4a6c342b391c543052238b4f3d1442001",
+      "junit": "native/nonmanual-junit/physical-study-contract-test/test.xml",
+      "inner_summaries": [
+        "test result: ok. 25 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 117.68s"
+      ]
+    },
+    {
+      "platform": "native",
+      "lane": "nonmanual",
+      "target": "//:pilot-contract-test",
+      "junit_cases": 1,
+      "junit_sha256": "33f081c40cf1c259d334d75a19482f0d084b83fe534638c648b90d39bef12ed5",
+      "junit": "native/nonmanual-junit/pilot-contract-test/test.xml",
+      "inner_summaries": [
+        "test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 228.38s"
+      ]
+    },
+    {
+      "platform": "native",
+      "lane": "nonmanual",
+      "target": "//:pipeline-contract-test",
+      "junit_cases": 1,
+      "junit_sha256": "e0700aa4466150c6ed7afee0d9d56528a3a8c01899a3afca7ca6bcd5af850ab1",
+      "junit": "native/nonmanual-junit/pipeline-contract-test/test.xml",
+      "inner_summaries": [
+        "test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.09s"
+      ]
+    },
+    {
+      "platform": "native",
+      "lane": "nonmanual",
+      "target": "//:prompt-contract-test",
+      "junit_cases": 1,
+      "junit_sha256": "ccc9600871afc864a7a98973e9789f57e9403ef555bc96c91d3378f3a363e8de",
+      "junit": "native/nonmanual-junit/prompt-contract-test/test.xml",
+      "inner_summaries": [
+        "test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.25s"
+      ]
+    },
+    {
+      "platform": "native",
+      "lane": "nonmanual",
+      "target": "//:protocol-contract-test",
+      "junit_cases": 1,
+      "junit_sha256": "4a1280ddc1fa4c4eb5f96aef04873c4b187d29e161d79768aa3091c8852ff5bc",
+      "junit": "native/nonmanual-junit/protocol-contract-test/test.xml",
+      "inner_summaries": [
+        "test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s"
+      ]
+    },
+    {
+      "platform": "native",
+      "lane": "nonmanual",
+      "target": "//:replay-contract-test",
+      "junit_cases": 1,
+      "junit_sha256": "91825894f2c57086b72cf36c7681d911f4cdac1f8e63a0c84d14f27b8c4f69be",
+      "junit": "native/nonmanual-junit/replay-contract-test/test.xml",
+      "inner_summaries": [
+        "test result: ok. 55 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 47.11s"
+      ]
+    },
+    {
+      "platform": "native",
+      "lane": "nonmanual",
+      "target": "//:runtime-contract-test",
+      "junit_cases": 1,
+      "junit_sha256": "d89dbb417ea65bee503c5baa93858a8a2887f20dbb00d9b074e61ed22729f3cc",
+      "junit": "native/nonmanual-junit/runtime-contract-test/test.xml",
+      "inner_summaries": [
+        "test result: ok. 18 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.23s"
+      ]
+    },
+    {
+      "platform": "native",
+      "lane": "nonmanual",
+      "target": "//:rustfmt-test",
+      "junit_cases": 1,
+      "junit_sha256": "f0ccd2a3202e5bc5c48521ee9619ea8d80b5c46155ec079ae767e986bc13f9a1",
+      "junit": "native/nonmanual-junit/rustfmt-test/test.xml",
+      "inner_summaries": []
+    },
+    {
+      "platform": "native",
+      "lane": "nonmanual",
+      "target": "//:session-contract-test",
+      "junit_cases": 1,
+      "junit_sha256": "990cc6dc5b0c7f59f6df1d5dba428a8e31559ded5d11ec9f76cb68ea87106378",
+      "junit": "native/nonmanual-junit/session-contract-test/test.xml",
+      "inner_summaries": [
+        "test result: ok. 30 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.10s"
+      ]
+    },
+    {
+      "platform": "native",
+      "lane": "nonmanual",
+      "target": "//:transport-contract-test",
+      "junit_cases": 1,
+      "junit_sha256": "928f82ba8faef2cd50bb59d56e48879964068b931ce3980d1beebd755e5e7534",
+      "junit": "native/nonmanual-junit/transport-contract-test/test.xml",
+      "inner_summaries": [
+        "test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.03s"
+      ]
+    },
+    {
+      "platform": "native",
+      "lane": "nonmanual",
+      "target": "//:unit-tests",
+      "junit_cases": 1,
+      "junit_sha256": "6457077de424cd414fb2a5a3e937ef2e6681631746c4680c7c108f2b14fb48cd",
+      "junit": "native/nonmanual-junit/unit-tests/test.xml",
+      "inner_summaries": [
+        "test result: ok. 59 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 9.37s"
+      ]
+    },
+    {
+      "platform": "native",
+      "lane": "nonmanual",
+      "target": "//:validation-contract-test",
+      "junit_cases": 1,
+      "junit_sha256": "4028d976d8c166e8155c11ae84fd4b04fff6f42f5363dcf208cf029b46c89298",
+      "junit": "native/nonmanual-junit/validation-contract-test/test.xml",
+      "inner_summaries": [
+        "test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s"
+      ]
+    },
+    {
+      "platform": "native",
+      "lane": "durability-1",
+      "target": "//:live-durability-syscall-test",
+      "junit_cases": 1,
+      "junit_sha256": "41a6ea4dc8811341ed5a700434c47a81ebe1f5af34fc3632b225d4d90e87e002",
+      "junit": "native/durability-1-junit/live-durability-syscall-test/test.xml",
+      "inner_summaries": []
+    },
+    {
+      "platform": "native",
+      "lane": "durability-2",
+      "target": "//:live-durability-syscall-test",
+      "junit_cases": 1,
+      "junit_sha256": "af729a4b5eacffddf7a3889d203ad4b6d2a51270b0eb4b8cbc9699e85dcb83b9",
+      "junit": "native/durability-2-junit/live-durability-syscall-test/test.xml",
+      "inner_summaries": []
+    },
+    {
+      "platform": "native",
+      "lane": "durability-3",
+      "target": "//:live-durability-syscall-test",
+      "junit_cases": 1,
+      "junit_sha256": "8c8d19991bf780aecbb4550874fbea735d0116783a6949e5d3c88748f289343f",
+      "junit": "native/durability-3-junit/live-durability-syscall-test/test.xml",
+      "inner_summaries": []
+    },
+    {
+      "platform": "native",
+      "lane": "browser",
+      "target": "//:calibration-browser-receipt-test",
+      "junit_cases": 1,
+      "junit_sha256": "822167067beb25737bd186818b5209e79018236d467816a4ac494075458432f3",
+      "junit": "native/browser-junit/calibration-browser-receipt-test/test.xml",
+      "inner_summaries": []
+    },
+    {
+      "platform": "native",
+      "lane": "full-size-reducer",
+      "target": "//:gate0-trace-contract-test",
+      "junit_cases": 1,
+      "junit_sha256": "728925de66a697f7432b7e0b21ae4619f7a2a2b721906b034d4b6bc13fd2d057",
+      "junit": "native/full-size-reducer-junit/gate0-trace-contract-test/test.xml",
+      "inner_summaries": [
+        "test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 38 filtered out; finished in 1307.40s"
+      ]
+    },
+    {
+      "platform": "native",
+      "lane": "native-sanitizers",
+      "target": "//firmware/zephyr:native-conformance-test",
+      "junit_cases": 1,
+      "junit_sha256": "673d8bdd9697f1b6f785c52920e0f334d9e7299df3873ad756e94da441538d4d",
+      "junit": "native/native-sanitizers-junit/firmware/zephyr/native-conformance-test/test.xml",
+      "inner_summaries": []
+    },
+    {
+      "platform": "native",
+      "lane": "native-sanitizers",
+      "target": "//firmware/zephyr:native-glue-conformance-test",
+      "junit_cases": 1,
+      "junit_sha256": "b175eeb3d347771238b1042825fcfdd3bd10d8df1c41a6ad0bb02b9f232bf72a",
+      "junit": "native/native-sanitizers-junit/firmware/zephyr/native-glue-conformance-test/test.xml",
+      "inner_summaries": []
+    },
+    {
+      "platform": "native",
+      "lane": "native-sanitizers",
+      "target": "//:firmware-acquisition-conformance-test",
+      "junit_cases": 1,
+      "junit_sha256": "2d52632faf41f313c2d1ff34f3278c1f0b8defde55e6c59e4a04ec75943684e8",
+      "junit": "native/native-sanitizers-junit/firmware-acquisition-conformance-test/test.xml",
+      "inner_summaries": []
+    },
+    {
+      "platform": "native",
+      "lane": "native-sanitizers",
+      "target": "//:firmware-frame-conformance-test",
+      "junit_cases": 1,
+      "junit_sha256": "a9b4d90ffed43c577ac66fb02fa7011a2d5579aa8a6641f40648bf80e067b5eb",
+      "junit": "native/native-sanitizers-junit/firmware-frame-conformance-test/test.xml",
+      "inner_summaries": []
+    },
+    {
+      "platform": "native",
+      "lane": "capture-stack-processes",
+      "target": "//:gate0a-capture-stack-test",
+      "junit_cases": 1,
+      "junit_sha256": "21b9cd646d0ae434ca9688abadf288471a782e5270797189287254a3b3b6e64b",
+      "junit": "native/capture-stack-processes-junit/gate0a-capture-stack-test/test.xml",
+      "inner_summaries": [
+        "Ran 18 tests in 19.205s"
+      ]
+    },
+    {
+      "platform": "x86",
+      "lane": "required-output",
+      "target": "//:output-system-required-test",
+      "junit_cases": 1,
+      "junit_sha256": "64078511f7d0e070e5bc91dd69f542c4dbf8cf594e1af833b7da0d9d21d9eccb",
+      "junit": "x86/required-output-junit/output-system-required-test/test.xml",
+      "inner_summaries": [
+        "test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 28.04s"
+      ]
+    },
+    {
+      "platform": "x86",
+      "lane": "x86-tty-and-footer",
+      "target": "//:cli-contract-test",
+      "junit_cases": 1,
+      "junit_sha256": "75d17d758c702278264456142f44496c8f8fcaf6951aa52c1928051ccc6a6f85",
+      "junit": "x86/x86-tty-and-footer-junit/cli-contract-test/test.xml",
+      "inner_summaries": [
+        "test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 68 filtered out; finished in 23.74s"
+      ]
+    },
+    {
+      "platform": "x86",
+      "lane": "capture-stack-binary",
+      "target": "//:gate0a-capture-stack-test",
+      "junit_cases": 1,
+      "junit_sha256": "95ee68a407b29ee949a5833f75fb70dc9f5c8cee7ca35e991b30c41896a23366",
+      "junit": "x86/capture-stack-binary-junit/gate0a-capture-stack-test/test.xml",
+      "inner_summaries": [
+        "Ran 2 tests in 0.376s"
+      ]
+    }
+  ],
+  "capture_test_coverage": {
+    "source_manifest_sha256": "5b6c2109e0a521d3470f895b87f8d4b9667e8a3c72da3fdd510ab234ffa478e6",
+    "discovered_case_count": 20,
+    "all_cases_passed_without_overlap": true,
+    "partitions": {
+      "native": [
+        "CaptureContractTests.test_analyzer_failure_aborts_recorder_and_suppresses_publication",
+        "CaptureContractTests.test_chunk_jump_beyond_stop_window_suppresses_publication",
+        "CaptureContractTests.test_invalid_final_analyzer_log_never_authorizes_a_recorder_footer",
+        "CaptureContractTests.test_production_wrapper_invocation_publishes_one_complete_set",
+        "CaptureContractTests.test_publication_rolls_back_finals_and_keeps_all_partials",
+        "CaptureContractTests.test_readiness_after_the_boot_window_suppresses_publication",
+        "CaptureContractTests.test_readiness_at_the_boot_window_boundary_preserves_the_full_capture",
+        "CaptureContractTests.test_readiness_requires_one_byte_followed_by_eof",
+        "CaptureContractTests.test_recorder_failure_aborts_analyzer_and_suppresses_publication",
+        "CaptureContractTests.test_recorder_log_quota_aborts_both_children",
+        "CaptureContractTests.test_signal_aborts_both_children_without_publication",
+        "FinalizationContractTests.test_crabbox_finalizer_hashes_large_inputs_and_resists_scorer_replacement",
+        "FinalizationContractTests.test_final_sidecar_and_report_publish_as_a_pair",
+        "FinalizationContractTests.test_finalizer_rejects_a_distinct_scorer_identity",
+        "FinalizationContractTests.test_log_binds_driver_stop_session_manifest_and_firmware",
+        "FinalizationContractTests.test_scorer_failure_is_fail_closed",
+        "FinalizationContractTests.test_scorer_stderr_quota_is_fail_closed",
+        "StaticCaptureStackContractTests.test_bazel_build_entrypoint_resolves_declared_inputs"
+      ],
+      "x86": [
+        "RealCaptureBinaryContractTests.test_missing_real_capture_binary_environment_fails_closed",
+        "RealCaptureBinaryContractTests.test_real_pinned_capture_binary_is_hash_bound_and_loadable"
+      ]
+    },
+    "reason": "Native Python exercises the unchanged 10 ms capture deadline; the x86 guest executes the pinned x86 binary. No test or application limit changed."
+  },
+  "artifact_archive": {
+    "path": "artifacts/validated-x86-firmware-capture-and-source.tar.gz",
+    "sha256": "67a50e4e27cf88448b31385866057d4187a597ed6a76461bcec537d93688421d",
+    "bytes": 9265992
+  },
+  "evidence_limits": [
+    "No physical controller, IMU, analyzer, or wearable was attached or flashed.",
+    "Required Linux output uses a real virtual input device in the non-root x86 guest; sensor input remains synthetic.",
+    "The full raw-reducer fixture deliberately rejects a stale hash after scanning all 14,440,000,000 bytes.",
+    "All three consecutive durability logs and their independent raw strace archives are retained.",
+    "Build actions may use pinned caches; test results are uncached.",
+    "Regression-before logs describe earlier source states and are not counted as final frozen-source passes."
+  ]
+}

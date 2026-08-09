@@ -1,0 +1,37 @@
+OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Loading: 1 packages loaded
+Analyzing: target //:gate0-trace-contract-test (5 packages loaded, 6 targets configured)
+Analyzing: target //:gate0-trace-contract-test (5 packages loaded, 6 targets configured)
+
+Analyzing: target //:gate0-trace-contract-test (15 packages loaded, 9 targets configured)
+
+Analyzing: target //:gate0-trace-contract-test (62 packages loaded, 9 targets configured)
+
+Analyzing: target //:gate0-trace-contract-test (79 packages loaded, 181 targets configured)
+
+Analyzing: target //:gate0-trace-contract-test (102 packages loaded, 736 targets configured)
+
+Analyzing: target //:gate0-trace-contract-test (124 packages loaded, 1289 targets configured)
+
+Analyzing: target //:gate0-trace-contract-test (143 packages loaded, 2864 targets configured)
+
+Analyzing: target //:gate0-trace-contract-test (177 packages loaded, 4184 targets configured)
+
+Analyzing: target //:gate0-trace-contract-test (209 packages loaded, 5422 targets configured)
+
+INFO: Analyzed target //:gate0-trace-contract-test (210 packages loaded, 5450 targets configured).
+[180 / 442] checking cached actions
+[442 / 443] [Prepa] Testing //:gate0-trace-contract-test
+[442 / 443] Testing //:gate0-trace-contract-test; 1s processwrapper-sandbox
+[442 / 443] Testing //:gate0-trace-contract-test; 11s processwrapper-sandbox
+[442 / 443] Testing //:gate0-trace-contract-test; 41s processwrapper-sandbox
+[442 / 443] Testing //:gate0-trace-contract-test; 101s processwrapper-sandbox
+[442 / 443] Testing //:gate0-trace-contract-test; 161s processwrapper-sandbox
+[442 / 443] Testing //:gate0-trace-contract-test; 221s processwrapper-sandbox
+[442 / 443] Testing //:gate0-trace-contract-test; 281s processwrapper-sandbox
+[442 / 443] Testing //:gate0-trace-contract-test; 341s processwrapper-sandbox
+[442 / 443] Testing //:gate0-trace-contract-test; 402s processwrapper-sandbox
+[442 / 443] Testing //:gate0-trace-contract-test; 462s processwrapper-sandbox

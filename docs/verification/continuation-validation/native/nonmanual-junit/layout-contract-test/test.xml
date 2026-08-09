@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="layout-contract-test" tests="1" failures="0" errors="0">
+    <testcase name="layout-contract-test" status="run" duration="0" time="0"></testcase>
+      <system-out>
+Generated test.log (if the file is not UTF-8, then this may be unreadable):
+<![CDATA[exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+Executing tests from //:layout-contract-test
+-----------------------------------------------------------------------------
+
+running 8 tests
+test core28_contains_every_letter_once_plus_space_and_backspace ... ok
+test keyboard_warm_start_excludes_ambiguous_and_passive_only_positions ... ok
+test mapping_is_bidirectional_for_enabled_positions ... ok
+test physical_layout_has_34_unique_positions ... ok
+test canonical_manifest_freezes_exact_core28_on_34_mapping ... ok
+test reserved_positions_are_exact_and_explicit ... ok
+test unsupported_ascii_characters_do_not_enter_core28 ... ok
+test unknown_positions_and_labels_do_not_resolve ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s]]>
+      </system-out>
+    </testsuite>
+</testsuites>

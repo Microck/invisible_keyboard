@@ -1,0 +1,52 @@
+OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //:replay-contract-test (1 packages loaded)
+Analyzing: target //:replay-contract-test (5 packages loaded, 6 targets configured)
+Analyzing: target //:replay-contract-test (5 packages loaded, 6 targets configured)
+
+Analyzing: target //:replay-contract-test (36 packages loaded, 9 targets configured)
+
+Analyzing: target //:replay-contract-test (81 packages loaded, 148 targets configured)
+
+Analyzing: target //:replay-contract-test (110 packages loaded, 875 targets configured)
+
+Analyzing: target //:replay-contract-test (133 packages loaded, 2606 targets configured)
+
+Analyzing: target //:replay-contract-test (174 packages loaded, 4147 targets configured)
+
+INFO: Analyzed target //:replay-contract-test (206 packages loaded, 5419 targets configured).
+[1 / 1] no actions running
+[166 / 425] checking cached actions
+[423 / 425] [Prepa] Compiling Rust bin replay-contract-test (1 file)
+INFO: From Compiling Rust bin replay-contract-test (1 file):
+warning: the gold linker is deprecated and has known bugs with Rust
+  |
+  = help: consider using LLD or ld from GNU binutils instead
+
+warning: 1 warning emitted
+
+[424 / 425] [Prepa] runfiles for //:replay-contract-test
+[425 / 426] Testing //:replay-contract-test; 1s processwrapper-sandbox
+[425 / 426] Testing //:replay-contract-test; 11s processwrapper-sandbox
+[425 / 426] Testing //:replay-contract-test; 12s processwrapper-sandbox
+INFO: From Testing //:replay-contract-test:
+==================== Test output for //:replay-contract-test:
+
+running 1 test
+test live_cli_ingress_healthy_receipt_merger_preserves_expected_output ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 44 filtered out; finished in 12.92s
+
+================================================================================
+INFO: Found 1 test target...
+Target //:replay-contract-test up-to-date:
+  bazel-bin/replay-contract-test
+INFO: Elapsed time: 26.699s, Critical Path: 14.74s
+INFO: 4 processes: 422 action cache hit, 2 internal, 3 processwrapper-sandbox.
+INFO: Build completed successfully, 4 total actions
+//:replay-contract-test                                                  PASSED in 13.0s
+
+Executed 1 out of 1 test: 1 test passes.
+There were tests whose specified size is too big. Use the --test_verbose_timeout_warnings command line option to see which ones these are.

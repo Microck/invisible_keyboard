@@ -1,0 +1,21 @@
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+Executing tests from //:calibration-worker-contract-test
+-----------------------------------------------------------------------------
+
+running 1 test
+test decoded_same_identity_integrity_faults_retain_raw_suffix_and_first_cause ... FAILED
+
+failures:
+
+---- decoded_same_identity_integrity_faults_retain_raw_suffix_and_first_cause stdout ----
+
+thread 'decoded_same_identity_integrity_faults_retain_raw_suffix_and_first_cause' (44137) panicked at tests/calibration-worker-contract.rs:146:18:
+bad completed frames must close authority before merge release: ()
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    decoded_same_identity_integrity_faults_retain_raw_suffix_and_first_cause
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 14 filtered out; finished in 0.01s
+

@@ -1,0 +1,58 @@
+OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Analyzing: target //:calibration-engine-contract-test (1 packages loaded)
+Analyzing: target //:calibration-engine-contract-test (5 packages loaded, 6 targets configured)
+Analyzing: target //:calibration-engine-contract-test (5 packages loaded, 6 targets configured)
+
+Analyzing: target //:calibration-engine-contract-test (13 packages loaded, 9 targets configured)
+
+Analyzing: target //:calibration-engine-contract-test (65 packages loaded, 61 targets configured)
+
+Analyzing: target //:calibration-engine-contract-test (84 packages loaded, 518 targets configured)
+
+Analyzing: target //:calibration-engine-contract-test (111 packages loaded, 1031 targets configured)
+
+Analyzing: target //:calibration-engine-contract-test (132 packages loaded, 2357 targets configured)
+
+Analyzing: target //:calibration-engine-contract-test (151 packages loaded, 3206 targets configured)
+
+Analyzing: target //:calibration-engine-contract-test (190 packages loaded, 4982 targets configured)
+
+INFO: Analyzed target //:calibration-engine-contract-test (206 packages loaded, 5419 targets configured).
+[1 / 1] no actions running
+[186 / 425] checking cached actions
+[425 / 426] [Prepa] Testing //:calibration-engine-contract-test
+FAIL: //:calibration-engine-contract-test (Exit 101) (see /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/execroot/_main/bazel-out/aarch64-fastbuild/testlogs/calibration-engine-contract-test/test.log)
+INFO: From Testing //:calibration-engine-contract-test:
+==================== Test output for //:calibration-engine-contract-test:
+
+running 1 test
+test raw_aggregate_repeat_with_advancing_sensor_times_is_rejected ... FAILED
+
+failures:
+
+---- raw_aggregate_repeat_with_advancing_sensor_times_is_rejected stdout ----
+
+thread 'raw_aggregate_repeat_with_advancing_sensor_times_is_rejected' (100950) panicked at tests/calibration-engine-contract.rs:2004:10:
+aggregate time must strictly advance even when every sensor advances: CalibrationMatchingRule { schema: "invisible-keyboard-causal-contact-rule-v1", acquisition_manifest_sha256: "ac756360e6b5181e10dee22cbc954ed2b76624b98f8500085c1a0793fb10d3bf", neutral_windows_sha256: "64284026f9fa3ac2cd70f86df54dc9545cb5df3bab6bf1363df17697ec6d520b", neutral_source_sha256: "6625a705728ad17a7b7c7fe0f61f523006ec72b0bc87839f1d7b5cc4f56f4c16", feature_schema: "dynamic-finger-to-dorsal-energy-v1", thresholds: [HandContactThresholds { hand: Left, low_energy: 1024, high_energy: 4096, motion_energy: 4096 }, HandContactThresholds { hand: Right, low_energy: 1024, high_energy: 4096, motion_energy: 4096 }], debounce_windows: 2, rearm_windows: 4, response_start_ns: 0, response_end_ns: 1500000000 }
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    raw_aggregate_repeat_with_advancing_sensor_times_is_rejected
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 28 filtered out; finished in 0.05s
+
+================================================================================
+INFO: Found 1 test target...
+Target //:calibration-engine-contract-test up-to-date:
+  bazel-bin/calibration-engine-contract-test
+INFO: Elapsed time: 17.438s, Critical Path: 0.63s
+INFO: 2 processes: 424 action cache hit, 1 internal, 2 processwrapper-sandbox.
+INFO: Build completed, 1 test FAILED, 2 total actions
+//:calibration-engine-contract-test                                      FAILED in 0.1s
+  /home/ubuntu/.cache/bazel/_bazel_ubuntu/7e2fd77890b488779b410a76e967fea6/execroot/_main/bazel-out/aarch64-fastbuild/testlogs/calibration-engine-contract-test/test.log
+
+Executed 1 out of 1 test: 1 fails locally.

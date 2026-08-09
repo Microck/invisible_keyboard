@@ -1,0 +1,2 @@
+metadata=neutral clock qualification failed: supplied offline clock epochs differ from the exact preserved raw-session fit
+raw_receipts=neutral clock qualification failed: clock-fit Left epoch failed: clock p95 residual 7879058 ns exceeds 2000000 ns
