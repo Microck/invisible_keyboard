@@ -35,41 +35,35 @@ plan without needing another architecture-discovery pass.
   combines them.
 - Human decisions remain open while the user is away. Research may narrow the
   options and recommend a choice, but it may not impersonate approval.
+- Keep this effort in the local Markdown tracker. Do not create GitHub issues
+  or publish external artifacts without a separately confirmed draft.
 - This map covers feasibility and prototype specification. It is not a software
   implementation plan.
 
 ## Decisions so far
 
-- The research target is finger-driven keyless text entry, based on the current
-  request and the supplied LapCal reference. Unrelated text-entry methods such
-  as speech, gaze, and brain-computer interfaces do not answer this question.
-- Powered finger actuation and medical or rehabilitation devices are not
-  required. The historic session asks for sensing, not force assistance.
-- Local files and abandoned-project notes are leads. A claim is not considered
-  current or general until the research pass verifies its evidence boundary.
-- The autonomous run uses local Markdown tickets. It makes no public repository,
-  GitHub issue, or external publication without a separately confirmed draft.
-- [LapCal's evidence audit](tickets/002-audit-lapcal-evidence.md) finds useful
+- [Audit what LapCal actually proved](tickets/002-audit-lapcal-evidence.md) finds useful
   hardware and data-collection lessons, but no reproducible proof of key
   identity, live text entry, or product-level performance; treat it as a
   cautionary baseline, not the implementation base.
-- The [sensing architecture comparison](tickets/003-compare-sensing-architectures.md)
+- [Compare sensing architectures for keyboardless finger input](tickets/003-compare-sensing-architectures.md)
   finds conditional co-leads: dual-wrist high-rate IMUs are the cheapest
   passive-surface test when personal calibration and language decoding are
   allowed; egocentric optical tracking leads when a camera/headset and its
   privacy cost are acceptable. Radar and magnetic tracking remain gated
   fallbacks; the human architecture choice is still open.
-- The [prior-art landscape](tickets/004-map-prior-art-and-failures.md) finds a
+- [Map prior art, products, and abandoned attempts](tickets/004-map-prior-art-and-failures.md)
+  finds a
   fundamental product fork: finger-sequence systems can achieve high phrase
   throughput by letting language infer same-finger keys, while arbitrary
   spatial QWERTY still needs geometry or an instrumented surface. Gest is the
   only confirmed shutdown; other silent projects remain status-unknown.
-- The [usable text-entry feasibility contract](tickets/005-define-feasibility-metrics.md)
+- [Define feasibility metrics for usable text entry](tickets/005-define-feasibility-metrics.md)
   requires cumulative evidence from stream integrity through continuous raw and
   corrected text, transfer, ordinary-movement negatives, and extended use; it
   keeps language-assisted phrases, exact arbitrary keys, and learned accessible
   or chorded input as separate claims.
-- [Operating-system input and compute paths](tickets/006-verify-input-and-compute-paths.md)
+- [Verify operating-system input and compute paths](tickets/006-verify-input-and-compute-paths.md)
   makes Linux `uinput` the bench route and standards USB HID the cross-platform
   appliance route; mobile software paths remain target-specific, with hard iOS
   secure-field limits and no browser-only system keyboard path.
@@ -78,28 +72,15 @@ plan without needing another architecture-discovery pass.
   experiment that comfortably fits the historic EUR 200 cash ceiling; owned
   optical hardware can also fit, while labor, participants, and higher-risk
   modalities require separate, much larger budgets.
-- [Privacy, safety, licensing, and IP constraints](tickets/008-map-risk-license-and-ip.md)
+- [Map privacy, safety, licensing, and intellectual-property constraints](tickets/008-map-risk-license-and-ip.md)
   keeps both co-leads feasible only behind local-data, explicit-capture,
   fail-neutral input, human-safety, and pre-market gates; LapCal is study-only
   for the canonical implementation, and the bounded patent search is not FTO.
 
 ## Not yet specified
 
-- What "invisible" must exclude: visible overlays, a marked surface, any
-  surface, a glove, rings, wrist hardware, or environmental sensors.
-- First setting and platform: desk, lap, standing, mobile, desktop, or extended
-  reality.
-- Layout and output scope: QWERTY muscle memory, a reduced layout, chords,
-  letters only, modifiers, symbols, shortcuts, and rollover.
-- Whether the first success target may use personal calibration or must transfer
-  between users and sessions.
-- Acceptable budget, setup time, learning time, false activation rate, latency,
-  text speed, correction load, fatigue, and privacy tradeoffs.
-- Primary sensing architecture and fallback.
-- Decoder, personalization, correction, and compute-placement strategy.
-- Decisive prototype stages, measurements, and stop conditions.
-- Exact component selection, enclosure, firmware, data schema, model, host
-  service, input protocol, and procurement list.
+None. Every currently specifiable question is represented by an open child
+ticket.
 
 ## Out of scope
 
