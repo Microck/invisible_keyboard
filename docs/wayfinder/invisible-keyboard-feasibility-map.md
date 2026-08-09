@@ -71,6 +71,11 @@ plan without needing another architecture-discovery pass.
   makes Linux `uinput` the bench route and standards USB HID the cross-platform
   appliance route; mobile software paths remain target-specific, with hard iOS
   secure-field limits and no browser-only system keyboard path.
+- [Cost viable prototype paths](tickets/007-cost-prototype-paths.md) finds a
+  USD 95-180 host-decoded dual-wrist IMU rig is the only new-hardware sensing
+  experiment that comfortably fits the historic EUR 200 cash ceiling; owned
+  optical hardware can also fit, while labor, participants, and higher-risk
+  modalities require separate, much larger budgets.
 
 ## Not yet specified
 
