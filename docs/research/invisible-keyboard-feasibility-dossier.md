@@ -49,6 +49,22 @@ The research does **not** support all of these requirements at once:
 That combination removes every measured source of key position. It is a
 physical observability problem, not a model-selection problem.
 
+## Reader's fast path
+
+This table is the shortest route through the handoff. The linked sections hold
+the evidence, exact protocol, and limits behind each answer.
+
+| Question | Short answer | Detail |
+| --- | --- | --- |
+| Is the idea possible? | Yes, in four bounded forms. Exact input on a blank instrumented surface has the strongest evidence. Passive hidden QWERTY is plausible but unproved. Learned gestures and language-assisted prose work only under narrower product contracts. | [Verdict](#verdict) and [product contracts](#four-separate-information-contracts) |
+| Which option should be used? | Choose a blank instrumented surface if it is allowed. For strict passive-surface QWERTY, test accessible optical geometry. If a new alphabet is acceptable, preserve a FineType-like system. Use wrist IMU plus a declared language model only for phrase entry. | [Ranked options](#ranked-options) |
+| What happens first? | Run P0: record 10 minutes of timestamped data from the exact candidate platform. Stop that platform if the needed data is inaccessible, capture terms are unacceptable, or timestamps cannot align to contact truth. If P0 passes, run the two-session P1 truth-rig screen. Stop passive QWERTY if the hidden-passive condition fails and the location oracle shows that position remains unobservable. | [The first decisive program](#the-first-decisive-program) |
+| What is needed? | Use a supported optical sensor, independent reference camera, blank contact-truth surface, matched passive surface, fixed registration, and Linux host. Record immutable timestamped sessions, start with a causal nearest-key baseline, run one-variable oracle substitutions, and evaluate with session- and person-held-out gates. | [Hardware](#hardware-boundary), [software](#software-boundary), [data](#data-and-labeling-protocol), and [evaluation](#ten-gate-build-roadmap) |
+| What can be spent or reused? | Inventory owned hardware first. Buy nothing for a product build before the product boundary and P0 are settled. Use the owned-hardware P0/P1 fixture envelope first, and do not fund custom PCBs, BLE polish, a large cohort, or scientific sensors yet. Keep LapCal and emg2qwerty outside the commercial implementation and verify every other artifact's license separately. | [Cost and stop-loss](#cost-envelopes-and-stop-loss) and [clean-room reuse](#clean-room-reuse-rule) |
+| What is proved versus uncertain? | Published work proves hidden-layout typing on an instrumented surface and narrower learned-gesture or phrase products under their stated tasks. It does not prove accessible, hidden, passive-surface exact QWERTY, full HID behavior, population transfer, long-term comfort, or commercial rights. | [Known gaps and claim-audit notes](#known-gaps-and-claim-audit-notes) |
+| What must the human decide? | Resolve the first use case, then sensing architecture, decoding strategy, and decisive prototype. The recommended defaults are proposals, not approvals. | [Open human decisions](#open-human-decisions-and-recommended-defaults) and [handoff order](#handoff) |
+| Where is the evidence? | K1-K17 link the primary papers and official standards. The local artifact index links the detailed audits, comparisons, cost model, risk register, and Wayfinder map. | [Source registry](#source-registry) and [local artifact index](#local-artifact-index) |
+
 ## What product is being built?
 
 ### Four separate information contracts
