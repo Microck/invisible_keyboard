@@ -1,6 +1,6 @@
 ---
 title: Compare sensing architectures for keyboardless finger input
-status: open
+status: closed
 labels:
   - wayfinder:research
 assignee:
@@ -28,3 +28,12 @@ reproducible projects over product claims.
 The result must expose which modalities directly observe intent or contact and
 which must infer it from motion alone.
 
+## Resolution
+
+Resolved by the
+[sensing architecture comparison](../../research/sensing-architecture-comparison.md).
+It ranks a TapType-style dual-wrist IMU prototype and an egocentric optical
+prototype as conditional co-leads, documents the evidence and failure boundary
+for every required sensing family, defines defensible hybrids, and carries the
+LapCal audit's acquisition and evaluation gates forward. The human-only final
+architecture choice remains open on the parent map.

@@ -51,6 +51,12 @@ plan without needing another architecture-discovery pass.
   hardware and data-collection lessons, but no reproducible proof of key
   identity, live text entry, or product-level performance; treat it as a
   cautionary baseline, not the implementation base.
+- The [sensing architecture comparison](tickets/003-compare-sensing-architectures.md)
+  finds conditional co-leads: dual-wrist high-rate IMUs are the cheapest
+  passive-surface test when personal calibration and language decoding are
+  allowed; egocentric optical tracking leads when a camera/headset and its
+  privacy cost are acceptable. Radar and magnetic tracking remain gated
+  fallbacks; the human architecture choice is still open.
 
 ## Not yet specified
 
