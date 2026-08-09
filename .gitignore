@@ -1,0 +1,5 @@
+# The supplied research corpus includes a nested repository and large generated
+# hardware artifacts. Keep it as local source material instead of making it
+# part of this planning repository by accident.
+/research/
+
