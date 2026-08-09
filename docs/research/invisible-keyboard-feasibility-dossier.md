@@ -168,9 +168,9 @@ prove hidden-layout typing.
 7% UER without a language model [K2]. Its training set was large and its live
 pipeline was real. The live condition also used a visible virtual keyboard.
 The result supports optical feasibility but does not answer the hidden-overlay
-question. This dossier intentionally omits a previously discussed approximate
-16 percent non-language figure because its exact metric and protocol passage
-were not verified well enough for this handoff.
+question. No separate non-language metric is carried into this handoff because
+its exact metric and protocol passage were not verified well enough during
+synthesis.
 
 Visible virtual keyboards help users maintain position and correct hand drift.
 Removing the overlay is a material condition change, not cosmetic polish.
@@ -262,7 +262,11 @@ For each person, session, and condition:
 
 Core-28 means A-Z, Space, and Backspace. It is the complete advertised set for
 this observability screen. Unsupported keys stay unsupported and cannot vanish
-from the denominator. Passing Core-28 does not qualify a full keyboard.
+from the denominator. Core-28 is a provisional, screen-only event manifest.
+The full product event manifest remains a human decision and must enumerate
+every advertised HID usage plus down/up, hold, modifier, repeat, shortcut,
+chord, and rollover behavior before Gate 5. Passing Core-28 does not qualify a
+full keyboard.
 
 The screen uses prompted random keys and mixed unfamiliar strings. It disables
 all autocorrection, language models, word candidates, post-hoc smoothing, and
@@ -564,7 +568,9 @@ Before reuse, perform an exact license and provenance review for:
 - UmeTrack and any StegoType implementation, data, weights, or device access;
 - TouchInsight source, data, weights, and platform APIs;
 - FineType source, data, weights, CAD, and sensor design;
-- TypeAnywhere code and its separately hosted model weights; and
+- TypeAnywhere's `DrustZ/TenFingerTyping` code, which is MIT-licensed and may be
+  reused with its notice, and its separately hosted model weight, which must not
+  be used without its own verified provenance and license; and
 - any camera SDK, hand model, language corpus, pretrained model, footprint,
   firmware sample, or evaluation dataset.
 
@@ -675,9 +681,8 @@ not modify, redistribute, or bless it for implementation reuse.
 - FineType included limited CodeSearchNet snippets in its mixed task. Saying it
   had no code material is wrong. It still published no separate code-only score
   or complete key-event semantics.
-- This dossier does not state the debated approximate 16.4% StegoType
-  non-language figure because the exact metric, denominator, and protocol
-  passage were not verified.
+- This dossier omits the debated StegoType non-language figure because its exact
+  metric, denominator, and protocol passage were not verified during synthesis.
 - TypeAnywhere's paper contains a cohort-count inconsistency: detailed method,
   IDs, and arithmetic support N=10 while one introductory sentence says five.
   The [prior-art report](prior-art-landscape.md) preserves that boundary.
