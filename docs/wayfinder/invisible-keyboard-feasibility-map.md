@@ -20,6 +20,8 @@ plan without needing another architecture-discovery pass.
 
 ## Notes
 
+- Use the [feasibility dossier](../research/invisible-keyboard-feasibility-dossier.md)
+  as the standalone research handoff and conditional prototype recommendation.
 - Reload the `wayfinder`, `domain-modeling`, and `grilling` skills at the start
   of every planning session.
 - Use [CONTEXT.md](../../CONTEXT.md) as the shared vocabulary.
